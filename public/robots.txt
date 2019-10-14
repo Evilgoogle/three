@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /admin/*
+
+Host: https://lovestyle.kz
+Sitemap: https://lovestyle.kz/sitemap.xml

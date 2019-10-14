@@ -1,0 +1,47 @@
+{
+  "name": "Freelife",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://gitlab.com/EvilGoogle/sex-shop.git",
+  "author": "EvilGoogle <evilgoogle@mail.ru>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch-poll": "npm run watch -- --watch-poll",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "devDependencies": {
+    "alertifyjs": "^1.11.0",
+    "axios": "^0.18",
+    "bootstrap": "^4.0.0",
+    "browser-sync": "^2.24.6",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "cross-env": "^5.1",
+    "css-loader": "^0.28.10",
+    "fullpage.js": "^3.0.1",
+    "jquery": "^3.2",
+    "jquery-fancybox": "^3.1.0",
+    "laravel-mix": "^2.0",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
+    "lightbox2": "^2.10.0",
+    "lodash": "^4.17.4",
+    "popper.js": "^1.13.0",
+    "style-loader": "^0.20.2",
+    "swiper": "^4.1.6"
+  },
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.5.1",
+    "@fortawesome/fontawesome-free": "^5.5.0",
+    "blazy": "^1.8.2",
+    "cropperjs": "^1.5.1",
+    "font-awesome": "^4.7.0",
+    "jquery-ui": "^1.12.1",
+    "sweetalert2": "^8.14.0",
+    "wow.js": "^1.2.2"
+  }
+}

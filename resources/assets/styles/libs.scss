@@ -1,0 +1,462 @@
+// Colors
+$color-white: #FFFFFF;
+$color-black: #1D1D1E;
+$color-pink: #E83F8B;
+$color-gray: #F1F1F1;
+
+//img
+@mixin img_cover($file) {
+  background: url($file) no-repeat center;
+  background-size: cover;
+}
+
+@mixin img_contain($file) {
+  background: url($file) no-repeat center;
+  background-size: contain;
+}
+
+@mixin set_cover() {
+  background: no-repeat center;
+  background-size: cover;
+}
+
+@mixin set_contain() {
+  background: no-repeat center;
+  background-size: contain;
+}
+
+//placeholder
+@mixin placeholder($color) {
+  ::-webkit-input-placeholder {
+    color: $color;
+    word-wrap: break-word;
+  }
+  ::-moz-placeholder {
+    color: $color;
+    word-wrap: break-word;
+  }
+  :-ms-input-placeholder {
+    color: $color;
+    word-wrap: break-word;
+  }
+  :-moz-placeholder {
+    color: $color;
+    word-wrap: break-word;
+  }
+}
+
+//others
+@mixin position_abs {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+//button
+@mixin button_reset() {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+//a
+@mixin a_reset($color) {
+  text-decoration: none;
+  color: $color;
+  &:link {
+    color: $color;
+  }
+  &:visited {
+    color: $color;
+  }
+}
+
+//Font
+$letter-spacing: -0.6px;
+
+//Border radius
+$border-radius: 6px;
+
+//Animation time
+$animation_time: 0.5s;
+$animation_easy: all 0.3s ease-out;
+
+// Media
+$w-1900: 1900px;
+$w-1800: 1800px;
+$w-1700: 1700px;
+$w-1680: 1680px;
+$w-1600: 1600px;
+$w-1536: 1536px;
+$w-1440: 1440px;
+$w-1400: 1400px;
+$w-1340: 1340px;
+$w-1300: 1300px;
+$w-1366: 1366px;
+$w-1280: 1280px;
+$w-1200: 1200px;
+$w-1136: 1136px;
+$w-1100: 1100px;
+$w-1024: 1024px;
+$w-1000: 1000px;
+$w-960: 960px;
+$w-900: 900px;
+$w-840: 840px;
+$w-812: 812px;
+$w-800: 800px;
+$w-750: 750px;
+$w-720: 720px;
+$w-736: 736px;
+$w-768: 768px;
+$w-667: 667px;
+$w-640: 640px;
+$w-568: 568px;
+$w-530: 530px;
+$w-480: 480px;
+$w-411: 414px;
+$w-420: 420px;
+$w-400: 400px;
+$w-375: 375px;
+$w-360: 360px;
+$w-320: 320px;
+
+/*custom media points*/
+$w-1919: 1919px;
+$w-1599: 1599px;
+$w-1439: 1439px;
+$w-1365: 1365px;
+$w-1279: 1279px;
+$w-1199: 1199px;
+$w-1023: 1023px;
+$w-799: 799px;
+$w-735: 735px;
+$w-639: 639px;
+$w-567: 567px;
+$w-479: 479px;
+$w-374: 374px;
+
+@mixin respond-to($media) {
+  @if ($media == w-320) {
+    @media only screen and (max-width: $w-320) {
+      @content;
+    }
+  }
+  @if ($media == w-360) {
+    @media only screen and (max-width: $w-360) {
+      @content;
+    }
+  }
+  @if ($media == w-375) {
+    @media only screen and (max-width: $w-375) {
+      @content;
+    }
+  }
+  @if ($media == w-400) {
+    @media only screen and (max-width: $w-400) {
+      @content;
+    }
+  }
+  @if ($media == w-420) {
+    @media only screen and (max-width: $w-420) {
+      @content;
+    }
+  }
+  @if ($media == w-411) {
+    @media only screen and (max-width: $w-411) {
+      @content;
+    }
+  }
+  @if ($media == w-480) {
+    @media only screen and (max-width: $w-480) {
+      @content;
+    }
+  }
+  @if ($media == w-530) {
+    @media only screen and (max-width: $w-530) {
+      @content;
+    }
+  }
+  @if ($media == w-568) {
+    @media only screen and (max-width: $w-568) {
+      @content;
+    }
+  }
+  @if ($media == w-667) {
+    @media only screen and (max-width: $w-667) {
+      @content;
+    }
+  }
+  @if ($media == w-640) {
+    @media only screen and (max-width: $w-640) {
+      @content;
+    }
+  }
+
+  @else if($media == w-720) {
+    @media only screen and (max-width: $w-720) {
+      @content;
+    }
+  }
+  @else if($media == w-736) {
+    @media only screen and (max-width: $w-799) {
+      @content;
+    }
+  }
+  @else if($media == w-750) {
+    @media only screen and (max-width: $w-750) {
+      @content;
+    }
+  }
+  @else if($media == w-768) {
+    @media only screen and (max-width: $w-768) {
+      @content;
+    }
+  }
+  @else if($media == w-800) {
+    @media only screen and (max-width: $w-800) {
+      @content;
+    }
+  }
+  @else if($media == w-812) {
+    @media only screen and (max-width: $w-812) {
+      @content;
+    }
+  }
+  @else if($media == w-840) {
+    @media only screen and (max-width: $w-840) {
+      @content;
+    }
+  }
+  @else if($media == w-960) {
+    @media only screen and (max-width: $w-960) {
+      @content;
+    }
+  }
+  @else if($media == w-900) {
+    @media only screen and (max-width: $w-900) {
+      @content;
+    }
+  }
+  @else if($media == w-1000) {
+    @media only screen and (max-width: $w-1000) {
+      @content;
+    }
+  }
+  @else if($media == w-1024) {
+    @media only screen and (max-width: $w-1024) {
+      @content;
+    }
+  }
+  @else if($media == w-1100) {
+    @media only screen and (max-width: $w-1100) {
+      @content;
+    }
+  }
+  @else if($media == w-1136) {
+    @media only screen and (max-width: $w-1136) {
+      @content;
+    }
+  }
+  @else if($media == w-1200) {
+    @media only screen and (max-width: $w-1200) {
+      @content;
+    }
+  }
+  @else if($media == w-1199) {
+    @media only screen and (max-width: $w-1199) {
+      @content;
+    }
+  }
+  @else if($media == w-1280) {
+    @media only screen and (max-width: $w-1280) {
+      @content;
+    }
+  }
+  @else if($media == w-1300) {
+    @media only screen and (max-width: $w-1300) {
+      @content;
+    }
+  }
+  @else if($media == w-1366) {
+    @media only screen and (max-width: $w-1366) {
+      @content;
+    }
+  }
+  @else if($media == w-1340) {
+    @media only screen and (max-width: $w-1340) {
+      @content;
+    }
+  }
+  @else if($media == w-1440) {
+    @media only screen and (max-width: $w-1440) {
+      @content;
+    }
+  }
+  @else if($media == w-1536) {
+    @media only screen and (max-width: $w-1536) {
+      @content;
+    }
+  }
+  @else if($media == w-1680) {
+    @media only screen and (max-width: $w-1680) {
+      @content;
+    }
+  }
+  @else if($media == w-1600) {
+    @media only screen and (max-width: $w-1600) {
+      @content;
+    }
+  }
+  @else if($media == w-1700) {
+    @media only screen and (max-width: $w-1700) {
+      @content;
+    }
+  }
+  @else if($media == w-1800) {
+    @media only screen and (max-width: $w-1800) {
+      @content;
+    }
+  }
+  @else if($media == w-1900) {
+    @media only screen and (max-width: $w-1900) {
+      @content;
+    }
+  }
+
+    /* custom */
+  @else if($media == w-1919) {
+    @media only screen and (max-width: $w-1919) {
+      @content;
+    }
+  }
+  @else if($media == w-1599) {
+    @media only screen and (max-width: $w-1599) {
+      @content;
+    }
+  }
+  @else if($media == w-1439) {
+    @media only screen and (max-width: $w-1439) {
+      @content;
+    }
+  }
+  @else if($media == w-1365) {
+    @media only screen and (max-width: $w-1365) {
+      @content;
+    }
+  }
+  @else if($media == w-1279) {
+    @media only screen and (max-width: $w-1279) {
+      @content;
+    }
+  }
+  @else if($media == w-1023) {
+    @media only screen and (max-width: $w-1023) {
+      @content;
+    }
+  }
+  @else if($media == w-799) {
+    @media only screen and (max-width: $w-799) {
+      @content;
+    }
+  }
+  @else if($media == w-735) {
+    @media only screen and (max-width: $w-735) {
+      @content;
+    }
+  }
+  @else if($media == w-639) {
+    @media only screen and (max-width: $w-639) {
+      @content;
+    }
+  }
+  @else if($media == w-567) {
+    @media only screen and (max-width: $w-567) {
+      @content;
+    }
+  }
+  @else if($media == w-479) {
+    @media only screen and (max-width: $w-479) {
+      @content;
+    }
+  }
+  @if ($media == w-374) {
+    @media only screen and (max-width: $w-374) {
+      @content;
+    }
+  }
+}
+
+//ck_reset
+@mixin cke_reset($font-size, $font-family) {
+  font-family: $font-family !important;
+
+  img {
+    max-width: 100% !important;
+    height: auto!important;
+  }
+  strong, b {
+    font-family: $font-Roboto_Medium !important;
+    font-weight: normal;
+  }
+  em, i {
+    font-family: $font-Roboto_LightItalic;
+    color: #848484;
+    font-style: normal;
+  }
+  p {
+    margin: 40px 0;
+    font-size: $font-size !important;
+    font-family: $font-family !important;
+    text-decoration: none !important;
+    @include respond-to(w-1919) {
+      margin: 27px 0;
+    }
+    @include respond-to(w-1599) {
+      margin: 21px 0;
+    }
+    @include respond-to(w-1366) {
+      margin: 18px 0;
+    }
+    @include respond-to(w-639) {
+      margin: 25px 0;
+    }
+  }
+  ul {
+    font-family: $font-Roboto_Light !important;
+    color: $color-pink !important;
+    margin: 5px 0;
+    padding: 0 0 0 14px;
+    li {
+      list-style-type: none;
+      position: relative;
+      &:before {
+        content: "-";
+        width: 5px;
+        height: 5px;
+        color: $color-pink;
+        position: absolute;
+        left: -13px;
+        top: 2px;
+      }
+    }
+  }
+  a {
+    color: $color-pink !important;
+    &:link {
+      color: $color-pink !important;
+    }
+    &:visited {
+      color: $color-pink !important;
+    }
+    text-decoration: underline !important;
+  }
+  .youtube-embed-wrapper {
+    width: 100% !important;
+  }
+  span {
+    font-size: $font-size !important;
+    font-family: $font-family !important;
+    text-decoration: none !important;
+  }
+}
