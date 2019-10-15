@@ -428,6 +428,60 @@ template {
   font-style: normal;
 }
 
+@-webkit-keyframes anm_main_slider_text {
+  0% {
+    -webkit-transform: perspective(2000px) rotateY(0deg);
+            transform: perspective(2000px) rotateY(0deg);
+  }
+
+  25% {
+    -webkit-transform: perspective(2000px) rotateY(10deg);
+            transform: perspective(2000px) rotateY(10deg);
+  }
+
+  50% {
+    -webkit-transform: perspective(2000px) rotateY(0deg);
+            transform: perspective(2000px) rotateY(0deg);
+  }
+
+  75% {
+    -webkit-transform: perspective(2000px) rotateY(-10deg);
+            transform: perspective(2000px) rotateY(-10deg);
+  }
+
+  100% {
+    -webkit-transform: perspective(2000px) rotateY(0deg);
+            transform: perspective(2000px) rotateY(0deg);
+  }
+}
+
+@keyframes anm_main_slider_text {
+  0% {
+    -webkit-transform: perspective(2000px) rotateY(0deg);
+            transform: perspective(2000px) rotateY(0deg);
+  }
+
+  25% {
+    -webkit-transform: perspective(2000px) rotateY(10deg);
+            transform: perspective(2000px) rotateY(10deg);
+  }
+
+  50% {
+    -webkit-transform: perspective(2000px) rotateY(0deg);
+            transform: perspective(2000px) rotateY(0deg);
+  }
+
+  75% {
+    -webkit-transform: perspective(2000px) rotateY(-10deg);
+            transform: perspective(2000px) rotateY(-10deg);
+  }
+
+  100% {
+    -webkit-transform: perspective(2000px) rotateY(0deg);
+            transform: perspective(2000px) rotateY(0deg);
+  }
+}
+
 /**
  * Swiper 4.3.0
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -3204,6 +3258,8 @@ header nav ul li a span {
 
 .main_swiper .swiper-slide .content {
   width: 60%;
+  -webkit-animation: anm_main_slider_text 8s linear infinite;
+          animation: anm_main_slider_text 8s linear infinite;
 }
 
 .main_swiper .swiper-slide .content h2 {
@@ -3237,6 +3293,10 @@ header nav ul li a span {
   position: absolute;
   top: 0px;
   left: 0px;
+}
+
+.main_swiper .swiper-slide .fon .element {
+  height: 100%;
   background-position: left top;
   background-size: contain;
 }

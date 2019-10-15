@@ -41,6 +41,7 @@
     "cropperjs": "^1.5.1",
     "font-awesome": "^4.7.0",
     "jquery-ui": "^1.12.1",
+    "parallax-js": "^3.1.0",
     "sweetalert2": "^8.14.0",
     "wow.js": "^1.2.2"
   }

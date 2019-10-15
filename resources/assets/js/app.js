@@ -11,6 +11,9 @@ var WOW = require('wow.js');
 new WOW().init();
 //
 
+// Parallax js
+const Parallax = require('parallax-js');
+
 $('input.phone').inputmask("+7 (999) 999 9999");
 
 $(document).ready(function () {
@@ -65,6 +68,10 @@ $(document).ready(function () {
             shadowScale: 0.94,
         },
     });
+
+    // Parallax main
+    var main_fon = document.getElementById('main_fon');
+    var parallaxInstance = new Parallax(main_fon);
 
     $('.js_modal_cose').click(function () {
 

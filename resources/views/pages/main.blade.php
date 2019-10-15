@@ -75,7 +75,9 @@
                     </div>
 
                     <!-- absolute -->
-                    <div class="fon" style="background-image: url('/temp/{{ $item->fon }}')"></div>
+                    <div class="fon" id="main_fon">
+                        <div data-depth="0.3" class="element" style="background-image: url('/temp/{{ $item->fon }}')"></div>
+                    </div>
                     <div class="image"></div>
                     <div class="main_swiper_panel" data-blocks="{{ $main_json }}"></div>
                 </div>

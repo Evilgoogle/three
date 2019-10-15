@@ -1,0 +1,17 @@
+@keyframes anm_main_slider_text {
+  0% {
+    transform: perspective(2000px) rotateY(0deg);
+  }
+  25% {
+    transform: perspective(2000px) rotateY(10deg);
+  }
+  50% {
+    transform: perspective(2000px) rotateY(0deg);
+  }
+  75% {
+    transform: perspective(2000px) rotateY(-10deg);
+  }
+  100% {
+    transform: perspective(2000px) rotateY(0deg);
+  }
+}
