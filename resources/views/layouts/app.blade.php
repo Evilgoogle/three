@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="google-site-verification" content="txkWRShqy8Lc79o0O6cV8Z210XePetb-YO3VMUcSg-k" />
-    <meta name="yandex-verification" content="12b7d7ce7c523501" />
 
     <?php
     if (isset($seo_new)) $seo = $seo_new;
@@ -18,19 +16,6 @@
     <meta name="keywords" content="{{ $seo->keywords ?? '' }}">
     <meta name="author" content="FreeLife">
     <meta name="robots" content="index, follow">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="{{ $seo->title ?? config('app.name') }}">
-    <meta property="og:description" content="{{ $seo->description ?? '' }}">
-    <meta property="og:url" content="{{ url()->current() }}/">
-    <meta property="og:image" content="{{ $seo->image ?? '' }}">
-    <meta property="og:image:url" content="{{ $seo->image ?? '' }}">
-    <meta property="og:image:width" content="{{ $seo->image_width ?? '' }}">
-    <meta property="og:image:height" content="{{ $seo->image_height ?? '' }}">
-    <meta property="og:image:type" content="{{ $seo->image_mime ?? '' }}">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="ru">
-    <meta property="og:site_name" content="proccess">
 
     <!-- WebSite CSS -->
     <link href="{{ asset('libs/animate.css') }}" rel="stylesheet">
@@ -46,13 +31,36 @@
 </head>
 <body>
 
-<main>
-    @if(isset($breadcrumbs))
+<header>
+    <div class="bar">
         <div class="contain">
-            @include('pages.templates.breadcrumbs', ['breadcrumbs' => $breadcrumbs])
+            <a href="/" class="logo"><img src="/images/logo.svg" alt="asken.kz"></a>
+            <div class="panel">
+                <form action="#" method="post">
+                    <input id="nav_search_input" type="text" name="text">
+                    <button type="button" class="js_search"></button>
+                </form>
+                <button class="js_mobile_nav"></button>
+            </div>
         </div>
-    @endif
-
+    </div>
+    <nav>
+        <div class="mobile_head">
+            <div class="contain">
+                <a href="/" class="logo"><img src="/images/logo.svg" alt="asken.kz"></a>
+                <button class="js_close_nav"></button>
+            </div>
+        </div>
+        <ul>
+            <li><a href="#">Продукция <span></span></a></li>
+            <li><a href="#">Отрасли <span></span></a></li>
+            <li><a href="#">О компании <span></span></a></li>
+            <li><a href="#">Каталог <span></span></a></li>
+            <li><a href="#">Контакты <span></span></a></li>
+        </ul>
+    </nav>
+</header>
+<main>
     @yield('app_content')
 </main>
 

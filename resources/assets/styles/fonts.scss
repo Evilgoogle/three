@@ -5,3 +5,43 @@
   font-style: normal;
 }
 $font-Roboto_Light: 'Roboto_Light';
+
+@font-face {
+  font-family: 'Roboto_Medium';
+  src: url('../fonts/Roboto-medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+$font-Roboto_Medium: 'Roboto_Medium';
+
+@font-face {
+  font-family: 'Roboto_Bold';
+  src: url('../fonts/Roboto-bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+$font-Roboto_Bold: 'Roboto_Bold';
+
+@font-face {
+  font-family: 'Roboto_Black';
+  src: url('../fonts/Roboto-Black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+$font-Roboto_Black: 'Roboto_Black';
+
+@font-face {
+  font-family: 'Roboto_LightItalic';
+  src: url('../fonts/Roboto-LightItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+$font-Roboto_LightItalic: 'Roboto_LightItalic';
+
+@font-face {
+  font-family: 'Roboto_Regular';
+  src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+$font-Roboto_Regular: 'Roboto_Regular';

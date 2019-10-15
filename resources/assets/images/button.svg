@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="325" height="82.431" viewBox="0 0 325 82.431">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.025" y1="0.717" x2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#762cff"/>
+      <stop offset="0.51" stop-color="#ff1cad"/>
+      <stop offset="1" stop-color="#ff484d"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_2" data-name="Group 2" transform="translate(-140 -644.924)">
+    <path id="Path_13" data-name="Path 13" d="M140,678l59.076-59.076H465l-82.431,82.431V678Z" transform="translate(0 26)" fill="url(#linear-gradient)"/>
+    <text id="Подробнее" transform="translate(201 681)" fill="#fff" font-size="24" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Подробнее</tspan></text>
+    <g id="Icon_feather-arrow-right" data-name="Icon feather-arrow-right" transform="translate(376.5 656.5)">
+      <path id="Path_14" data-name="Path 14" d="M7.5,18h17" transform="translate(0 -2)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path id="Path_15" data-name="Path 15" d="M18,7.5,26.5,16,18,24.5" transform="translate(-2)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    </g>
+  </g>
+</svg>
