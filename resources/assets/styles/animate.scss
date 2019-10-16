@@ -3,15 +3,39 @@
     transform: perspective(2000px) rotateY(0deg);
   }
   25% {
-    transform: perspective(2000px) rotateY(10deg);
+    transform: perspective(2000px) rotateY(6deg);
   }
   50% {
     transform: perspective(2000px) rotateY(0deg);
   }
   75% {
-    transform: perspective(2000px) rotateY(-10deg);
+    transform: perspective(2000px) rotateY(-6deg);
   }
   100% {
     transform: perspective(2000px) rotateY(0deg);
+  }
+}
+
+@keyframes anm_main_slider_fon {
+  0% {
+    transform: perspective(2000px) rotateY(0deg) scale(1);
+  }
+  50% {
+    transform: perspective(2000px) rotateY(20deg) scale(0.95);
+  }
+  100% {
+    transform: perspective(2000px) rotateY(0deg) scale(1);
+  }
+}
+
+@keyframes anm_main_slider_image {
+  0% {
+    transform:  translate(0px, 0px);
+  }
+  50% {
+    transform: translate(-10px, 10px);
+  }
+  100% {
+    transform:  translate(0px, 0px);
   }
 }

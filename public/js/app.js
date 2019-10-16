@@ -12205,11 +12205,11 @@ $(document).ready(function () {
     });
 
     // main swiper
-    var main_swiper_panel = $('.main_swiper_panel').data('blocks');
+    var main_swiper_panel = $('.main_swiper_panel .block').data('blocks');
     var main_swiper = new Swiper('.main_swiper', {
         direction: 'vertical',
         pagination: {
-            el: '.main_swiper_panel',
+            el: '.main_swiper_panel .block',
             clickable: true,
             renderBullet: function renderBullet(index, className) {
                 for (var key in main_swiper_panel) {
@@ -12224,20 +12224,25 @@ $(document).ready(function () {
             nextEl: '.next',
             prevEl: '.prev'
         },
-        //loop: true,
-        effect: 'cube',
+        effect: 'coverflow',
         grabCursor: true,
-        cubeEffect: {
-            shadow: false,
-            slideShadows: true,
-            shadowOffset: 10,
-            shadowScale: 0.94
-        }
+        mousewheel: true
     });
 
     // Parallax main
-    var main_fon = document.getElementById('main_fon');
-    var parallaxInstance = new Parallax(main_fon);
+    $('.main_swiper .swiper-slide').each(function (key, val) {
+
+        var fon = $(val).children('.fon').children('.zoomer').attr('id'),
+            image = $(val).children('.image').attr('id');
+
+        var main_fon = document.getElementById(fon);
+        new Parallax(main_fon, {
+            scalarX: 26
+        });
+
+        var main_image = document.getElementById(image);
+        new Parallax(main_image);
+    });
 
     $('.js_modal_cose').click(function () {
 
