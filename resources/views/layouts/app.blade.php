@@ -52,8 +52,8 @@
             </div>
         </div>
         <ul>
-            <li><a href="#">Продукция <span></span></a></li>
-            <li><a href="#">Отрасли <span></span></a></li>
+            <li><a href="/">Продукция <span></span></a></li>
+            <li><a href="/industries">Отрасли <span></span></a></li>
             <li><a href="#">О компании <span></span></a></li>
             <li><a href="#">Каталог <span></span></a></li>
             <li><a href="#">Контакты <span></span></a></li>

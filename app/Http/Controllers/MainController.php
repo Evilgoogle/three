@@ -119,6 +119,11 @@ class MainController extends Controller
         return view('pages.main', compact(''));
     }
 
+    public function industries() {
+
+        return view('pages.industries', compact(''));
+    }
+
     // Sitemaps
     public function sitemap() {
         $last_news_time = $this->last_news_time();

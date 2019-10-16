@@ -78,6 +78,27 @@ $(document).ready(function () {
        new Parallax(main_image);
    });
 
+   // Gallary
+    var swiper_gallary = new Swiper('.swiper_gallary', {
+        slidesPerView: 4,
+        spaceBetween: 0,
+        loop: true,
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        keyboard: {
+            enabled: true,
+        },
+        mousewheel: true,
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 140,
+            modifier: 1,
+            slideShadows : true
+        },
+    });
+
     $('.js_modal_cose').click(function () {
 
         $('#modal_buy .modal').removeClass('modal_active');

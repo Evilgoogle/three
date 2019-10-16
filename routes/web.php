@@ -219,20 +219,6 @@ Route::group(['middleware' => 'web'], function () {
     Route::post('file-uploads', 'MainController@fileUploads');
     Route::post('request', 'MainController@request');
 
-    Route::group(['prefix' => 'cart'], function () {
-        Route::get('', 'CartController@index');
-        Route::post('to-cart', 'CartController@addToCart');
-        Route::post('remove', 'CartController@remove');
-        Route::post('action', 'CartController@cartAction');
-        Route::get('clear', 'CartController@cartClear');
-    });
-    Route::group(['prefix' => 'favourite'], function () {
-        Route::get('', 'FavouritesController@index');
-        Route::post('to-cart', 'FavouritesController@addToCart');
-        Route::post('remove', 'FavouritesController@remove');
-        Route::post('action', 'FavouritesController@cartAction');
-        Route::get('clear', 'FavouritesController@cartClear');
-    });
 
     // Sitemap
     Route::get('sitemap.xml', 'MainController@sitemap');
@@ -242,28 +228,6 @@ Route::group(['middleware' => 'web'], function () {
 
     // website
     Route::get('', 'MainController@index');
-    Route::get('product-catalog', 'MainController@product_catalog');
-    Route::get('goods/{cat?}/{url?}', 'MainController@goods');
-    Route::get('goods_show/{url?}', 'MainController@goods_show');
-    Route::get('delivery', 'MainController@delivery');
-    Route::get('how-to-order', 'MainController@how_to_order');
-    Route::get('warranty-and-return', 'MainController@warranty_and_return');
-    Route::get('about', 'MainController@about');
-    Route::get('stocks/{url?}', 'MainController@stocks');
-    Route::get('reviews', 'MainController@reviews');
-    Route::post('reviews_add', 'MainController@reviews_add');
-    Route::get('articles/{url?}', 'MainController@articles');
-    Route::post('articles/year', 'MainController@year');
-    Route::get('contacts', 'MainController@contacts');
-    Route::get('search', 'MainController@search');
+    Route::get('industries', 'MainController@industries');
 
-    Route::post('order', 'OrderController@order');
-    Route::post('order-paybox', 'OrderController@order_paybox');
-    Route::post('payment-check', 'OrderController@payment_check');
-    Route::post('payment-result', 'OrderController@payment_result');
-    Route::post('payment-success', 'OrderController@payment_success');
-    Route::post('payment-failure', 'OrderController@payment_failure');
-
-    Route::post('comment', 'MainController@comment');
-    Route::post('window18', 'MainController@window18');
 });

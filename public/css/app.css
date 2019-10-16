@@ -3142,6 +3142,14 @@ body {
   color: #D9D9D9;
 }
 
+main {
+  padding-top: 120px;
+}
+
+.page {
+  padding-top: 40px;
+}
+
 header {
   position: fixed;
   width: 100%;
@@ -3291,7 +3299,6 @@ header nav ul li a span {
 
 .main_swiper {
   height: calc(100vh - 120px);
-  margin-top: 120px;
   color: #858687;
   overflow: hidden;
 }
@@ -3545,6 +3552,87 @@ header nav ul li a span {
 
 .main_swiper .swiper-slide .main_swiper_panel .block .swiper-pagination-bullet-active {
   display: none;
+}
+
+.gallary .swiper_gallary {
+  padding-bottom: 5px;
+}
+
+.gallary .swiper_gallary .swiper-slide {
+  height: 680px;
+  background: no-repeat center;
+  background-size: cover;
+  position: relative;
+  color: #D9D9D9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 35px 20px;
+}
+
+.gallary .swiper_gallary .swiper-slide:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 6, 23, 0.3)), to(rgba(0, 6, 23, 0)));
+  background: linear-gradient(to top, rgba(0, 6, 23, 0.3) 0%, rgba(0, 6, 23, 0) 100%);
+}
+
+.gallary .swiper_gallary .swiper-slide:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 6, 23, 0.9)), color-stop(85%, rgba(0, 6, 23, 0.07)));
+  background: linear-gradient(to top, rgba(0, 6, 23, 0.9) 0%, rgba(0, 6, 23, 0.07) 85%);
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  border: 2px solid #762CFF;
+  margin-left: -2px;
+}
+
+.gallary .swiper_gallary .swiper-slide .content {
+  position: relative;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  z-index: 1;
+}
+
+.gallary .swiper_gallary .swiper-slide .content h2 {
+  font-family: "Roboto_Bold";
+  font-size: 31px;
+  margin: 40px auto;
+}
+
+.gallary .swiper_gallary .swiper-slide .content small {
+  font-family: "Roboto_Medium";
+  font-size: 20px;
+}
+
+.gallary .swiper_gallary .swiper-slide-active:after {
+  opacity: 1;
+}
+
+.gallary .swiper_gallary .swiper-slide-active .content {
+  opacity: 1;
 }
 
 .section_404 img {
