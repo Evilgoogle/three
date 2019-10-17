@@ -124,6 +124,21 @@ class MainController extends Controller
         return view('pages.industries', compact(''));
     }
 
+    public function about() {
+
+        return view('pages.about', compact(''));
+    }
+
+    public function catalog($url = null) {
+
+        if(isset($url)) {
+
+            $active = $url;
+            return view('pages.catolog', compact('active'));
+        }
+        return view('pages.catolog', compact(''));
+    }
+
     // Sitemaps
     public function sitemap() {
         $last_news_time = $this->last_news_time();

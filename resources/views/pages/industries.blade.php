@@ -39,16 +39,22 @@
 
     <div class="gallary page">
         <div class="contain">
-            <div class="swiper_gallary swiper-container">
-                <div class="swiper-wrapper">
-                    @foreach($items as $item)
-                        <div class="swiper-slide" style="background-image: url('/temp/{{ $item->image }}')">
-                            <div class="content">
-                                <h2>{{ $item->title }}</h2>
-                                <small>{{ $item->desc }}</small>
+            <div class="swiper_gallary">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        @foreach($items as $item)
+                            <div class="swiper-slide" style="background-image: url('/temp/{{ $item->image }}')">
+                                <div class="content">
+                                    <h2>{{ $item->title }}</h2>
+                                    <small>{{ $item->desc }}</small>
+                                </div>
                             </div>
-                        </div>
-                    @endforeach
+                        @endforeach
+                    </div>
+                </div>
+                <div class="arrows">
+                    <div class="prev swiper-button-next"></div>
+                    <div class="next swiper-button-prev"></div>
                 </div>
             </div>
         </div>

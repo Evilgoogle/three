@@ -17,6 +17,75 @@
   @include img_contain('../images/button.svg');
   display: block;
 }
+.industries_block {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: $font-Roboto_Medium;
+  .bn {
+    width: 20%;
+    position: relative;
+    @include a_reset($color-gray);
+    margin-bottom: 5px;
+    &:hover {
+      transition: $animation_easy;
+      @include a_reset($color-white);
+      .rubber {
+        transform: scale(1.15);
+        z-index: 2;
+        border-color: $color-violet;
+        .icon {
+          svg {
+            path {
+              fill: $color-white;
+            }
+          }
+        }
+      }
+    }
+    &:before {
+      content: '';
+      display: block;
+      padding-top: 60%;
+    }
+    .rubber {
+      width: 100%;
+      height: calc(100% - 4px);
+      @include position_abs;
+      border: 2px solid$color-gray;
+      border-left: 1px solid$color-gray;
+      border-right: 1px solid$color-gray;
+      background-color: $color-blue;
+      transition: $animation_easy;
+      transform: scale(1);
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+      padding: 5% 27px;
+      z-index: 1;
+      background: none;
+      .text {
+        width: 70%;
+        font-size: 18px;
+        transition: $animation_easy;
+      }
+      .icon {
+        width: 92px;
+        height: 73px;
+        margin-left: 20px;
+        svg {
+          width: 100%;
+          height: 100%;
+          @include set_contain;
+          transition: $animation_easy;
+          path {
+            fill: $color-gray;
+          }
+        }
+
+      }
+    }
+  }
+}
 // modal
 .overlay {
   z-index: 10;
@@ -56,6 +125,7 @@ header {
   font-family: $font-Roboto_Bold;
   top: 0;
   left: 0;
+  z-index: 10;
   .bar {
     height: 100%;
     background-color: $color-blue;
@@ -312,7 +382,11 @@ header {
 .gallary {
   .swiper_gallary {
     padding-bottom: 5px;
+    .swiper-container {
+      padding-bottom: 5px;
+    }
     .swiper-slide {
+      width: 25% !important;
       height: 680px;
       @include set_cover;
       position: relative;
@@ -364,6 +438,193 @@ header {
       }
       .content {
         opacity: 1;
+      }
+    }
+    .arrows {
+      width: 32%;
+      position: relative;
+      display: flex;
+      margin: 40px auto;
+      .prev {
+        width: 25px;
+        height: 44px;
+        @include img_contain("../images/ico_grayarrow.png");
+        transform: rotate(90deg);
+      }
+      .next {
+        width: 25px;
+        height: 44px;
+        @include img_contain("../images/ico_grayarrow.png");
+        transform: scale(1, -1);
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}
+.about {
+  font-size: 20px;
+  color: $color-white;
+  padding-top: 5%;
+  .logo {
+    width: 250px;
+    height: auto;
+    margin: auto;
+    display: block;
+    animation: anm_main_slider_text 3s linear infinite;
+  }
+  .text_1, .text_2 {
+    @include cke_reset(20, $font-Roboto_Medium);
+  }
+  .text_1 {
+    margin: 5% 0;
+  }
+  .text_2 {
+    margin: 3% 0;
+  }
+  .text_gray {
+    @include cke_reset(20, $font-Roboto_Medium);
+    color: $color-gray;
+    margin: 4% 0;
+  }
+  .mission {
+    .head {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      .line {
+        width: 100%;
+        height: 2px;
+        background-color: $color-violet;
+      }
+      .box {
+        width: 145px;
+        height: 55px;
+        position: absolute;
+        border: 2px solid$color-violet;
+        color: $color-gray;
+        font-family: $font-Roboto_Bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-blue;
+        font-size: 30px;
+      }
+    }
+    .contain {
+      padding: 3.7% 0;
+      font-family: $font-Roboto_Bold;
+      font-size: 32px;
+      text-align: center;
+    }
+  }
+}
+.catalog {
+  .industries_block {
+    .bn {
+      &:before {
+        padding-top: 52%;
+      }
+      &:hover {
+        transition: $animation_easy;
+        @include a_reset($color-white);
+        .rubber {
+          transform: scale(1.01);
+          z-index: 2;
+          border-color: $color-violet;
+          border-right: 1px solid$color-violet;
+          background: linear-gradient(to right, rgba(0,6,23,1) 0%, rgba(7,15,36,1) 32%, rgba(65,77,89,1) 100%);
+          .text {
+            color: $color-white;
+          }
+          .icon {
+            svg {
+              path {
+                fill: $color-white;
+              }
+            }
+          }
+        }
+      }
+      .rubber {
+        background-color: #FFFFFF;
+        border: 1px solid $color-gray;
+        border-left: 0.5px solid $color-gray;
+        border-right: none;
+        .text {
+          color: $color-blue;
+        }
+        .icon {
+          svg {
+            path {
+              fill: $color-blue;
+            }
+          }
+        }
+      }
+    }
+    .active {
+      transition: $animation_easy;
+      @include a_reset($color-white);
+      .rubber {
+        transform: scale(1.01);
+        z-index: 2;
+        border-color: $color-violet;
+        border-right: 1px solid$color-violet;
+        background: linear-gradient(to right, rgba(0,6,23,1) 0%, rgba(7,15,36,1) 32%, rgba(65,77,89,1) 100%);
+        .text {
+          color: $color-white;
+        }
+        .icon {
+          svg {
+            path {
+              fill: $color-white;
+            }
+          }
+        }
+      }
+    }
+  }
+  .block {
+    margin-top: 5%;
+    font-family: $font-Roboto_Medium;
+    .info {
+      color: $color-gray;
+      font-size: 18px;
+    }
+    .bn {
+      font-size: 20px;
+      display: flex;
+      margin: 20px 0;
+      @include a_reset($color-white);
+      &:hover {
+        .left {
+          .line {
+            background-color: $color-violet;
+          }
+        }
+      }
+      .left {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        .line {
+          width: 100%;
+          height: 2px;
+          position: absolute;
+          background-color: $color-gray;
+          transition: $animation_easy;
+        }
+        .text {
+          background-color: $color-blue;
+          padding-right: 45px;
+          position: relative;
+          z-index: 1;
+        }
+      }
+      .right {
+        width: 40px;
       }
     }
   }

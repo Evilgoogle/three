@@ -79,7 +79,7 @@ $(document).ready(function () {
    });
 
    // Gallary
-    var swiper_gallary = new Swiper('.swiper_gallary', {
+    var swiper_gallary = new Swiper('.swiper_gallary .swiper-container', {
         slidesPerView: 4,
         spaceBetween: 0,
         loop: true,
@@ -88,6 +88,10 @@ $(document).ready(function () {
         centeredSlides: true,
         keyboard: {
             enabled: true,
+        },
+        navigation: {
+            nextEl: '.next',
+            prevEl: '.prev',
         },
         mousewheel: true,
         coverflowEffect: {
