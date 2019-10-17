@@ -586,7 +586,7 @@ header {
     }
   }
   .block {
-    margin-top: 5%;
+    margin: 5% 0 3%;
     font-family: $font-Roboto_Medium;
     .info {
       color: $color-gray;
@@ -625,6 +625,169 @@ header {
       }
       .right {
         width: 40px;
+        display: flex;
+        justify-content: flex-end;
+        .icon {
+          width: 20px;
+          height: 20px;
+          @include img_contain("../images/ico_download.svg");
+        }
+      }
+    }
+    .download_all {
+      display: flex;
+      justify-content: flex-end;
+      .bn {
+        width: 220px;
+        font-size: 18px;
+        .left {
+          .text {
+            padding-right: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+.contacts {
+  margin-top: 9%;
+  height: 69vh;
+  font-family: $font-Roboto_Medium;
+  .contain {
+    position: relative;
+    height: 100%;
+  }
+  .map {
+    width: 100%;
+    height: 100%;
+    @include position_abs;
+    overflow: hidden;
+    #map {
+      width: 100%;
+      height: 100%;
+      transition: 0.5s ease-in-out;
+      transform: translateX(100%);
+      background-color: $color-gray;
+    }
+  }
+  .block {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    .header {
+      font-family: $font-Roboto_Bold;
+      font-size: 36px;
+      margin-bottom: 46px;
+    }
+    .left {
+      width: 38%;
+      .bn {
+        font-size: 24px;
+        display: flex;
+        margin: 23px 0;
+        @include a_reset($color-white);
+        &:hover {
+          .left {
+            .line {
+              background-color: $color-violet;
+            }
+            .text {
+              color: $color-white;
+            }
+          }
+          .right {
+            svg {
+              path {
+                fill: $color-violet
+              }
+            }
+          }
+        }
+        .left {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          position: relative;
+          .line {
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            background-color: $color-gray;
+            transition: $animation_easy;
+          }
+          .text {
+            background-color: $color-blue;
+            padding-right: 15px;
+            position: relative;
+            z-index: 1;
+            color: $color-gray;
+            transition: $animation_easy;
+          }
+        }
+        .right {
+          width: 40px;
+          display: flex;
+          justify-content: flex-end;
+          svg {
+            path {
+              fill: $color-gray;
+              transition: $animation_easy;
+            }
+          }
+        }
+      }
+      .js_map {
+        @include button_reset;
+        width: 250px;
+        height: 50px;
+        margin-top: 44px;
+        background: linear-gradient(to right, rgba(0,6,23,1) 0%, rgba(7,15,36,1) 32%, rgba(65,77,89,1) 100%);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: $color-white;
+        border: 2px solid$color-violet;
+        transition: $animation_easy;
+        transform: translateX(0px);
+        &:hover {
+          transform: translateX(30px);
+        }
+        .icon {
+          width: 15px;
+          height: 21px;
+          @include img_contain("../images/ico_map.svg");
+        }
+      }
+    }
+    .right {
+      width: 33%;
+      form {
+        input {
+          width: 100%;
+          color: $color-white;
+          padding: 0px 10px 7px 0;
+          border: none;
+          border-bottom: 2px solid$color-violet;
+          background: transparent;
+          margin-bottom: 30px;
+          font-size: 20px;
+          display: block;
+        }
+        .submit {
+          display: flex;
+          justify-content: flex-end;
+          button {
+            @include button_reset;
+            width: 245px;
+            height: 62px;
+            @include img_contain("../images/button.svg");
+            transition: $animation_easy;
+            transform: translateX(0px);
+            &:hover {
+              transform: translateX(30px);
+            }
+          }
+        }
       }
     }
   }

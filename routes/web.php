@@ -231,4 +231,5 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('industries', 'MainController@industries');
     Route::get('about', 'MainController@about');
     Route::get('catalog/{url?}', 'MainController@catalog');
+    Route::get('contacts', 'MainController@contacts');
 });

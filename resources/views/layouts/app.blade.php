@@ -56,7 +56,7 @@
             <li><a href="/industries">Отрасли <span></span></a></li>
             <li><a href="/about">О компании <span></span></a></li>
             <li><a href="/catalog">Каталог <span></span></a></li>
-            <li><a href="#">Контакты <span></span></a></li>
+            <li><a href="/contacts">Контакты <span></span></a></li>
         </ul>
     </nav>
 </header>

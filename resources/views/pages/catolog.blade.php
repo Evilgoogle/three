@@ -153,16 +153,22 @@
                             <div class="text">{{ $item->title }}</div>
                             <div class="line"></div>
                         </div>
-                        <div class="right"></div>
+                        <div class="right">
+                            <div class="icon"></div>
+                        </div>
                     </a>
                 @endforeach
-                <div class="bn all">
-                    <div class="left">
-                        <div class="text"></div>
-                        <div class="line"></div>
-                    </div>
-                    <a href="#" class="right"></a>
-                </div>
+                <div class="download_all">
+                    <a href="#" class="bn">
+                        <div class="left">
+                            <div class="text">Скачать все</div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="right">
+                            <div class="icon"></div>
+                        </div>
+                    </a>
+                </a>
             </a>
         </div>
     </div>

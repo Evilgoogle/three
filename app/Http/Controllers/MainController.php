@@ -139,6 +139,11 @@ class MainController extends Controller
         return view('pages.catolog', compact(''));
     }
 
+    public function contacts() {
+
+        return view('pages.contacts', compact(''));
+    }
+
     // Sitemaps
     public function sitemap() {
         $last_news_time = $this->last_news_time();
