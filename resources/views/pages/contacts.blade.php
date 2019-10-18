@@ -4,8 +4,8 @@
 
     <div class="contacts">
         <div class="contain">
-            <div class="map">
-                <div id="map"></div>
+            <div id="map" class="map">
+                <button class="js_close"></button>
             </div>
             <div class="block">
                 <div class="left">

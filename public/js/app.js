@@ -12269,6 +12269,14 @@ $(document).ready(function () {
         }
     });
 
+    // Map
+    $('.js_map').click(function () {
+        $('.map').addClass('active');
+    });
+    $('.js_close').click(function () {
+        $('.map').removeClass('active');
+    });
+
     $('.js_modal_cose').click(function () {
 
         $('#modal_buy .modal').removeClass('modal_active');

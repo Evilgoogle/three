@@ -656,24 +656,41 @@ header {
   .contain {
     position: relative;
     height: 100%;
+    overflow: hidden;
   }
   .map {
-    width: 100%;
-    height: 100%;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    transition: 0.5s ease-in-out;
+    transform: translateX(100%);
+    background-color: $color-gray;
+    position: relative;
+    border: 1px solid$color-violet;
     @include position_abs;
-    overflow: hidden;
-    #map {
-      width: 100%;
-      height: 100%;
-      transition: 0.5s ease-in-out;
-      transform: translateX(100%);
-      background-color: $color-gray;
+    z-index: 2;
+    .js_close {
+      @include button_reset;
+      width: 25px;
+      height: 25px;
+      @include img_contain("../images/ico_close.svg");
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      transition: $animation_easy;
+      transform: rotate(0deg);
+      &:hover {
+        transform: rotate(180deg);
+      }
     }
+  }
+  .active {
+    transform: translateX(0%) !important;
   }
   .block {
     display: flex;
     justify-content: space-between;
     position: relative;
+    z-index: 1;
     .header {
       font-family: $font-Roboto_Bold;
       font-size: 36px;
@@ -771,6 +788,7 @@ header {
           background: transparent;
           margin-bottom: 30px;
           font-size: 20px;
+          box-sizing: border-box;
           display: block;
         }
         .submit {
