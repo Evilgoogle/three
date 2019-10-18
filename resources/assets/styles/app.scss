@@ -10,6 +10,24 @@
   max-width: 1640px;
   width: 100%;
   margin: auto;
+  @include respond-to(w-1919) {
+    max-width: 1370px;
+  }
+  @include respond-to(w-1599) {
+    max-width: 1225px;
+  }
+  @include respond-to(w-1366) {
+    max-width: 1180px;
+  }
+  @include respond-to(w-1280) {
+    max-width: 1110px;
+  }
+  @include respond-to(w-1279) {
+    max-width: 1015px;
+  }
+  @include respond-to(w-1199) {
+    max-width: 880px;
+  }
 }
 .web_button {
   width: 325px;
@@ -113,11 +131,19 @@ body {
 }
 main {
   padding-top: 120px;
+  @include respond-to(w-1919) {
+    padding-top: 90px;
+  }
+  @include respond-to(w-1366) {
+    padding-top: 80px;
+  }
+  @include respond-to(w-1279) {
+    padding-top: 70px;
+  }
 }
 .page {
   padding-top: 40px;
 }
-
 header {
   position: fixed;
   width: 100%;
@@ -126,6 +152,15 @@ header {
   top: 0;
   left: 0;
   z-index: 10;
+  @include respond-to(w-1919) {
+    height: 90px;
+  }
+  @include respond-to(w-1366) {
+    height: 80px;
+  }
+  @include respond-to(w-1279) {
+    height: 70px;
+  }
   .bar {
     height: 100%;
     background-color: $color-blue;
@@ -137,6 +172,15 @@ header {
       .logo {
         width: 50px;
         display: block;
+        @include respond-to(w-1919) {
+          width: 45px;
+        }
+        @include respond-to(w-1280) {
+          width: 40px;
+        }
+        @include respond-to(w-1279) {
+          width: 35px;
+        }
         img {
           width: 100%;
         }
@@ -144,8 +188,10 @@ header {
       .panel {
         form {
           display: flex;
+          justify-content: flex-end;
           align-items: center;
           input {
+            width: 100%;
             opacity: 0;
             transform: translateX(10px);
             transition: $animation_time;
@@ -155,6 +201,9 @@ header {
             border-bottom: 1px solid$color-gray;
             margin-right: 20px;
             display: none;
+            @include respond-to(w-1279) {
+              width: 63%;
+            }
           }
           .active {
             opacity: 1;
@@ -176,6 +225,16 @@ header {
   nav {
     width: 72%;
     margin: -70px auto 0;
+    @include respond-to(w-1919) {
+      margin: -53px auto 0;
+    }
+    @include respond-to(w-1366) {
+      margin: -48px auto 0;
+    }
+    @include respond-to(w-1279) {
+      width: 70%;
+      margin: -44px auto 0;
+    }
     .mobile_head {
       display: none;
     }
@@ -186,15 +245,36 @@ header {
       li {
         list-style-type: none;
         margin-right: 70px;
+        @include respond-to(w-1366) {
+          margin-right: 55px;
+        }
+        @include respond-to(w-1279) {
+          margin-right: 45px;
+        }
         a {
           @include a_reset($color-gray);
           font-size: 20px;
           transition: $animation_time;
+          @include respond-to(w-1919) {
+            font-size: 17px;
+          }
+          @include respond-to(w-1366) {
+            font-size: 16px;
+          }
+          @include respond-to(w-1279) {
+            font-size: 15px;
+          }
           &:hover {
             @include a_reset($color-white);
             span {
               width: 100%;
               transform: translateX(60px);
+              @include respond-to(w-1599) {
+                transform: translateX(50px);
+              }
+              @include respond-to(w-1279) {
+                transform: translateX(40px);
+              }
             }
           }
           span {
@@ -214,6 +294,15 @@ header {
   height: calc(100vh - 120px);
   color: $color-gray;
   overflow: hidden;
+  @include respond-to(w-1919) {
+    height: calc(100vh - 90px);
+  }
+  @include respond-to(w-1366) {
+    height: calc(100vh - 80px);
+  }
+  @include respond-to(w-1279) {
+    height: calc(100vh - 70px);
+  }
   .swiper-slide {
     position: relative;
     overflow: hidden;
@@ -243,16 +332,51 @@ header {
         color: $color-white;
         font-size: 60px;
         font-family: $font-Roboto_Bold;
+        @include respond-to(w-1919) {
+          font-size: 47px;
+        }
+        @include respond-to(w-1599) {
+          font-size: 45px;
+        }
+        @include respond-to(w-1366) {
+          font-size: 40px;
+        }
+        @include respond-to(w-1280) {
+          font-size: 37px;
+        }
+        @include respond-to(w-1199) {
+          font-size: 32px;
+        }
       }
       small {
         font-size: 18px;
         font-family: $font-Roboto_Medium;
+        @include respond-to(w-1919) {
+          font-size: 17px;
+        }
+        @include respond-to(w-1599) {
+          font-size: 16px;
+        }
+        @include respond-to(w-1366) {
+          font-size: 15px;
+        }
       }
       .web_button {
         @include a_reset($color-white);
         margin-top: 40px;
         transition: 0.5s ease-out;
         transform: translateX(0);
+        @include respond-to(w-1919) {
+          width: 290px;
+        }
+        @include respond-to(w-1366) {
+          width: 250px;
+          margin-top: 28px;
+        }
+        @include respond-to(w-1199) {
+          width: 220px;
+          margin-top: 25px;
+        }
         &:hover {
           transform: translateX(30px);
         }
@@ -306,6 +430,9 @@ header {
       right: 0;
       z-index: 2;
       display: flex;
+      @include respond-to(w-1366) {
+        width: 27%;
+      }
       .arrows {
         width: 20%;
         display: flex;
@@ -333,6 +460,18 @@ header {
         font-family: $font-Roboto_Medium;
         font-size: 18px;
         color: $color-gray;
+        @include respond-to(w-1919) {
+          font-size: 17px;
+        }
+        @include respond-to(w-1599) {
+          font-size: 16px;
+        }
+        @include respond-to(w-1366) {
+          font-size: 15px;
+        }
+        @include respond-to(w-1280) {
+          font-size: 14px;
+        }
         .bn {
           width: 100%;
           height: 25%;
@@ -349,6 +488,18 @@ header {
           transform: translate3d(0, 0, 0) perspective(1000px) rotate3d(0, 1, 0, 0deg);
           transform-origin: right center;
           transition: $animation_easy;
+          @include respond-to(w-1919) {
+            padding: 0 30px;
+          }
+          @include respond-to(w-1366) {
+            padding: 0 27px;
+          }
+          @include respond-to(w-1279) {
+            padding: 0 24px;
+          }
+          @include respond-to(w-1199) {
+            padding: 0px 22px;
+          }
           &:hover {
             transform: translate3d(0, 0, 0) perspective(1000px) rotate3d(0, 1, 0, -20deg);
             &:before {
@@ -368,12 +519,34 @@ header {
             width: 75%;
             margin-right: 25px;
             text-align: left;
+            @include respond-to(w-1599) {
+              margin-right: 15px;
+            }
+            @include respond-to(w-1199) {
+              margin-right: 12px;
+            }
           }
           .icon {
             width: 110px;
             height: 90px;
             @include set_contain;
             margin-left: 10px;
+            @include respond-to(w-1919) {
+              width: 90px;
+              height: 80px;
+            }
+            @include respond-to(w-1599) {
+              width: 80px;
+              height: 70px;
+            }
+            @include respond-to(w-1279) {
+              width: 74px;
+              height: 64px;
+            }
+            @include respond-to(w-1199) {
+              width: 70px;
+              height: 60px;
+            }
           }
         }
         .swiper-pagination-bullet-active {

@@ -46,13 +46,13 @@
 }
 @keyframes webkit_anm_main_slider_fon {
   0% {
-    transform: perspective(2000px) rotateY(0deg) scale(1) /*translateZ(-100px) translateX(-100px)*/ translate3d(-100px, 30px, -100px);
+    transform: perspective(2000px) rotateY(0deg) scale(1) translate3d(-100px, 30px, -100px);
   }
   50% {
-    transform: perspective(2000px) rotateY(9deg) scale(0.95) /*translateZ(-100px) translateX(-100px)*/ translate3d(-100px, 30px, -100px);
+    transform: perspective(2000px) rotateY(9deg) scale(0.95) translate3d(-100px, 30px, -100px);
   }
   100% {
-    transform: perspective(2000px) rotateY(0deg) scale(1) /*translateZ(-100px) translateX(-100px)*/ translate3d(-100px, 30px, -100px);
+    transform: perspective(2000px) rotateY(0deg) scale(1) translate3d(-100px, 30px, -100px);
   }
 }
 
