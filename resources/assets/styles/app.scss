@@ -10,6 +10,7 @@
   max-width: 1640px;
   width: 100%;
   margin: auto;
+  box-sizing: border-box;
   @include respond-to(w-1919) {
     max-width: 1370px;
   }
@@ -27,6 +28,15 @@
   }
   @include respond-to(w-1199) {
     max-width: 880px;
+  }
+  @include respond-to(w-1023) {
+    max-width: 100%;
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+  @include respond-to(w-799) {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 .web_button {
@@ -140,6 +150,9 @@ main {
   @include respond-to(w-1279) {
     padding-top: 70px;
   }
+  @include respond-to(w-1023) {
+    padding-top: 60px;
+  }
 }
 .page {
   padding-top: 40px;
@@ -161,9 +174,15 @@ header {
   @include respond-to(w-1279) {
     height: 70px;
   }
+  @include respond-to(w-1023) {
+    height: auto;
+  }
   .bar {
     height: 100%;
     background-color: $color-blue;
+    @include respond-to(w-1023) {
+      height: 60px;
+    }
     .contain {
       height: 100%;
       display: flex;
@@ -190,6 +209,9 @@ header {
           display: flex;
           justify-content: flex-end;
           align-items: center;
+          @include respond-to(w-1023) {
+            display: none;
+          }
           input {
             width: 100%;
             opacity: 0;
@@ -217,7 +239,14 @@ header {
           }
         }
         .js_mobile_nav {
+          @include button_reset;
+          width: 22px;
+          height: 14px;
+          @include img_contain("../images/mobile_nav.svg");
           display: none;
+          @include respond-to(w-1023) {
+            display: block;
+          }
         }
       }
     }
@@ -225,6 +254,7 @@ header {
   nav {
     width: 72%;
     margin: -70px auto 0;
+    transition: $animation_easy;
     @include respond-to(w-1919) {
       margin: -53px auto 0;
     }
@@ -235,13 +265,49 @@ header {
       width: 70%;
       margin: -44px auto 0;
     }
+    @include respond-to(w-1023) {
+      width: 100%;
+      height: 100vh;
+      transform: translateX(100%);
+      overflow: auto;
+      background-color: $color-blue;
+      margin: 0;
+      @include position_abs;
+    }
     .mobile_head {
       display: none;
+      @include respond-to(w-1023) {
+        display: block;
+      }
+      .contain {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        .logo {
+          width: 40px;
+          display: block;
+          img {
+            width: 100%;
+          }
+        }
+        .js_close_nav {
+          @include button_reset;
+          width: 18px;
+          height: 18px;
+          @include img_contain("../images/nav_close.svg");
+        }
+      }
     }
     ul {
       margin: 0;
       padding: 0;
       display: flex;
+      @include respond-to(w-1023) {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 7%;
+      }
       li {
         list-style-type: none;
         margin-right: 70px;
@@ -250,6 +316,10 @@ header {
         }
         @include respond-to(w-1279) {
           margin-right: 45px;
+        }
+        @include respond-to(w-1023) {
+          margin-right: 0;
+          margin-bottom: 7%;
         }
         a {
           @include a_reset($color-gray);
@@ -263,6 +333,9 @@ header {
           }
           @include respond-to(w-1279) {
             font-size: 15px;
+          }
+          @include respond-to(w-1023) {
+            font-size: 20px;
           }
           &:hover {
             @include a_reset($color-white);
@@ -284,10 +357,16 @@ header {
             margin-top: 6px;
             transform: translateX(0px);
             transition: 0.4s ease-in-out;
+            @include respond-to(w-1023) {
+              display: none;
+            }
           }
         }
       }
     }
+  }
+  .active_nav {
+    transform: translateX(0) !important;
   }
 }
 .main_swiper {
@@ -302,6 +381,9 @@ header {
   }
   @include respond-to(w-1279) {
     height: calc(100vh - 70px);
+  }
+  @include respond-to(w-1023) {
+    height: calc(100vh - 60px);
   }
   .swiper-slide {
     position: relative;
@@ -322,12 +404,24 @@ header {
       height: 100%;
       z-index: 1;
       position: relative;
+      @media only screen and (orientation: portrait) {
+        height: 80%;
+      }
     }
 
     .content {
       width: 50%;
       -webkit-animation: webkit_anm_main_slider_text 10s linear infinite;
       -moz-animation: moz_anm_main_slider_text 10s linear infinite;
+      @include respond-to(w-1023) {
+        width: 60%;
+      }
+      @include respond-to(w-799) {
+        width: 70%;
+      }
+      @media only screen and (orientation: portrait) {
+        width: 80%;
+      }
       h2 {
         color: $color-white;
         font-size: 60px;
@@ -347,6 +441,12 @@ header {
         @include respond-to(w-1199) {
           font-size: 32px;
         }
+        @include respond-to(w-1023) {
+          font-size: 23px;
+        }
+        @include respond-to(w-799) {
+          font-size: 19px;
+        }
       }
       small {
         font-size: 18px;
@@ -359,6 +459,12 @@ header {
         }
         @include respond-to(w-1366) {
           font-size: 15px;
+        }
+        @include respond-to(w-1023) {
+          font-size: 14px;
+        }
+        @include respond-to(w-799) {
+          font-size: 13px;
         }
       }
       .web_button {
@@ -376,6 +482,16 @@ header {
         @include respond-to(w-1199) {
           width: 220px;
           margin-top: 25px;
+        }
+        @include respond-to(w-1023) {
+          width: 200px;
+          margin-top: 15px;
+        }
+        @include respond-to(w-799) {
+          margin-top: 10px;
+        }
+        @include respond-to(w-799) {
+          width: 190px;
         }
         &:hover {
           transform: translateX(30px);
@@ -401,6 +517,9 @@ header {
           margin-left: -5%;
           background-position: left top;
           background-size: contain;
+          @media only screen and (orientation: portrait) {
+            transform: scale(2.2) !important;
+          }
         }
       }
     }
@@ -408,7 +527,7 @@ header {
       width: 100%;
       height: 100%;
       @include position_abs;
-      overflow: hidden;
+      //overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -418,6 +537,25 @@ header {
         height: 100%;
         background: right center no-repeat;
         background-size: contain;
+        @media only screen and (orientation: portrait) {
+          width: 100%;
+          height: 45%;
+          background-size: cover;
+          margin: 0 -70% -65% 0;
+        }
+        @media only screen and (orientation: portrait) and (max-height: 1300px) {
+          margin: 0 -50% -42% 0;
+          height: 55%;
+        }
+        @media only screen and (orientation: portrait) and (max-height: 1000px) {
+          height: 40%;
+        }
+        @media only screen and (orientation: portrait) and (max-height: 800px) {
+          height: 45%;
+        }
+        @media only screen and (orientation: portrait) and (max-height: 600px) {
+          height: 50%;
+        }
       }
     }
 
@@ -433,11 +571,27 @@ header {
       @include respond-to(w-1366) {
         width: 27%;
       }
+      @include respond-to(w-1023) {
+        width: 30%;
+      }
+      @media only screen and (orientation: portrait) {
+        height: 20%;
+        position: static;
+        width: 100%;
+        flex-direction: column;
+      }
       .arrows {
         width: 20%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        @media only screen and (orientation: portrait) {
+          width: 100%;
+          height: 80px;
+          flex-direction: row;
+          padding: 0 40px;
+          box-sizing: border-box;
+        }
         .swiper-button-next, .swiper-button-prev {
           position: static;
         }
@@ -446,6 +600,13 @@ header {
           height: 35px;
           @include img_contain("../images/ico_grayarrow.png");
           margin-top: 50px;
+          @include respond-to(w-1023) {
+            margin-top: 20px;
+          }
+          @media only screen and (orientation: portrait) {
+            margin-top: 0;
+            transform: rotate(-90deg);
+          }
         }
         .next {
           width: 20px;
@@ -453,6 +614,14 @@ header {
           @include img_contain("../images/ico_grayarrow.png");
           transform: scale(1, -1);
           margin-bottom: 50px;
+          @include respond-to(w-1023) {
+            margin-bottom: 20px;
+          }
+          @media only screen and (orientation: portrait) {
+            margin-bottom: 0;
+            transform: rotate(90deg);
+            margin-top: 0;
+          }
         }
       }
       .block {
@@ -471,6 +640,14 @@ header {
         }
         @include respond-to(w-1280) {
           font-size: 14px;
+        }
+        @include respond-to(w-1023) {
+          font-size: 13px;
+        }
+        @media only screen and (orientation: portrait) {
+          display: flex;
+          width: 100%;
+          height: 100%;
         }
         .bn {
           width: 100%;
@@ -500,10 +677,22 @@ header {
           @include respond-to(w-1199) {
             padding: 0px 22px;
           }
+          @include respond-to(w-1023) {
+            padding: 0px 15px;
+          }
+          @media only screen and (orientation: portrait) {
+            height: 100%;
+          }
           &:hover {
             transform: translate3d(0, 0, 0) perspective(1000px) rotate3d(0, 1, 0, -20deg);
+            @include respond-to(w-799) {
+              transform: translate3d(0, 0, 0) perspective(1000px) rotate3d(0, 1, 0, 0deg);
+            }
             &:before {
               opacity: 1;
+              @include respond-to(w-799) {
+                opacity: 0;
+              }
             }
           }
           &:before {
@@ -524,6 +713,13 @@ header {
             }
             @include respond-to(w-1199) {
               margin-right: 12px;
+            }
+            @include respond-to(w-1023) {
+              width: 70%;
+              margin-right: 8px;
+            }
+            @include respond-to(w-799) {
+              display: none;
             }
           }
           .icon {
@@ -546,6 +742,14 @@ header {
             @include respond-to(w-1199) {
               width: 70px;
               height: 60px;
+            }
+            @include respond-to(w-1023) {
+              width: 50px;
+              height: 40px;
+            }
+            @include respond-to(w-799) {
+              width: 100%;
+              height: 50px;
             }
           }
         }

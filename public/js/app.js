@@ -12185,6 +12185,12 @@ var Parallax = __webpack_require__("./node_modules/parallax-js/dist/parallax.js"
 
 $('input.phone').inputmask("+7 (999) 999 9999");
 
+/* Прослушка ориентаций экрана */
+var mql = window.matchMedia("(orientation: portrait)");
+mql.addListener(function (m) {
+    window.location = location.pathname;
+});
+
 $(document).ready(function () {
 
     // nav search
@@ -12205,9 +12211,13 @@ $(document).ready(function () {
     });
 
     // main swiper
+    var orientation = 'vertical';
+    if (window.matchMedia("(orientation: portrait)").matches) {
+        orientation = 'horizontal';
+    }
     var main_swiper_panel = $('.main_swiper_panel .block').data('blocks');
     var main_swiper = new Swiper('.main_swiper', {
-        direction: 'vertical',
+        direction: orientation,
         pagination: {
             el: '.main_swiper_panel .block',
             clickable: true,
@@ -12267,6 +12277,16 @@ $(document).ready(function () {
             modifier: 1,
             slideShadows: true
         }
+    });
+
+    // Mobile nav
+    $('.js_mobile_nav').click(function () {
+
+        $('nav').addClass('active_nav');
+    });
+    $('.js_close_nav').click(function () {
+
+        $('nav').removeClass('active_nav');
     });
 
     // Map
