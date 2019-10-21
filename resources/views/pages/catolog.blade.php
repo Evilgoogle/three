@@ -136,14 +136,16 @@
     <div class="catalog page">
         <div class="contain">
             <div class="industries_block">
-                @foreach($main as $item)
-                    <a href="{{ $item->url }}" class="bn">
-                        <div class="rubber">
-                            <div class="text">{{ $item->title }}</div>
-                            <div class="icon">{!!  file_get_contents(asset('/temp/'.$item->icon)) !!}</div>
-                        </div>
-                    </a>
-                @endforeach
+                <div class="contain">
+                    @foreach($main as $item)
+                        <a href="{{ $item->url }}" class="bn">
+                            <div class="rubber">
+                                <div class="text">{{ $item->title }}</div>
+                                <div class="icon">{!!  file_get_contents(asset('/temp/'.$item->icon)) !!}</div>
+                            </div>
+                        </a>
+                    @endforeach
+                </div>
             </div>
             <div class="block">
                 <div class="info">Кабельно-проводниковая продукция:</div>

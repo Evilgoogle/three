@@ -122,6 +122,9 @@
         width: 70%;
         font-size: 18px;
         transition: $animation_easy;
+        @include respond-to(w-1599) {
+          font-size: 15px;
+        }
         @include respond-to(w-1366) {
           font-size: 14px;
         }
@@ -1322,6 +1325,10 @@ header {
       display: flex;
       margin: 20px 0;
       @include a_reset($color-white);
+      @include respond-to(w-1599) {
+        font-size: 17px;
+        margin: 16px 0;
+      }
       &:hover {
         .left {
           .line {
