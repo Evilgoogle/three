@@ -31,7 +31,7 @@
 </head>
 <body>
 
-{{--<header>
+<header>
     <div class="bar">
         <div class="contain">
             <a href="/" class="logo"><img src="/images/logo.svg" alt="asken.kz"></a>
@@ -59,7 +59,7 @@
             <li><a href="/contacts">Контакты <span></span></a></li>
         </ul>
     </nav>
-</header>--}}
+</header>
 <main>
     @yield('app_content')
 </main>

@@ -46,14 +46,31 @@
   display: block;
 }
 .industries_block {
-  display: flex;
-  flex-wrap: wrap;
-  font-family: $font-Roboto_Medium;
+  @include respond-to(w-479) {
+    .contain {
+      padding: 0;
+    }
+  }
+  .contain {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: $font-Roboto_Medium;
+  }
   .bn {
     width: 20%;
     position: relative;
     @include a_reset($color-gray);
     margin-bottom: 5px;
+    @include respond-to(w-1023) {
+      width: 33.3%;
+    }
+    @include respond-to(w-639) {
+      width: 50%;
+    }
+    @include respond-to(w-479) {
+      width: 100%;
+      margin-bottom: -2px;
+    }
     &:hover {
       transition: $animation_easy;
       @include a_reset($color-white);
@@ -74,6 +91,9 @@
       content: '';
       display: block;
       padding-top: 60%;
+      @include respond-to(w-479) {
+        display: none;
+      }
     }
     .rubber {
       width: 100%;
@@ -82,7 +102,6 @@
       border: 2px solid$color-gray;
       border-left: 1px solid$color-gray;
       border-right: 1px solid$color-gray;
-      background-color: $color-blue;
       transition: $animation_easy;
       transform: scale(1);
       display: flex;
@@ -90,16 +109,49 @@
       box-sizing: border-box;
       padding: 5% 27px;
       z-index: 1;
-      background: none;
+      background: $color-blue;
+      @include respond-to(w-1366) {
+        padding: 5% 15px;
+      }
+      @include respond-to(w-479) {
+        position: static;
+        padding: 5% 40px;
+        height: auto;
+      }
       .text {
         width: 70%;
         font-size: 18px;
         transition: $animation_easy;
+        @include respond-to(w-1366) {
+          font-size: 14px;
+        }
+        @include respond-to(w-1279) {
+          font-size: 11px;
+        }
+        @include respond-to(w-1023) {
+          font-size: 14px;
+        }
+        @include respond-to(w-799) {
+          font-size: 12px;
+        }
+        @include respond-to(w-639) {
+          font-size: 14px;
+        }
       }
       .icon {
         width: 92px;
         height: 73px;
         margin-left: 20px;
+        @include respond-to(w-1279) {
+          margin-left: 10px;
+        }
+        @include respond-to(w-1023) {
+          margin-left: 15px;
+        }
+        @include respond-to(w-479) {
+          width: 60px;
+          height: 40px;
+        }
         svg {
           width: 100%;
           height: 100%;
@@ -159,6 +211,12 @@ main {
 }
 .page {
   padding-top: 40px;
+  @include respond-to(w-1366) {
+    padding-top: 30px;
+  }
+  @include respond-to(w-1280) {
+    padding-top: 20px;
+  }
 }
 header {
   position: fixed;
@@ -167,7 +225,7 @@ header {
   font-family: $font-Roboto_Bold;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 20;
   @include respond-to(w-1919) {
     height: 90px;
   }
@@ -472,9 +530,11 @@ header {
         @include respond-to(w-799) {
           font-size: 19px;
         }
+        @media only screen and (orientation: landscape) and (max-width: 719px) {
+          margin: 10px auto 5px;
+        }
         @media only screen and (orientation: landscape) and (max-width: 639px) {
           font-size: 17px;
-          margin: 10px auto 5px;
         }
         @include respond-to(w-479) {
           font-size: 18px;
@@ -538,8 +598,10 @@ header {
         @include respond-to(w-799) {
           width: 190px;
         }
-        @media only screen and (orientation: landscape) and (max-width: 639px) {
-          height: 45px;
+        @media only screen and (orientation: landscape) and (max-width: 719px) {
+          margin-top: 8px;
+          width: 140px;
+          height: 35px;
         }
         &:hover {
           transform: translateX(30px);
@@ -846,13 +908,18 @@ header {
   }
 }
 .gallary {
+  .contain {
+    @include respond-to(w-639) {
+      padding: 0;
+      overflow: hidden;
+    }
+  }
   .swiper_gallary {
     padding-bottom: 5px;
     .swiper-container {
       padding-bottom: 5px;
     }
     .swiper-slide {
-      width: 25% !important;
       height: 680px;
       @include set_cover;
       position: relative;
@@ -862,6 +929,21 @@ header {
       justify-content: flex-end;
       box-sizing: border-box;
       padding: 35px 20px;
+      @include respond-to(w-1919) {
+        height: 580px;
+      }
+      @include respond-to(w-1366) {
+        height: 475px;
+      }
+      @include respond-to(w-1280) {
+        height: 440px;
+      }
+      @include respond-to(w-1023) {
+        height: 55vh;
+      }
+      @include respond-to(w-639) {
+        padding: 20px 20px;
+      }
       &:before {
         content: '';
         width: 100%;
@@ -891,14 +973,56 @@ header {
           font-family: $font-Roboto_Bold;
           font-size: 31px;
           margin: 40px auto;
+          @include respond-to(w-1599) {
+            font-size: 25px;
+            margin: 30px auto;
+          }
+          @include respond-to(w-1366) {
+            font-size: 23px;
+            margin: 25px auto;
+          }
+          @include respond-to(w-1280) {
+            font-size: 20px;
+          }
+          @include respond-to(w-1279) {
+            font-size: 17px;
+            margin: 18px auto;
+          }
+          @include respond-to(w-639) {
+            font-size: 16px;
+            margin: 15px auto;
+          }
+          @include respond-to(w-479) {
+            font-size: 15px;
+            margin: 12px auto;
+          }
         }
         small {
           font-family: $font-Roboto_Medium;
           font-size: 20px;
+          @include respond-to(w-1599) {
+            font-size: 17px;
+          }
+          @include respond-to(w-1280) {
+            font-size: 16px;
+          }
+          @include respond-to(w-1279) {
+            font-size: 14px;
+          }
+          @include respond-to(w-639) {
+            font-size: 13px;
+          }
+          @include respond-to(w-479) {
+            font-size: 12px;
+          }
         }
       }
     }
     .swiper-slide-active {
+      @include respond-to(w-639) {
+        width: 60% !important;
+        transform: translateX(-7%) !important;
+      }
       &:after {
         opacity: 1;
       }
@@ -911,11 +1035,21 @@ header {
       position: relative;
       display: flex;
       margin: 40px auto;
+      @include respond-to(w-1023) {
+        width: 100%;
+      }
       .prev {
         width: 25px;
         height: 44px;
         @include img_contain("../images/ico_grayarrow.png");
         transform: rotate(90deg);
+        @include respond-to(w-639) {
+          margin-right: 15px;
+        }
+        @include respond-to(w-479) {
+          width: 13px;
+          height: 25px;
+        }
       }
       .next {
         width: 25px;
@@ -923,6 +1057,13 @@ header {
         @include img_contain("../images/ico_grayarrow.png");
         transform: scale(1, -1);
         transform: rotate(-90deg);
+        @include respond-to(w-639) {
+          margin-left: 15px;
+        }
+        @include respond-to(w-479) {
+          width: 13px;
+          height: 25px;
+        }
       }
     }
   }
@@ -931,26 +1072,102 @@ header {
   font-size: 20px;
   color: $color-white;
   padding-top: 5%;
+  @include respond-to(w-1919) {
+    font-size: 18px;
+  }
+  @include respond-to(w-1366) {
+    font-size: 16px;
+  }
+  @include respond-to(w-1279) {
+    font-size: 15px;
+  }
+  @include respond-to(w-1023) {
+    font-size: 14px;
+  }
+  @include respond-to(w-479) {
+    font-size: 13px;
+  }
   .logo {
     width: 250px;
     height: auto;
     margin: auto;
     display: block;
     animation: anm_main_slider_text 3s linear infinite;
+    @include respond-to(w-1919) {
+      width: 220px;
+    }
+    @include respond-to(w-1599) {
+      width: 200px;
+    }
+    @include respond-to(w-1279) {
+      width: 180px;
+    }
+    @include respond-to(w-479) {
+      width: 170px;
+    }
   }
   .text_1, .text_2 {
     @include cke_reset(20, $font-Roboto_Medium);
+    @include respond-to(w-1919) {
+      @include cke_reset(18, $font-Roboto_Medium);
+    }
+    @include respond-to(w-1366) {
+      @include cke_reset(16, $font-Roboto_Medium);
+    }
+    @include respond-to(w-1279) {
+      @include cke_reset(15, $font-Roboto_Medium);
+    }
+    @include respond-to(w-1023) {
+      @include cke_reset(14, $font-Roboto_Medium);
+    }
+    @include respond-to(w-479) {
+      @include cke_reset(13, $font-Roboto_Medium);
+    }
   }
   .text_1 {
     margin: 5% 0;
+    @include respond-to(w-639) {
+      margin: 11% 0;
+    }
+    @include respond-to(w-479) {
+      margin: 25% 0;
+    }
   }
   .text_2 {
     margin: 3% 0;
+    @include respond-to(w-639) {
+      margin: 7% 0 3%;
+    }
+    @include respond-to(w-479) {
+      margin: 14% 0 3%;
+    }
   }
   .text_gray {
     @include cke_reset(20, $font-Roboto_Medium);
     color: $color-gray;
     margin: 4% 0;
+    @include respond-to(w-1919) {
+      @include cke_reset(18, $font-Roboto_Medium);
+    }
+    @include respond-to(w-1366) {
+      @include cke_reset(16, $font-Roboto_Medium);
+    }
+    @include respond-to(w-1279) {
+      @include cke_reset(15, $font-Roboto_Medium);
+    }
+    @include respond-to(w-1023) {
+      @include cke_reset(14, $font-Roboto_Medium);
+    }
+    @include respond-to(w-799) {
+      margin: 9% 0;
+    }
+    @include respond-to(w-639) {
+      margin: 13% 0;
+    }
+    @include respond-to(w-479) {
+      margin: 19% 0;
+      @include cke_reset(13, $font-Roboto_Medium);
+    }
   }
   .mission {
     .head {
@@ -975,6 +1192,19 @@ header {
         align-items: center;
         background-color: $color-blue;
         font-size: 30px;
+        @include respond-to(w-1919) {
+          width: 145px;
+          height: 40px;
+          font-size: 24px
+        }
+        @include respond-to(w-1279) {
+          width: 135px;
+          height: 30px;
+          font-size: 20px;
+        }
+        @include respond-to(w-479) {
+          font-size: 18px;
+        }
       }
     }
     .contain {
@@ -982,6 +1212,35 @@ header {
       font-family: $font-Roboto_Bold;
       font-size: 32px;
       text-align: center;
+      @include respond-to(w-1919) {
+        font-size: 28px;
+      }
+      @include respond-to(w-1599) {
+        font-size: 26px;
+      }
+      @include respond-to(w-1366) {
+        font-size: 24px;
+      }
+      @include respond-to(w-1279) {
+        font-size: 19px;
+      }
+      @include respond-to(w-1023) {
+        font-size: 16px;
+      }
+      @include respond-to(w-799) {
+        padding: 6.1% 0;
+      }
+      @include respond-to(w-639) {
+        padding: 8.7% 0;
+        width: 90%;
+        margin: auto;
+      }
+      @include respond-to(w-479) {
+        padding: 12% 0 9%;
+        width: 85%;
+        margin: auto;
+        font-size: 17px;
+      }
     }
   }
 }

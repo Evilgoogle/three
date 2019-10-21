@@ -12255,8 +12255,14 @@ $(document).ready(function () {
     });
 
     // Gallary
+    var gal_slides = 4;
+    var gal_stretch = 0;
+    if ($clientWidht < 1024) {
+        gal_slides = 2;
+        gal_stretch = 40;
+    }
     var swiper_gallary = new Swiper('.swiper_gallary .swiper-container', {
-        slidesPerView: 4,
+        slidesPerView: gal_slides,
         spaceBetween: 0,
         loop: true,
         effect: 'coverflow',
@@ -12272,7 +12278,7 @@ $(document).ready(function () {
         mousewheel: true,
         coverflowEffect: {
             rotate: 0,
-            stretch: 0,
+            stretch: gal_stretch,
             depth: 140,
             modifier: 1,
             slideShadows: true
