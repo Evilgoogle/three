@@ -153,6 +153,9 @@ main {
   @include respond-to(w-1023) {
     padding-top: 60px;
   }
+  @media only screen and (orientation: landscape) and (max-width: 639px) {
+    padding-top: 40px;
+  }
 }
 .page {
   padding-top: 40px;
@@ -182,6 +185,9 @@ header {
     background-color: $color-blue;
     @include respond-to(w-1023) {
       height: 60px;
+    }
+    @media only screen and (orientation: landscape) and (max-width: 639px) {
+      height: 40px;
     }
     .contain {
       height: 100%;
@@ -308,6 +314,9 @@ header {
         text-align: center;
         margin-top: 7%;
       }
+      @media only screen and (orientation: landscape) and (max-width: 639px) {
+        margin-top: 4%;
+      }
       li {
         list-style-type: none;
         margin-right: 70px;
@@ -320,6 +329,9 @@ header {
         @include respond-to(w-1023) {
           margin-right: 0;
           margin-bottom: 7%;
+        }
+        @media only screen and (orientation: landscape) and (max-width: 639px) {
+          margin-bottom: 5%;
         }
         a {
           @include a_reset($color-gray);
@@ -336,6 +348,9 @@ header {
           }
           @include respond-to(w-1023) {
             font-size: 20px;
+          }
+          @media only screen and (orientation: landscape) and (max-width: 639px) {
+            font-size: 17px;
           }
           &:hover {
             @include a_reset($color-white);
@@ -385,9 +400,13 @@ header {
   @include respond-to(w-1023) {
     height: calc(100vh - 60px);
   }
+  @media only screen and (orientation: landscape) and (max-width: 639px) {
+    height: calc(100vh - 40px);
+  }
   .swiper-slide {
     position: relative;
     overflow: hidden;
+    height: 100% !important;
     &:before {
       content: '';
       width: 100%;
@@ -422,6 +441,12 @@ header {
       @media only screen and (orientation: portrait) {
         width: 80%;
       }
+      @include respond-to(w-639) {
+        width: 75%;
+      }
+      @media only screen and (orientation: portrait) and (max-width: 639px) {
+        width: 100%;
+      }
       h2 {
         color: $color-white;
         font-size: 60px;
@@ -447,6 +472,16 @@ header {
         @include respond-to(w-799) {
           font-size: 19px;
         }
+        @media only screen and (orientation: landscape) and (max-width: 639px) {
+          font-size: 17px;
+          margin: 10px auto 5px;
+        }
+        @include respond-to(w-479) {
+          font-size: 18px;
+        }
+        @media only screen and (orientation: portrait) and (max-width: 340px) {
+          font-size: 16px;
+        }
       }
       small {
         font-size: 18px;
@@ -465,6 +500,16 @@ header {
         }
         @include respond-to(w-799) {
           font-size: 13px;
+        }
+        @media only screen and (orientation: landscape) and (max-width: 639px) {
+          font-size: 12px;
+        }
+        @media only screen and (orientation: portrait) and (max-width: 479px) {
+          width: 80%;
+          display: block;
+        }
+        @media only screen and (orientation: portrait) and (max-width: 340px) {
+          font-size: 12px;
         }
       }
       .web_button {
@@ -493,6 +538,9 @@ header {
         @include respond-to(w-799) {
           width: 190px;
         }
+        @media only screen and (orientation: landscape) and (max-width: 639px) {
+          height: 45px;
+        }
         &:hover {
           transform: translateX(30px);
         }
@@ -519,6 +567,11 @@ header {
           background-size: contain;
           @media only screen and (orientation: portrait) {
             transform: scale(2.2) !important;
+          }
+          @media only screen and (orientation: portrait) and (max-width: 639px) {
+            margin-top: 10%;
+            margin-left: -20%;
+            transform: scale(2.5) !important;
           }
         }
       }
@@ -556,6 +609,9 @@ header {
         @media only screen and (orientation: portrait) and (max-height: 600px) {
           height: 50%;
         }
+        @media only screen and (orientation: portrait) and (max-width: 479px) and (max-height: 1023px) {
+          margin: 0 -70% -75% 0;
+        }
       }
     }
 
@@ -580,6 +636,9 @@ header {
         width: 100%;
         flex-direction: column;
       }
+      @media only screen and (orientation: landscape) and (max-width: 639px) {
+        width: 25%;
+      }
       .arrows {
         width: 20%;
         display: flex;
@@ -591,6 +650,12 @@ header {
           flex-direction: row;
           padding: 0 40px;
           box-sizing: border-box;
+        }
+        @media only screen and (orientation: landscape) and (max-width: 639px) {
+          width: 25%;
+        }
+        @media only screen and (orientation: portrait) and (max-width: 340px) {
+          height: 50px;
         }
         .swiper-button-next, .swiper-button-prev {
           position: static;
@@ -607,6 +672,9 @@ header {
             margin-top: 0;
             transform: rotate(-90deg);
           }
+          @include respond-to(w-639) {
+            margin-top: 5px;
+          }
         }
         .next {
           width: 20px;
@@ -621,6 +689,9 @@ header {
             margin-bottom: 0;
             transform: rotate(90deg);
             margin-top: 0;
+          }
+          @include respond-to(w-639) {
+            margin-bottom: 5px;
           }
         }
       }
@@ -648,6 +719,9 @@ header {
           display: flex;
           width: 100%;
           height: 100%;
+        }
+        @media only screen and (orientation: landscape) and (max-width: 639px) {
+          width: 75%;
         }
         .bn {
           width: 100%;
@@ -750,6 +824,17 @@ header {
             @include respond-to(w-799) {
               width: 100%;
               height: 50px;
+            }
+            @media only screen and (orientation: landscape) and (max-width: 639px) {
+              height: 40px;
+            }
+            @media only screen and (orientation: portrait) and (max-width: 340px) {
+              height: 35px;
+            }
+            svg {
+              path {
+                fill: $color-gray;
+              }
             }
           }
         }
