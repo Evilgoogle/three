@@ -12295,6 +12295,16 @@ $(document).ready(function () {
         $('nav').removeClass('active_nav');
     });
 
+    $('.js_arrow_ind').click(function () {
+
+        var ind = $('#ind_mobile');
+        if (ind.hasClass('active_ind_mobile')) {
+            ind.removeClass('active_ind_mobile');
+        } else {
+            ind.addClass('active_ind_mobile');
+        }
+    });
+
     // Map
     $('.js_map').click(function () {
         $('.map').addClass('active');

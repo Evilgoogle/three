@@ -8,7 +8,7 @@
                 <button class="js_close"></button>
             </div>
             <div class="block">
-                <div class="left">
+                <div class="left_block">
                     <div class="header">Есть вопросы, свяжитесь с нами:</div>
                     <a href="tel:+77771708273" class="bn">
                         <div class="left">
@@ -48,7 +48,7 @@
                         <span class="icon"></span>
                     </button>
                 </div>
-                <div class="right">
+                <div class="right_block">
                     <div class="header">Или напишите нам:</div>
                     <form id="request">
                         <input type="text" name="name" placeholder="Ваше имя">

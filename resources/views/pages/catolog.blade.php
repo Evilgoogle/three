@@ -134,19 +134,29 @@
     ?>
 
     <div class="catalog page">
-        <div class="contain">
-            <div class="industries_block">
-                <div class="contain">
-                    @foreach($main as $item)
-                        <a href="{{ $item->url }}" class="bn">
-                            <div class="rubber">
-                                <div class="text">{{ $item->title }}</div>
-                                <div class="icon">{!!  file_get_contents(asset('/temp/'.$item->icon)) !!}</div>
-                            </div>
-                        </a>
-                    @endforeach
+
+        <div class="industries_block">
+            <a href="#" class="bn mobile">
+                <div class="rubber">
+                    <div class="text">{{ $main[0]->title }}</div>
+                    <div class="icon">{!!  file_get_contents(asset('/temp/'.$main[0]->icon)) !!}</div>
+                    <button class="js_arrow_ind"></button>
                 </div>
+            </a>
+            <div id="ind_mobile" class="contain">
+                <?php $i = 0;?>
+                @foreach($main as $item)
+                    <?php $i++?>
+                    <a href="{{ $item->url }}" class="bn {{ ($i == 1) ? 'active' : '' }}">
+                        <div class="rubber">
+                            <div class="text">{{ $item->title }}</div>
+                            <div class="icon">{!!  file_get_contents(asset('/temp/'.$item->icon)) !!}</div>
+                        </div>
+                    </a>
+                @endforeach
             </div>
+        </div>
+        <div class="contain">
             <div class="block">
                 <div class="info">Кабельно-проводниковая продукция:</div>
                 @foreach($product as $item)
