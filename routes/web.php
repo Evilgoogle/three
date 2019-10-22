@@ -116,100 +116,27 @@ Route::group(['middleware' => 'web'], function () {
        |--------------------------------------------------------------------------
        */
 
-        Route::group(['prefix' => 'category'], function () {
-            Route::get('', 'CategoryController@index');
-            Route::get('add', 'CategoryController@add');
-            Route::get('edit/{id}', 'CategoryController@edit');
-            Route::post('insert/{id?}', 'CategoryController@insert');
-            Route::get('remove/{id}', 'CategoryController@remove');
-            Route::post('enable', 'CategoryController@enable');
-            Route::post('change-position', 'CategoryController@changePosition');
-            Route::post('remove-image', 'CategoryController@removeImage');
-        });
-
-        Route::group(['prefix' => 'slider'], function () {
-            Route::get('', 'SliderController@index');
-            Route::get('add', 'SliderController@add');
-            Route::get('edit/{id}', 'SliderController@edit');
-            Route::post('insert/{id?}', 'SliderController@insert');
-            Route::post('enable', 'SliderController@enable');
-            Route::get('remove/{id}', 'SliderController@remove');
-            Route::post('change-position', 'SliderController@changePosition');
-            Route::post('remove-image', 'SliderController@removeImage');
-        });
-
-        Route::group(['prefix' => 'item'], function () {
-            Route::get('', 'ItemController@index');
-            Route::get('filter', 'ItemController@filter');
-            Route::get('add', 'ItemController@add');
-            Route::get('edit/{id}', 'ItemController@edit');
-            Route::post('insert/{id?}', 'ItemController@insert');
-            Route::post('enable', 'ItemController@enable');
-            Route::get('remove/{id}', 'ItemController@remove');
-            Route::post('change-position', 'ItemController@changePosition');
-            Route::post('remove-image', 'ItemController@removeImage');
-            Route::post('image/change-position', 'ItemController@changeImagePosition');
-            Route::post('image', 'ItemController@image');
-            Route::post('image-delete', 'ItemController@image_delete');
-            Route::post('view-goods', 'ItemController@view_goods');
-            //Route::get('import', 'ItemController@import');
-            Route::post('import-file', 'ImportController@importItemsFromFile');
-            Route::get('search-title', 'ItemController@search');
-            Route::get('search-artikul', 'ItemController@search_artikul');
-        });
-
-        Route::group(['prefix' => 'orders'], function () {
-            Route::get('', 'OrderController@index');
-            Route::get('edit/{id}', 'OrderController@edit');
-            Route::post('insert/{id?}', 'OrderController@insert');
-            Route::get('remove/{id}', 'OrderController@remove');
-            Route::post('enable', 'OrderController@enable');
-        });
-
-        Route::group(['prefix' => 'pages'], function () {
-            Route::get('{url}', 'PageController@index');
-            Route::post('insert/{id}', 'PageController@insert');
-        });
-
-        Route::group(['prefix' => 'stocks'], function () {
-            Route::get('', 'StockController@index');
-            Route::get('add', 'StockController@add');
-            Route::get('edit/{id}', 'StockController@edit');
-            Route::post('insert/{id?}', 'StockController@insert');
-            Route::get('remove/{id}', 'StockController@remove');
-            Route::post('enable', 'StockController@enable');
-            Route::post('change-position', 'StockController@changePosition');
-        });
-
-        Route::group(['prefix' => 'reviews'], function () {
-            Route::get('', 'ReviewController@index');
-            Route::get('add', 'ReviewController@add');
-            Route::get('edit/{id}', 'ReviewController@edit');
-            Route::post('insert/{id?}', 'ReviewController@insert');
-            Route::get('remove/{id}', 'ReviewController@remove');
-            Route::post('enable', 'ReviewController@enable');
-        });
-
-        Route::group(['prefix' => 'articles'], function () {
-            Route::get('', 'ArticlesController@index');
-            Route::get('add', 'ArticlesController@add');
-            Route::get('edit/{id}', 'ArticlesController@edit');
-            Route::post('insert/{id?}', 'ArticlesController@insert');
-            Route::get('remove/{id}', 'ArticlesController@remove');
-            Route::post('enable', 'ArticlesController@enable');
-        });
-
-        Route::group(['prefix' => 'comments'], function () {
-            Route::get('', 'CommentController@index');
-            Route::get('edit/{id}', 'CommentController@edit');
-            Route::post('insert/{id?}', 'CommentController@insert');
-            Route::get('remove/{id}', 'CommentController@remove');
-            Route::post('enable', 'CommentController@enable');
+        Route::group(['prefix' => 'products'], function () {
+            Route::get('', 'ProductController@index');
+            Route::get('add', 'ProductController@add');
+            Route::get('edit/{id}', 'ProductController@edit');
+            Route::post('insert/{id?}', 'ProductController@insert');
+            Route::get('remove/{id}', 'ProductController@remove');
+            Route::post('enable', 'ProductController@enable');
+            Route::post('change-position', 'ProductController@changePosition');
         });
 
         Route::group(['prefix' => 'contacts'], function () {
             Route::get('', 'ContactsController@index');
             Route::post('insert/{id}', 'ContactsController@insert');
+        });
+
+        Route::group(['prefix' => 'requests'], function () {
+            Route::get('', 'RequestController@index');
+            Route::get('edit/{id}', 'RequestController@edit');
+            Route::post('insert/{id?}', 'RequestController@insert');
+            Route::get('remove/{id}', 'RequestController@remove');
+            Route::post('enable', 'RequestController@enable');
         });
     });
 

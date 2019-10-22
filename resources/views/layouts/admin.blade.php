@@ -26,7 +26,7 @@
         window.Laravel = {!! json_encode(['csrfToken' => csrf_token()]) !!};
     </script>
 </head>
-<body class="theme-blue">
+<body class="theme-indigo">
 
 @include('admin.file-manager')
 @include('admin.delete_modal')

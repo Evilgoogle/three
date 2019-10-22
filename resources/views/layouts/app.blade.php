@@ -60,7 +60,7 @@
         </ul>
     </nav>
 </header>
-<main>
+<main class="{{ (\Illuminate\Support\Facades\Request::url() == url('/')) ? 'main' : '' }}">
     @yield('app_content')
 </main>
 
