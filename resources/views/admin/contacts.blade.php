@@ -12,10 +12,15 @@
                 <form action="/admin/{{ $info->url }}/insert/{{ $item->id }}" method="post" enctype="multipart/form-data">
                     {{ csrf_field() }}
 
+                    @include('admin._input.input-text', [
+                        'name' => 'phone_1',
+                        'label' => 'Телефон 1',
+                        'item' => isset($item) ? $item : ''
+                    ])
 
                     @include('admin._input.input-text', [
-                        'name' => 'phone',
-                        'label' => 'Телефон',
+                        'name' => 'phone_2',
+                        'label' => 'Телефон 2',
                         'item' => isset($item) ? $item : ''
                     ])
 

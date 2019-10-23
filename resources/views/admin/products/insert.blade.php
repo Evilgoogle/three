@@ -13,14 +13,6 @@
                     <form action="/admin/{{ $info->url }}/insert{{ isset($item->id) ? '/'. $item->id : '' }}" method="post" enctype="multipart/form-data">
                         {{ csrf_field() }}
 
-                        @include('admin._input.input-switch', [
-                            'name' => 'enable',
-                            'label' => 'Состояние',
-                            'item' => isset($item) ? $item : '',
-                            'default' => true,
-                            'on' => 'Включить', 'off' => 'Выключить'
-                        ])
-
                         @include('admin._input.input-text', [
                             'name' => 'title',
                             'label' => 'Заголовок',
@@ -28,33 +20,40 @@
                             'required' => true
                         ])
 
+                        @include('admin._input.input-text', [
+                            'name' => 'ulr',
+                            'label' => 'URL',
+                            'item' => isset($item) ? $item : '',
+                        ])
+
                         @include('admin._input.input-filemanager', [
-                            'name' => 'image',
-                            'label' => 'Изображение',
+                            'name' => 'icon',
+                            'label' => 'Иконка',
                             'item' => isset($item) ? $item : '',
                             'is_image' => true,
                             'filemanager_id' => 1,
                         ])
 
                         @include('admin._input.input-filemanager', [
-                            'name' => 'fullimage',
-                            'label' => 'Внутренное изображение',
+                            'name' => 'image',
+                            'label' => 'Изображение',
                             'item' => isset($item) ? $item : '',
                             'is_image' => true,
                             'filemanager_id' => 2,
+                        ])
+
+                        @include('admin._input.input-filemanager', [
+                            'name' => 'fon',
+                            'label' => 'Фоновое изображение',
+                            'item' => isset($item) ? $item : '',
+                            'is_image' => true,
+                            'filemanager_id' => 3,
                         ])
 
                         @include('admin._input.textarea', [
                              'name' => 'desc',
                              'label' => 'Короткое описание',
                              'item' => isset($item) ? $item : ''
-                        ])
-
-                        @include('admin._input.textarea', [
-                             'name' => 'text',
-                             'label' => 'Описание',
-                             'item' => isset($item) ? $item : '',
-                             'editor' =>true
                         ])
 
                         <div class="row clearfix">

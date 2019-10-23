@@ -57,7 +57,7 @@ $(document).ready(function () {
                     if(index == key) {
                         return '<button class="bn ' + className + '">' +
                             '<div class="text">'+main_swiper_panel[key].title+'</div>' +
-                            '<div class="icon" style="background-image: url(/temp/' + main_swiper_panel[key].icon + ')"></div>' +
+                            '<div class="icon" style="background-image: url(/files/' + main_swiper_panel[key].icon + ')"></div>' +
                             '</button>';
                     }
                 }

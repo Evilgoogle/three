@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Article;
 use App\Http\CrudClass;
+use App\Industry;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 
-class ArticlesController extends Controller
+class IndustriesController extends Controller
 {
     protected $crudClass;
     protected $info;
@@ -17,25 +17,25 @@ class ArticlesController extends Controller
     {
         $this->crudClass = new CrudClass();
         $this->info = (object)[];
-        $this->info->head = 'Статьи';
-        $this->info->url = 'articles';
-        $this->info->modelName = 'Article';
+        $this->info->head = 'Отрасли';
+        $this->info->url = 'industries';
+        $this->info->modelName = 'Industry';
         $this->middleware('role:superadmin');
     }
 
     public function index()
     {
-        $items = Article::orderBy('created_at', 'DESC')->get();
+        $items = Industry::orderBy('created_at', 'DESC')->get();
         $info = $this->info;
 
-        return view('admin.articles.index', compact('items', 'info'));
+        return view('admin.industries.index', compact('items', 'info'));
     }
 
     public function add()
     {
         $info = $this->info;
 
-        return view('admin.articles.insert', compact('items', 'info'));
+        return view('admin.industries.insert', compact('items', 'info'));
     }
 
     public function edit($id)
@@ -43,12 +43,12 @@ class ArticlesController extends Controller
         $info = $this->info;
 
         try {
-            $item = Article::findOrFail($id);
+            $item = Product::findOrFail($id);
         } catch (\Exception $e) {
             return back()->withErrors($e->getMessage());
         }
 
-        return view('admin.articles.insert', compact(['item', 'info']));
+        return view('admin.industries.insert', compact(['item', 'info']));
     }
 
     public function remove($id)
@@ -83,6 +83,12 @@ class ArticlesController extends Controller
             return back()->withErrors($result['message']);
     }
 
+    public function changePosition(Request $request)
+    {
+        $result = $this->crudClass->changePosition($this->info->modelName, $request);
+
+        return response()->json($result);
+    }
 
     public function enable(Request $request)
     {

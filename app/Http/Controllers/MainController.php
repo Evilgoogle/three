@@ -116,12 +116,16 @@ class MainController extends Controller
 
     public function index() {
 
-        return view('pages.main', compact(''));
+        $main = App\Product::orderBy('position', 'ASC')->get();
+
+        return view('pages.main', compact('main'));
     }
 
     public function industries() {
 
-        return view('pages.industries', compact(''));
+        $items = App\Industry::where('enable', 1)->orderBy('position', 'ASC')->get();
+
+        return view('pages.industries', compact('items'));
     }
 
     public function about() {

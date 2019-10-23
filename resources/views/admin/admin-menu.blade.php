@@ -48,11 +48,20 @@
             </a>
         </li>--}}
         <li>
-            <a href="/admin/products">
+            <a href="javascript:void(0);" class="menu-toggle">
                 <i class="material-icons">assignment_turned_in</i>
                 <span>Продукция</span>
             </a>
+            <ul class="ml-menu">
+                <li>
+                    <a href="/admin/products">Продукция</a>
+                </li>
+                <li>
+                    <a href="/admin/catalog">Каталог</a>
+                </li>
+            </ul>
         </li>
+
         <li>
             <a href="/admin/industries">
                 <i class="material-icons">build</i>
@@ -63,12 +72,6 @@
             <a href="/admin/about">
                 <i class="material-icons">business</i>
                 <span>О компаний</span>
-            </a>
-        </li>
-        <li>
-            <a href="/admin/catalog">
-                <i class="material-icons">content_copy</i>
-                <span>Каталог</span>
             </a>
         </li>
         <li>

@@ -33,15 +33,6 @@ Route::group(['middleware' => 'web'], function () {
             Route::get('remove/{id}', 'SeoController@remove');
         });
 
-        Route::group(['prefix' => 'block'], function () {
-            Route::get('', 'BlockController@index');
-            Route::get('add', 'BlockController@add');
-            Route::get('edit/{id}', 'BlockController@edit');
-            Route::post('insert/{id?}', 'BlockController@insert');
-            Route::get('remove/{id}', 'BlockController@remove');
-            Route::post('enable', 'BlockController@enable');
-        });
-
         // --> filemanager
         Route::group(['prefix' => 'admin'], function () {
             Route::post('filemanager', 'AdminController@filemanager');
@@ -121,9 +112,28 @@ Route::group(['middleware' => 'web'], function () {
             Route::get('add', 'ProductController@add');
             Route::get('edit/{id}', 'ProductController@edit');
             Route::post('insert/{id?}', 'ProductController@insert');
-            Route::get('remove/{id}', 'ProductController@remove');
-            Route::post('enable', 'ProductController@enable');
             Route::post('change-position', 'ProductController@changePosition');
+        });
+
+        Route::group(['prefix' => 'catalog'], function () {
+            Route::get('', 'DocsController@index');
+            Route::get('filter', 'DocsController@filter');
+            Route::get('add', 'DocsController@add');
+            Route::get('edit/{id}', 'DocsController@edit');
+            Route::post('insert/{id?}', 'DocsController@insert');
+            Route::get('remove/{id}', 'DocsController@remove');
+            Route::post('remove-image', 'DocsController@removeImage');
+            Route::post('enable', 'DocsController@enable');
+        });
+
+        Route::group(['prefix' => 'industries'], function () {
+            Route::get('', 'IndustriesController@index');
+            Route::get('add', 'IndustriesController@add');
+            Route::get('edit/{id}', 'IndustriesController@edit');
+            Route::post('insert/{id?}', 'IndustriesController@insert');
+            Route::get('remove/{id}', 'IndustriesController@remove');
+            Route::post('change-position', 'IndustriesController@changePosition');
+            Route::post('enable', 'IndustriesController@enable');
         });
 
         Route::group(['prefix' => 'contacts'], function () {

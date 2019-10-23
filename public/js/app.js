@@ -12224,7 +12224,7 @@ $(document).ready(function () {
             renderBullet: function renderBullet(index, className) {
                 for (var key in main_swiper_panel) {
                     if (index == key) {
-                        return '<button class="bn ' + className + '">' + '<div class="text">' + main_swiper_panel[key].title + '</div>' + '<div class="icon" style="background-image: url(/temp/' + main_swiper_panel[key].icon + ')"></div>' + '</button>';
+                        return '<button class="bn ' + className + '">' + '<div class="text">' + main_swiper_panel[key].title + '</div>' + '<div class="icon" style="background-image: url(/files/' + main_swiper_panel[key].icon + ')"></div>' + '</button>';
                     }
                 }
             }

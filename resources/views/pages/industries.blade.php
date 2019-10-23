@@ -2,60 +2,27 @@
 
 @section('app_content')
 
-    <?php
-    $items = [
-        0 => (object)[
-            'id' => 1,
-            'title' => 'Энергетика и телекоммуникации',
-            'desc' => 'ТОО «ASKEN Казахстанско-Китайcкий Торговый Дом» является многопрофильным поставщиком продукции, направленной на улучшение и развитие различных видов отраслей экономики на постоянной основе.',
-            'image' => 'ind_1.png'
-        ],
-        1 => (object)[
-            'id' => 1,
-            'title' => 'Промышленный сектор',
-            'desc' => 'ТОО «ASKEN Казахстанско-Китайcкий Торговый Дом» является многопрофильным поставщиком продукции, направленной на улучшение и развитие различных видов отраслей экономики на постоянной основе.',
-            'image' => 'ind_2.png'
-        ],
-        2 => (object)[
-            'id' => 1,
-            'title' => 'Инфраструктура и внешние инженерные коммуникации',
-            'desc' => 'ТОО «ASKEN Казахстанско-Китайcкий Торговый Дом» является многопрофильным поставщиком продукции, направленной на улучшение и развитие различных видов отраслей экономики на постоянной основе.',
-            'image' => 'ind_3.png'
-        ],
-        3 => (object)[
-            'id' => 1,
-            'title' => 'Строительство и реконструкция',
-            'desc' => 'ТОО «ASKEN Казахстанско-Китайcкий Торговый Дом» является многопрофильным поставщиком продукции, направленной на улучшение и развитие различных видов отраслей экономики на постоянной основе.',
-            'image' => 'ind_4.png'
-        ],
-        4 => (object)[
-            'id' => 1,
-            'title' => 'Производственный сектор',
-            'desc' => 'ТОО «ASKEN Казахстанско-Китайcкий Торговый Дом» является многопрофильным поставщиком продукции, направленной на улучшение и развитие различных видов отраслей экономики на постоянной основе.',
-            'image' => 'ind_5.png'
-        ],
-    ];
-    ?>
-
     <div class="gallary page">
         <div class="contain">
             <div class="swiper_gallary">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        @foreach($items as $item)
-                            <div class="swiper-slide" style="background-image: url('/temp/{{ $item->image }}')">
-                                <div class="content">
-                                    <h2>{{ $item->title }}</h2>
-                                    <small>{{ $item->desc }}</small>
+                @if($items->count())
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            @foreach($items as $item)
+                                <div class="swiper-slide" style="background-image: url('/files/{{ $item->image }}')">
+                                    <div class="content">
+                                        <h2>{{ $item->title }}</h2>
+                                        <small>{{ $item->desc }}</small>
+                                    </div>
                                 </div>
-                            </div>
-                        @endforeach
+                            @endforeach
+                        </div>
                     </div>
-                </div>
-                <div class="arrows">
-                    <div class="prev swiper-button-next"></div>
-                    <div class="next swiper-button-prev"></div>
-                </div>
+                    <div class="arrows">
+                        <div class="prev swiper-button-next"></div>
+                        <div class="next swiper-button-prev"></div>
+                    </div>
+                @endif
             </div>
         </div>
     </div>

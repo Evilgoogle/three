@@ -343,7 +343,7 @@ class CrudClass
                 ];
             }
 
-//            $this->fileClass->removeFile($item->$columnName);
+            $this->fileClass->removeFile($item->$columnName);
 
             if($remove == 1) {
                 $item->delete();
