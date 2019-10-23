@@ -436,6 +436,7 @@ class ComposerStaticInita7c432565899ad5f9613d186fc978c8d
     );
 
     public static $classMap = array (
+        'App\\About' => __DIR__ . '/../..' . '/app/About.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Contact' => __DIR__ . '/../..' . '/app/Contact.php',
         'App\\Doc' => __DIR__ . '/../..' . '/app/Doc.php',
@@ -451,8 +452,10 @@ class ComposerStaticInita7c432565899ad5f9613d186fc978c8d
         'App\\Events\\Event' => __DIR__ . '/../..' . '/app/Events/Event.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Filemanager' => __DIR__ . '/../..' . '/app/Filemanager.php',
+        'App\\Http\\Controllers\\Admin\\AboutController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AboutController.php',
         'App\\Http\\Controllers\\Admin\\AccessController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AccessController.php',
         'App\\Http\\Controllers\\Admin\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AdminController.php',
+        'App\\Http\\Controllers\\Admin\\ContacsController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/ContacsController.php',
         'App\\Http\\Controllers\\Admin\\ContactsController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/ContactsController.php',
         'App\\Http\\Controllers\\Admin\\DocsController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/DocsController.php',
         'App\\Http\\Controllers\\Admin\\IndustriesController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/IndustriesController.php',

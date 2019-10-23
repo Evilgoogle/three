@@ -141,12 +141,17 @@ Route::group(['middleware' => 'web'], function () {
             Route::post('insert/{id}', 'ContactsController@insert');
         });
 
+        Route::group(['prefix' => 'about'], function () {
+            Route::get('', 'AboutController@index');
+            Route::post('insert/{id}', 'AboutController@insert');
+        });
+
         Route::group(['prefix' => 'requests'], function () {
-            Route::get('', 'RequestController@index');
-            Route::get('edit/{id}', 'RequestController@edit');
-            Route::post('insert/{id?}', 'RequestController@insert');
-            Route::get('remove/{id}', 'RequestController@remove');
-            Route::post('enable', 'RequestController@enable');
+            Route::get('', 'ClientRequestController@index');
+            Route::get('edit/{id}', 'ClientRequestController@edit');
+            Route::post('insert/{id?}', 'ClientRequestController@insert');
+            Route::get('remove/{id}', 'ClientRequestController@remove');
+            Route::post('enable', 'ClientRequestController@enable');
         });
     });
 

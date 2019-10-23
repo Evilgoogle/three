@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Contact;
+use App\About;
 use App\Http\CrudClass;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class ContacsController extends Controller
+class AboutController extends Controller
 {
     protected $crudClass;
     protected $info;
@@ -16,18 +16,18 @@ class ContacsController extends Controller
     {
         $this->crudClass = new CrudClass();
         $this->info = (object)[];
-        $this->info->head = 'Контакты';
-        $this->info->url = 'contacts';
-        $this->info->modelName = 'Contact';
+        $this->info->head = 'О компаний';
+        $this->info->url = 'about';
+        $this->info->modelName = 'About';
         $this->middleware('role:superadmin');
     }
 
     public function index()
     {
-        $item = Contact::find(1);
+        $item = About::find(1);
         $info = $this->info;
 
-        return view('admin.contacts', compact('item', 'info', 'products'));
+        return view('admin.about', compact('item', 'info', 'products'));
     }
 
     public function insert(Request $request, $id = null)

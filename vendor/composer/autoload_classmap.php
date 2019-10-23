@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\About' => $baseDir . '/app/About.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Contact' => $baseDir . '/app/Contact.php',
     'App\\Doc' => $baseDir . '/app/Doc.php',
@@ -21,8 +22,10 @@ return array(
     'App\\Events\\Event' => $baseDir . '/app/Events/Event.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Filemanager' => $baseDir . '/app/Filemanager.php',
+    'App\\Http\\Controllers\\Admin\\AboutController' => $baseDir . '/app/Http/Controllers/Admin/AboutController.php',
     'App\\Http\\Controllers\\Admin\\AccessController' => $baseDir . '/app/Http/Controllers/Admin/AccessController.php',
     'App\\Http\\Controllers\\Admin\\AdminController' => $baseDir . '/app/Http/Controllers/Admin/AdminController.php',
+    'App\\Http\\Controllers\\Admin\\ContacsController' => $baseDir . '/app/Http/Controllers/Admin/ContacsController.php',
     'App\\Http\\Controllers\\Admin\\ContactsController' => $baseDir . '/app/Http/Controllers/Admin/ContactsController.php',
     'App\\Http\\Controllers\\Admin\\DocsController' => $baseDir . '/app/Http/Controllers/Admin/DocsController.php',
     'App\\Http\\Controllers\\Admin\\IndustriesController' => $baseDir . '/app/Http/Controllers/Admin/IndustriesController.php',

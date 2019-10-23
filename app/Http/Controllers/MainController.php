@@ -130,7 +130,10 @@ class MainController extends Controller
 
     public function about() {
 
-        return view('pages.about', compact(''));
+        $about = App\About::find(1);
+        $main = App\Product::orderBy('position', 'ASC')->get();
+
+        return view('pages.about', compact('about', 'main'));
     }
 
     public function catalog($url = null) {
