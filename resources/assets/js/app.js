@@ -24,6 +24,33 @@ mql.addListener(function(m) {
 
 $(document).ready(function () {
 
+    // Правка области сайта в браузерах webkit
+    var user_agent = window.navigator.userAgent;
+    if(/AppleWebKit/.test(user_agent)) {
+        if(/iPhone/.test(user_agent) || /iPad/.test(user_agent)) {
+            if(window.matchMedia("(orientation: portrait)").matches) {
+                let height = window.outerHeight - window.innerHeight;
+                $('#main_site').css({
+                    'height': '-webkit-calc(100vh - '+height+'px)',
+                    'height': '-o-calc(100vh - '+height+'px)',
+                    'height': 'calc(100vh - '+height+'px)'
+                });
+            } else {
+                $('#main_site').css({
+                    'height': '-webkit-calc(100vh - 50px)',
+                    'height': '-o-calc(100vh - 50px)',
+                    'height': 'calc(100vh - 50px)'
+                });
+            }
+        } else if(/Android/.test(user_agent)) {
+            $('#main_site').css({
+                'height': '-webkit-calc(100vh - 60px)',
+                'height': '-o-calc(100vh - 60px)',
+                'height': 'calc(100vh - 60px)'
+            });
+        }
+    }
+
     // nav search
     $('.js_search').click(function () {
 
