@@ -1456,6 +1456,8 @@ header {
         margin: 10% 0;
       }
       .bn {
+        @include button_reset;
+        padding: 0;
         width: 220px;
         @include respond-to(w-799) {
           border: 1px solid$color-violet;

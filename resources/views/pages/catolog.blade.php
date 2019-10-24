@@ -2,155 +2,22 @@
 
 @section('app_content')
 
-    <?php
-    $main = [
-        0 => (object)[
-            'id' => 1,
-            'title' => 'Кабельно-проводниковая продукция',
-            'url' => '#',
-            'desc' => 'Поставляемая нашей компанией кабельно-проводниковая продукция, обеспечит высокий уровень надёжности Ваших линий электропередач и управления, благодаря применению современных технологий на производстве. Качество металлов, применяемых при изготовлении проводников обеспечит высокую проводимость и снизит величину потерь при передаче электроэнергии',
-            'icon' => 'main_slider_ico1.svg',
-            'fon' => 'main_slider_fon1.png',
-            'image' => 'main_slider_image1.png'
-        ],
-        1 => (object)[
-            'id' => 2,
-            'title' => 'Трубы, фитинги и запорная арматура',
-            'url' => '#',
-            'desc' => 'Поставляемая нашей компанией кабельно-проводниковая продукция, обеспечит высокий уровень надёжности Ваших линий электропередач и управления, благодаря применению современных технологий на производстве. Качество металлов, применяемых при изготовлении проводников обеспечит высокую проводимость и снизит величину потерь при передаче электроэнергии',
-            'icon' => 'main_slider_ico2.svg',
-            'fon' => 'main_slider_fon2.png',
-            'image' => 'main_slider_image2.png'
-        ],
-        2 => (object)[
-            'id' => 3,
-            'title' => 'Оборудование для промышленного производства',
-            'url' => '#',
-            'desc' => 'Поставляемая нашей компанией кабельно-проводниковая продукция, обеспечит высокий уровень надёжности Ваших линий электропередач и управления, благодаря применению современных технологий на производстве. Качество металлов, применяемых при изготовлении проводников обеспечит высокую проводимость и снизит величину потерь при передаче электроэнергии',
-            'icon' => 'main_slider_ico3.svg',
-            'fon' => 'main_slider_fon3.png',
-            'image' => 'main_slider_image3.png'
-        ],
-        3 => (object)[
-            'id' => 4,
-            'title' => 'Металлические решётчатые настилы и ограждения',
-            'url' => '#',
-            'desc' => 'Поставляемая нашей компанией кабельно-проводниковая продукция, обеспечит высокий уровень надёжности Ваших линий электропередач и управления, благодаря применению современных технологий на производстве. Качество металлов, применяемых при изготовлении проводников обеспечит высокую проводимость и снизит величину потерь при передаче электроэнергии',
-            'icon' => 'main_slider_ico4.svg',
-            'fon' => 'main_slider_fon4.png',
-            'image' => 'main_slider_image4.png'
-        ],
-        4 => (object)[
-            'id' => 5,
-            'title' => 'Металлический прокат',
-            'url' => '#',
-            'desc' => 'Поставляемая нашей компанией кабельно-проводниковая продукция, обеспечит высокий уровень надёжности Ваших линий электропередач и управления, благодаря применению современных технологий на производстве. Качество металлов, применяемых при изготовлении проводников обеспечит высокую проводимость и снизит величину потерь при передаче электроэнергии',
-            'icon' => 'main_slider_ico5.svg',
-            'fon' => 'main_slider_fon1.png',
-            'image' => 'main_slider_image5.png'
-        ],
-    ];
-
-    $product = [
-        0 => (object)[
-            'id' => 5,
-            'catalog_id' => 5,
-            'title' => 'Кабели силовые для стационарной прокладки на напряжение до 1 кВ включительно',
-            'url' => '#',
-        ],
-        1 => (object)[
-            'id' => 5,
-            'catalog_id' => 5,
-            'title' => 'Кабели силовые для стационарной прокладки на напряжение свыше 1 кВ',
-            'url' => '#',
-        ],
-        2 => (object)[
-            'id' => 5,
-            'catalog_id' => 5,
-            'title' => 'Кабель контрольный',
-            'url' => '#',
-        ],
-        3 => (object)[
-            'id' => 5,
-            'catalog_id' => 5,
-            'title' => 'Провода и кабеля монтажные',
-            'url' => '#',
-        ],
-        4 => (object)[
-            'id' => 5,
-            'catalog_id' => 5,
-            'title' => 'Кабели для нестационарной прокладки',
-            'url' => '#',
-        ],
-        5 => (object)[
-            'id' => 5,
-            'catalog_id' => 5,
-            'title' => 'Провода силовые общего назначения',
-            'url' => '#',
-        ],
-        6 => (object)[
-            'id' => 5,
-            'catalog_id' => 5,
-            'title' => 'Провода силовые для электрических установок',
-            'url' => '#',
-        ],
-        7 => (object)[
-            'id' => 5,
-            'catalog_id' => 5,
-            'title' => 'Кабели судовые',
-            'url' => '#',
-        ],
-        8 => (object)[
-            'id' => 5,
-            'catalog_id' => 5,
-            'title' => 'Провода и кабели для подвижного состава',
-            'url' => '#',
-        ],
-        9 => (object)[
-            'id' => 5,
-            'catalog_id' => 5,
-            'title' => 'Провода неизолированные гибкие',
-            'url' => '#',
-        ],
-        10 => (object)[
-            'id' => 5,
-            'catalog_id' => 5,
-            'title' => 'Провода изолированные для воздушных линий передач',
-            'url' => '#',
-        ],
-        11 => (object)[
-            'id' => 5,
-            'catalog_id' => 5,
-            'title' => 'Провода неизолированные для воздушных линий передач',
-            'url' => '#',
-        ],
-        12 => (object)[
-            'id' => 5,
-            'catalog_id' => 5,
-            'title' => 'Провода и шнуры различного назначения',
-            'url' => '#',
-        ],
-    ];
-    ?>
-
     <div class="catalog page">
 
         <div class="industries_block">
             <a href="#" class="bn mobile">
                 <div class="rubber">
-                    <div class="text">{{ $main[0]->title }}</div>
-                    <div class="icon">{!!  file_get_contents(asset('/temp/'.$main[0]->icon)) !!}</div>
+                    <div class="text">{{ $products[0]->title }}</div>
+                    <div class="icon">{!!  file_get_contents(asset('/files/'.$products[0]->icon)) !!}</div>
                     <button class="js_arrow_ind"></button>
                 </div>
             </a>
             <div id="ind_mobile" class="contain">
-                <?php $i = 0;?>
-                @foreach($main as $item)
-                    <?php $i++?>
-                    <a href="{{ $item->url }}" class="bn {{ ($i == 1) ? 'active' : '' }}">
+                @foreach($products as $item)
+                    <a href="/catalog/{{ $item->url }}" class="bn {{ isset($main) && ($item->id == $main->id) ? 'active' : '' }}">
                         <div class="rubber">
                             <div class="text">{{ $item->title }}</div>
-                            <div class="icon">{!!  file_get_contents(asset('/temp/'.$item->icon)) !!}</div>
+                            <div class="icon">{!!  file_get_contents(asset('/files/'.$item->icon)) !!}</div>
                         </div>
                     </a>
                 @endforeach
@@ -158,9 +25,10 @@
         </div>
         <div class="contain">
             <div class="block">
-                <div class="info">Кабельно-проводниковая продукция:</div>
-                @foreach($product as $item)
-                    <a href="/{{ $item->url }}" class="bn">
+                <div class="info">{{ isset($main) ? $main->title.':' : 'Весь каталог:' }}</div>
+                <?php $data = []?>
+                @foreach($catalog as $item)
+                    <{{ !empty($item->file) ? 'a' : 'div' }} href="{{ !empty($item->file) ? '/uploads/'.$item->file : '#' }}" download="download" class="bn">
                         <div class="left">
                             <div class="text">{{ $item->title }}</div>
                             <div class="line"></div>
@@ -168,21 +36,30 @@
                         <div class="right">
                             <div class="icon"></div>
                         </div>
-                    </a>
+                    </{{ !empty($item->file) ? 'a' : 'div' }}>
+                    <?php
+                        if(!empty($item->file)) {
+                            $data[] = $item->file;
+                        }
+                    ?>
                 @endforeach
-                <div class="download_all">
-                    <a href="#" class="bn">
-                        <div class="left">
-                            <div class="text">Скачать все</div>
-                            <div class="line"></div>
-                        </div>
-                        <div class="right">
-                            <div class="icon"></div>
-                        </div>
-                    </a>
-                </a>
-            </a>
-        </div>
+                @if($catalog->count())
+                    <form action="/download" class="download_all" method="post">
+                        {{ csrf_field() }}
+                        <input type="hidden" name="data" value="{{ json_encode($data) }}">
+                        <button type="submit" class="bn">
+                            <div class="left">
+                                <div class="text">Скачать все</div>
+                                <div class="line"></div>
+                            </div>
+                            <div class="right">
+                                <div class="icon"></div>
+                            </div>
+                        </button>
+                    </form>
+                @endif
+            </div>
+        </form>
     </div>
 
 @stop

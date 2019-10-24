@@ -261,178 +261,32 @@ if(!function_exists('setDinamic_image')) {
     }
 }
 
-if(!function_exists('sex_switch')) {
+if(!function_exists('downloadZip')) {
 
-    /**
-     * @param $var
-     * @return string
-     */
-    function sex_switch($var) {
+    function downloadZip($files) {
 
-        $sex = 'Оба';
-        if($var == 'man') {
-            $sex = 'Мужчина';
-        } elseif ($var == 'woman') {
-            $sex = 'Женщина';
-        }
+        $zip = new ZipArchive;
+        $zip_name = public_path('/uploads/'.date('U').md5(str_random(10).time()).'.zip');
+        if ($zip->open($zip_name, ZipArchive::CREATE) === TRUE) {
 
-        return $sex;
-    }
-}
-
-if(!function_exists('payment_vocabulary')) {
-
-    /**
-     * @param $var
-     * @return string
-     */
-    function payment_vocabulary($var) {
-        
-        if($var == 'pg_result') {
-            $var = 'Результат оплаты';
-        } elseif ($var == 'pg_payment_id') {
-            $var = 'Идентификатор платежа PayBox';
-        } elseif ($var == 'pg_currency') {
-            $var = 'Выбранная валюта';
-        } elseif ($var == 'pg_amount') {
-            $var = 'Обшая сумма';
-        } elseif ($var == 'pg_net_amount') {
-            $var = 'Сумма списанная с магазина';
-        } elseif ($var == 'pg_ps_amount') {
-            $var = 'Сумма счета в ПС';
-        } elseif ($var == 'pg_ps_full_amount') {
-            $var = 'Полная сумма покупателю';
-        } elseif ($var == 'pg_ps_currency') {
-            $var = 'Выбранная валюта возврата';
-        } elseif ($var == 'pg_payment_system') {
-            $var = 'Идентификатор платежной системы';
-        } elseif ($var == 'pg_payment_date') {
-            $var = 'Дата и время совершения платежа';
-        } elseif ($var == 'pg_user_phone') {
-            $var = 'Телефон покупателя';
-        } elseif ($var == 'pg_card_pan') {
-            $var = 'Карта покупателя';
-        } elseif ($var == 'pg_captured') {
-            $var = 'Клиринг карты';
-        } elseif ($var == 'pg_overpayment') {
-            $var = 'Переплаченная сумма';
-        } elseif ($var == 'pg_card_brand') {
-            $var = 'Бренд карты';
-        } elseif ($var == 'pg_failure_code') {
-            $var = 'Код отказа';
-        } elseif ($var == 'pg_failure_description') {
-            $var = 'Причины отказа';
-        }
-
-        return $var;
-    }
-}
-
-
-if(!function_exists('switch_cats_project')) {
-
-    function switch_cats_project($var, $switch) {
-
-        if($switch == 'colsa_nasadki') {
-
-            if($var == 'Виброкольца') {
-                return 21;
-            } elseif($var == 'Кольца') {
-                return 22;
-            } elseif($var == 'Насадка на член') {
-                return 23;
+            foreach ($files as $f) {
+                $patch = public_path('/uploads/' . $f);
+                if (is_file($patch)) {
+                    $zip->addFile($patch, $f);
+                }
             }
-        } elseif($switch == 'cloath') {
+            $zip->close();
 
-            if($var == 'Корсеты') {
-                return 24;
-            } elseif($var == 'Латексный костюм') {
-                return 25;
-            } elseif($var == 'Платье') {
-                return 26;
-            } elseif($var == 'Халатик') {
-                return 27;
-            } elseif($var == 'Бантик') {
-                return 28;
-            } elseif($var == 'Чулки') {
-                return 29;
-            } elseif($var == 'Комплекты') {
-                return 30;
-            } elseif($var == 'Комбинации') {
-                return 31;
-            } elseif($var == 'Пеньюар') {
-                return 32;
-            }
-        } elseif($switch == 'kukli') {
-
-            return 11;
-        } elseif($switch == 'pompy_fal') {
-
-            return 33;
-        } elseif($switch == 'anal_toys') {
-
-            if($var == 'Массажер простаты') {
-                return 34;
-            } elseif($var == 'Анальные пробки') {
-                return 35;
-            } elseif($var == 'Анальный стимулятор') {
-                return 36;
-            } elseif($var == 'Анальный вибратор') {
-                return 37;
-            } elseif($var == 'Анальный вибратор') {
-                return 37;
-            }
-        } elseif($switch == 'mastrubator') {
-
-            return 6;
-        } elseif($switch == 'vaginal_toys') {
-
-            if($var == 'Виброяйца') {
-                return 38;
-            } elseif($var == 'Вагинальные шарики') {
-                return 39;
-            }
-        } elseif($switch == 'klitor_massage') {
-
-            return 40;
-        } elseif($switch == 'vibrators') {
-
-            if($var == 'Вибраторы с клиторальной стимуляцией') {
-                return 16;
-            } elseif($var == 'Вибраторы') {
-                return 17;
-            } elseif($var == 'Вибраторы с пультом') {
-                return 18;
-            } elseif($var == 'Вибраторы-массажеры') {
-                return 19;
-            } elseif($var == 'Вибраторы двойные') {
-                return 20;
-            }
-        } elseif($switch == 'fallomet') {
-
-            if($var == 'Фалоимитаторы') {
-                return 41;
-            } elseif($var == 'Фалоимитаторы из стекла') {
-                return 42;
-            }
-        } elseif($switch == 'BDSM') {
-
-            if($var == 'Набор БДСМ') {
-                return 43;
-            } elseif($var == 'Фиксация') {
-                return 44;
-            } elseif($var == 'Ошейники') {
-                return 45;
-            } elseif($var == 'Зажимы') {
-                return 46;
-            } elseif($var == 'Наручники') {
-                return 48;
-            } elseif($var == 'Плетки, кнуты, шлепалки') {
-                return 49;
-            } elseif($var == 'Маски') {
-                return 50;
-            } elseif($var == 'Страпоны') {
-                return 51;
+            if (file_exists($zip_name)) {
+                header('Content-Description: File Transfer');
+                header('Content-Type: application/octet-stream');
+                header('Content-Disposition: attachment; filename="' . basename($zip_name) . '"');
+                header('Expires: 0');
+                header('Cache-Control: must-revalidate');
+                header('Pragma: public');
+                header('Content-Length: ' . filesize($zip_name));
+                readfile($zip_name);
+                unlink($zip_name);
             }
         }
     }

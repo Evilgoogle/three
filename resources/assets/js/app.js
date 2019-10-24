@@ -165,4 +165,44 @@ $(document).ready(function () {
 
         $('#overlay').removeClass('active');
     });
+
+    var request = $('#request');
+    request.submit(function(e){
+        e.preventDefault();
+        var formData = request.serialize();
+        $.ajax({
+            url: '/request',
+            type: 'POST',
+            data: formData,
+            dataType: 'json',
+            headers: {
+                'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+            },
+            success: function(data){
+                if (data.status == 'ok') {
+                    Swal.fire({
+                        title: 'Спасибо',
+                        html: 'Ваш отзыв после появится после модераций',
+                        type: 'success',
+                        confirmButtonText: 'Закрыть'
+                    });
+                    $("input", request).val('');
+                }
+            },
+            error: function (data) {
+                var alert = data.responseJSON;
+                var errors = [];
+                for(var a in alert) {
+                    errors.push(alert[a][0]);
+                }
+                Swal.fire({
+                    title: 'Ошибка!',
+                    html: errors.join('<br>'),
+                    type: 'error',
+                    confirmButtonText: 'Закрыть'
+                });
+            }
+        });
+    });
+
 });

@@ -16,6 +16,7 @@ class TableRequests extends Migration
         Schema::create('requests', function (Blueprint $table) {
             $table->increments('id');
             $table->boolean('enable')->default(false);
+            $table->text('name')->nullable();
             $table->text('phone')->nullable();
             $table->text('email')->nullable();
             $table->text('message')->nullable();

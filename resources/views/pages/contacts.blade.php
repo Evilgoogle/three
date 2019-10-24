@@ -4,15 +4,15 @@
 
     <div class="contacts">
         <div class="contain">
-            <div id="map" class="map">
+            <div id="map" class="map" data-lat="{{ $contacts->lat }}" data-lng="{{ $contacts->lng }}">
                 <button class="js_close"></button>
             </div>
             <div class="block">
                 <div class="left_block">
                     <div class="header">Есть вопросы, свяжитесь с нами:</div>
-                    <a href="tel:+77771708273" class="bn">
+                    <a href="tel:{{ $contacts->phone_1 }}" class="bn">
                         <div class="left">
-                            <div class="text">+ 7 777 170 8273</div>
+                            <div class="text">{{ $contacts->phone_1 }}</div>
                             <div class="line"></div>
                         </div>
                         <div class="right">
@@ -21,9 +21,9 @@
                             </svg>
                         </div>
                     </a>
-                    <a href="tel:+77771708273" class="bn">
+                    <a href="tel:{{ $contacts->phone_2 }}" class="bn">
                         <div class="left">
-                            <div class="text">+ 7 707 230 7253</div>
+                            <div class="text">{{ $contacts->phone_2 }}</div>
                             <div class="line"></div>
                         </div>
                         <div class="right">
@@ -32,9 +32,9 @@
                             </svg>
                         </div>
                     </a>
-                    <a href="mailto:asken@expert" class="bn">
+                    <a href="mailto:{{ $contacts->email }}" class="bn">
                         <div class="left">
-                            <div class="text">asken@expert</div>
+                            <div class="text">{{ $contacts->email }}</div>
                             <div class="line"></div>
                         </div>
                         <div class="right">
@@ -54,7 +54,7 @@
                         <input type="text" name="name" placeholder="Ваше имя">
                         <input type="text" name="email" placeholder="Ваш e-mail">
                         <input type="phone" name="phone" class="phone" placeholder="Ваш телефон...">
-                        <input type="text" name="text" placeholder="Текст...">
+                        <input type="text" name="message" placeholder="Текст...">
                         <div class="submit">
                             <button type="submit"></button>
                         </div>

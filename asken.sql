@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Окт 23 2019 г., 15:02
+-- Время создания: Окт 24 2019 г., 09:36
 -- Версия сервера: 5.6.38
 -- Версия PHP: 7.1.12
 
@@ -67,7 +67,7 @@ CREATE TABLE `contacts` (
 --
 
 INSERT INTO `contacts` (`id`, `phone_1`, `phone_2`, `adress`, `email`, `lat`, `lng`, `created_at`, `updated_at`) VALUES
-(1, '87054456684', '12121', NULL, NULL, NULL, NULL, NULL, '2019-10-23 11:29:25');
+(1, '+ 7 777 170 8273', '+ 7 707 230 7253', NULL, 'asken@expert', NULL, NULL, NULL, '2019-10-24 05:01:06');
 
 -- --------------------------------------------------------
 
@@ -91,7 +91,7 @@ CREATE TABLE `docs` (
 
 INSERT INTO `docs` (`id`, `enable`, `product_id`, `title`, `file`, `created_at`, `updated_at`) VALUES
 (1, 1, 1, 'Кабели силовые для стационарной прокладки на напряжение до 1 кВ включительно', '37fae088e03f7e4077730e1b5cbc4bdb.txt', '2019-10-23 07:25:13', '2019-10-23 09:36:22'),
-(2, 1, 1, 'Кабели силовые для стационарной прокладки на напряжение свыше 1 кВ', NULL, '2019-10-23 09:36:08', '2019-10-23 09:36:08'),
+(2, 1, 1, 'Кабели силовые для стационарной прокладки на напряжение свыше 1 кВ', '81566f6712ab6fec08bb3bd46731e025.jpg', '2019-10-23 09:36:08', '2019-10-24 05:53:03'),
 (3, 1, 1, 'Кабель контрольный', NULL, '2019-10-23 09:36:36', '2019-10-23 09:50:16'),
 (4, 1, 1, 'Провода и кабеля монтажные', NULL, '2019-10-23 09:36:52', '2019-10-23 09:36:52'),
 (5, 1, 1, 'Кабели для нестационарной прокладки', NULL, '2019-10-23 09:37:02', '2019-10-23 09:37:02'),
@@ -336,6 +336,7 @@ INSERT INTO `products` (`id`, `position`, `title`, `url`, `icon`, `image`, `fon`
 CREATE TABLE `requests` (
   `id` int(10) UNSIGNED NOT NULL,
   `enable` tinyint(1) NOT NULL DEFAULT '0',
+  `name` text COLLATE utf8mb4_unicode_ci,
   `phone` text COLLATE utf8mb4_unicode_ci,
   `email` text COLLATE utf8mb4_unicode_ci,
   `message` text COLLATE utf8mb4_unicode_ci,

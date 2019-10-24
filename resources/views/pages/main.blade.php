@@ -20,7 +20,7 @@
                         <div class="content">
                             <h2>{{ $item->title }}</h2>
                             <small>{{ $item->desc }}</small>
-                            <a href="{{ $item->url }}" class="web_button"></a>
+                            <a href="/catalog/{{ $item->url }}" class="web_button"></a>
                         </div>
                     </div>
 

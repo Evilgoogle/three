@@ -174,4 +174,5 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('about', 'MainController@about');
     Route::get('catalog/{url?}', 'MainController@catalog');
     Route::get('contacts', 'MainController@contacts');
+    Route::post('download', 'MainController@download');
 });

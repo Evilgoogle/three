@@ -85,7 +85,8 @@ class MainController extends Controller
         $rules = [
             'name' => 'required',
             'phone' => 'required',
-            'captcha' => 'required|captcha',
+            'email' => 'email|required',
+            //'captcha' => 'required|captcha',
         ];
 
         $messages = [
@@ -95,9 +96,15 @@ class MainController extends Controller
         ];
 
         $v = Validator::make($request->all(), $rules, $messages);
-        if ($v->fails()) return back()->withErrors($v->errors())->withInput();
+        if ($v->fails()) return response()->json($v->errors(), 422);
 
         $data = $request->all();
+        $set = new App\ClientRequest();
+        $set->name = $request->name;
+        $set->email = $request->email;
+        $set->phone = $request->phone;
+        $set->message = $request->message;
+        $set->save();
 
         Mail::send('email.request', ['data' => $data], function($message) {
             $message->from('stan-poral@yandex.kz', 'Stan Info');
@@ -105,7 +112,7 @@ class MainController extends Controller
             $message->to('evilgoogle@mail.ru');
         });
 
-        return back()->with('message', 'Заявка принята. Ждите нашего звонка!');
+        return response()->json(['status' => 'ok', 'message' => 'Заявка принята. Ждите нашего звонка!']);
     }
 
     /*
@@ -138,17 +145,32 @@ class MainController extends Controller
 
     public function catalog($url = null) {
 
+        $products = App\Product::orderBy('position', 'ASC')->get();
         if(isset($url)) {
 
-            $active = $url;
-            return view('pages.catolog', compact('active'));
+            $main = App\Product::where('url', $url)->first();
+            if(!isset($main)) {
+                abort('404');
+            }
+            $catalog = App\Doc::where('product_id', $main->id)->orderBy('created_at', 'DESC')->get();
+            return view('pages.catolog', compact('products', 'catalog', 'main'));
         }
-        return view('pages.catolog', compact(''));
+
+        $catalog = App\Doc::orderBy('created_at', 'DESC')->get();
+        return view('pages.catolog', compact('products', 'catalog'));
     }
 
     public function contacts() {
 
-        return view('pages.contacts', compact(''));
+        $contacts = App\Contact::find(1);
+        return view('pages.contacts', compact('contacts'));
+    }
+
+    public function download(Request $request) {
+
+        $data = json_decode($request->data);
+        downloadZip($data);
+        return back();
     }
 
     // Sitemaps
