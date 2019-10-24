@@ -10,7 +10,7 @@
         <div class="industries_block">
             <div class="contain">
                 @foreach($main as $item)
-                    <a href="{{ $item->url }}" class="bn">
+                    <a href="/catalog/{{ $item->url }}" class="bn">
                         <div class="rubber">
                             <div class="text">{{ $item->title }}</div>
                             <div class="icon">{!!  file_get_contents(asset('/files/'.$item->icon)) !!}</div>
