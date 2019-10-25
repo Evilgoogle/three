@@ -158,8 +158,8 @@ $(document).ready(function () {
             enabled: true,
         },
         navigation: {
-            nextEl: '.next',
-            prevEl: '.prev',
+            nextEl: '.prev',
+            prevEl: '.next',
         },
         mousewheel: true,
         coverflowEffect: {
