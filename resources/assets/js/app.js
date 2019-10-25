@@ -76,6 +76,11 @@ $(document).ready(function () {
     var main_swiper_panel = $('.main_swiper_panel .block').data('blocks');
     var main_swiper  = new Swiper('.main_swiper', {
         direction: orientation,
+        on: {
+            init: function () {
+                console.log('swiper initialized');
+            },
+        },
         pagination: {
             el: '.main_swiper_panel .block',
             clickable: true,

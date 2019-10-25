@@ -13,7 +13,9 @@
         }
         $main_json = json_encode($data); ?>
         <div class="swiper-wrapper">
+            <?php $i = 0?>
             @foreach ($main as $item)
+                <?php $i++?>
                 <div class="swiper-slide">
                     <!-- text -->
                     <div class="contain">
