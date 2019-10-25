@@ -3,7 +3,7 @@
 @section('app_content')
 
     <div class="gallary page">
-        <div class="contain">
+        <div class="contain wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.3s" data-wow-offset="10">
             <div class="swiper_gallary">
                 @if($items->count())
                     <div class="swiper-container">

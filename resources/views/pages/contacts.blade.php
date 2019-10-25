@@ -8,7 +8,7 @@
                 <button class="js_close"></button>
             </div>
             <div class="block">
-                <div class="left_block">
+                <div class="left_block wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.3s" data-wow-offset="10">
                     <div class="header">Есть вопросы, свяжитесь с нами:</div>
                     <a href="tel:{{ $contacts->phone_1 }}" class="bn">
                         <div class="left">
@@ -48,7 +48,7 @@
                         <span class="icon"></span>
                     </button>
                 </div>
-                <div class="right_block">
+                <div class="right_block wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.3s" data-wow-offset="10">
                     <div class="header">Или напишите нам:</div>
                     <form id="request">
                         <input type="text" name="name" placeholder="Ваше имя">

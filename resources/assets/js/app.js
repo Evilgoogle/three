@@ -78,7 +78,27 @@ $(document).ready(function () {
         direction: orientation,
         on: {
             init: function () {
-                console.log('swiper initialized');
+
+                setTimeout(function () {
+                    var swmain_block_1 = $('#swmain_block_1');
+                    swmain_block_1.removeClass('anm_end_swmain_block');
+                    swmain_block_1.addClass('anm_end_swmain_block');
+                },100);
+                setTimeout(function () {
+                    var swmain_fon_1 = $('#swmain_fon_1');
+                    swmain_fon_1.removeClass('anm_start_swmain');
+                    swmain_fon_1.addClass('anm_end_swmain');
+                },700);
+                setTimeout(function () {
+                    var swmain_image_1 = $('#swmain_image_1');
+                    swmain_image_1.removeClass('anm_start_swmain');
+                    swmain_image_1.addClass('anm_end_swmain');
+                },800);
+                setTimeout(function () {
+                    var swmain_text_1 = $('#swmain_text_1');
+                    swmain_text_1.removeClass('anm_start_swmain_text');
+                    swmain_text_1.addClass('anm_end_swmain_text');
+                },1200);
             },
         },
         pagination: {
@@ -108,8 +128,8 @@ $(document).ready(function () {
     // Parallax main
    $('.main_swiper .swiper-slide').each(function (key, val) {
 
-       var fon = $(val).children('.fon').children('.zoomer').attr('id'),
-           image = $(val).children('.image').attr('id');
+       var fon = $(val).children('.fon').children('.space_animate').children('.zoomer').attr('id'),
+           image = $(val).children('.image').children('.space_animate').attr('id');
 
        var main_fon = document.getElementById(fon);
        new Parallax(main_fon, {

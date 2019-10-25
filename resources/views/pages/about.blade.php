@@ -4,10 +4,10 @@
 
     <div class="about">
         <div class="contain">
-            <img src="/images/logo_text.svg" alt="Asken" class="logo">
-            <div class="text_1">{!! $about->text_1 !!}</div>
+            <img src="/images/logo_text.svg" alt="Asken" class="logo wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.5s" data-wow-offset="10">
+            <div class="text_1 wow fadeIn" data-wow-duration="0.7s" data-wow-delay="0.3s" data-wow-offset="10">{!! $about->text_1 !!}</div>
         </div>
-        <div class="industries_block">
+        <div class="industries_block wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.3s" data-wow-offset="10">
             <div class="contain">
                 @foreach($main as $item)
                     <a href="/catalog/{{ $item->url }}" class="bn">
@@ -19,11 +19,11 @@
                 @endforeach
             </div>
         </div>
-        <div class="contain">
+        <div class="contain wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.5s" data-wow-offset="10">
             <div class="text_2">{!! $about->text_2 !!}</div>
             <div class="text_gray">{!! $about->textgray !!}</div>
         </div>
-        <div class="mission">
+        <div class="mission wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.5s" data-wow-offset="10">
             <div class="head">
                 <div class="line"></div>
                 <div class="box">Миссия</div>

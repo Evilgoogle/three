@@ -4,7 +4,7 @@
 
     <div class="catalog page">
 
-        <div class="industries_block">
+        <div class="industries_block wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.3s" data-wow-offset="10">
             <a href="#" class="bn mobile">
                 <div class="rubber">
                     <div class="text">{{ $products[0]->title }}</div>
@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="contain">
-            <div class="block">
+            <div class="block wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.8s" data-wow-offset="10">
                 <div class="info">{{ isset($main) ? $main->title.':' : 'Весь каталог:' }}</div>
                 <?php $data = []?>
                 @foreach($catalog as $item)

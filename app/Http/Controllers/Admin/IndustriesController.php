@@ -43,7 +43,7 @@ class IndustriesController extends Controller
         $info = $this->info;
 
         try {
-            $item = Product::findOrFail($id);
+            $item = Industry::findOrFail($id);
         } catch (\Exception $e) {
             return back()->withErrors($e->getMessage());
         }
