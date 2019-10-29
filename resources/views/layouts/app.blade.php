@@ -34,7 +34,7 @@
 <header>
     <div class="bar">
         <div class="contain">
-            <a href="/" class="logo"><img src="/images/logo.svg" alt="asken.kz"></a>
+            <a href="/about" class="logo"><img src="/images/logo.svg" alt="asken.kz"></a>
             <div class="panel">
                 <form action="#" method="post">
                     <input id="nav_search_input" type="text" name="text">
@@ -47,7 +47,7 @@
     <nav>
         <div class="mobile_head">
             <div class="contain">
-                <a href="/" class="logo"><img src="/images/logo.svg" alt="asken.kz"></a>
+                <a href="/about" class="logo"><img src="/images/logo.svg" alt="asken.kz"></a>
                 <button class="js_close_nav"></button>
             </div>
         </div>
@@ -71,8 +71,10 @@
 
 <!-- WebSite JS -->
 <script src="{{ asset('/js/jquery.min.js') }}"></script>
-<!-- Google map JS -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXrKE5h-QaBB_NDgmMqTzEDaAj4NzM9Wk"></script>
+
+{{-- Yandex map--}}
+<script src="https://api-maps.yandex.ru/2.1/?apikey=5ac63499-6dcf-4f32-a034-5aea9dda69a2&lang=ru_RU" type="text/javascript"></script>
+
 <script src="{{ asset('/js/app.js') }}"></script>
 </body>
 </html>

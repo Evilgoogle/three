@@ -11,9 +11,10 @@
                     <a href="/admin/{{ $info->url }}/add" class="btn btn-info waves-effect m-t-15">Добавить</a>
                 </div>
                 <div class="body table-responsive">
-                    <table class="table table-bordered table-striped js-table">
+                    <table class="table table-bordered table-striped js-table order-table">
                         <thead>
                         <tr>
+                            <th class="index">Порядок сортировки</th>
                             <th>ID</th>
                             <th>Заголовок</th>
                             <th>Изображение</th>
@@ -24,7 +25,8 @@
                         </thead>
                         <tbody>
                         @foreach ($items as $item)
-                            <tr>
+                            <tr id="{{ $item->id }}">
+                                <td class="index">{{ $item->order }}</td>
                                 <td>{{ $item->id }}</td>
                                 <td>{{ $item->title }}</td>
                                 <td><img src="{{ issetImg($item->image) }}" class="goods_preview"></td>

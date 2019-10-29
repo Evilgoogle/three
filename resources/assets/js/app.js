@@ -199,6 +199,33 @@ $(document).ready(function () {
         $('.map').removeClass('active');
     });
 
+    var lat = $('#map').data('lat');
+    var lng = $('#map').data('lng');
+    var myLatLng = {lat: lat, lng: lng};
+
+    if(/contacts/i.test(location.href)) {
+        ymaps.ready(init);
+
+        function init() {
+            var myMap = new ymaps.Map("map", {
+                center: [myLatLng.lat, myLatLng.lng],
+                zoom: 15
+            });
+
+            myPlacemark_1 = new ymaps.Placemark([myLatLng.lat, myLatLng.lng], {
+                hintContent: 'Asken',
+                balloonContent: 'Asken company'
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: '../images/map-marker.png',
+                iconImageSize: [41, 55],
+                iconImageOffset: [-20, -50]
+            });
+
+            myMap.geoObjects.add(myPlacemark_1);
+        }
+    }
+
     $('.js_modal_cose').click(function () {
 
         $('#modal_buy .modal').removeClass('modal_active');
@@ -234,7 +261,7 @@ $(document).ready(function () {
                 if (data.status == 'ok') {
                     Swal.fire({
                         title: 'Спасибо',
-                        html: 'Ваш отзыв после появится после модераций',
+                        html: 'Заявка принято. Ждите нашего звонка!',
                         type: 'success',
                         confirmButtonText: 'Закрыть'
                     });

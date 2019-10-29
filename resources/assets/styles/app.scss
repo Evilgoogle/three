@@ -1540,10 +1540,11 @@ header {
       height: 25px;
       @include img_contain("../images/ico_close.svg");
       position: absolute;
-      top: 20px;
+      top: 45px;
       right: 20px;
       transition: $animation_easy;
       transform: rotate(0deg);
+      z-index: 1;
       &:hover {
         transform: rotate(180deg);
       }

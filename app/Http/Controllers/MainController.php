@@ -107,9 +107,9 @@ class MainController extends Controller
         $set->save();
 
         Mail::send('email.request', ['data' => $data], function($message) {
-            $message->from('stan-poral@yandex.kz', 'Stan Info');
-            $message->subject('Stan.kz | Жаңа сауал түсті');
-            $message->to('evilgoogle@mail.ru');
+            $message->from('emotions-mailgun@yandex.kz', 'Asken | Заявка');
+            $message->subject('Asken | Заявка');
+            $message->to('sales@askentd.kz');
         });
 
         return response()->json(['status' => 'ok', 'message' => 'Заявка принята. Ждите нашего звонка!']);

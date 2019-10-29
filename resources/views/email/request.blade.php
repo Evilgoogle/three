@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <body>
-    <b>Есімі:</b> {{ $data['name'] or '' }}<br>
+    <b>Имя:</b> {{ $data['name'] or '' }}<br>
     <b>Телефоны:</b> {{ $data['phone'] or '' }}<br>
-    <b>Почтасы:</b> {{ $data['email'] or '' }}<br>
-    <b>Сауал:</b> {!! $data['quest'] or '' !!}
+    <b>Почта:</b> {{ $data['email'] or '' }}<br>
+    <b>Текст:</b> {!! $data['quest'] or '' !!}
 </body>
 </html>
