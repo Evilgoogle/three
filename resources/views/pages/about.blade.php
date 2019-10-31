@@ -2,7 +2,7 @@
 
 @section('app_content')
 
-    <div class="about">
+    <div id="none" style="display: none" class="about">
         <div class="contain">
             <img src="/images/logo_text.svg" alt="Asken" class="logo wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.5s" data-wow-offset="10">
             <div class="text_1 wow fadeIn" data-wow-duration="0.7s" data-wow-delay="0.3s" data-wow-offset="10">{!! $about->text_1 !!}</div>

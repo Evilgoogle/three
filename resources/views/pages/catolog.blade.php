@@ -2,7 +2,7 @@
 
 @section('app_content')
 
-    <div class="catalog page">
+    <div id="none" style="display: none;" class="catalog page">
 
         <div class="industries_block wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.3s" data-wow-offset="10">
             <a href="#" class="bn mobile">

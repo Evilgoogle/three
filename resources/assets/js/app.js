@@ -24,6 +24,43 @@ mql.addListener(function(m) {
 
 $(document).ready(function () {
 
+    setTimeout(function () {
+        $('#none').removeAttr('style');
+
+        setTimeout(function () {
+            // Gallary
+            var gal_slides = 4;
+            var gal_stretch = 0;
+            if ($clientWidht < 1024) {
+                gal_slides = 2;
+                gal_stretch = 40
+            }
+            var swiper_gallary = new Swiper('.swiper_gallary .swiper-container', {
+                slidesPerView: gal_slides,
+                spaceBetween: 0,
+                loop: true,
+                effect: 'coverflow',
+                grabCursor: true,
+                centeredSlides: true,
+                keyboard: {
+                    enabled: true,
+                },
+                navigation: {
+                    nextEl: '.prev',
+                    prevEl: '.next',
+                },
+                mousewheel: true,
+                coverflowEffect: {
+                    rotate: 0,
+                    stretch: gal_stretch,
+                    depth: 140,
+                    modifier: 1,
+                    slideShadows : true
+                },
+            });
+        },100);
+    },200);
+
     // Правка области сайта в браузерах webkit
     var user_agent = window.navigator.userAgent;
     if(/AppleWebKit/.test(user_agent)) {
@@ -139,37 +176,6 @@ $(document).ready(function () {
        var main_image = document.getElementById(image);
        new Parallax(main_image);
    });
-
-   // Gallary
-    var gal_slides = 4;
-    var gal_stretch = 0;
-    if ($clientWidht < 1024) {
-        gal_slides = 2;
-        gal_stretch = 40
-    }
-    var swiper_gallary = new Swiper('.swiper_gallary .swiper-container', {
-        slidesPerView: gal_slides,
-        spaceBetween: 0,
-        loop: true,
-        effect: 'coverflow',
-        grabCursor: true,
-        centeredSlides: true,
-        keyboard: {
-            enabled: true,
-        },
-        navigation: {
-            nextEl: '.prev',
-            prevEl: '.next',
-        },
-        mousewheel: true,
-        coverflowEffect: {
-            rotate: 0,
-            stretch: gal_stretch,
-            depth: 140,
-            modifier: 1,
-            slideShadows : true
-        },
-    });
 
     // Mobile nav
     $('.js_mobile_nav').click(function () {

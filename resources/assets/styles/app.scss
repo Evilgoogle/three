@@ -1075,6 +1075,7 @@ header {
   font-size: 20px;
   color: $color-white;
   padding-top: 5%;
+  text-align: center;
   @include respond-to(w-1919) {
     font-size: 18px;
   }
@@ -1525,7 +1526,7 @@ header {
     width: calc(100% - 2px);
     height: calc(100% - 2px);
     transition: 0.5s ease-in-out;
-    transform: translateX(100%);
+    transform: translateY(100%);
     background-color: $color-gray;
     position: relative;
     border: 1px solid$color-violet;
@@ -1551,7 +1552,7 @@ header {
     }
   }
   .active {
-    transform: translateX(0%) !important;
+    transform: translateY(0%) !important;
   }
   .block {
     display: flex;
@@ -1753,7 +1754,7 @@ header {
             @include button_reset;
             width: 245px;
             height: 62px;
-            @include img_contain("../images/button.svg");
+            @include img_contain("../images/button_form.svg");
             transition: $animation_easy;
             transform: translateX(0px);
             @include respond-to(w-1919) {

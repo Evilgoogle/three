@@ -2,7 +2,7 @@
 
 @section('app_content')
 
-    <div class="contacts">
+    <div id="none" style="display: none" class="contacts">
         <div class="contain">
             <div id="map" class="map" data-lat="{{ $contacts->lat }}" data-lng="{{ $contacts->lng }}">
                 <button class="js_close"></button>
