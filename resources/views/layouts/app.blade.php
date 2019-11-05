@@ -36,8 +36,8 @@
         <div class="contain">
             <a href="/about" class="logo"><img src="/images/logo.svg" alt="asken.kz"></a>
             <div class="panel">
-                <form action="#" method="post">
-                    <input id="nav_search_input" type="text" name="text">
+                <form action="/search" method="get">
+                    <input id="nav_search_input" type="text" name="title">
                     <button type="button" class="js_search"></button>
                 </form>
                 <button class="js_mobile_nav"></button>

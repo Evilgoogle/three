@@ -1389,6 +1389,9 @@ header {
       @include respond-to(w-799) {
         margin-bottom: 7%;
       }
+      b {
+        color: $color-white;
+      }
     }
     .bn {
       font-size: 20px;

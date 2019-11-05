@@ -172,6 +172,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('', 'MainController@index');
     Route::get('industries', 'MainController@industries');
     Route::get('about', 'MainController@about');
+    Route::get('search', 'MainController@search');
     Route::get('catalog/{url?}', 'MainController@catalog');
     Route::get('contacts', 'MainController@contacts');
     Route::post('download', 'MainController@download');

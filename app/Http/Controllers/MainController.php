@@ -143,6 +143,14 @@ class MainController extends Controller
         return view('pages.about', compact('about', 'main'));
     }
 
+    public function search(Request $request) {
+
+        $title = $request->title;
+        $catalog = App\Doc::orderBy('created_at', 'desc')->where('title', 'LIKE', '%'.$request->title.'%')->get();
+
+        return view('pages.search', compact('catalog', 'title'));
+    }
+
     public function catalog($url = null) {
 
         $products = App\Product::orderBy('position', 'ASC')->get();
