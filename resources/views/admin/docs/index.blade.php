@@ -11,7 +11,7 @@
                     <a href="/admin/{{ $info->url }}/add" class="btn btn-info waves-effect m-t-15">Добавить</a>
                 </div>
                 <div class="pagination_block">
-                    <form class="filter_block" action="/admin/docs/filter" method="get">
+                    <form class="filter_block" action="/admin/catalog/filter" method="get">
                         <div class="bn">
                             <div class="form-group">
                                 <div class="form-line">
@@ -29,7 +29,7 @@
                     {{ $items->appends(isset($patch) ? $patch : [])->links() }}
                 </div>
                 <div class="body table-responsive">
-                    <table class="table table-bordered table-striped js-table">
+                    <table class="table table-bordered table-striped">
                         <thead>
                         <tr>
                             <th>ID</th>

@@ -28,7 +28,7 @@ class DocsController extends Controller
     public function index()
     {
         $products = $this->info->product;
-        $items = Doc::paginate(30);
+        $items = Doc::orderBy('created_at', 'DESC')->paginate(30);
         $info = $this->info;
 
         return view('admin.docs.index', compact('items', 'info', 'products'));
@@ -39,10 +39,10 @@ class DocsController extends Controller
         $info = $this->info;
         if(isset($request->product)) {
 
-            $items = Doc::where('product_id', $request->product)->orderBy('order', 'ASC')->paginate(30);
+            $items = Doc::where('product_id', $request->product)->orderBy('created_at', 'DESC')->paginate(30);
         } else {
 
-            $items = Doc::orderBy('order', 'ASC')->paginate(30);
+            $items = Doc::orderBy('created_at', 'DESC')->paginate(30);
         }
 
         // filter
