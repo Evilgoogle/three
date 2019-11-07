@@ -177,7 +177,7 @@ class MainController extends Controller
     public function download(Request $request) {
 
         $data = json_decode($request->data);
-        downloadZip($data);
+        downloadZip($data, $request->title);
         return back();
     }
 

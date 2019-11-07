@@ -263,10 +263,10 @@ if(!function_exists('setDinamic_image')) {
 
 if(!function_exists('downloadZip')) {
 
-    function downloadZip($files) {
+    function downloadZip($files, $name) {
 
         $zip = new ZipArchive;
-        $zip_name = public_path('/uploads/'.date('U').md5(str_random(10).time()).'.zip');
+        $zip_name = public_path('/uploads/'.$name.'.zip');
         if ($zip->open($zip_name, ZipArchive::CREATE) === TRUE) {
 
             foreach ($files as $f) {

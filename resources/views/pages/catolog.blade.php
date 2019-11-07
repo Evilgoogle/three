@@ -28,7 +28,13 @@
                 <div class="info">{{ isset($main) ? $main->title.':' : 'Весь каталог:' }}</div>
                 <?php $data = []?>
                 @foreach($catalog as $item)
-                    <{{ !empty($item->file) ? 'a' : 'div' }} href="{{ !empty($item->file) ? '/uploads/'.$item->file : '#' }}" download="download" class="bn">
+                    <?php
+                        $format = '';
+                        if(preg_match('#^.*(\.[a-z0-1]*)$#ui', $item->file, $match)) {
+                            $format = $match[1];
+                        }
+                    ?>
+                    <{{ !empty($item->file) ? 'a' : 'div' }} href="{{ !empty($item->file) ? '/uploads/'.$item->file : '#' }}" download="{{ $item->title.$format }}" class="bn">
                         <div class="left">
                             <div class="text">{{ $item->title }}</div>
                             <div class="line"></div>
@@ -46,6 +52,7 @@
                 @if($catalog->count())
                     <form action="/download" class="download_all" method="post">
                         {{ csrf_field() }}
+                        <input type="hidden" name="title" value="{{ isset($main) ? $main->title.' - Asken' : 'Полный каталог - Asken' }}">
                         <input type="hidden" name="data" value="{{ json_encode($data) }}">
                         <button type="submit" class="bn">
                             <div class="left">
