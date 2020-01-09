@@ -22,7 +22,7 @@ class MainComposer
         if (empty($url)) $url = "main";
         $seo = Seo::where('url', $url)->first();
 
-        $view->with(compact('seo', 'contacts'));
+        $view->with(compact('seo'));
     }
 
 }
