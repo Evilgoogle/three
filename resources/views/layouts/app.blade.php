@@ -17,6 +17,11 @@
     <meta name="author" content="FreeLife">
     <meta name="robots" content="index, follow">
 
+    <style>
+        body { margin: 0; }
+        canvas { display: block; }
+    </style>
+
     <!-- WebSite CSS -->
     <link href="{{ asset('libs/animate.css') }}" rel="stylesheet">
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
@@ -72,8 +77,8 @@
 <!-- WebSite JS -->
 <script src="{{ asset('/js/jquery.min.js') }}"></script>
 
-{{-- Yandex map--}}
-<script src="https://api-maps.yandex.ru/2.1/?apikey=5ac63499-6dcf-4f32-a034-5aea9dda69a2&lang=ru_RU" type="text/javascript"></script>
+<!-- Three JS -->
+<!--<script src="{{ asset('/libs/three.js') }}"></script>-->
 
 <script src="{{ asset('/js/app.js') }}"></script>
 </body>
