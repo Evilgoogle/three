@@ -1187,9 +1187,119 @@ function test_core() {
             }
         }
     }
+    function font() {
+
+        /*var loader = new THREE.FontLoader();
+        var font = loader.load(
+            // resource URL
+            'fonts/helvetiker_bold.typeface.json',
+
+            // onLoad callback
+            function ( font ) {
+                // do something with the font
+                scene.add( font );
+            },
+
+            // onProgress callback
+            function ( xhr ) {
+                console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
+            },
+
+            // onError callback
+            function ( err ) {
+                console.log( 'An error happened' );
+            }
+        );*/
+
+        let font = THREE.Font();
+        //font.generateShapes('EvilGoogle');
+        console.log(font);
+    }
+    function curve() {
+
+        //let curve = new THREE.Curve(); // Абстрактный базовый класс для кривых
+        //get.getPoint(1);
+        //get.getPointAt(1);
+        //get.getLength();
+
+        /*var curve = new THREE.EllipseCurve(
+            0,  0,            // ax, aY
+            5, 2,           // xRadius, yRadius
+            0,  2 * Math.PI,  // это отрисовка кольца
+            false,            // по часовой или против часовой строим кольцо
+            0                 // aRotation
+        );*/
+
+        /*var curve = new THREE.CatmullRomCurve3([ // Это создает произвольную кривую
+            new THREE.Vector3(-4, 0, 4),
+            new THREE.Vector3(-3, 3, 3),
+            new THREE.Vector3(0, 0, 0),
+            new THREE.Vector3(2, -2, 2),
+            new THREE.Vector3(4, 0, 4)
+        ]);
+        curve.closed = true; // Если true, то линия коректируясь замкнеться
+        curve.curveType = 'catmullrom'; // тип отрисовки. На глаз одинаковое*/
+
+        /*var curve = new THREE.CubicBezierCurve( // создаем линия на основе 4 точек
+            new THREE.Vector2( -10, 0 ), // начальная точка
+            new THREE.Vector2( -5, 15 ), // смежная точка 1
+            new THREE.Vector2( 20, 15 ), // смежная точка 2
+            new THREE.Vector2( 10, 0 ) // конечная точка
+        );*/
+
+        /*var curve = new THREE.CubicBezierCurve3( // тоже самое как CubicBezierCurve, но имеется z кордината. Можно наклонить по z
+            new THREE.Vector3( -10, 0, 0 ),
+            new THREE.Vector3( -5, 15, 0 ),
+            new THREE.Vector3( 20, 15, 0 ),
+            new THREE.Vector3( 10, 0, 0 )
+        );*/
+
+        /*var curve = new THREE.LineCurve( // создаем линию
+            new THREE.Vector2(1, 0),
+            new THREE.Vector2(3, 4),
+        );*/
+
+        /*var curve = new THREE.LineCurve3( // тоже самое что LineCurve, но есть z кордината
+            new THREE.Vector3(1, 0, 2),
+            new THREE.Vector3(3, 4, 3),
+        );*/
+
+        /*var curve = new THREE.QuadraticBezierCurve( // создаем линия на основе 3 точек.
+            new THREE.Vector2( -10, 0 ), // начальная точка
+            new THREE.Vector2( 20, 15 ), // смежная точка
+            new THREE.Vector2( 10, 0 ) // конечная точка
+        );*/
+
+        /*var curve = new THREE.QuadraticBezierCurve3( // тотже QuadraticBezierCurve, но с z кординатой
+            new THREE.Vector3( -10, 0, 0 ),
+            new THREE.Vector3( 20, 15, 0 ),
+            new THREE.Vector3( 10, 0, 0 )
+        );*/
+
+        var curve = new THREE.SplineCurve([ // Тоже самое что CatmullRomCurve3 создает произвольгую линию, но тольков xy кординатах
+            new THREE.Vector2( -10, 0 ),
+            new THREE.Vector2( -5, 5 ),
+            new THREE.Vector2( 0, 0 ),
+            new THREE.Vector2( 5, -5 ),
+            new THREE.Vector2( 10, 0 )
+        ]);
+
+        var points = curve.getPoints(50); // Точки в кординате с добавленными 50 точками для округление
+        console.log(points);
+        //console.log(curve.getLength()); // Получаем общую длину кривой
+        //console.log(curve.getTangent(20)); // получается xyz для чего не понятно
+
+        var geometry = new THREE.BufferGeometry().setFromPoints(points);
+        var material = new THREE.LineBasicMaterial({ color : 0xff0000 });
+        var line = new THREE.Line(geometry, material);
+        scene.add(line);
+    }
+
     //clock();
     //bufferGeometry();
     set_raycaster();
+    //curve()
+    font();
 }
 
 function test_math() {
