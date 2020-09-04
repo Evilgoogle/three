@@ -10695,8 +10695,8 @@ if (typeof this !== 'undefined' && this.Sweetalert2){  this.swal = this.sweetAle
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return FloatType; });
 /* unused harmony export Fog */
 /* unused harmony export FogExp2 */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "w", function() { return Font; });
-/* unused harmony export FontLoader */
+/* unused harmony export Font */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "w", function() { return FontLoader; });
 /* unused harmony export FrontFaceDirectionCCW */
 /* unused harmony export FrontFaceDirectionCW */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "x", function() { return FrontSide; });
@@ -10938,25 +10938,25 @@ if (typeof this !== 'undefined' && this.Sweetalert2){  this.swal = this.sweetAle
 /* unused harmony export ShaderMaterial */
 /* unused harmony export ShadowMaterial */
 /* unused harmony export Shape */
-/* unused harmony export ShapeBufferGeometry */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_21", function() { return ShapeBufferGeometry; });
 /* unused harmony export ShapeGeometry */
 /* unused harmony export ShapePath */
 /* unused harmony export ShapeUtils */
 /* unused harmony export ShortType */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_21", function() { return Skeleton; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_22", function() { return Skeleton; });
 /* unused harmony export SkeletonHelper */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_22", function() { return SkinnedMesh; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_23", function() { return SkinnedMesh; });
 /* unused harmony export SmoothShading */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_23", function() { return Sphere; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_24", function() { return SphereBufferGeometry; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_24", function() { return Sphere; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_25", function() { return SphereBufferGeometry; });
 /* unused harmony export SphereGeometry */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_25", function() { return Spherical; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_26", function() { return Spherical; });
 /* unused harmony export SphericalHarmonics3 */
 /* unused harmony export SphericalReflectionMapping */
 /* unused harmony export Spline */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_26", function() { return SplineCurve; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_27", function() { return SplineCurve; });
 /* unused harmony export SplineCurve3 */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_27", function() { return SpotLight; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_28", function() { return SpotLight; });
 /* unused harmony export SpotLightHelper */
 /* unused harmony export SpotLightShadow */
 /* unused harmony export Sprite */
@@ -10974,25 +10974,25 @@ if (typeof this !== 'undefined' && this.Sweetalert2){  this.swal = this.sweetAle
 /* unused harmony export StringKeyframeTrack */
 /* unused harmony export SubtractEquation */
 /* unused harmony export SubtractiveBlending */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_28", function() { return TOUCH; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_29", function() { return TangentSpaceNormalMap; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_29", function() { return TOUCH; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_30", function() { return TangentSpaceNormalMap; });
 /* unused harmony export TetrahedronBufferGeometry */
 /* unused harmony export TetrahedronGeometry */
 /* unused harmony export TextBufferGeometry */
 /* unused harmony export TextGeometry */
 /* unused harmony export Texture */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_30", function() { return TextureLoader; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_31", function() { return TextureLoader; });
 /* unused harmony export TorusBufferGeometry */
 /* unused harmony export TorusGeometry */
 /* unused harmony export TorusKnotBufferGeometry */
 /* unused harmony export TorusKnotGeometry */
 /* unused harmony export Triangle */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_31", function() { return TriangleFanDrawMode; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_32", function() { return TriangleStripDrawMode; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_32", function() { return TriangleFanDrawMode; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_33", function() { return TriangleStripDrawMode; });
 /* unused harmony export TrianglesDrawMode */
 /* unused harmony export TubeBufferGeometry */
 /* unused harmony export TubeGeometry */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_33", function() { return UVMapping; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_34", function() { return UVMapping; });
 /* unused harmony export Uint16Attribute */
 /* unused harmony export Uint16BufferAttribute */
 /* unused harmony export Uint32Attribute */
@@ -11003,7 +11003,7 @@ if (typeof this !== 'undefined' && this.Sweetalert2){  this.swal = this.sweetAle
 /* unused harmony export Uint8ClampedBufferAttribute */
 /* unused harmony export Uncharted2ToneMapping */
 /* unused harmony export Uniform */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_34", function() { return UniformsLib; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_35", function() { return UniformsLib; });
 /* unused harmony export UniformsUtils */
 /* unused harmony export UnsignedByteType */
 /* unused harmony export UnsignedInt248Type */
@@ -11013,10 +11013,10 @@ if (typeof this !== 'undefined' && this.Sweetalert2){  this.swal = this.sweetAle
 /* unused harmony export UnsignedShort565Type */
 /* unused harmony export UnsignedShortType */
 /* unused harmony export VSMShadowMap */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_35", function() { return Vector2; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_36", function() { return Vector3; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_36", function() { return Vector2; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_37", function() { return Vector3; });
 /* unused harmony export Vector4 */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_37", function() { return VectorKeyframeTrack; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_38", function() { return VectorKeyframeTrack; });
 /* unused harmony export Vertex */
 /* unused harmony export VertexColors */
 /* unused harmony export VideoTexture */
@@ -11024,7 +11024,7 @@ if (typeof this !== 'undefined' && this.Sweetalert2){  this.swal = this.sweetAle
 /* unused harmony export WebGLMultisampleRenderTarget */
 /* unused harmony export WebGLRenderTarget */
 /* unused harmony export WebGLRenderTargetCube */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_38", function() { return WebGLRenderer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_39", function() { return WebGLRenderer; });
 /* unused harmony export WebGLUtils */
 /* unused harmony export WireframeGeometry */
 /* unused harmony export WireframeHelper */
@@ -11034,7 +11034,7 @@ if (typeof this !== 'undefined' && this.Sweetalert2){  this.swal = this.sweetAle
 /* unused harmony export ZeroFactor */
 /* unused harmony export ZeroSlopeEnding */
 /* unused harmony export ZeroStencilOp */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_39", function() { return sRGBEncoding; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_40", function() { return sRGBEncoding; });
 // Polyfills
 
 if ( Number.EPSILON === undefined ) {
@@ -62024,7 +62024,7 @@ var OrbitControls = function ( object, domElement ) {
 	this.enabled = true;
 
 	// "target" sets the location of focus, where the object orbits around
-	this.target = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector3 */]();
+	this.target = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_37" /* Vector3 */]();
 
 	// How far you can dolly in and out ( PerspectiveCamera only )
 	this.minDistance = 0;
@@ -62079,7 +62079,7 @@ var OrbitControls = function ( object, domElement ) {
 	this.mouseButtons = { LEFT: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["O" /* MOUSE */].ROTATE, MIDDLE: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["O" /* MOUSE */].DOLLY, RIGHT: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["O" /* MOUSE */].PAN };
 
 	// Touch fingers
-	this.touches = { ONE: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_28" /* TOUCH */].ROTATE, TWO: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_28" /* TOUCH */].DOLLY_PAN };
+	this.touches = { ONE: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_29" /* TOUCH */].ROTATE, TWO: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_29" /* TOUCH */].DOLLY_PAN };
 
 	// for reset
 	this.target0 = this.target.clone();
@@ -62128,13 +62128,13 @@ var OrbitControls = function ( object, domElement ) {
 	// this method is exposed, but perhaps it would be better if we can make it private...
 	this.update = function () {
 
-		var offset = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector3 */]();
+		var offset = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_37" /* Vector3 */]();
 
 		// so camera.up is the orbit axis
-		var quat = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_12" /* Quaternion */]().setFromUnitVectors( object.up, new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector3 */]( 0, 1, 0 ) );
+		var quat = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_12" /* Quaternion */]().setFromUnitVectors( object.up, new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_37" /* Vector3 */]( 0, 1, 0 ) );
 		var quatInverse = quat.clone().inverse();
 
-		var lastPosition = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector3 */]();
+		var lastPosition = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_37" /* Vector3 */]();
 		var lastQuaternion = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_12" /* Quaternion */]();
 
 		return function update() {
@@ -62288,24 +62288,24 @@ var OrbitControls = function ( object, domElement ) {
 	var EPS = 0.000001;
 
 	// current position in spherical coordinates
-	var spherical = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_25" /* Spherical */]();
-	var sphericalDelta = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_25" /* Spherical */]();
+	var spherical = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_26" /* Spherical */]();
+	var sphericalDelta = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_26" /* Spherical */]();
 
 	var scale = 1;
-	var panOffset = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector3 */]();
+	var panOffset = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_37" /* Vector3 */]();
 	var zoomChanged = false;
 
-	var rotateStart = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_35" /* Vector2 */]();
-	var rotateEnd = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_35" /* Vector2 */]();
-	var rotateDelta = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_35" /* Vector2 */]();
+	var rotateStart = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector2 */]();
+	var rotateEnd = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector2 */]();
+	var rotateDelta = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector2 */]();
 
-	var panStart = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_35" /* Vector2 */]();
-	var panEnd = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_35" /* Vector2 */]();
-	var panDelta = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_35" /* Vector2 */]();
+	var panStart = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector2 */]();
+	var panEnd = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector2 */]();
+	var panDelta = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector2 */]();
 
-	var dollyStart = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_35" /* Vector2 */]();
-	var dollyEnd = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_35" /* Vector2 */]();
-	var dollyDelta = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_35" /* Vector2 */]();
+	var dollyStart = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector2 */]();
+	var dollyEnd = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector2 */]();
+	var dollyDelta = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector2 */]();
 
 	function getAutoRotationAngle() {
 
@@ -62333,7 +62333,7 @@ var OrbitControls = function ( object, domElement ) {
 
 	var panLeft = function () {
 
-		var v = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector3 */]();
+		var v = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_37" /* Vector3 */]();
 
 		return function panLeft( distance, objectMatrix ) {
 
@@ -62348,7 +62348,7 @@ var OrbitControls = function ( object, domElement ) {
 
 	var panUp = function () {
 
-		var v = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector3 */]();
+		var v = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_37" /* Vector3 */]();
 
 		return function panUp( distance, objectMatrix ) {
 
@@ -62374,7 +62374,7 @@ var OrbitControls = function ( object, domElement ) {
 	// deltaX and deltaY are in pixels; right and down are positive
 	var pan = function () {
 
-		var offset = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector3 */]();
+		var offset = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_37" /* Vector3 */]();
 
 		return function pan( deltaX, deltaY ) {
 
@@ -62942,7 +62942,7 @@ var OrbitControls = function ( object, domElement ) {
 
 				switch ( scope.touches.ONE ) {
 
-					case __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_28" /* TOUCH */].ROTATE:
+					case __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_29" /* TOUCH */].ROTATE:
 
 						if ( scope.enableRotate === false ) return;
 
@@ -62952,7 +62952,7 @@ var OrbitControls = function ( object, domElement ) {
 
 						break;
 
-					case __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_28" /* TOUCH */].PAN:
+					case __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_29" /* TOUCH */].PAN:
 
 						if ( scope.enablePan === false ) return;
 
@@ -62974,7 +62974,7 @@ var OrbitControls = function ( object, domElement ) {
 
 				switch ( scope.touches.TWO ) {
 
-					case __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_28" /* TOUCH */].DOLLY_PAN:
+					case __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_29" /* TOUCH */].DOLLY_PAN:
 
 						if ( scope.enableZoom === false && scope.enablePan === false ) return;
 
@@ -62984,7 +62984,7 @@ var OrbitControls = function ( object, domElement ) {
 
 						break;
 
-					case __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_28" /* TOUCH */].DOLLY_ROTATE:
+					case __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_29" /* TOUCH */].DOLLY_ROTATE:
 
 						if ( scope.enableZoom === false && scope.enableRotate === false ) return;
 
@@ -63139,8 +63139,8 @@ var MapControls = function ( object, domElement ) {
 	this.mouseButtons.LEFT = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["O" /* MOUSE */].PAN;
 	this.mouseButtons.RIGHT = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["O" /* MOUSE */].ROTATE;
 
-	this.touches.ONE = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_28" /* TOUCH */].PAN;
-	this.touches.TWO = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_28" /* TOUCH */].DOLLY_ROTATE;
+	this.touches.ONE = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_29" /* TOUCH */].PAN;
+	this.touches.TWO = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_29" /* TOUCH */].DOLLY_ROTATE;
 
 };
 
@@ -63191,7 +63191,7 @@ var PointerLockControls = function ( camera, domElement ) {
 
 	var PI_2 = Math.PI / 2;
 
-	var vec = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector3 */]();
+	var vec = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_37" /* Vector3 */]();
 
 	function onMouseMove( event ) {
 
@@ -63267,7 +63267,7 @@ var PointerLockControls = function ( camera, domElement ) {
 
 	this.getDirection = function () {
 
-		var direction = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector3 */]( 0, 0, - 1 );
+		var direction = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_37" /* Vector3 */]( 0, 0, - 1 );
 
 		return function ( v ) {
 
@@ -63450,11 +63450,11 @@ var RectAreaLightUniformsLib = {
 
 		// data textures
 
-		var ltc_1 = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["o" /* DataTexture */]( new Float32Array( LTC_MAT_1 ), 64, 64, __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_14" /* RGBAFormat */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["v" /* FloatType */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_33" /* UVMapping */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["k" /* ClampToEdgeWrapping */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["k" /* ClampToEdgeWrapping */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["J" /* LinearFilter */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["Z" /* NearestFilter */], 1 );
-		var ltc_2 = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["o" /* DataTexture */]( new Float32Array( LTC_MAT_2 ), 64, 64, __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_14" /* RGBAFormat */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["v" /* FloatType */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_33" /* UVMapping */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["k" /* ClampToEdgeWrapping */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["k" /* ClampToEdgeWrapping */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["J" /* LinearFilter */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["Z" /* NearestFilter */], 1 );
+		var ltc_1 = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["o" /* DataTexture */]( new Float32Array( LTC_MAT_1 ), 64, 64, __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_14" /* RGBAFormat */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["v" /* FloatType */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_34" /* UVMapping */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["k" /* ClampToEdgeWrapping */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["k" /* ClampToEdgeWrapping */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["J" /* LinearFilter */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["Z" /* NearestFilter */], 1 );
+		var ltc_2 = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["o" /* DataTexture */]( new Float32Array( LTC_MAT_2 ), 64, 64, __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_14" /* RGBAFormat */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["v" /* FloatType */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_34" /* UVMapping */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["k" /* ClampToEdgeWrapping */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["k" /* ClampToEdgeWrapping */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["J" /* LinearFilter */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["Z" /* NearestFilter */], 1 );
 
-		__WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_34" /* UniformsLib */].LTC_1 = ltc_1;
-		__WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_34" /* UniformsLib */].LTC_2 = ltc_2;
+		__WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_35" /* UniformsLib */].LTC_1 = ltc_1;
+		__WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_35" /* UniformsLib */].LTC_2 = ltc_2;
 
 		// add ltc data textures to material uniforms
 
@@ -63817,7 +63817,7 @@ var GLTFLoader = ( function () {
 				break;
 
 			case 'spot':
-				lightNode = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_27" /* SpotLight */]( color );
+				lightNode = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_28" /* SpotLight */]( color );
 				lightNode.distance = range;
 				// Handle spotlight properties.
 				lightDef.spot = lightDef.spot || {};
@@ -63952,7 +63952,7 @@ var GLTFLoader = ( function () {
 
 				var scale = extension.clearcoatNormalTexture.scale;
 
-				materialParams.clearcoatNormalScale = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_35" /* Vector2 */]( scale, scale );
+				materialParams.clearcoatNormalScale = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector2 */]( scale, scale );
 
 			}
 
@@ -64417,7 +64417,7 @@ var GLTFLoader = ( function () {
 				material.bumpScale = 1;
 
 				material.normalMap = materialParams.normalMap === undefined ? null : materialParams.normalMap;
-				material.normalMapType = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_29" /* TangentSpaceNormalMap */];
+				material.normalMapType = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_30" /* TangentSpaceNormalMap */];
 
 				if ( materialParams.normalScale ) material.normalScale = materialParams.normalScale;
 
@@ -64894,7 +64894,7 @@ var GLTFLoader = ( function () {
 		// BufferGeometry caching
 		this.primitiveCache = {};
 
-		this.textureLoader = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_30" /* TextureLoader */]( this.options.manager );
+		this.textureLoader = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_31" /* TextureLoader */]( this.options.manager );
 		this.textureLoader.setCrossOrigin( this.options.crossOrigin );
 
 		this.fileLoader = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["t" /* FileLoader */]( this.options.manager );
@@ -65689,7 +65689,7 @@ var GLTFLoader = ( function () {
 
 			pending.push( parser.assignTexture( materialParams, 'normalMap', materialDef.normalTexture ) );
 
-			materialParams.normalScale = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_35" /* Vector2 */]( 1, 1 );
+			materialParams.normalScale = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector2 */]( 1, 1 );
 
 			if ( materialDef.normalTexture.scale !== undefined ) {
 
@@ -65748,8 +65748,8 @@ var GLTFLoader = ( function () {
 			if ( materialDef.name ) material.name = materialDef.name;
 
 			// baseColorTexture, emissiveTexture, and specularGlossinessTexture use sRGB encoding.
-			if ( material.map ) material.map.encoding = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_39" /* sRGBEncoding */];
-			if ( material.emissiveMap ) material.emissiveMap.encoding = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_39" /* sRGBEncoding */];
+			if ( material.map ) material.map.encoding = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_40" /* sRGBEncoding */];
+			if ( material.emissiveMap ) material.emissiveMap.encoding = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_40" /* sRGBEncoding */];
 
 			assignExtrasToUserData( material, materialDef );
 
@@ -65786,8 +65786,8 @@ var GLTFLoader = ( function () {
 			if ( min !== undefined && max !== undefined ) {
 
 				box.set(
-					new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector3 */]( min[ 0 ], min[ 1 ], min[ 2 ] ),
-					new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector3 */]( max[ 0 ], max[ 1 ], max[ 2 ] ) );
+					new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_37" /* Vector3 */]( min[ 0 ], min[ 1 ], min[ 2 ] ),
+					new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_37" /* Vector3 */]( max[ 0 ], max[ 1 ], max[ 2 ] ) );
 
 			} else {
 
@@ -65807,8 +65807,8 @@ var GLTFLoader = ( function () {
 
 		if ( targets !== undefined ) {
 
-			var maxDisplacement = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector3 */]();
-			var vector = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector3 */]();
+			var maxDisplacement = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_37" /* Vector3 */]();
+			var vector = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_37" /* Vector3 */]();
 
 			for ( var i = 0, il = targets.length; i < il; i ++ ) {
 
@@ -65852,7 +65852,7 @@ var GLTFLoader = ( function () {
 
 		geometry.boundingBox = box;
 
-		var sphere = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_23" /* Sphere */]();
+		var sphere = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_24" /* Sphere */]();
 
 		box.getCenter( sphere.center );
 		sphere.radius = box.min.distanceTo( box.max ) / 2;
@@ -65963,7 +65963,7 @@ var GLTFLoader = ( function () {
 		var numberOfTriangles = index.count - 2;
 		var newIndices = [];
 
-		if ( drawMode === __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_31" /* TriangleFanDrawMode */] ) {
+		if ( drawMode === __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_32" /* TriangleFanDrawMode */] ) {
 
 			// gl.TRIANGLE_FAN
 
@@ -66137,7 +66137,7 @@ var GLTFLoader = ( function () {
 
 					// .isSkinnedMesh isn't in glTF spec. See .markDefs()
 					mesh = meshDef.isSkinnedMesh === true
-						? new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_22" /* SkinnedMesh */]( geometry, material )
+						? new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_23" /* SkinnedMesh */]( geometry, material )
 						: new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["T" /* Mesh */]( geometry, material );
 
 					if ( mesh.isSkinnedMesh === true && ! mesh.geometry.attributes.skinWeight.normalized ) {
@@ -66150,11 +66150,11 @@ var GLTFLoader = ( function () {
 
 					if ( primitive.mode === WEBGL_CONSTANTS.TRIANGLE_STRIP ) {
 
-						mesh.geometry = toTrianglesDrawMode( mesh.geometry, __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_32" /* TriangleStripDrawMode */] );
+						mesh.geometry = toTrianglesDrawMode( mesh.geometry, __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_33" /* TriangleStripDrawMode */] );
 
 					} else if ( primitive.mode === WEBGL_CONSTANTS.TRIANGLE_FAN ) {
 
-						mesh.geometry = toTrianglesDrawMode( mesh.geometry, __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_31" /* TriangleFanDrawMode */] );
+						mesh.geometry = toTrianglesDrawMode( mesh.geometry, __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_32" /* TriangleFanDrawMode */] );
 
 					}
 
@@ -66364,7 +66364,7 @@ var GLTFLoader = ( function () {
 					case PATH_PROPERTIES.scale:
 					default:
 
-						TypedKeyframeTrack = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_37" /* VectorKeyframeTrack */];
+						TypedKeyframeTrack = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_38" /* VectorKeyframeTrack */];
 						break;
 
 				}
@@ -66703,7 +66703,7 @@ var GLTFLoader = ( function () {
 
 						}
 
-						mesh.bind( new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_21" /* Skeleton */]( bones, boneInverses ), mesh.matrixWorld );
+						mesh.bind( new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_22" /* Skeleton */]( bones, boneInverses ), mesh.matrixWorld );
 
 					} );
 
@@ -69960,8 +69960,8 @@ var camera = {
                 'objects': null,
                 'raycaster': null,
                 'prevTime': performance.now(),
-                'velocity': new __WEBPACK_IMPORTED_MODULE_0_three__["_36" /* Vector3 */](),
-                'direction': new __WEBPACK_IMPORTED_MODULE_0_three__["_36" /* Vector3 */](),
+                'velocity': new __WEBPACK_IMPORTED_MODULE_0_three__["_37" /* Vector3 */](),
+                'direction': new __WEBPACK_IMPORTED_MODULE_0_three__["_37" /* Vector3 */](),
                 'moveForward': false,
                 'moveBackward': false,
                 'moveLeft': false,
@@ -70023,20 +70023,20 @@ function modelLight() {
 
         // --> Прожекторный свет
         var spotblue_intensity = 6.7;
-        var spotLight_blue = new __WEBPACK_IMPORTED_MODULE_0_three__["_27" /* SpotLight */](0x73b0ed, spotblue_intensity);
+        var spotLight_blue = new __WEBPACK_IMPORTED_MODULE_0_three__["_28" /* SpotLight */](0x73b0ed, spotblue_intensity);
         spotLight_blue.position.set(-5.46, 3.555, -4.2);
         scene.add(spotLight_blue);
 
-        var spotLight_blueMesh = new __WEBPACK_IMPORTED_MODULE_0_three__["T" /* Mesh */](new __WEBPACK_IMPORTED_MODULE_0_three__["_24" /* SphereBufferGeometry */](0.07, 8, 8), new __WEBPACK_IMPORTED_MODULE_0_three__["U" /* MeshBasicMaterial */]());
+        var spotLight_blueMesh = new __WEBPACK_IMPORTED_MODULE_0_three__["T" /* Mesh */](new __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* SphereBufferGeometry */](0.07, 8, 8), new __WEBPACK_IMPORTED_MODULE_0_three__["U" /* MeshBasicMaterial */]());
         spotLight_blue.add(spotLight_blueMesh);
 
         var spotpink_intensity = 4;
-        var spotLight_pink = new __WEBPACK_IMPORTED_MODULE_0_three__["_27" /* SpotLight */](0xffdcfd, spotpink_intensity);
+        var spotLight_pink = new __WEBPACK_IMPORTED_MODULE_0_three__["_28" /* SpotLight */](0xffdcfd, spotpink_intensity);
         spotLight_pink.position.set(4.545, 3.43, 4.57);
         spotLight_pink.rotation.y = __WEBPACK_IMPORTED_MODULE_0_three__["Q" /* Math */].degToRad(60);
         scene.add(spotLight_pink);
 
-        var spotLight_pinkMesh = new __WEBPACK_IMPORTED_MODULE_0_three__["T" /* Mesh */](new __WEBPACK_IMPORTED_MODULE_0_three__["_24" /* SphereBufferGeometry */](0.07, 8, 8), new __WEBPACK_IMPORTED_MODULE_0_three__["U" /* MeshBasicMaterial */]());
+        var spotLight_pinkMesh = new __WEBPACK_IMPORTED_MODULE_0_three__["T" /* Mesh */](new __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* SphereBufferGeometry */](0.07, 8, 8), new __WEBPACK_IMPORTED_MODULE_0_three__["U" /* MeshBasicMaterial */]());
         spotLight_pink.add(spotLight_pinkMesh);
     }
     function test_lightes() {
@@ -70063,14 +70063,14 @@ function modelLight() {
         directionalLight.position.set(0, 6, 4);
         var helper = new __WEBPACK_IMPORTED_MODULE_0_three__["j" /* CameraHelper */](directionalLight.shadow.camera);
         //scene.add( helper );
-        var directionalLightMesh = new __WEBPACK_IMPORTED_MODULE_0_three__["T" /* Mesh */](new __WEBPACK_IMPORTED_MODULE_0_three__["_24" /* SphereBufferGeometry */](0.07, 8, 8), new __WEBPACK_IMPORTED_MODULE_0_three__["U" /* MeshBasicMaterial */]());
+        var directionalLightMesh = new __WEBPACK_IMPORTED_MODULE_0_three__["T" /* Mesh */](new __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* SphereBufferGeometry */](0.07, 8, 8), new __WEBPACK_IMPORTED_MODULE_0_three__["U" /* MeshBasicMaterial */]());
         directionalLight.add(directionalLightMesh);
 
         // Это свет похожий на directionalLight, но с GI и с 2 точками
         // -- Есть 2 точки вверх(небо) и вниз(земля) куда вставляются цвета. Этим добивается реализм, к примеру рядом с источником свет яркий, а в земле уже темный и отадаляесь становиться темнее.
         var hemisphereLight = new __WEBPACK_IMPORTED_MODULE_0_three__["z" /* HemisphereLight */](0xffffff, 0x000000, 12);
         hemisphereLight.position.set(0, 6, 12);
-        var hemisphereLightMesh = new __WEBPACK_IMPORTED_MODULE_0_three__["T" /* Mesh */](new __WEBPACK_IMPORTED_MODULE_0_three__["_24" /* SphereBufferGeometry */](0.07, 8, 8), new __WEBPACK_IMPORTED_MODULE_0_three__["U" /* MeshBasicMaterial */]());
+        var hemisphereLightMesh = new __WEBPACK_IMPORTED_MODULE_0_three__["T" /* Mesh */](new __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* SphereBufferGeometry */](0.07, 8, 8), new __WEBPACK_IMPORTED_MODULE_0_three__["U" /* MeshBasicMaterial */]());
         hemisphereLight.add(hemisphereLightMesh);
 
         // Это свет точещнего источника, с направлением во все стороны. Пример лапочка в комнате, святлички.
@@ -70084,7 +70084,7 @@ function modelLight() {
         pointLight.shadow.camera.near = 0.5; // default
         pointLight.shadow.camera.far = 512; // default
 
-        var pointLightMesh = new __WEBPACK_IMPORTED_MODULE_0_three__["T" /* Mesh */](new __WEBPACK_IMPORTED_MODULE_0_three__["_24" /* SphereBufferGeometry */](0.07, 8, 8), new __WEBPACK_IMPORTED_MODULE_0_three__["U" /* MeshBasicMaterial */]());
+        var pointLightMesh = new __WEBPACK_IMPORTED_MODULE_0_three__["T" /* Mesh */](new __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* SphereBufferGeometry */](0.07, 8, 8), new __WEBPACK_IMPORTED_MODULE_0_three__["U" /* MeshBasicMaterial */]());
         pointLight.add(pointLightMesh);
 
         // Квадратный источник света - аналог как в vray квадрат в 3dmax
@@ -70103,7 +70103,7 @@ function modelLight() {
         targetObject.position.set(40, 0, 6);
         scene.add(targetObject);
 
-        var spotLight = new __WEBPACK_IMPORTED_MODULE_0_three__["_27" /* SpotLight */](0xffffff, 1, 50, __WEBPACK_IMPORTED_MODULE_0_three__["Q" /* Math */].degToRad(30), 0.1, 2);
+        var spotLight = new __WEBPACK_IMPORTED_MODULE_0_three__["_28" /* SpotLight */](0xffffff, 1, 50, __WEBPACK_IMPORTED_MODULE_0_three__["Q" /* Math */].degToRad(30), 0.1, 2);
         spotLight.power = 2000;
         spotLight.position.set(20, 6, 3);
         spotLight.target = targetObject; // Задаем цель прицелу источника. Теперь он будет следить за ним и поворачиваться туда где стоит цель.
@@ -70239,7 +70239,7 @@ function modelCamera(type_camera) {
 function modelObjects() {
 
     var geometry = function geometry() {
-        var sphere = new __WEBPACK_IMPORTED_MODULE_0_three__["_24" /* SphereBufferGeometry */](1.5, 48, 48);
+        var sphere = new __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* SphereBufferGeometry */](1.5, 48, 48);
 
         var test = new __WEBPACK_IMPORTED_MODULE_0_three__["i" /* BufferGeometry */]();
         var test_vertices = new Float32Array([0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 2.0, 2.0, -1.0, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 2.0, 2.0, 1.0]);
@@ -70271,7 +70271,7 @@ function modelObjects() {
                 console.log(error);
             };
 
-            var textureLoader = new __WEBPACK_IMPORTED_MODULE_0_three__["_30" /* TextureLoader */]();
+            var textureLoader = new __WEBPACK_IMPORTED_MODULE_0_three__["_31" /* TextureLoader */]();
 
             var color = null;
             if (typeof map['color'] !== "undefined") {
@@ -70283,7 +70283,7 @@ function modelObjects() {
                 bitmap = textureLoader.load(map.map, undefined, undefined, function (error) {
                     return onError(error);
                 });
-                bitmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_39" /* sRGBEncoding */];
+                bitmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_40" /* sRGBEncoding */];
                 bitmap.flipY = false;
                 bitmap.wrapS = __WEBPACK_IMPORTED_MODULE_0_three__["_18" /* RepeatWrapping */];
                 bitmap.wrapT = __WEBPACK_IMPORTED_MODULE_0_three__["_18" /* RepeatWrapping */];
@@ -70367,7 +70367,7 @@ function modelObjects() {
                 emissivemap = textureLoader.load(map.emissivemap, undefined, undefined, function (error) {
                     return onError(error);
                 });
-                emissivemap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_39" /* sRGBEncoding */];
+                emissivemap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_40" /* sRGBEncoding */];
                 emissivemap.flipY = false;
                 emissivemap.wrapS = __WEBPACK_IMPORTED_MODULE_0_three__["_18" /* RepeatWrapping */];
                 emissivemap.wrapT = __WEBPACK_IMPORTED_MODULE_0_three__["_18" /* RepeatWrapping */];
@@ -70383,7 +70383,7 @@ function modelObjects() {
                 envmap = textureLoader.load(map.envmap, undefined, undefined, function (error) {
                     return onError(error);
                 });
-                envmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_39" /* sRGBEncoding */];
+                envmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_40" /* sRGBEncoding */];
                 envmap.flipY = false;
                 envmap.wrapS = __WEBPACK_IMPORTED_MODULE_0_three__["_18" /* RepeatWrapping */];
                 envmap.wrapT = __WEBPACK_IMPORTED_MODULE_0_three__["_18" /* RepeatWrapping */];
@@ -70399,7 +70399,7 @@ function modelObjects() {
                 lightmap = textureLoader.load(map.lightmap, undefined, undefined, function (error) {
                     return onError(error);
                 });
-                lightmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_39" /* sRGBEncoding */];
+                lightmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_40" /* sRGBEncoding */];
                 lightmap.flipY = false;
                 lightmap.wrapS = __WEBPACK_IMPORTED_MODULE_0_three__["_18" /* RepeatWrapping */];
                 lightmap.wrapT = __WEBPACK_IMPORTED_MODULE_0_three__["_18" /* RepeatWrapping */];
@@ -70430,7 +70430,7 @@ function modelObjects() {
                 metalnessmap = textureLoader.load(map.metalnessmap, undefined, undefined, function (error) {
                     return onError(error);
                 });
-                metalnessmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_39" /* sRGBEncoding */];
+                metalnessmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_40" /* sRGBEncoding */];
                 metalnessmap.flipY = false;
                 metalnessmap.wrapS = __WEBPACK_IMPORTED_MODULE_0_three__["_18" /* RepeatWrapping */];
                 metalnessmap.wrapT = __WEBPACK_IMPORTED_MODULE_0_three__["_18" /* RepeatWrapping */];
@@ -70577,7 +70577,7 @@ function loadModel() {
             console.log(error);
         };
 
-        var textureLoader = new __WEBPACK_IMPORTED_MODULE_0_three__["_30" /* TextureLoader */]();
+        var textureLoader = new __WEBPACK_IMPORTED_MODULE_0_three__["_31" /* TextureLoader */]();
 
         var color = null;
         if (typeof map['color'] !== "undefined") {
@@ -70589,7 +70589,7 @@ function loadModel() {
             bitmap = textureLoader.load(map.map, undefined, undefined, function (error) {
                 return onError(error);
             });
-            bitmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_39" /* sRGBEncoding */];
+            bitmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_40" /* sRGBEncoding */];
             bitmap.anisotropy = 8; // Четкость
             bitmap.flipY = false;
         }
@@ -70610,7 +70610,6 @@ function loadModel() {
             aomap.format = __WEBPACK_IMPORTED_MODULE_0_three__["a" /* AlphaFormat */];
             aomap.anisotropy = 8;
             aomap.flipY = false;
-            console.log('ao');
         }
 
         var bumpmap = null; // [Реализм] Это карта рельефа работает только на освещение. Как в максе задает шереховатость поверхности. bumpScale указывает интенсивность
@@ -70621,7 +70620,6 @@ function loadModel() {
             bumpmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["a" /* AlphaFormat */];
             bumpmap.anisotropy = 8;
             bumpmap.flipY = false;
-            console.log('bump');
         }
 
         var displacementmap = null; // Это displacement как в максе, действует на геометрию моделя. С ним я рисовал траву, жрет он много.
@@ -70644,10 +70642,9 @@ function loadModel() {
             emissivemap = textureLoader.load(map.emissivemap, undefined, undefined, function (error) {
                 return onError(error);
             });
-            emissivemap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_39" /* sRGBEncoding */];
+            emissivemap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_40" /* sRGBEncoding */];
             emissivemap.anisotropy = 8; // Четкость
             emissivemap.flipY = false;
-            console.log('emissive');
         }
 
         var envmap = null;
@@ -70655,7 +70652,7 @@ function loadModel() {
             envmap = textureLoader.load(map.envmap, undefined, undefined, function (error) {
                 return onError(error);
             });
-            envmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_39" /* sRGBEncoding */];
+            envmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_40" /* sRGBEncoding */];
             envmap.anisotropy = 8; // Четкость
             envmap.flipY = false;
         }
@@ -70665,10 +70662,9 @@ function loadModel() {
             lightmap = textureLoader.load(map.lightmap, undefined, undefined, function (error) {
                 return onError(error);
             });
-            lightmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_39" /* sRGBEncoding */];
+            lightmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_40" /* sRGBEncoding */];
             lightmap.anisotropy = 8; // Четкость
             lightmap.flipY = false;
-            console.log('Light');
         }
 
         var roughness = 1; // Уровень шереховатестей поверхностя. Он зеркально гладкий, хорошо отражает свет или расеянный.
@@ -70684,7 +70680,6 @@ function loadModel() {
             roughnessmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["a" /* AlphaFormat */];
             roughnessmap.anisotropy = 8; // Четкость
             roughnessmap.flipY = false;
-            console.log('roughness');
         }
 
         var refractionratio = 0.98; // Уровень IOR
@@ -70702,7 +70697,7 @@ function loadModel() {
             metalnessmap = textureLoader.load(map.metalnessmap, undefined, undefined, function (error) {
                 return onError(error);
             });
-            metalnessmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_39" /* sRGBEncoding */];
+            metalnessmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_40" /* sRGBEncoding */];
             metalnessmap.anisotropy = 8; // Четкость
             metalnessmap.flipY = false;
         }
@@ -70712,7 +70707,7 @@ function loadModel() {
             specularmap = textureLoader.load(map.metalnessmap, undefined, undefined, function (error) {
                 return onError(error);
             });
-            specularmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_39" /* sRGBEncoding */];
+            specularmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_40" /* sRGBEncoding */];
             specularmap.anisotropy = 8; // Четкость
             specularmap.flipY = false;
         }
@@ -70770,10 +70765,10 @@ function loadModel() {
             scene.add(mesh);
         };
         var onProgress = function onProgress(xhr) {
-            console.log(xhr.loaded / xhr.total * 100 + '% loaded');
+            //console.log((xhr.loaded / xhr.total * 100) + '% loaded');
         };
         var onError = function onError(error) {
-            console.log(error);
+            //console.log(error);
         };
 
         var loader = new __WEBPACK_IMPORTED_MODULE_3_three_examples_jsm_loaders_GLTFLoader__["a" /* GLTFLoader */](); // Здесь задаем загрузщики, их много видов. По умолчанию (THREE.DefaultLoadingManager), меняется редко.
@@ -70789,8 +70784,6 @@ function loadModel() {
     function set_model_pillar() {
 
         var onLoad = function onLoad(gltf) {
-
-            console.log(gltf.scene);
 
             var textures_pillar = {
                 'map': 'models/pillar/textures/pillar.jpg'
@@ -70820,10 +70813,10 @@ function loadModel() {
             mesh_cloth.position.z = -0.5;
         };
         var onProgress = function onProgress(xhr) {
-            console.log(xhr.loaded / xhr.total * 100 + '% loaded');
+            //console.log((xhr.loaded / xhr.total * 100 ) + '% loaded');
         };
         var onError = function onError(error) {
-            console.log(error);
+            //console.log(error);
         };
 
         var loader = new __WEBPACK_IMPORTED_MODULE_3_three_examples_jsm_loaders_GLTFLoader__["a" /* GLTFLoader */](); // Здесь задаем загрузщики, их много видов. По умолчанию (THREE.DefaultLoadingManager), меняется редко.
@@ -70856,10 +70849,10 @@ function loadModel() {
             scene.add(mesh);
         };
         var onProgress = function onProgress(xhr) {
-            console.log(xhr.loaded / xhr.total * 100 + '% loaded');
+            //console.log((xhr.loaded / xhr.total * 100) + '% loaded');
         };
         var onError = function onError(error) {
-            console.log(error);
+            //console.log(error);
         };
 
         var loader = new __WEBPACK_IMPORTED_MODULE_3_three_examples_jsm_loaders_GLTFLoader__["a" /* GLTFLoader */](); // Здесь задаем загрузщики, их много видов. По умолчанию (THREE.DefaultLoadingManager), меняется редко.
@@ -70884,7 +70877,7 @@ function loadModel() {
         }
         function wall() {
             var onLoad = function onLoad(gltf) {
-                console.log(gltf.scene);
+
                 var textures = {
                     'map': 'models/room/walls/textures/diffuse.jpg',
                     'bumpmap': 'models/room/walls/textures/bump.jpg',
@@ -70905,10 +70898,10 @@ function loadModel() {
                 //camera.controls.game.param.objects.push(mesh);
             };
             var onProgress = function onProgress(xhr) {
-                console.log(xhr.loaded / xhr.total * 100 + '% loaded');
+                //console.log((xhr.loaded / xhr.total * 100) + '% loaded');
             };
             var onError = function onError(error) {
-                console.log(error);
+                //console.log(error);
             };
 
             var loader = new __WEBPACK_IMPORTED_MODULE_3_three_examples_jsm_loaders_GLTFLoader__["a" /* GLTFLoader */](); // Здесь задаем загрузщики, их много видов. По умолчанию (THREE.DefaultLoadingManager), меняется редко.
@@ -70937,10 +70930,10 @@ function loadModel() {
                 scene.add(mesh);
             };
             var onProgress = function onProgress(xhr) {
-                console.log(xhr.loaded / xhr.total * 100 + '% loaded');
+                //console.log((xhr.loaded / xhr.total * 100) + '% loaded');
             };
             var onError = function onError(error) {
-                console.log(error);
+                //console.log(error);
             };
 
             var loader = new __WEBPACK_IMPORTED_MODULE_3_three_examples_jsm_loaders_GLTFLoader__["a" /* GLTFLoader */](); // Здесь задаем загрузщики, их много видов. По умолчанию (THREE.DefaultLoadingManager), меняется редко.
@@ -70971,10 +70964,10 @@ function loadModel() {
                 scene.add(mesh);
             };
             var onProgress = function onProgress(xhr) {
-                console.log(xhr.loaded / xhr.total * 100 + '% loaded');
+                //(xhr.loaded / xhr.total * 100) + '% loaded');
             };
             var onError = function onError(error) {
-                console.log(error);
+                //console.log(error);
             };
 
             var loader = new __WEBPACK_IMPORTED_MODULE_3_three_examples_jsm_loaders_GLTFLoader__["a" /* GLTFLoader */](); // Здесь задаем загрузщики, их много видов. По умолчанию (THREE.DefaultLoadingManager), меняется редко.
@@ -71001,10 +70994,10 @@ function loadModel() {
                 scene.add(mesh);
             };
             var onProgress = function onProgress(xhr) {
-                console.log(xhr.loaded / xhr.total * 100 + '% loaded');
+                //console.log((xhr.loaded / xhr.total * 100) + '% loaded');
             };
             var onError = function onError(error) {
-                console.log(error);
+                //console.log(error);
             };
 
             var loader = new __WEBPACK_IMPORTED_MODULE_3_three_examples_jsm_loaders_GLTFLoader__["a" /* GLTFLoader */](); // Здесь задаем загрузщики, их много видов. По умолчанию (THREE.DefaultLoadingManager), меняется редко.
@@ -71033,10 +71026,10 @@ function loadModel() {
                 scene.add(mesh);
             };
             var onProgress = function onProgress(xhr) {
-                console.log(xhr.loaded / xhr.total * 100 + '% loaded');
+                //console.log((xhr.loaded / xhr.total * 100) + '% loaded');
             };
             var onError = function onError(error) {
-                console.log(error);
+                //console.log(error);
             };
 
             var loader = new __WEBPACK_IMPORTED_MODULE_3_three_examples_jsm_loaders_GLTFLoader__["a" /* GLTFLoader */](); // Здесь задаем загрузщики, их много видов. По умолчанию (THREE.DefaultLoadingManager), меняется редко.
@@ -71119,16 +71112,15 @@ function test_core() {
         attr.itemSize = 3;
         attr.name = 'Deep'; // Название, это для меня. Идентифицирую этот атрибут
         attr.needsUpdate = true; // Даем указания что если атрибут изменился, то его сного надо передать видеокарте
-        attr.onUploadCallback = function () {
-            // Срабатывает, тогда когда данные были приняты видеокартой. Не знаю когда использовать, возможно пригодиться.
-            console.log('Видеокарта принела данные');
-        };
+        attr.onUploadCallback = function () {} // Срабатывает, тогда когда данные были приняты видеокартой. Не знаю когда использовать, возможно пригодиться.
+        //console.log('Видеокарта принела данные');
+
         // св:version - показывается версию изминенй этого экземпляра.
 
-        geometry_attr.setAttribute('position', attr); // Для position, normal, color, uv вставим 3 в itemSize
+        ;geometry_attr.setAttribute('position', attr); // Для position, normal, color, uv вставим 3 в itemSize
 
         // test Geo 1
-        var geo_1 = new __WEBPACK_IMPORTED_MODULE_0_three__["_24" /* SphereBufferGeometry */](1.4, 32, 32);
+        var geo_1 = new __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* SphereBufferGeometry */](1.4, 32, 32);
         //var geo_1 = new THREE.ConeBufferGeometry(1.4, 2, 32);
         var get_index_1 = geo_1.getIndex(); // getIndex - получить index
         var get_position_1 = geo_1.getAttribute('position');
@@ -71168,7 +71160,7 @@ function test_core() {
         // mt: geometry2.deleteAttribute('color') - удаляет атрибут
         // mt: geometry2.setFromObject(Object3D) - добавляет атрибуты из объекта Object3D
 
-        var merge_1 = new __WEBPACK_IMPORTED_MODULE_0_three__["_24" /* SphereBufferGeometry */](1.4, 24, 24);
+        var merge_1 = new __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* SphereBufferGeometry */](1.4, 24, 24);
         var merge_2 = new __WEBPACK_IMPORTED_MODULE_0_three__["n" /* ConeBufferGeometry */](1.4, 2, 32);
         merge_2.rotateX(__WEBPACK_IMPORTED_MODULE_0_three__["Q" /* Math */].degToRad(30));
         merge_2.rotateY(__WEBPACK_IMPORTED_MODULE_0_three__["Q" /* Math */].degToRad(30));
@@ -71190,7 +71182,7 @@ function test_core() {
     function set_raycaster() {
 
         raycaster.cast = new __WEBPACK_IMPORTED_MODULE_0_three__["_16" /* Raycaster */]();
-        raycaster.mouse = new __WEBPACK_IMPORTED_MODULE_0_three__["_35" /* Vector2 */]();
+        raycaster.mouse = new __WEBPACK_IMPORTED_MODULE_0_three__["_36" /* Vector2 */]();
         raycaster.func = function onMouseMove(event) {
             if (event !== undefined) {
                 raycaster.mouse.x = event.clientX / window.innerWidth * 2 - 1;
@@ -71200,28 +71192,42 @@ function test_core() {
     }
     function font() {
 
-        /*var loader = new THREE.FontLoader();
+        var loader = new __WEBPACK_IMPORTED_MODULE_0_three__["w" /* FontLoader */]();
         var font = loader.load(
-            // resource URL
-            'fonts/helvetiker_bold.typeface.json',
-              // onLoad callback
-            function ( font ) {
-                // do something with the font
-                scene.add( font );
-            },
-              // onProgress callback
-            function ( xhr ) {
-                console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
-            },
-              // onError callback
-            function ( err ) {
-                console.log( 'An error happened' );
-            }
-        );*/
+        // resource URL
+        'models/fonts/roboto_regular.json',
 
-        var font = __WEBPACK_IMPORTED_MODULE_0_three__["w" /* Font */]();
-        //font.generateShapes('EvilGoogle');
-        console.log(font);
+        // onLoad callback
+        function (font) {
+
+            var matLite = new __WEBPACK_IMPORTED_MODULE_0_three__["U" /* MeshBasicMaterial */]({
+                color: 0x006699,
+                transparent: true,
+                opacity: 1,
+                side: __WEBPACK_IMPORTED_MODULE_0_three__["q" /* DoubleSide */]
+            });
+
+            var generate_text = "EvilGoogle";
+            var shapes = font.generateShapes(generate_text, 2);
+
+            var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["_21" /* ShapeBufferGeometry */](shapes);
+            geometry.computeBoundingBox();
+
+            var text = new __WEBPACK_IMPORTED_MODULE_0_three__["T" /* Mesh */](geometry, matLite);
+            text.position.y = 2;
+            scene.add(text);
+        },
+
+        // onProgress callback
+        function (xhr) {
+            //console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
+        },
+
+        // onError callback
+        function (err) {
+            console.log(err);
+            //console.log( 'An error happened' );
+        });
     }
     function curve() {
 
@@ -71284,11 +71290,10 @@ function test_core() {
             new THREE.Vector3( 10, 0, 0 )
         );*/
 
-        var curve = new __WEBPACK_IMPORTED_MODULE_0_three__["_26" /* SplineCurve */]([// Тоже самое что CatmullRomCurve3 создает произвольгую линию, но тольков xy кординатах
-        new __WEBPACK_IMPORTED_MODULE_0_three__["_35" /* Vector2 */](-10, 0), new __WEBPACK_IMPORTED_MODULE_0_three__["_35" /* Vector2 */](-5, 5), new __WEBPACK_IMPORTED_MODULE_0_three__["_35" /* Vector2 */](0, 0), new __WEBPACK_IMPORTED_MODULE_0_three__["_35" /* Vector2 */](5, -5), new __WEBPACK_IMPORTED_MODULE_0_three__["_35" /* Vector2 */](10, 0)]);
+        var curve = new __WEBPACK_IMPORTED_MODULE_0_three__["_27" /* SplineCurve */]([// Тоже самое что CatmullRomCurve3 создает произвольгую линию, но тольков xy кординатах
+        new __WEBPACK_IMPORTED_MODULE_0_three__["_36" /* Vector2 */](-10, 0), new __WEBPACK_IMPORTED_MODULE_0_three__["_36" /* Vector2 */](-5, 5), new __WEBPACK_IMPORTED_MODULE_0_three__["_36" /* Vector2 */](0, 0), new __WEBPACK_IMPORTED_MODULE_0_three__["_36" /* Vector2 */](5, -5), new __WEBPACK_IMPORTED_MODULE_0_three__["_36" /* Vector2 */](10, 0)]);
 
         var points = curve.getPoints(50); // Точки в кординате с добавленными 50 точками для округление
-        console.log(points);
         //console.log(curve.getLength()); // Получаем общую длину кривой
         //console.log(curve.getTangent(20)); // получается xyz для чего не понятно
 
@@ -71317,20 +71322,20 @@ function test_math() {
         box.copy(mesh.geometry.boundingBox).applyMatrix4(mesh.matrixWorld);
 
         //scene.add(box);
-        console.log(box);
+        //console.log(box);
     }
     //box3();
 }
 
 function modelRender() {
 
-    renderer = new __WEBPACK_IMPORTED_MODULE_0_three__["_38" /* WebGLRenderer */]({ antialias: true }); // antialias - сглаживания
+    renderer = new __WEBPACK_IMPORTED_MODULE_0_three__["_39" /* WebGLRenderer */]({ antialias: true }); // antialias - сглаживания
 
     // Физическое правильное освещение
     renderer.physicallyCorrectLights = true;
 
     // Кодировка цвета
-    renderer.outputEncoding = __WEBPACK_IMPORTED_MODULE_0_three__["_39" /* sRGBEncoding */];
+    renderer.outputEncoding = __WEBPACK_IMPORTED_MODULE_0_three__["_40" /* sRGBEncoding */];
 
     // Гамма. Настраиваем гамму коррекцию видимой для глаз
     renderer.gammaFactor = 2.2;

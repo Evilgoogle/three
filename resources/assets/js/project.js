@@ -655,7 +655,6 @@ function loadModel() {
             aomap.format = THREE.AlphaFormat;
             aomap.anisotropy = 8;
             aomap.flipY = false;
-            console.log('ao');
         }
 
         let bumpmap = null; // [Реализм] Это карта рельефа работает только на освещение. Как в максе задает шереховатость поверхности. bumpScale указывает интенсивность
@@ -664,7 +663,6 @@ function loadModel() {
             bumpmap.encoding = THREE.AlphaFormat;
             bumpmap.anisotropy = 8;
             bumpmap.flipY = false;
-            console.log('bump');
         }
 
         let displacementmap = null; // Это displacement как в максе, действует на геометрию моделя. С ним я рисовал траву, жрет он много.
@@ -686,7 +684,6 @@ function loadModel() {
             emissivemap.encoding = THREE.sRGBEncoding;
             emissivemap.anisotropy = 8; // Четкость
             emissivemap.flipY = false;
-            console.log('emissive');
         }
 
         let envmap = null
@@ -703,7 +700,6 @@ function loadModel() {
             lightmap.encoding = THREE.sRGBEncoding;
             lightmap.anisotropy = 8; // Четкость
             lightmap.flipY = false;
-            console.log('Light');
         }
 
         let roughness = 1; // Уровень шереховатестей поверхностя. Он зеркально гладкий, хорошо отражает свет или расеянный.
@@ -717,7 +713,6 @@ function loadModel() {
             roughnessmap.encoding = THREE.AlphaFormat;
             roughnessmap.anisotropy = 8; // Четкость
             roughnessmap.flipY = false;
-            console.log('roughness');
         }
 
         let refractionratio = 0.98; // Уровень IOR
@@ -799,10 +794,10 @@ function loadModel() {
             scene.add(mesh);
         };
         const onProgress = (xhr) => {
-            console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+            //console.log((xhr.loaded / xhr.total * 100) + '% loaded');
         };
         const onError = (error) => {
-            console.log(error);
+            //console.log(error);
         };
 
         const loader = new GLTFLoader(); // Здесь задаем загрузщики, их много видов. По умолчанию (THREE.DefaultLoadingManager), меняется редко.
@@ -812,8 +807,6 @@ function loadModel() {
     function set_model_pillar() {
 
         const onLoad = (gltf) => {
-
-            console.log(gltf.scene);
 
             let textures_pillar = {
                 'map': 'models/pillar/textures/pillar.jpg',
@@ -844,10 +837,10 @@ function loadModel() {
 
         };
         const onProgress = (xhr) => {
-            console.log((xhr.loaded / xhr.total * 100 ) + '% loaded');
+            //console.log((xhr.loaded / xhr.total * 100 ) + '% loaded');
         };
         const onError = (error) => {
-            console.log(error);
+            //console.log(error);
         };
 
         const loader = new GLTFLoader(); // Здесь задаем загрузщики, их много видов. По умолчанию (THREE.DefaultLoadingManager), меняется редко.
@@ -874,10 +867,10 @@ function loadModel() {
             scene.add(mesh);
         };
         const onProgress = (xhr) => {
-            console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+            //console.log((xhr.loaded / xhr.total * 100) + '% loaded');
         };
         const onError = (error) => {
-            console.log(error);
+            //console.log(error);
         };
 
         const loader = new GLTFLoader(); // Здесь задаем загрузщики, их много видов. По умолчанию (THREE.DefaultLoadingManager), меняется редко.
@@ -896,7 +889,7 @@ function loadModel() {
         }
         function wall() {
             const onLoad = (gltf) => {
-console.log(gltf.scene);
+
                 let textures = {
                     'map': 'models/room/walls/textures/diffuse.jpg',
                     'bumpmap': 'models/room/walls/textures/bump.jpg',
@@ -917,10 +910,10 @@ console.log(gltf.scene);
                 //camera.controls.game.param.objects.push(mesh);
             };
             const onProgress = (xhr) => {
-                console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+                //console.log((xhr.loaded / xhr.total * 100) + '% loaded');
             };
             const onError = (error) => {
-                console.log(error);
+                //console.log(error);
             };
 
             const loader = new GLTFLoader(); // Здесь задаем загрузщики, их много видов. По умолчанию (THREE.DefaultLoadingManager), меняется редко.
@@ -943,10 +936,10 @@ console.log(gltf.scene);
                 scene.add(mesh);
             };
             const onProgress = (xhr) => {
-                console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+                //console.log((xhr.loaded / xhr.total * 100) + '% loaded');
             };
             const onError = (error) => {
-                console.log(error);
+                //console.log(error);
             };
 
             const loader = new GLTFLoader(); // Здесь задаем загрузщики, их много видов. По умолчанию (THREE.DefaultLoadingManager), меняется редко.
@@ -971,10 +964,10 @@ console.log(gltf.scene);
                 scene.add(mesh);
             };
             const onProgress = (xhr) => {
-                console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+                //(xhr.loaded / xhr.total * 100) + '% loaded');
             };
             const onError = (error) => {
-                console.log(error);
+                //console.log(error);
             };
 
             const loader = new GLTFLoader(); // Здесь задаем загрузщики, их много видов. По умолчанию (THREE.DefaultLoadingManager), меняется редко.
@@ -995,10 +988,10 @@ console.log(gltf.scene);
                 scene.add(mesh);
             };
             const onProgress = (xhr) => {
-                console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+                //console.log((xhr.loaded / xhr.total * 100) + '% loaded');
             };
             const onError = (error) => {
-                console.log(error);
+                //console.log(error);
             };
 
             const loader = new GLTFLoader(); // Здесь задаем загрузщики, их много видов. По умолчанию (THREE.DefaultLoadingManager), меняется редко.
@@ -1021,10 +1014,10 @@ console.log(gltf.scene);
                 scene.add(mesh);
             };
             const onProgress = (xhr) => {
-                console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+                //console.log((xhr.loaded / xhr.total * 100) + '% loaded');
             };
             const onError = (error) => {
-                console.log(error);
+                //console.log(error);
             };
 
             const loader = new GLTFLoader(); // Здесь задаем загрузщики, их много видов. По умолчанию (THREE.DefaultLoadingManager), меняется редко.
@@ -1110,7 +1103,7 @@ function test_core() {
         attr.name = 'Deep'; // Название, это для меня. Идентифицирую этот атрибут
         attr.needsUpdate = true; // Даем указания что если атрибут изменился, то его сного надо передать видеокарте
         attr.onUploadCallback = function() { // Срабатывает, тогда когда данные были приняты видеокартой. Не знаю когда использовать, возможно пригодиться.
-            console.log('Видеокарта принела данные');
+            //console.log('Видеокарта принела данные');
         }
         // св:version - показывается версию изминенй этого экземпляра.
 
@@ -1189,31 +1182,43 @@ function test_core() {
     }
     function font() {
 
-        /*var loader = new THREE.FontLoader();
+        var loader = new THREE.FontLoader();
         var font = loader.load(
             // resource URL
-            'fonts/helvetiker_bold.typeface.json',
+            'models/fonts/roboto_regular.json',
 
             // onLoad callback
-            function ( font ) {
-                // do something with the font
-                scene.add( font );
+            function (font) {
+
+                let matLite = new THREE.MeshBasicMaterial({
+                    color: 0x006699,
+                    transparent: true,
+                    opacity: 1,
+                    side: THREE.DoubleSide
+                });
+
+                let generate_text = "EvilGoogle"; 
+                let shapes = font.generateShapes(generate_text, 2);
+
+                let geometry = new THREE.ShapeBufferGeometry(shapes);
+                geometry.computeBoundingBox();
+
+                let text = new THREE.Mesh(geometry, matLite);
+                text.position.y = 2;
+                scene.add(text);
             },
 
             // onProgress callback
             function ( xhr ) {
-                console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
+                //console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
             },
 
             // onError callback
             function ( err ) {
-                console.log( 'An error happened' );
+                console.log(err);
+                //console.log( 'An error happened' );
             }
-        );*/
-
-        let font = THREE.Font();
-        //font.generateShapes('EvilGoogle');
-        console.log(font);
+        );
     }
     function curve() {
 
@@ -1285,7 +1290,6 @@ function test_core() {
         ]);
 
         var points = curve.getPoints(50); // Точки в кординате с добавленными 50 точками для округление
-        console.log(points);
         //console.log(curve.getLength()); // Получаем общую длину кривой
         //console.log(curve.getTangent(20)); // получается xyz для чего не понятно
 
@@ -1317,7 +1321,7 @@ function test_math() {
         box.copy(mesh.geometry.boundingBox).applyMatrix4(mesh.matrixWorld);
 
         //scene.add(box);
-        console.log(box);
+        //console.log(box);
     }
     //box3();
 }
