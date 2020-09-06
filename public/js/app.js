@@ -10585,48 +10585,48 @@ if (typeof this !== 'undefined' && this.Sweetalert2){  this.swal = this.sweetAle
 /* unused harmony export AnimationUtils */
 /* unused harmony export ArcCurve */
 /* unused harmony export ArrayCamera */
-/* unused harmony export ArrowHelper */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return ArrowHelper; });
 /* unused harmony export Audio */
 /* unused harmony export AudioAnalyser */
 /* unused harmony export AudioContext */
 /* unused harmony export AudioListener */
 /* unused harmony export AudioLoader */
-/* unused harmony export AxesHelper */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return AxesHelper; });
 /* unused harmony export AxisHelper */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return BackSide; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return BackSide; });
 /* unused harmony export BasicDepthPacking */
 /* unused harmony export BasicShadowMap */
 /* unused harmony export BinaryTextureLoader */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return Bone; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return Bone; });
 /* unused harmony export BooleanKeyframeTrack */
 /* unused harmony export BoundingBoxHelper */
 /* unused harmony export Box2 */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return Box3; });
-/* unused harmony export Box3Helper */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return BoxBufferGeometry; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return Box3; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return Box3Helper; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return BoxBufferGeometry; });
 /* unused harmony export BoxGeometry */
-/* unused harmony export BoxHelper */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return BufferAttribute; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return BufferGeometry; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return BoxHelper; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return BufferAttribute; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return BufferGeometry; });
 /* unused harmony export BufferGeometryLoader */
 /* unused harmony export ByteType */
 /* unused harmony export Cache */
 /* unused harmony export Camera */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return CameraHelper; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return CameraHelper; });
 /* unused harmony export CanvasRenderer */
 /* unused harmony export CanvasTexture */
 /* unused harmony export CatmullRomCurve3 */
 /* unused harmony export CineonToneMapping */
 /* unused harmony export CircleBufferGeometry */
 /* unused harmony export CircleGeometry */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return ClampToEdgeWrapping; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return Clock; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return ClampToEdgeWrapping; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return Clock; });
 /* unused harmony export ClosedSplineCurve3 */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return Color; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "q", function() { return Color; });
 /* unused harmony export ColorKeyframeTrack */
 /* unused harmony export CompressedTexture */
 /* unused harmony export CompressedTextureLoader */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return ConeBufferGeometry; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return ConeBufferGeometry; });
 /* unused harmony export ConeGeometry */
 /* unused harmony export CubeCamera */
 /* unused harmony export CubeGeometry */
@@ -10649,7 +10649,7 @@ if (typeof this !== 'undefined' && this.Sweetalert2){  this.swal = this.sweetAle
 /* unused harmony export CylinderBufferGeometry */
 /* unused harmony export CylinderGeometry */
 /* unused harmony export Cylindrical */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return DataTexture; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "s", function() { return DataTexture; });
 /* unused harmony export DataTexture2DArray */
 /* unused harmony export DataTexture3D */
 /* unused harmony export DataTextureLoader */
@@ -10659,13 +10659,13 @@ if (typeof this !== 'undefined' && this.Sweetalert2){  this.swal = this.sweetAle
 /* unused harmony export DepthFormat */
 /* unused harmony export DepthStencilFormat */
 /* unused harmony export DepthTexture */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return DirectionalLight; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "t", function() { return DirectionalLight; });
 /* unused harmony export DirectionalLightHelper */
 /* unused harmony export DirectionalLightShadow */
 /* unused harmony export DiscreteInterpolant */
 /* unused harmony export DodecahedronBufferGeometry */
 /* unused harmony export DodecahedronGeometry */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "q", function() { return DoubleSide; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "u", function() { return DoubleSide; });
 /* unused harmony export DstAlphaFactor */
 /* unused harmony export DstColorFactor */
 /* unused harmony export DynamicBufferAttribute */
@@ -10679,27 +10679,27 @@ if (typeof this !== 'undefined' && this.Sweetalert2){  this.swal = this.sweetAle
 /* unused harmony export EqualStencilFunc */
 /* unused harmony export EquirectangularReflectionMapping */
 /* unused harmony export EquirectangularRefractionMapping */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return Euler; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "s", function() { return EventDispatcher; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return Euler; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "w", function() { return EventDispatcher; });
 /* unused harmony export ExtrudeBufferGeometry */
 /* unused harmony export ExtrudeGeometry */
 /* unused harmony export Face3 */
 /* unused harmony export Face4 */
 /* unused harmony export FaceColors */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "t", function() { return FileLoader; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "x", function() { return FileLoader; });
 /* unused harmony export FlatShading */
 /* unused harmony export Float32Attribute */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "u", function() { return Float32BufferAttribute; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "y", function() { return Float32BufferAttribute; });
 /* unused harmony export Float64Attribute */
 /* unused harmony export Float64BufferAttribute */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return FloatType; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "z", function() { return FloatType; });
 /* unused harmony export Fog */
 /* unused harmony export FogExp2 */
 /* unused harmony export Font */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "w", function() { return FontLoader; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "A", function() { return FontLoader; });
 /* unused harmony export FrontFaceDirectionCCW */
 /* unused harmony export FrontFaceDirectionCW */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "x", function() { return FrontSide; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "B", function() { return FrontSide; });
 /* unused harmony export Frustum */
 /* unused harmony export GammaEncoding */
 /* unused harmony export Geometry */
@@ -10709,9 +10709,9 @@ if (typeof this !== 'undefined' && this.Sweetalert2){  this.swal = this.sweetAle
 /* unused harmony export GreaterEqualStencilFunc */
 /* unused harmony export GreaterStencilFunc */
 /* unused harmony export GridHelper */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "y", function() { return Group; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "C", function() { return Group; });
 /* unused harmony export HalfFloatType */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "z", function() { return HemisphereLight; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "D", function() { return HemisphereLight; });
 /* unused harmony export HemisphereLightHelper */
 /* unused harmony export HemisphereLightProbe */
 /* unused harmony export IcosahedronBufferGeometry */
@@ -10719,7 +10719,7 @@ if (typeof this !== 'undefined' && this.Sweetalert2){  this.swal = this.sweetAle
 /* unused harmony export ImageBitmapLoader */
 /* unused harmony export ImageLoader */
 /* unused harmony export ImageUtils */
-/* unused harmony export ImmediateRenderObject */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "E", function() { return ImmediateRenderObject; });
 /* unused harmony export IncrementStencilOp */
 /* unused harmony export IncrementWrapStencilOp */
 /* unused harmony export InstancedBufferAttribute */
@@ -10733,11 +10733,11 @@ if (typeof this !== 'undefined' && this.Sweetalert2){  this.swal = this.sweetAle
 /* unused harmony export Int8Attribute */
 /* unused harmony export Int8BufferAttribute */
 /* unused harmony export IntType */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "A", function() { return InterleavedBuffer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "B", function() { return InterleavedBufferAttribute; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "C", function() { return Interpolant; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "D", function() { return InterpolateDiscrete; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "E", function() { return InterpolateLinear; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "F", function() { return InterleavedBuffer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "G", function() { return InterleavedBufferAttribute; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "H", function() { return Interpolant; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "I", function() { return InterpolateDiscrete; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "J", function() { return InterpolateLinear; });
 /* unused harmony export InterpolateSmooth */
 /* unused harmony export InvertStencilOp */
 /* unused harmony export JSONLoader */
@@ -10755,26 +10755,26 @@ if (typeof this !== 'undefined' && this.Sweetalert2){  this.swal = this.sweetAle
 /* unused harmony export Light */
 /* unused harmony export LightProbe */
 /* unused harmony export LightShadow */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "F", function() { return Line; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "K", function() { return Line; });
 /* unused harmony export Line3 */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "G", function() { return LineBasicMaterial; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "L", function() { return LineBasicMaterial; });
 /* unused harmony export LineCurve */
 /* unused harmony export LineCurve3 */
 /* unused harmony export LineDashedMaterial */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "H", function() { return LineLoop; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "M", function() { return LineLoop; });
 /* unused harmony export LinePieces */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "I", function() { return LineSegments; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "N", function() { return LineSegments; });
 /* unused harmony export LineStrip */
 /* unused harmony export LinearEncoding */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "J", function() { return LinearFilter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "O", function() { return LinearFilter; });
 /* unused harmony export LinearInterpolant */
 /* unused harmony export LinearMipMapLinearFilter */
 /* unused harmony export LinearMipMapNearestFilter */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "K", function() { return LinearMipmapLinearFilter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "L", function() { return LinearMipmapNearestFilter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "P", function() { return LinearMipmapLinearFilter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Q", function() { return LinearMipmapNearestFilter; });
 /* unused harmony export LinearToneMapping */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "M", function() { return Loader; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "N", function() { return LoaderUtils; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "R", function() { return Loader; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "S", function() { return LoaderUtils; });
 /* unused harmony export LoadingManager */
 /* unused harmony export LogLuvEncoding */
 /* unused harmony export LoopOnce */
@@ -10782,48 +10782,48 @@ if (typeof this !== 'undefined' && this.Sweetalert2){  this.swal = this.sweetAle
 /* unused harmony export LoopRepeat */
 /* unused harmony export LuminanceAlphaFormat */
 /* unused harmony export LuminanceFormat */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "O", function() { return MOUSE; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "P", function() { return Material; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "T", function() { return MOUSE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "U", function() { return Material; });
 /* unused harmony export MaterialLoader */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Q", function() { return MathUtils; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "R", function() { return MathUtils; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "V", function() { return MathUtils; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "W", function() { return MathUtils; });
 /* unused harmony export Matrix3 */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "S", function() { return Matrix4; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "X", function() { return Matrix4; });
 /* unused harmony export MaxEquation */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "T", function() { return Mesh; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "U", function() { return MeshBasicMaterial; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Y", function() { return Mesh; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Z", function() { return MeshBasicMaterial; });
 /* unused harmony export MeshDepthMaterial */
 /* unused harmony export MeshDistanceMaterial */
 /* unused harmony export MeshFaceMaterial */
 /* unused harmony export MeshLambertMaterial */
 /* unused harmony export MeshMatcapMaterial */
 /* unused harmony export MeshNormalMaterial */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "V", function() { return MeshPhongMaterial; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "W", function() { return MeshPhysicalMaterial; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "X", function() { return MeshStandardMaterial; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_0", function() { return MeshPhongMaterial; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_1", function() { return MeshPhysicalMaterial; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_2", function() { return MeshStandardMaterial; });
 /* unused harmony export MeshToonMaterial */
 /* unused harmony export MinEquation */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Y", function() { return MirroredRepeatWrapping; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_3", function() { return MirroredRepeatWrapping; });
 /* unused harmony export MixOperation */
 /* unused harmony export MultiMaterial */
 /* unused harmony export MultiplyBlending */
 /* unused harmony export MultiplyOperation */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Z", function() { return NearestFilter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_4", function() { return NearestFilter; });
 /* unused harmony export NearestMipMapLinearFilter */
 /* unused harmony export NearestMipMapNearestFilter */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_0", function() { return NearestMipmapLinearFilter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_1", function() { return NearestMipmapNearestFilter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_5", function() { return NearestMipmapLinearFilter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_6", function() { return NearestMipmapNearestFilter; });
 /* unused harmony export NeverDepth */
 /* unused harmony export NeverStencilFunc */
 /* unused harmony export NoBlending */
-/* unused harmony export NoColors */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_7", function() { return NoColors; });
 /* unused harmony export NoToneMapping */
 /* unused harmony export NormalAnimationBlendMode */
 /* unused harmony export NormalBlending */
 /* unused harmony export NotEqualDepth */
 /* unused harmony export NotEqualStencilFunc */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_2", function() { return NumberKeyframeTrack; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_3", function() { return Object3D; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_8", function() { return NumberKeyframeTrack; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_9", function() { return Object3D; });
 /* unused harmony export ObjectLoader */
 /* unused harmony export ObjectSpaceNormalMap */
 /* unused harmony export OctahedronBufferGeometry */
@@ -10833,9 +10833,9 @@ if (typeof this !== 'undefined' && this.Sweetalert2){  this.swal = this.sweetAle
 /* unused harmony export OneMinusDstColorFactor */
 /* unused harmony export OneMinusSrcAlphaFactor */
 /* unused harmony export OneMinusSrcColorFactor */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_4", function() { return OrthographicCamera; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_10", function() { return OrthographicCamera; });
 /* unused harmony export PCFShadowMap */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_5", function() { return PCFSoftShadowMap; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_11", function() { return PCFSoftShadowMap; });
 /* unused harmony export PMREMGenerator */
 /* unused harmony export ParametricBufferGeometry */
 /* unused harmony export ParametricGeometry */
@@ -10843,32 +10843,32 @@ if (typeof this !== 'undefined' && this.Sweetalert2){  this.swal = this.sweetAle
 /* unused harmony export ParticleBasicMaterial */
 /* unused harmony export ParticleSystem */
 /* unused harmony export ParticleSystemMaterial */
-/* unused harmony export Path */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_6", function() { return PerspectiveCamera; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_12", function() { return Path; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_13", function() { return PerspectiveCamera; });
 /* unused harmony export Plane */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_7", function() { return PlaneBufferGeometry; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_14", function() { return PlaneBufferGeometry; });
 /* unused harmony export PlaneGeometry */
 /* unused harmony export PlaneHelper */
 /* unused harmony export PointCloud */
 /* unused harmony export PointCloudMaterial */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_8", function() { return PointLight; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_15", function() { return PointLight; });
 /* unused harmony export PointLightHelper */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_9", function() { return Points; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_10", function() { return PointsMaterial; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_16", function() { return Points; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_17", function() { return PointsMaterial; });
 /* unused harmony export PolarGridHelper */
 /* unused harmony export PolyhedronBufferGeometry */
 /* unused harmony export PolyhedronGeometry */
 /* unused harmony export PositionalAudio */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_11", function() { return PropertyBinding; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_18", function() { return PropertyBinding; });
 /* unused harmony export PropertyMixer */
 /* unused harmony export QuadraticBezierCurve */
 /* unused harmony export QuadraticBezierCurve3 */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_12", function() { return Quaternion; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_13", function() { return QuaternionKeyframeTrack; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_19", function() { return Quaternion; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_20", function() { return QuaternionKeyframeTrack; });
 /* unused harmony export QuaternionLinearInterpolant */
 /* unused harmony export REVISION */
 /* unused harmony export RGBADepthPacking */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_14", function() { return RGBAFormat; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_21", function() { return RGBAFormat; });
 /* unused harmony export RGBAIntegerFormat */
 /* unused harmony export RGBA_ASTC_10x10_Format */
 /* unused harmony export RGBA_ASTC_10x5_Format */
@@ -10894,7 +10894,7 @@ if (typeof this !== 'undefined' && this.Sweetalert2){  this.swal = this.sweetAle
 /* unused harmony export RGBDEncoding */
 /* unused harmony export RGBEEncoding */
 /* unused harmony export RGBEFormat */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_15", function() { return RGBFormat; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_22", function() { return RGBFormat; });
 /* unused harmony export RGBIntegerFormat */
 /* unused harmony export RGBM16Encoding */
 /* unused harmony export RGBM7Encoding */
@@ -10907,12 +10907,12 @@ if (typeof this !== 'undefined' && this.Sweetalert2){  this.swal = this.sweetAle
 /* unused harmony export RGIntegerFormat */
 /* unused harmony export RawShaderMaterial */
 /* unused harmony export Ray */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_16", function() { return Raycaster; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_17", function() { return RectAreaLight; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_23", function() { return Raycaster; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_24", function() { return RectAreaLight; });
 /* unused harmony export RedFormat */
 /* unused harmony export RedIntegerFormat */
 /* unused harmony export ReinhardToneMapping */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_18", function() { return RepeatWrapping; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_25", function() { return RepeatWrapping; });
 /* unused harmony export ReplaceStencilOp */
 /* unused harmony export ReverseSubtractEquation */
 /* unused harmony export RingBufferGeometry */
@@ -10931,32 +10931,32 @@ if (typeof this !== 'undefined' && this.Sweetalert2){  this.swal = this.sweetAle
 /* unused harmony export SRGB8_ALPHA8_ASTC_8x5_Format */
 /* unused harmony export SRGB8_ALPHA8_ASTC_8x6_Format */
 /* unused harmony export SRGB8_ALPHA8_ASTC_8x8_Format */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_19", function() { return Scene; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_26", function() { return Scene; });
 /* unused harmony export SceneUtils */
 /* unused harmony export ShaderChunk */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_20", function() { return ShaderLib; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_27", function() { return ShaderLib; });
 /* unused harmony export ShaderMaterial */
 /* unused harmony export ShadowMaterial */
 /* unused harmony export Shape */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_21", function() { return ShapeBufferGeometry; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_28", function() { return ShapeBufferGeometry; });
 /* unused harmony export ShapeGeometry */
 /* unused harmony export ShapePath */
 /* unused harmony export ShapeUtils */
 /* unused harmony export ShortType */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_22", function() { return Skeleton; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_29", function() { return Skeleton; });
 /* unused harmony export SkeletonHelper */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_23", function() { return SkinnedMesh; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_30", function() { return SkinnedMesh; });
 /* unused harmony export SmoothShading */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_24", function() { return Sphere; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_25", function() { return SphereBufferGeometry; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_31", function() { return Sphere; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_32", function() { return SphereBufferGeometry; });
 /* unused harmony export SphereGeometry */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_26", function() { return Spherical; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_33", function() { return Spherical; });
 /* unused harmony export SphericalHarmonics3 */
 /* unused harmony export SphericalReflectionMapping */
 /* unused harmony export Spline */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_27", function() { return SplineCurve; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_34", function() { return SplineCurve; });
 /* unused harmony export SplineCurve3 */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_28", function() { return SpotLight; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_35", function() { return SpotLight; });
 /* unused harmony export SpotLightHelper */
 /* unused harmony export SpotLightShadow */
 /* unused harmony export Sprite */
@@ -10974,25 +10974,25 @@ if (typeof this !== 'undefined' && this.Sweetalert2){  this.swal = this.sweetAle
 /* unused harmony export StringKeyframeTrack */
 /* unused harmony export SubtractEquation */
 /* unused harmony export SubtractiveBlending */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_29", function() { return TOUCH; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_30", function() { return TangentSpaceNormalMap; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_36", function() { return TOUCH; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_37", function() { return TangentSpaceNormalMap; });
 /* unused harmony export TetrahedronBufferGeometry */
 /* unused harmony export TetrahedronGeometry */
 /* unused harmony export TextBufferGeometry */
 /* unused harmony export TextGeometry */
 /* unused harmony export Texture */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_31", function() { return TextureLoader; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_38", function() { return TextureLoader; });
 /* unused harmony export TorusBufferGeometry */
 /* unused harmony export TorusGeometry */
 /* unused harmony export TorusKnotBufferGeometry */
 /* unused harmony export TorusKnotGeometry */
 /* unused harmony export Triangle */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_32", function() { return TriangleFanDrawMode; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_33", function() { return TriangleStripDrawMode; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_39", function() { return TriangleFanDrawMode; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_40", function() { return TriangleStripDrawMode; });
 /* unused harmony export TrianglesDrawMode */
 /* unused harmony export TubeBufferGeometry */
 /* unused harmony export TubeGeometry */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_34", function() { return UVMapping; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_41", function() { return UVMapping; });
 /* unused harmony export Uint16Attribute */
 /* unused harmony export Uint16BufferAttribute */
 /* unused harmony export Uint32Attribute */
@@ -11003,7 +11003,7 @@ if (typeof this !== 'undefined' && this.Sweetalert2){  this.swal = this.sweetAle
 /* unused harmony export Uint8ClampedBufferAttribute */
 /* unused harmony export Uncharted2ToneMapping */
 /* unused harmony export Uniform */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_35", function() { return UniformsLib; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_42", function() { return UniformsLib; });
 /* unused harmony export UniformsUtils */
 /* unused harmony export UnsignedByteType */
 /* unused harmony export UnsignedInt248Type */
@@ -11013,10 +11013,10 @@ if (typeof this !== 'undefined' && this.Sweetalert2){  this.swal = this.sweetAle
 /* unused harmony export UnsignedShort565Type */
 /* unused harmony export UnsignedShortType */
 /* unused harmony export VSMShadowMap */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_36", function() { return Vector2; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_37", function() { return Vector3; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_43", function() { return Vector2; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_44", function() { return Vector3; });
 /* unused harmony export Vector4 */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_38", function() { return VectorKeyframeTrack; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_45", function() { return VectorKeyframeTrack; });
 /* unused harmony export Vertex */
 /* unused harmony export VertexColors */
 /* unused harmony export VideoTexture */
@@ -11024,7 +11024,7 @@ if (typeof this !== 'undefined' && this.Sweetalert2){  this.swal = this.sweetAle
 /* unused harmony export WebGLMultisampleRenderTarget */
 /* unused harmony export WebGLRenderTarget */
 /* unused harmony export WebGLRenderTargetCube */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_39", function() { return WebGLRenderer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_46", function() { return WebGLRenderer; });
 /* unused harmony export WebGLUtils */
 /* unused harmony export WireframeGeometry */
 /* unused harmony export WireframeHelper */
@@ -11034,7 +11034,7 @@ if (typeof this !== 'undefined' && this.Sweetalert2){  this.swal = this.sweetAle
 /* unused harmony export ZeroFactor */
 /* unused harmony export ZeroSlopeEnding */
 /* unused harmony export ZeroStencilOp */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_40", function() { return sRGBEncoding; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_47", function() { return sRGBEncoding; });
 // Polyfills
 
 if ( Number.EPSILON === undefined ) {
@@ -62024,7 +62024,7 @@ var OrbitControls = function ( object, domElement ) {
 	this.enabled = true;
 
 	// "target" sets the location of focus, where the object orbits around
-	this.target = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_37" /* Vector3 */]();
+	this.target = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_44" /* Vector3 */]();
 
 	// How far you can dolly in and out ( PerspectiveCamera only )
 	this.minDistance = 0;
@@ -62076,10 +62076,10 @@ var OrbitControls = function ( object, domElement ) {
 	this.keys = { LEFT: 37, UP: 38, RIGHT: 39, BOTTOM: 40 };
 
 	// Mouse buttons
-	this.mouseButtons = { LEFT: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["O" /* MOUSE */].ROTATE, MIDDLE: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["O" /* MOUSE */].DOLLY, RIGHT: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["O" /* MOUSE */].PAN };
+	this.mouseButtons = { LEFT: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["T" /* MOUSE */].ROTATE, MIDDLE: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["T" /* MOUSE */].DOLLY, RIGHT: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["T" /* MOUSE */].PAN };
 
 	// Touch fingers
-	this.touches = { ONE: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_29" /* TOUCH */].ROTATE, TWO: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_29" /* TOUCH */].DOLLY_PAN };
+	this.touches = { ONE: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* TOUCH */].ROTATE, TWO: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* TOUCH */].DOLLY_PAN };
 
 	// for reset
 	this.target0 = this.target.clone();
@@ -62128,14 +62128,14 @@ var OrbitControls = function ( object, domElement ) {
 	// this method is exposed, but perhaps it would be better if we can make it private...
 	this.update = function () {
 
-		var offset = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_37" /* Vector3 */]();
+		var offset = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_44" /* Vector3 */]();
 
 		// so camera.up is the orbit axis
-		var quat = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_12" /* Quaternion */]().setFromUnitVectors( object.up, new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_37" /* Vector3 */]( 0, 1, 0 ) );
+		var quat = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_19" /* Quaternion */]().setFromUnitVectors( object.up, new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_44" /* Vector3 */]( 0, 1, 0 ) );
 		var quatInverse = quat.clone().inverse();
 
-		var lastPosition = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_37" /* Vector3 */]();
-		var lastQuaternion = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_12" /* Quaternion */]();
+		var lastPosition = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_44" /* Vector3 */]();
+		var lastQuaternion = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_19" /* Quaternion */]();
 
 		return function update() {
 
@@ -62288,24 +62288,24 @@ var OrbitControls = function ( object, domElement ) {
 	var EPS = 0.000001;
 
 	// current position in spherical coordinates
-	var spherical = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_26" /* Spherical */]();
-	var sphericalDelta = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_26" /* Spherical */]();
+	var spherical = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_33" /* Spherical */]();
+	var sphericalDelta = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_33" /* Spherical */]();
 
 	var scale = 1;
-	var panOffset = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_37" /* Vector3 */]();
+	var panOffset = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_44" /* Vector3 */]();
 	var zoomChanged = false;
 
-	var rotateStart = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector2 */]();
-	var rotateEnd = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector2 */]();
-	var rotateDelta = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector2 */]();
+	var rotateStart = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_43" /* Vector2 */]();
+	var rotateEnd = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_43" /* Vector2 */]();
+	var rotateDelta = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_43" /* Vector2 */]();
 
-	var panStart = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector2 */]();
-	var panEnd = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector2 */]();
-	var panDelta = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector2 */]();
+	var panStart = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_43" /* Vector2 */]();
+	var panEnd = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_43" /* Vector2 */]();
+	var panDelta = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_43" /* Vector2 */]();
 
-	var dollyStart = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector2 */]();
-	var dollyEnd = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector2 */]();
-	var dollyDelta = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector2 */]();
+	var dollyStart = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_43" /* Vector2 */]();
+	var dollyEnd = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_43" /* Vector2 */]();
+	var dollyDelta = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_43" /* Vector2 */]();
 
 	function getAutoRotationAngle() {
 
@@ -62333,7 +62333,7 @@ var OrbitControls = function ( object, domElement ) {
 
 	var panLeft = function () {
 
-		var v = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_37" /* Vector3 */]();
+		var v = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_44" /* Vector3 */]();
 
 		return function panLeft( distance, objectMatrix ) {
 
@@ -62348,7 +62348,7 @@ var OrbitControls = function ( object, domElement ) {
 
 	var panUp = function () {
 
-		var v = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_37" /* Vector3 */]();
+		var v = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_44" /* Vector3 */]();
 
 		return function panUp( distance, objectMatrix ) {
 
@@ -62374,7 +62374,7 @@ var OrbitControls = function ( object, domElement ) {
 	// deltaX and deltaY are in pixels; right and down are positive
 	var pan = function () {
 
-		var offset = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_37" /* Vector3 */]();
+		var offset = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_44" /* Vector3 */]();
 
 		return function pan( deltaX, deltaY ) {
 
@@ -62785,7 +62785,7 @@ var OrbitControls = function ( object, domElement ) {
 
 		switch ( mouseAction ) {
 
-			case __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["O" /* MOUSE */].DOLLY:
+			case __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["T" /* MOUSE */].DOLLY:
 
 				if ( scope.enableZoom === false ) return;
 
@@ -62795,7 +62795,7 @@ var OrbitControls = function ( object, domElement ) {
 
 				break;
 
-			case __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["O" /* MOUSE */].ROTATE:
+			case __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["T" /* MOUSE */].ROTATE:
 
 				if ( event.ctrlKey || event.metaKey || event.shiftKey ) {
 
@@ -62817,7 +62817,7 @@ var OrbitControls = function ( object, domElement ) {
 
 				break;
 
-			case __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["O" /* MOUSE */].PAN:
+			case __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["T" /* MOUSE */].PAN:
 
 				if ( event.ctrlKey || event.metaKey || event.shiftKey ) {
 
@@ -62942,7 +62942,7 @@ var OrbitControls = function ( object, domElement ) {
 
 				switch ( scope.touches.ONE ) {
 
-					case __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_29" /* TOUCH */].ROTATE:
+					case __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* TOUCH */].ROTATE:
 
 						if ( scope.enableRotate === false ) return;
 
@@ -62952,7 +62952,7 @@ var OrbitControls = function ( object, domElement ) {
 
 						break;
 
-					case __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_29" /* TOUCH */].PAN:
+					case __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* TOUCH */].PAN:
 
 						if ( scope.enablePan === false ) return;
 
@@ -62974,7 +62974,7 @@ var OrbitControls = function ( object, domElement ) {
 
 				switch ( scope.touches.TWO ) {
 
-					case __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_29" /* TOUCH */].DOLLY_PAN:
+					case __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* TOUCH */].DOLLY_PAN:
 
 						if ( scope.enableZoom === false && scope.enablePan === false ) return;
 
@@ -62984,7 +62984,7 @@ var OrbitControls = function ( object, domElement ) {
 
 						break;
 
-					case __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_29" /* TOUCH */].DOLLY_ROTATE:
+					case __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* TOUCH */].DOLLY_ROTATE:
 
 						if ( scope.enableZoom === false && scope.enableRotate === false ) return;
 
@@ -63120,7 +63120,7 @@ var OrbitControls = function ( object, domElement ) {
 
 };
 
-OrbitControls.prototype = Object.create( __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["s" /* EventDispatcher */].prototype );
+OrbitControls.prototype = Object.create( __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["w" /* EventDispatcher */].prototype );
 OrbitControls.prototype.constructor = OrbitControls;
 
 
@@ -63136,15 +63136,15 @@ var MapControls = function ( object, domElement ) {
 
 	OrbitControls.call( this, object, domElement );
 
-	this.mouseButtons.LEFT = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["O" /* MOUSE */].PAN;
-	this.mouseButtons.RIGHT = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["O" /* MOUSE */].ROTATE;
+	this.mouseButtons.LEFT = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["T" /* MOUSE */].PAN;
+	this.mouseButtons.RIGHT = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["T" /* MOUSE */].ROTATE;
 
-	this.touches.ONE = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_29" /* TOUCH */].PAN;
-	this.touches.TWO = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_29" /* TOUCH */].DOLLY_ROTATE;
+	this.touches.ONE = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* TOUCH */].PAN;
+	this.touches.TWO = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* TOUCH */].DOLLY_ROTATE;
 
 };
 
-MapControls.prototype = Object.create( __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["s" /* EventDispatcher */].prototype );
+MapControls.prototype = Object.create( __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["w" /* EventDispatcher */].prototype );
 MapControls.prototype.constructor = MapControls;
 
 
@@ -63187,11 +63187,11 @@ var PointerLockControls = function ( camera, domElement ) {
 	var lockEvent = { type: 'lock' };
 	var unlockEvent = { type: 'unlock' };
 
-	var euler = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["r" /* Euler */]( 0, 0, 0, 'YXZ' );
+	var euler = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["v" /* Euler */]( 0, 0, 0, 'YXZ' );
 
 	var PI_2 = Math.PI / 2;
 
-	var vec = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_37" /* Vector3 */]();
+	var vec = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_44" /* Vector3 */]();
 
 	function onMouseMove( event ) {
 
@@ -63267,7 +63267,7 @@ var PointerLockControls = function ( camera, domElement ) {
 
 	this.getDirection = function () {
 
-		var direction = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_37" /* Vector3 */]( 0, 0, - 1 );
+		var direction = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_44" /* Vector3 */]( 0, 0, - 1 );
 
 		return function ( v ) {
 
@@ -63314,7 +63314,7 @@ var PointerLockControls = function ( camera, domElement ) {
 
 };
 
-PointerLockControls.prototype = Object.create( __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["s" /* EventDispatcher */].prototype );
+PointerLockControls.prototype = Object.create( __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["w" /* EventDispatcher */].prototype );
 PointerLockControls.prototype.constructor = PointerLockControls;
 
 
@@ -63346,13 +63346,13 @@ function RectAreaLightHelper( light, color ) {
 
 	var positions = [ 1, 1, 0, - 1, 1, 0, - 1, - 1, 0, 1, - 1, 0, 1, 1, 0 ];
 
-	var geometry = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["i" /* BufferGeometry */]();
-	geometry.setAttribute( 'position', new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["u" /* Float32BufferAttribute */]( positions, 3 ) );
+	var geometry = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["m" /* BufferGeometry */]();
+	geometry.setAttribute( 'position', new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["y" /* Float32BufferAttribute */]( positions, 3 ) );
 	geometry.computeBoundingSphere();
 
-	var material = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["G" /* LineBasicMaterial */]( { fog: false } );
+	var material = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["L" /* LineBasicMaterial */]( { fog: false } );
 
-	__WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["F" /* Line */].call( this, geometry, material );
+	__WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["K" /* Line */].call( this, geometry, material );
 
 	this.type = 'RectAreaLightHelper';
 
@@ -63360,17 +63360,17 @@ function RectAreaLightHelper( light, color ) {
 
 	var positions2 = [ 1, 1, 0, - 1, 1, 0, - 1, - 1, 0, 1, 1, 0, - 1, - 1, 0, 1, - 1, 0 ];
 
-	var geometry2 = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["i" /* BufferGeometry */]();
-	geometry2.setAttribute( 'position', new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["u" /* Float32BufferAttribute */]( positions2, 3 ) );
+	var geometry2 = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["m" /* BufferGeometry */]();
+	geometry2.setAttribute( 'position', new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["y" /* Float32BufferAttribute */]( positions2, 3 ) );
 	geometry2.computeBoundingSphere();
 
-	this.add( new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["T" /* Mesh */]( geometry2, new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["U" /* MeshBasicMaterial */]( { side: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["d" /* BackSide */], fog: false } ) ) );
+	this.add( new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["Y" /* Mesh */]( geometry2, new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["Z" /* MeshBasicMaterial */]( { side: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["f" /* BackSide */], fog: false } ) ) );
 
 	this.update();
 
 }
 
-RectAreaLightHelper.prototype = Object.create( __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["F" /* Line */].prototype );
+RectAreaLightHelper.prototype = Object.create( __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["K" /* Line */].prototype );
 RectAreaLightHelper.prototype.constructor = RectAreaLightHelper;
 
 RectAreaLightHelper.prototype.update = function () {
@@ -63450,18 +63450,18 @@ var RectAreaLightUniformsLib = {
 
 		// data textures
 
-		var ltc_1 = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["o" /* DataTexture */]( new Float32Array( LTC_MAT_1 ), 64, 64, __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_14" /* RGBAFormat */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["v" /* FloatType */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_34" /* UVMapping */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["k" /* ClampToEdgeWrapping */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["k" /* ClampToEdgeWrapping */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["J" /* LinearFilter */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["Z" /* NearestFilter */], 1 );
-		var ltc_2 = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["o" /* DataTexture */]( new Float32Array( LTC_MAT_2 ), 64, 64, __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_14" /* RGBAFormat */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["v" /* FloatType */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_34" /* UVMapping */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["k" /* ClampToEdgeWrapping */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["k" /* ClampToEdgeWrapping */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["J" /* LinearFilter */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["Z" /* NearestFilter */], 1 );
+		var ltc_1 = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["s" /* DataTexture */]( new Float32Array( LTC_MAT_1 ), 64, 64, __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_21" /* RGBAFormat */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["z" /* FloatType */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_41" /* UVMapping */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["o" /* ClampToEdgeWrapping */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["o" /* ClampToEdgeWrapping */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["O" /* LinearFilter */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_4" /* NearestFilter */], 1 );
+		var ltc_2 = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["s" /* DataTexture */]( new Float32Array( LTC_MAT_2 ), 64, 64, __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_21" /* RGBAFormat */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["z" /* FloatType */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_41" /* UVMapping */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["o" /* ClampToEdgeWrapping */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["o" /* ClampToEdgeWrapping */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["O" /* LinearFilter */], __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_4" /* NearestFilter */], 1 );
 
-		__WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_35" /* UniformsLib */].LTC_1 = ltc_1;
-		__WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_35" /* UniformsLib */].LTC_2 = ltc_2;
+		__WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_42" /* UniformsLib */].LTC_1 = ltc_1;
+		__WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_42" /* UniformsLib */].LTC_2 = ltc_2;
 
 		// add ltc data textures to material uniforms
 
 		var ltc = { ltc_1: { value: null }, ltc_2: { value: null } };
 
-		Object.assign( __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_20" /* ShaderLib */].standard.uniforms, ltc );
-		Object.assign( __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_20" /* ShaderLib */].physical.uniforms, ltc );
+		Object.assign( __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_27" /* ShaderLib */].standard.uniforms, ltc );
+		Object.assign( __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_27" /* ShaderLib */].physical.uniforms, ltc );
 
 	}
 
@@ -63492,14 +63492,14 @@ var GLTFLoader = ( function () {
 
 	function GLTFLoader( manager ) {
 
-		__WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["M" /* Loader */].call( this, manager );
+		__WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["R" /* Loader */].call( this, manager );
 
 		this.dracoLoader = null;
 		this.ddsLoader = null;
 
 	}
 
-	GLTFLoader.prototype = Object.assign( Object.create( __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["M" /* Loader */].prototype ), {
+	GLTFLoader.prototype = Object.assign( Object.create( __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["R" /* Loader */].prototype ), {
 
 		constructor: GLTFLoader,
 
@@ -63519,7 +63519,7 @@ var GLTFLoader = ( function () {
 
 			} else {
 
-				resourcePath = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["N" /* LoaderUtils */].extractUrlBase( url );
+				resourcePath = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["S" /* LoaderUtils */].extractUrlBase( url );
 
 			}
 
@@ -63545,7 +63545,7 @@ var GLTFLoader = ( function () {
 
 			};
 
-			var loader = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["t" /* FileLoader */]( scope.manager );
+			var loader = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["x" /* FileLoader */]( scope.manager );
 
 			loader.setPath( this.path );
 			loader.setResponseType( 'arraybuffer' );
@@ -63604,7 +63604,7 @@ var GLTFLoader = ( function () {
 
 			} else {
 
-				var magic = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["N" /* LoaderUtils */].decodeText( new Uint8Array( data, 0, 4 ) );
+				var magic = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["S" /* LoaderUtils */].decodeText( new Uint8Array( data, 0, 4 ) );
 
 				if ( magic === BINARY_EXTENSION_HEADER_MAGIC ) {
 
@@ -63623,7 +63623,7 @@ var GLTFLoader = ( function () {
 
 				} else {
 
-					content = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["N" /* LoaderUtils */].decodeText( new Uint8Array( data ) );
+					content = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["S" /* LoaderUtils */].decodeText( new Uint8Array( data ) );
 
 				}
 
@@ -63798,7 +63798,7 @@ var GLTFLoader = ( function () {
 		var lightDef = this.lightDefs[ lightIndex ];
 		var lightNode;
 
-		var color = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["m" /* Color */]( 0xffffff );
+		var color = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["q" /* Color */]( 0xffffff );
 		if ( lightDef.color !== undefined ) color.fromArray( lightDef.color );
 
 		var range = lightDef.range !== undefined ? lightDef.range : 0;
@@ -63806,18 +63806,18 @@ var GLTFLoader = ( function () {
 		switch ( lightDef.type ) {
 
 			case 'directional':
-				lightNode = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["p" /* DirectionalLight */]( color );
+				lightNode = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["t" /* DirectionalLight */]( color );
 				lightNode.target.position.set( 0, 0, - 1 );
 				lightNode.add( lightNode.target );
 				break;
 
 			case 'point':
-				lightNode = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_8" /* PointLight */]( color );
+				lightNode = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_15" /* PointLight */]( color );
 				lightNode.distance = range;
 				break;
 
 			case 'spot':
-				lightNode = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_28" /* SpotLight */]( color );
+				lightNode = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_35" /* SpotLight */]( color );
 				lightNode.distance = range;
 				// Handle spotlight properties.
 				lightDef.spot = lightDef.spot || {};
@@ -63861,7 +63861,7 @@ var GLTFLoader = ( function () {
 
 	GLTFMaterialsUnlitExtension.prototype.getMaterialType = function () {
 
-		return __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["U" /* MeshBasicMaterial */];
+		return __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["Z" /* MeshBasicMaterial */];
 
 	};
 
@@ -63869,7 +63869,7 @@ var GLTFLoader = ( function () {
 
 		var pending = [];
 
-		materialParams.color = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["m" /* Color */]( 1.0, 1.0, 1.0 );
+		materialParams.color = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["q" /* Color */]( 1.0, 1.0, 1.0 );
 		materialParams.opacity = 1.0;
 
 		var metallicRoughness = materialDef.pbrMetallicRoughness;
@@ -63910,7 +63910,7 @@ var GLTFLoader = ( function () {
 
 	GLTFMaterialsClearcoatExtension.prototype.getMaterialType = function () {
 
-		return __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["W" /* MeshPhysicalMaterial */];
+		return __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_1" /* MeshPhysicalMaterial */];
 
 	};
 
@@ -63952,7 +63952,7 @@ var GLTFLoader = ( function () {
 
 				var scale = extension.clearcoatNormalTexture.scale;
 
-				materialParams.clearcoatNormalScale = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector2 */]( scale, scale );
+				materialParams.clearcoatNormalScale = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_43" /* Vector2 */]( scale, scale );
 
 			}
 
@@ -63976,7 +63976,7 @@ var GLTFLoader = ( function () {
 		var headerView = new DataView( data, 0, BINARY_EXTENSION_HEADER_LENGTH );
 
 		this.header = {
-			magic: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["N" /* LoaderUtils */].decodeText( new Uint8Array( data.slice( 0, 4 ) ) ),
+			magic: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["S" /* LoaderUtils */].decodeText( new Uint8Array( data.slice( 0, 4 ) ) ),
 			version: headerView.getUint32( 4, true ),
 			length: headerView.getUint32( 8, true )
 		};
@@ -64005,7 +64005,7 @@ var GLTFLoader = ( function () {
 			if ( chunkType === BINARY_EXTENSION_CHUNK_TYPES.JSON ) {
 
 				var contentArray = new Uint8Array( data, BINARY_EXTENSION_HEADER_LENGTH + chunkIndex, chunkLength );
-				this.content = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["N" /* LoaderUtils */].decodeText( contentArray );
+				this.content = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["S" /* LoaderUtils */].decodeText( contentArray );
 
 			} else if ( chunkType === BINARY_EXTENSION_CHUNK_TYPES.BIN ) {
 
@@ -64166,7 +64166,7 @@ var GLTFLoader = ( function () {
 
 	function GLTFMeshStandardSGMaterial( params ) {
 
-		__WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["X" /* MeshStandardMaterial */].call( this );
+		__WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_2" /* MeshStandardMaterial */].call( this );
 
 		this.isGLTFSpecularGlossinessMaterial = true;
 
@@ -64214,7 +64214,7 @@ var GLTFLoader = ( function () {
 		].join( '\n' );
 
 		var uniforms = {
-			specular: { value: new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["m" /* Color */]().setHex( 0xffffff ) },
+			specular: { value: new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["q" /* Color */]().setHex( 0xffffff ) },
 			glossiness: { value: 1 },
 			specularMap: { value: null },
 			glossinessMap: { value: null }
@@ -64291,12 +64291,12 @@ var GLTFLoader = ( function () {
 
 	}
 
-	GLTFMeshStandardSGMaterial.prototype = Object.create( __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["X" /* MeshStandardMaterial */].prototype );
+	GLTFMeshStandardSGMaterial.prototype = Object.create( __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_2" /* MeshStandardMaterial */].prototype );
 	GLTFMeshStandardSGMaterial.prototype.constructor = GLTFMeshStandardSGMaterial;
 
 	GLTFMeshStandardSGMaterial.prototype.copy = function ( source ) {
 
-		__WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["X" /* MeshStandardMaterial */].prototype.copy.call( this, source );
+		__WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_2" /* MeshStandardMaterial */].prototype.copy.call( this, source );
 		this.specularMap = source.specularMap;
 		this.specular.copy( source.specular );
 		this.glossinessMap = source.glossinessMap;
@@ -64352,7 +64352,7 @@ var GLTFLoader = ( function () {
 
 				var pbrSpecularGlossiness = materialDef.extensions[ this.name ];
 
-				materialParams.color = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["m" /* Color */]( 1.0, 1.0, 1.0 );
+				materialParams.color = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["q" /* Color */]( 1.0, 1.0, 1.0 );
 				materialParams.opacity = 1.0;
 
 				var pending = [];
@@ -64372,9 +64372,9 @@ var GLTFLoader = ( function () {
 
 				}
 
-				materialParams.emissive = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["m" /* Color */]( 0.0, 0.0, 0.0 );
+				materialParams.emissive = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["q" /* Color */]( 0.0, 0.0, 0.0 );
 				materialParams.glossiness = pbrSpecularGlossiness.glossinessFactor !== undefined ? pbrSpecularGlossiness.glossinessFactor : 1.0;
-				materialParams.specular = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["m" /* Color */]( 1.0, 1.0, 1.0 );
+				materialParams.specular = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["q" /* Color */]( 1.0, 1.0, 1.0 );
 
 				if ( Array.isArray( pbrSpecularGlossiness.specularFactor ) ) {
 
@@ -64417,7 +64417,7 @@ var GLTFLoader = ( function () {
 				material.bumpScale = 1;
 
 				material.normalMap = materialParams.normalMap === undefined ? null : materialParams.normalMap;
-				material.normalMapType = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_30" /* TangentSpaceNormalMap */];
+				material.normalMapType = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_37" /* TangentSpaceNormalMap */];
 
 				if ( materialParams.normalScale ) material.normalScale = materialParams.normalScale;
 
@@ -64465,11 +64465,11 @@ var GLTFLoader = ( function () {
 	// Specification: https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/README.md#appendix-c-spline-interpolation
 	function GLTFCubicSplineInterpolant( parameterPositions, sampleValues, sampleSize, resultBuffer ) {
 
-		__WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["C" /* Interpolant */].call( this, parameterPositions, sampleValues, sampleSize, resultBuffer );
+		__WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["H" /* Interpolant */].call( this, parameterPositions, sampleValues, sampleSize, resultBuffer );
 
 	}
 
-	GLTFCubicSplineInterpolant.prototype = Object.create( __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["C" /* Interpolant */].prototype );
+	GLTFCubicSplineInterpolant.prototype = Object.create( __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["H" /* Interpolant */].prototype );
 	GLTFCubicSplineInterpolant.prototype.constructor = GLTFCubicSplineInterpolant;
 
 	GLTFCubicSplineInterpolant.prototype.copySampleValue_ = function ( index ) {
@@ -64574,18 +64574,18 @@ var GLTFLoader = ( function () {
 	};
 
 	var WEBGL_FILTERS = {
-		9728: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["Z" /* NearestFilter */],
-		9729: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["J" /* LinearFilter */],
-		9984: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_1" /* NearestMipmapNearestFilter */],
-		9985: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["L" /* LinearMipmapNearestFilter */],
-		9986: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_0" /* NearestMipmapLinearFilter */],
-		9987: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["K" /* LinearMipmapLinearFilter */]
+		9728: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_4" /* NearestFilter */],
+		9729: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["O" /* LinearFilter */],
+		9984: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_6" /* NearestMipmapNearestFilter */],
+		9985: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["Q" /* LinearMipmapNearestFilter */],
+		9986: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_5" /* NearestMipmapLinearFilter */],
+		9987: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["P" /* LinearMipmapLinearFilter */]
 	};
 
 	var WEBGL_WRAPPINGS = {
-		33071: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["k" /* ClampToEdgeWrapping */],
-		33648: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["Y" /* MirroredRepeatWrapping */],
-		10497: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_18" /* RepeatWrapping */]
+		33071: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["o" /* ClampToEdgeWrapping */],
+		33648: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_3" /* MirroredRepeatWrapping */],
+		10497: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_25" /* RepeatWrapping */]
 	};
 
 	var WEBGL_TYPE_SIZES = {
@@ -64619,8 +64619,8 @@ var GLTFLoader = ( function () {
 	var INTERPOLATION = {
 		CUBICSPLINE: undefined, // We use a custom interpolant (GLTFCubicSplineInterpolation) for CUBICSPLINE tracks. Each
 		                        // keyframe track will be initialized with a default interpolation type, then modified.
-		LINEAR: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["E" /* InterpolateLinear */],
-		STEP: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["D" /* InterpolateDiscrete */]
+		LINEAR: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["J" /* InterpolateLinear */],
+		STEP: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["I" /* InterpolateDiscrete */]
 	};
 
 	var ALPHA_MODES = {
@@ -64630,8 +64630,8 @@ var GLTFLoader = ( function () {
 	};
 
 	var MIME_TYPE_FORMATS = {
-		'image/png': __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_14" /* RGBAFormat */],
-		'image/jpeg': __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_15" /* RGBFormat */]
+		'image/png': __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_21" /* RGBAFormat */],
+		'image/jpeg': __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_22" /* RGBFormat */]
 	};
 
 	/* UTILITY FUNCTIONS */
@@ -64669,14 +64669,14 @@ var GLTFLoader = ( function () {
 
 		if ( cache[ 'DefaultMaterial' ] === undefined ) {
 
-			cache[ 'DefaultMaterial' ] = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["X" /* MeshStandardMaterial */]( {
+			cache[ 'DefaultMaterial' ] = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_2" /* MeshStandardMaterial */]( {
 				color: 0xFFFFFF,
 				emissive: 0x000000,
 				metalness: 1,
 				roughness: 1,
 				transparent: false,
 				depthTest: true,
-				side: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["x" /* FrontSide */]
+				side: __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["B" /* FrontSide */]
 			} );
 
 		}
@@ -64894,10 +64894,10 @@ var GLTFLoader = ( function () {
 		// BufferGeometry caching
 		this.primitiveCache = {};
 
-		this.textureLoader = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_31" /* TextureLoader */]( this.options.manager );
+		this.textureLoader = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_38" /* TextureLoader */]( this.options.manager );
 		this.textureLoader.setCrossOrigin( this.options.crossOrigin );
 
-		this.fileLoader = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["t" /* FileLoader */]( this.options.manager );
+		this.fileLoader = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["x" /* FileLoader */]( this.options.manager );
 		this.fileLoader.setResponseType( 'arraybuffer' );
 
 		if ( this.options.crossOrigin === 'use-credentials' ) {
@@ -65240,13 +65240,13 @@ var GLTFLoader = ( function () {
 					array = new TypedArray( bufferView, ibSlice * byteStride, accessorDef.count * byteStride / elementBytes );
 
 					// Integer parameters to IB/IBA are in array elements, not bytes.
-					ib = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["A" /* InterleavedBuffer */]( array, byteStride / elementBytes );
+					ib = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["F" /* InterleavedBuffer */]( array, byteStride / elementBytes );
 
 					parser.cache.add( ibCacheKey, ib );
 
 				}
 
-				bufferAttribute = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["B" /* InterleavedBufferAttribute */]( ib, itemSize, ( byteOffset % byteStride ) / elementBytes, normalized );
+				bufferAttribute = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["G" /* InterleavedBufferAttribute */]( ib, itemSize, ( byteOffset % byteStride ) / elementBytes, normalized );
 
 			} else {
 
@@ -65260,7 +65260,7 @@ var GLTFLoader = ( function () {
 
 				}
 
-				bufferAttribute = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["h" /* BufferAttribute */]( array, itemSize, normalized );
+				bufferAttribute = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["l" /* BufferAttribute */]( array, itemSize, normalized );
 
 			}
 
@@ -65279,7 +65279,7 @@ var GLTFLoader = ( function () {
 				if ( bufferView !== null ) {
 
 					// Avoid modifying the original ArrayBuffer, if the bufferView wasn't initialized with zeroes.
-					bufferAttribute = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["h" /* BufferAttribute */]( bufferAttribute.array.slice(), bufferAttribute.itemSize, bufferAttribute.normalized );
+					bufferAttribute = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["l" /* BufferAttribute */]( bufferAttribute.array.slice(), bufferAttribute.itemSize, bufferAttribute.normalized );
 
 				}
 
@@ -65395,10 +65395,10 @@ var GLTFLoader = ( function () {
 			var samplers = json.samplers || {};
 			var sampler = samplers[ textureDef.sampler ] || {};
 
-			texture.magFilter = WEBGL_FILTERS[ sampler.magFilter ] || __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["J" /* LinearFilter */];
-			texture.minFilter = WEBGL_FILTERS[ sampler.minFilter ] || __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["K" /* LinearMipmapLinearFilter */];
-			texture.wrapS = WEBGL_WRAPPINGS[ sampler.wrapS ] || __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_18" /* RepeatWrapping */];
-			texture.wrapT = WEBGL_WRAPPINGS[ sampler.wrapT ] || __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_18" /* RepeatWrapping */];
+			texture.magFilter = WEBGL_FILTERS[ sampler.magFilter ] || __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["O" /* LinearFilter */];
+			texture.minFilter = WEBGL_FILTERS[ sampler.minFilter ] || __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["P" /* LinearMipmapLinearFilter */];
+			texture.wrapS = WEBGL_WRAPPINGS[ sampler.wrapS ] || __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_25" /* RepeatWrapping */];
+			texture.wrapT = WEBGL_WRAPPINGS[ sampler.wrapT ] || __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_25" /* RepeatWrapping */];
 
 			parser.associations.set( texture, {
 				type: 'textures',
@@ -65433,7 +65433,7 @@ var GLTFLoader = ( function () {
 					case 'metalnessMap':
 					case 'normalMap':
 					case 'roughnessMap':
-						texture.format = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_15" /* RGBFormat */];
+						texture.format = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_22" /* RGBFormat */];
 						break;
 
 				}
@@ -65496,8 +65496,8 @@ var GLTFLoader = ( function () {
 
 			if ( ! pointsMaterial ) {
 
-				pointsMaterial = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_10" /* PointsMaterial */]();
-				__WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["P" /* Material */].prototype.copy.call( pointsMaterial, material );
+				pointsMaterial = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_17" /* PointsMaterial */]();
+				__WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["U" /* Material */].prototype.copy.call( pointsMaterial, material );
 				pointsMaterial.color.copy( material.color );
 				pointsMaterial.map = material.map;
 				pointsMaterial.sizeAttenuation = false; // glTF spec says points should be 1px
@@ -65516,8 +65516,8 @@ var GLTFLoader = ( function () {
 
 			if ( ! lineMaterial ) {
 
-				lineMaterial = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["G" /* LineBasicMaterial */]();
-				__WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["P" /* Material */].prototype.copy.call( lineMaterial, material );
+				lineMaterial = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["L" /* LineBasicMaterial */]();
+				__WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["U" /* Material */].prototype.copy.call( lineMaterial, material );
 				lineMaterial.color.copy( material.color );
 
 				this.cache.add( cacheKey, lineMaterial );
@@ -65624,11 +65624,11 @@ var GLTFLoader = ( function () {
 			// Specification:
 			// https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#metallic-roughness-material
 
-			materialType = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["X" /* MeshStandardMaterial */];
+			materialType = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_2" /* MeshStandardMaterial */];
 
 			var metallicRoughness = materialDef.pbrMetallicRoughness || {};
 
-			materialParams.color = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["m" /* Color */]( 1.0, 1.0, 1.0 );
+			materialParams.color = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["q" /* Color */]( 1.0, 1.0, 1.0 );
 			materialParams.opacity = 1.0;
 
 			if ( Array.isArray( metallicRoughness.baseColorFactor ) ) {
@@ -65660,7 +65660,7 @@ var GLTFLoader = ( function () {
 
 		if ( materialDef.doubleSided === true ) {
 
-			materialParams.side = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["q" /* DoubleSide */];
+			materialParams.side = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["u" /* DoubleSide */];
 
 		}
 
@@ -65685,11 +65685,11 @@ var GLTFLoader = ( function () {
 
 		}
 
-		if ( materialDef.normalTexture !== undefined && materialType !== __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["U" /* MeshBasicMaterial */] ) {
+		if ( materialDef.normalTexture !== undefined && materialType !== __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["Z" /* MeshBasicMaterial */] ) {
 
 			pending.push( parser.assignTexture( materialParams, 'normalMap', materialDef.normalTexture ) );
 
-			materialParams.normalScale = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_36" /* Vector2 */]( 1, 1 );
+			materialParams.normalScale = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_43" /* Vector2 */]( 1, 1 );
 
 			if ( materialDef.normalTexture.scale !== undefined ) {
 
@@ -65699,7 +65699,7 @@ var GLTFLoader = ( function () {
 
 		}
 
-		if ( materialDef.occlusionTexture !== undefined && materialType !== __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["U" /* MeshBasicMaterial */] ) {
+		if ( materialDef.occlusionTexture !== undefined && materialType !== __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["Z" /* MeshBasicMaterial */] ) {
 
 			pending.push( parser.assignTexture( materialParams, 'aoMap', materialDef.occlusionTexture ) );
 
@@ -65711,13 +65711,13 @@ var GLTFLoader = ( function () {
 
 		}
 
-		if ( materialDef.emissiveFactor !== undefined && materialType !== __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["U" /* MeshBasicMaterial */] ) {
+		if ( materialDef.emissiveFactor !== undefined && materialType !== __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["Z" /* MeshBasicMaterial */] ) {
 
-			materialParams.emissive = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["m" /* Color */]().fromArray( materialDef.emissiveFactor );
+			materialParams.emissive = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["q" /* Color */]().fromArray( materialDef.emissiveFactor );
 
 		}
 
-		if ( materialDef.emissiveTexture !== undefined && materialType !== __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["U" /* MeshBasicMaterial */] ) {
+		if ( materialDef.emissiveTexture !== undefined && materialType !== __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["Z" /* MeshBasicMaterial */] ) {
 
 			pending.push( parser.assignTexture( materialParams, 'emissiveMap', materialDef.emissiveTexture ) );
 
@@ -65748,8 +65748,8 @@ var GLTFLoader = ( function () {
 			if ( materialDef.name ) material.name = materialDef.name;
 
 			// baseColorTexture, emissiveTexture, and specularGlossinessTexture use sRGB encoding.
-			if ( material.map ) material.map.encoding = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_40" /* sRGBEncoding */];
-			if ( material.emissiveMap ) material.emissiveMap.encoding = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_40" /* sRGBEncoding */];
+			if ( material.map ) material.map.encoding = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_47" /* sRGBEncoding */];
+			if ( material.emissiveMap ) material.emissiveMap.encoding = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_47" /* sRGBEncoding */];
 
 			assignExtrasToUserData( material, materialDef );
 
@@ -65772,7 +65772,7 @@ var GLTFLoader = ( function () {
 
 		var attributes = primitiveDef.attributes;
 
-		var box = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["f" /* Box3 */]();
+		var box = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["h" /* Box3 */]();
 
 		if ( attributes.POSITION !== undefined ) {
 
@@ -65786,8 +65786,8 @@ var GLTFLoader = ( function () {
 			if ( min !== undefined && max !== undefined ) {
 
 				box.set(
-					new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_37" /* Vector3 */]( min[ 0 ], min[ 1 ], min[ 2 ] ),
-					new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_37" /* Vector3 */]( max[ 0 ], max[ 1 ], max[ 2 ] ) );
+					new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_44" /* Vector3 */]( min[ 0 ], min[ 1 ], min[ 2 ] ),
+					new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_44" /* Vector3 */]( max[ 0 ], max[ 1 ], max[ 2 ] ) );
 
 			} else {
 
@@ -65807,8 +65807,8 @@ var GLTFLoader = ( function () {
 
 		if ( targets !== undefined ) {
 
-			var maxDisplacement = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_37" /* Vector3 */]();
-			var vector = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_37" /* Vector3 */]();
+			var maxDisplacement = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_44" /* Vector3 */]();
+			var vector = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_44" /* Vector3 */]();
 
 			for ( var i = 0, il = targets.length; i < il; i ++ ) {
 
@@ -65852,7 +65852,7 @@ var GLTFLoader = ( function () {
 
 		geometry.boundingBox = box;
 
-		var sphere = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_24" /* Sphere */]();
+		var sphere = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_31" /* Sphere */]();
 
 		box.getCenter( sphere.center );
 		sphere.radius = box.min.distanceTo( box.max ) / 2;
@@ -65963,7 +65963,7 @@ var GLTFLoader = ( function () {
 		var numberOfTriangles = index.count - 2;
 		var newIndices = [];
 
-		if ( drawMode === __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_32" /* TriangleFanDrawMode */] ) {
+		if ( drawMode === __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_39" /* TriangleFanDrawMode */] ) {
 
 			// gl.TRIANGLE_FAN
 
@@ -66068,7 +66068,7 @@ var GLTFLoader = ( function () {
 				} else {
 
 					// Otherwise create a new geometry
-					geometryPromise = addPrimitiveAttributes( new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["i" /* BufferGeometry */](), primitive, parser );
+					geometryPromise = addPrimitiveAttributes( new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["m" /* BufferGeometry */](), primitive, parser );
 
 				}
 
@@ -66137,8 +66137,8 @@ var GLTFLoader = ( function () {
 
 					// .isSkinnedMesh isn't in glTF spec. See .markDefs()
 					mesh = meshDef.isSkinnedMesh === true
-						? new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_23" /* SkinnedMesh */]( geometry, material )
-						: new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["T" /* Mesh */]( geometry, material );
+						? new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_30" /* SkinnedMesh */]( geometry, material )
+						: new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["Y" /* Mesh */]( geometry, material );
 
 					if ( mesh.isSkinnedMesh === true && ! mesh.geometry.attributes.skinWeight.normalized ) {
 
@@ -66150,29 +66150,29 @@ var GLTFLoader = ( function () {
 
 					if ( primitive.mode === WEBGL_CONSTANTS.TRIANGLE_STRIP ) {
 
-						mesh.geometry = toTrianglesDrawMode( mesh.geometry, __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_33" /* TriangleStripDrawMode */] );
+						mesh.geometry = toTrianglesDrawMode( mesh.geometry, __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_40" /* TriangleStripDrawMode */] );
 
 					} else if ( primitive.mode === WEBGL_CONSTANTS.TRIANGLE_FAN ) {
 
-						mesh.geometry = toTrianglesDrawMode( mesh.geometry, __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_32" /* TriangleFanDrawMode */] );
+						mesh.geometry = toTrianglesDrawMode( mesh.geometry, __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_39" /* TriangleFanDrawMode */] );
 
 					}
 
 				} else if ( primitive.mode === WEBGL_CONSTANTS.LINES ) {
 
-					mesh = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["I" /* LineSegments */]( geometry, material );
+					mesh = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["N" /* LineSegments */]( geometry, material );
 
 				} else if ( primitive.mode === WEBGL_CONSTANTS.LINE_STRIP ) {
 
-					mesh = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["F" /* Line */]( geometry, material );
+					mesh = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["K" /* Line */]( geometry, material );
 
 				} else if ( primitive.mode === WEBGL_CONSTANTS.LINE_LOOP ) {
 
-					mesh = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["H" /* LineLoop */]( geometry, material );
+					mesh = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["M" /* LineLoop */]( geometry, material );
 
 				} else if ( primitive.mode === WEBGL_CONSTANTS.POINTS ) {
 
-					mesh = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_9" /* Points */]( geometry, material );
+					mesh = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_16" /* Points */]( geometry, material );
 
 				} else {
 
@@ -66204,7 +66204,7 @@ var GLTFLoader = ( function () {
 
 			}
 
-			var group = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["y" /* Group */]();
+			var group = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["C" /* Group */]();
 
 			for ( var i = 0, il = meshes.length; i < il; i ++ ) {
 
@@ -66238,11 +66238,11 @@ var GLTFLoader = ( function () {
 
 		if ( cameraDef.type === 'perspective' ) {
 
-			camera = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_6" /* PerspectiveCamera */]( __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["R" /* MathUtils */].radToDeg( params.yfov ), params.aspectRatio || 1, params.znear || 1, params.zfar || 2e6 );
+			camera = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_13" /* PerspectiveCamera */]( __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["W" /* MathUtils */].radToDeg( params.yfov ), params.aspectRatio || 1, params.znear || 1, params.zfar || 2e6 );
 
 		} else if ( cameraDef.type === 'orthographic' ) {
 
-			camera = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_4" /* OrthographicCamera */]( - params.xmag, params.xmag, params.ymag, - params.ymag, params.znear, params.zfar );
+			camera = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_10" /* OrthographicCamera */]( - params.xmag, params.xmag, params.ymag, - params.ymag, params.znear, params.zfar );
 
 		}
 
@@ -66352,26 +66352,26 @@ var GLTFLoader = ( function () {
 
 					case PATH_PROPERTIES.weights:
 
-						TypedKeyframeTrack = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_2" /* NumberKeyframeTrack */];
+						TypedKeyframeTrack = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_8" /* NumberKeyframeTrack */];
 						break;
 
 					case PATH_PROPERTIES.rotation:
 
-						TypedKeyframeTrack = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_13" /* QuaternionKeyframeTrack */];
+						TypedKeyframeTrack = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_20" /* QuaternionKeyframeTrack */];
 						break;
 
 					case PATH_PROPERTIES.position:
 					case PATH_PROPERTIES.scale:
 					default:
 
-						TypedKeyframeTrack = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_38" /* VectorKeyframeTrack */];
+						TypedKeyframeTrack = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_45" /* VectorKeyframeTrack */];
 						break;
 
 				}
 
 				var targetName = node.name ? node.name : node.uuid;
 
-				var interpolation = sampler.interpolation !== undefined ? INTERPOLATION[ sampler.interpolation ] : __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["E" /* InterpolateLinear */];
+				var interpolation = sampler.interpolation !== undefined ? INTERPOLATION[ sampler.interpolation ] : __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["J" /* InterpolateLinear */];
 
 				var targetNames = [];
 
@@ -66560,11 +66560,11 @@ var GLTFLoader = ( function () {
 			// .isBone isn't in glTF spec. See .markDefs
 			if ( nodeDef.isBone === true ) {
 
-				node = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["e" /* Bone */]();
+				node = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["g" /* Bone */]();
 
 			} else if ( objects.length > 1 ) {
 
-				node = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["y" /* Group */]();
+				node = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["C" /* Group */]();
 
 			} else if ( objects.length === 1 ) {
 
@@ -66572,7 +66572,7 @@ var GLTFLoader = ( function () {
 
 			} else {
 
-				node = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_3" /* Object3D */]();
+				node = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_9" /* Object3D */]();
 
 			}
 
@@ -66589,7 +66589,7 @@ var GLTFLoader = ( function () {
 			if ( nodeDef.name ) {
 
 				node.userData.name = nodeDef.name;
-				node.name = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_11" /* PropertyBinding */].sanitizeNodeName( nodeDef.name );
+				node.name = __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_18" /* PropertyBinding */].sanitizeNodeName( nodeDef.name );
 
 			}
 
@@ -66599,7 +66599,7 @@ var GLTFLoader = ( function () {
 
 			if ( nodeDef.matrix !== undefined ) {
 
-				var matrix = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["S" /* Matrix4 */]();
+				var matrix = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["X" /* Matrix4 */]();
 				matrix.fromArray( nodeDef.matrix );
 				node.applyMatrix4( matrix );
 
@@ -66685,7 +66685,7 @@ var GLTFLoader = ( function () {
 
 								bones.push( jointNode );
 
-								var mat = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["S" /* Matrix4 */]();
+								var mat = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["X" /* Matrix4 */]();
 
 								if ( skinEntry.inverseBindMatrices !== undefined ) {
 
@@ -66703,7 +66703,7 @@ var GLTFLoader = ( function () {
 
 						}
 
-						mesh.bind( new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_22" /* Skeleton */]( bones, boneInverses ), mesh.matrixWorld );
+						mesh.bind( new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_29" /* Skeleton */]( bones, boneInverses ), mesh.matrixWorld );
 
 					} );
 
@@ -66747,7 +66747,7 @@ var GLTFLoader = ( function () {
 
 			// Loader returns Group, not Scene.
 			// See: https://github.com/mrdoob/three.js/issues/18342#issuecomment-578981172
-			var scene = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["y" /* Group */]();
+			var scene = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["C" /* Group */]();
 			if ( sceneDef.name ) scene.name = sceneDef.name;
 
 			assignExtrasToUserData( scene, sceneDef );
@@ -66777,6 +66777,1296 @@ var GLTFLoader = ( function () {
 	return GLTFLoader;
 
 } )();
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/three/examples/jsm/objects/MarchingCubes.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MarchingCubes; });
+/* unused harmony export edgeTable */
+/* unused harmony export triTable */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__ = __webpack_require__("./node_modules/three/build/three.module.js");
+/**
+ * @author alteredq / http://alteredqualia.com/
+ * @author mrdoob / http://mrdoob.com
+ * @author chaht01 / http://hyuntak.com
+ * Port of http://webglsamples.org/blob/blob.html
+ */
+
+
+
+var MarchingCubes = function ( resolution, material, enableUvs, enableColors ) {
+
+	__WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["E" /* ImmediateRenderObject */].call( this, material );
+
+	var scope = this;
+
+	// temp buffers used in polygonize
+
+	var vlist = new Float32Array( 12 * 3 );
+	var nlist = new Float32Array( 12 * 3 );
+	var clist = new Float32Array( 12 * 3 );
+
+	this.enableUvs = enableUvs !== undefined ? enableUvs : false;
+	this.enableColors = enableColors !== undefined ? enableColors : false;
+
+	// functions have to be object properties
+	// prototype functions kill performance
+	// (tested and it was 4x slower !!!)
+
+	this.init = function ( resolution ) {
+
+		this.resolution = resolution;
+
+		// parameters
+
+		this.isolation = 80.0;
+
+		// size of field, 32 is pushing it in Javascript :)
+
+		this.size = resolution;
+		this.size2 = this.size * this.size;
+		this.size3 = this.size2 * this.size;
+		this.halfsize = this.size / 2.0;
+
+		// deltas
+
+		this.delta = 2.0 / this.size;
+		this.yd = this.size;
+		this.zd = this.size2;
+
+		this.field = new Float32Array( this.size3 );
+		this.normal_cache = new Float32Array( this.size3 * 3 );
+		this.palette = new Float32Array( this.size3 * 3 );
+
+		// immediate render mode simulator
+
+		this.maxCount = 4096; // TODO: find the fastest size for this buffer
+		this.count = 0;
+
+		this.hasPositions = false;
+		this.hasNormals = false;
+		this.hasColors = false;
+		this.hasUvs = false;
+
+		this.positionArray = new Float32Array( this.maxCount * 3 );
+		this.normalArray = new Float32Array( this.maxCount * 3 );
+
+		if ( this.enableUvs ) {
+
+			this.uvArray = new Float32Array( this.maxCount * 2 );
+
+		}
+
+		if ( this.enableColors ) {
+
+			this.colorArray = new Float32Array( this.maxCount * 3 );
+
+		}
+
+	};
+
+	///////////////////////
+	// Polygonization
+	///////////////////////
+
+	function lerp( a, b, t ) {
+
+		return a + ( b - a ) * t;
+
+	}
+
+	function VIntX( q, offset, isol, x, y, z, valp1, valp2, c_offset1, c_offset2 ) {
+
+		var mu = ( isol - valp1 ) / ( valp2 - valp1 ),
+			nc = scope.normal_cache;
+
+		vlist[ offset + 0 ] = x + mu * scope.delta;
+		vlist[ offset + 1 ] = y;
+		vlist[ offset + 2 ] = z;
+
+		nlist[ offset + 0 ] = lerp( nc[ q + 0 ], nc[ q + 3 ], mu );
+		nlist[ offset + 1 ] = lerp( nc[ q + 1 ], nc[ q + 4 ], mu );
+		nlist[ offset + 2 ] = lerp( nc[ q + 2 ], nc[ q + 5 ], mu );
+
+		clist[ offset + 0 ] = lerp( scope.palette[ c_offset1 * 3 + 0 ], scope.palette[ c_offset2 * 3 + 0 ], mu );
+		clist[ offset + 1 ] = lerp( scope.palette[ c_offset1 * 3 + 1 ], scope.palette[ c_offset2 * 3 + 1 ], mu );
+		clist[ offset + 2 ] = lerp( scope.palette[ c_offset1 * 3 + 2 ], scope.palette[ c_offset2 * 3 + 2 ], mu );
+
+	}
+
+	function VIntY( q, offset, isol, x, y, z, valp1, valp2, c_offset1, c_offset2 ) {
+
+		var mu = ( isol - valp1 ) / ( valp2 - valp1 ),
+			nc = scope.normal_cache;
+
+		vlist[ offset + 0 ] = x;
+		vlist[ offset + 1 ] = y + mu * scope.delta;
+		vlist[ offset + 2 ] = z;
+
+		var q2 = q + scope.yd * 3;
+
+		nlist[ offset + 0 ] = lerp( nc[ q + 0 ], nc[ q2 + 0 ], mu );
+		nlist[ offset + 1 ] = lerp( nc[ q + 1 ], nc[ q2 + 1 ], mu );
+		nlist[ offset + 2 ] = lerp( nc[ q + 2 ], nc[ q2 + 2 ], mu );
+
+		clist[ offset + 0 ] = lerp( scope.palette[ c_offset1 * 3 + 0 ], scope.palette[ c_offset2 * 3 + 0 ], mu );
+		clist[ offset + 1 ] = lerp( scope.palette[ c_offset1 * 3 + 1 ], scope.palette[ c_offset2 * 3 + 1 ], mu );
+		clist[ offset + 2 ] = lerp( scope.palette[ c_offset1 * 3 + 2 ], scope.palette[ c_offset2 * 3 + 2 ], mu );
+
+	}
+
+	function VIntZ( q, offset, isol, x, y, z, valp1, valp2, c_offset1, c_offset2 ) {
+
+		var mu = ( isol - valp1 ) / ( valp2 - valp1 ),
+			nc = scope.normal_cache;
+
+		vlist[ offset + 0 ] = x;
+		vlist[ offset + 1 ] = y;
+		vlist[ offset + 2 ] = z + mu * scope.delta;
+
+		var q2 = q + scope.zd * 3;
+
+		nlist[ offset + 0 ] = lerp( nc[ q + 0 ], nc[ q2 + 0 ], mu );
+		nlist[ offset + 1 ] = lerp( nc[ q + 1 ], nc[ q2 + 1 ], mu );
+		nlist[ offset + 2 ] = lerp( nc[ q + 2 ], nc[ q2 + 2 ], mu );
+
+		clist[ offset + 0 ] = lerp( scope.palette[ c_offset1 * 3 + 0 ], scope.palette[ c_offset2 * 3 + 0 ], mu );
+		clist[ offset + 1 ] = lerp( scope.palette[ c_offset1 * 3 + 1 ], scope.palette[ c_offset2 * 3 + 1 ], mu );
+		clist[ offset + 2 ] = lerp( scope.palette[ c_offset1 * 3 + 2 ], scope.palette[ c_offset2 * 3 + 2 ], mu );
+
+	}
+
+	function compNorm( q ) {
+
+		var q3 = q * 3;
+
+		if ( scope.normal_cache[ q3 ] === 0.0 ) {
+
+			scope.normal_cache[ q3 + 0 ] = scope.field[ q - 1 ] - scope.field[ q + 1 ];
+			scope.normal_cache[ q3 + 1 ] =
+				scope.field[ q - scope.yd ] - scope.field[ q + scope.yd ];
+			scope.normal_cache[ q3 + 2 ] =
+				scope.field[ q - scope.zd ] - scope.field[ q + scope.zd ];
+
+		}
+
+	}
+
+	// Returns total number of triangles. Fills triangles.
+	// (this is where most of time is spent - it's inner work of O(n3) loop )
+
+	function polygonize( fx, fy, fz, q, isol, renderCallback ) {
+
+		// cache indices
+		var q1 = q + 1,
+			qy = q + scope.yd,
+			qz = q + scope.zd,
+			q1y = q1 + scope.yd,
+			q1z = q1 + scope.zd,
+			qyz = q + scope.yd + scope.zd,
+			q1yz = q1 + scope.yd + scope.zd;
+
+		var cubeindex = 0,
+			field0 = scope.field[ q ],
+			field1 = scope.field[ q1 ],
+			field2 = scope.field[ qy ],
+			field3 = scope.field[ q1y ],
+			field4 = scope.field[ qz ],
+			field5 = scope.field[ q1z ],
+			field6 = scope.field[ qyz ],
+			field7 = scope.field[ q1yz ];
+
+		if ( field0 < isol ) cubeindex |= 1;
+		if ( field1 < isol ) cubeindex |= 2;
+		if ( field2 < isol ) cubeindex |= 8;
+		if ( field3 < isol ) cubeindex |= 4;
+		if ( field4 < isol ) cubeindex |= 16;
+		if ( field5 < isol ) cubeindex |= 32;
+		if ( field6 < isol ) cubeindex |= 128;
+		if ( field7 < isol ) cubeindex |= 64;
+
+		// if cube is entirely in/out of the surface - bail, nothing to draw
+
+		var bits = edgeTable[ cubeindex ];
+		if ( bits === 0 ) return 0;
+
+		var d = scope.delta,
+			fx2 = fx + d,
+			fy2 = fy + d,
+			fz2 = fz + d;
+
+		// top of the cube
+
+		if ( bits & 1 ) {
+
+			compNorm( q );
+			compNorm( q1 );
+			VIntX( q * 3, 0, isol, fx, fy, fz, field0, field1, q, q1 );
+
+		}
+
+		if ( bits & 2 ) {
+
+			compNorm( q1 );
+			compNorm( q1y );
+			VIntY( q1 * 3, 3, isol, fx2, fy, fz, field1, field3, q1, q1y );
+
+		}
+
+		if ( bits & 4 ) {
+
+			compNorm( qy );
+			compNorm( q1y );
+			VIntX( qy * 3, 6, isol, fx, fy2, fz, field2, field3, qy, q1y );
+
+		}
+
+		if ( bits & 8 ) {
+
+			compNorm( q );
+			compNorm( qy );
+			VIntY( q * 3, 9, isol, fx, fy, fz, field0, field2, q, qy );
+
+		}
+
+		// bottom of the cube
+
+		if ( bits & 16 ) {
+
+			compNorm( qz );
+			compNorm( q1z );
+			VIntX( qz * 3, 12, isol, fx, fy, fz2, field4, field5, qz, q1z );
+
+		}
+
+		if ( bits & 32 ) {
+
+			compNorm( q1z );
+			compNorm( q1yz );
+			VIntY(
+				q1z * 3,
+				15,
+				isol,
+				fx2,
+				fy,
+				fz2,
+				field5,
+				field7,
+				q1z,
+				q1yz
+			);
+
+		}
+
+		if ( bits & 64 ) {
+
+			compNorm( qyz );
+			compNorm( q1yz );
+			VIntX(
+				qyz * 3,
+				18,
+				isol,
+				fx,
+				fy2,
+				fz2,
+				field6,
+				field7,
+				qyz,
+				q1yz
+			);
+
+		}
+
+		if ( bits & 128 ) {
+
+			compNorm( qz );
+			compNorm( qyz );
+			VIntY( qz * 3, 21, isol, fx, fy, fz2, field4, field6, qz, qyz );
+
+		}
+
+		// vertical lines of the cube
+		if ( bits & 256 ) {
+
+			compNorm( q );
+			compNorm( qz );
+			VIntZ( q * 3, 24, isol, fx, fy, fz, field0, field4, q, qz );
+
+		}
+
+		if ( bits & 512 ) {
+
+			compNorm( q1 );
+			compNorm( q1z );
+			VIntZ( q1 * 3, 27, isol, fx2, fy, fz, field1, field5, q1, q1z );
+
+		}
+
+		if ( bits & 1024 ) {
+
+			compNorm( q1y );
+			compNorm( q1yz );
+			VIntZ(
+				q1y * 3,
+				30,
+				isol,
+				fx2,
+				fy2,
+				fz,
+				field3,
+				field7,
+				q1y,
+				q1yz
+			);
+
+		}
+
+		if ( bits & 2048 ) {
+
+			compNorm( qy );
+			compNorm( qyz );
+			VIntZ( qy * 3, 33, isol, fx, fy2, fz, field2, field6, qy, qyz );
+
+		}
+
+		cubeindex <<= 4; // re-purpose cubeindex into an offset into triTable
+
+		var o1,
+			o2,
+			o3,
+			numtris = 0,
+			i = 0;
+
+		// here is where triangles are created
+
+		while ( triTable[ cubeindex + i ] != - 1 ) {
+
+			o1 = cubeindex + i;
+			o2 = o1 + 1;
+			o3 = o1 + 2;
+
+			posnormtriv(
+				vlist,
+				nlist,
+				clist,
+				3 * triTable[ o1 ],
+				3 * triTable[ o2 ],
+				3 * triTable[ o3 ],
+				renderCallback
+			);
+
+			i += 3;
+			numtris ++;
+
+		}
+
+		return numtris;
+
+	}
+
+	/////////////////////////////////////
+	// Immediate render mode simulator
+	/////////////////////////////////////
+
+	function posnormtriv( pos, norm, colors, o1, o2, o3, renderCallback ) {
+
+		var c = scope.count * 3;
+
+		// positions
+
+		scope.positionArray[ c + 0 ] = pos[ o1 ];
+		scope.positionArray[ c + 1 ] = pos[ o1 + 1 ];
+		scope.positionArray[ c + 2 ] = pos[ o1 + 2 ];
+
+		scope.positionArray[ c + 3 ] = pos[ o2 ];
+		scope.positionArray[ c + 4 ] = pos[ o2 + 1 ];
+		scope.positionArray[ c + 5 ] = pos[ o2 + 2 ];
+
+		scope.positionArray[ c + 6 ] = pos[ o3 ];
+		scope.positionArray[ c + 7 ] = pos[ o3 + 1 ];
+		scope.positionArray[ c + 8 ] = pos[ o3 + 2 ];
+
+		// normals
+
+		if ( scope.material.flatShading === true ) {
+
+			var nx = ( norm[ o1 + 0 ] + norm[ o2 + 0 ] + norm[ o3 + 0 ] ) / 3;
+			var ny = ( norm[ o1 + 1 ] + norm[ o2 + 1 ] + norm[ o3 + 1 ] ) / 3;
+			var nz = ( norm[ o1 + 2 ] + norm[ o2 + 2 ] + norm[ o3 + 2 ] ) / 3;
+
+			scope.normalArray[ c + 0 ] = nx;
+			scope.normalArray[ c + 1 ] = ny;
+			scope.normalArray[ c + 2 ] = nz;
+
+			scope.normalArray[ c + 3 ] = nx;
+			scope.normalArray[ c + 4 ] = ny;
+			scope.normalArray[ c + 5 ] = nz;
+
+			scope.normalArray[ c + 6 ] = nx;
+			scope.normalArray[ c + 7 ] = ny;
+			scope.normalArray[ c + 8 ] = nz;
+
+		} else {
+
+			scope.normalArray[ c + 0 ] = norm[ o1 + 0 ];
+			scope.normalArray[ c + 1 ] = norm[ o1 + 1 ];
+			scope.normalArray[ c + 2 ] = norm[ o1 + 2 ];
+
+			scope.normalArray[ c + 3 ] = norm[ o2 + 0 ];
+			scope.normalArray[ c + 4 ] = norm[ o2 + 1 ];
+			scope.normalArray[ c + 5 ] = norm[ o2 + 2 ];
+
+			scope.normalArray[ c + 6 ] = norm[ o3 + 0 ];
+			scope.normalArray[ c + 7 ] = norm[ o3 + 1 ];
+			scope.normalArray[ c + 8 ] = norm[ o3 + 2 ];
+
+		}
+
+		// uvs
+
+		if ( scope.enableUvs ) {
+
+			var d = scope.count * 2;
+
+			scope.uvArray[ d + 0 ] = pos[ o1 + 0 ];
+			scope.uvArray[ d + 1 ] = pos[ o1 + 2 ];
+
+			scope.uvArray[ d + 2 ] = pos[ o2 + 0 ];
+			scope.uvArray[ d + 3 ] = pos[ o2 + 2 ];
+
+			scope.uvArray[ d + 4 ] = pos[ o3 + 0 ];
+			scope.uvArray[ d + 5 ] = pos[ o3 + 2 ];
+
+		}
+
+		// colors
+
+		if ( scope.enableColors ) {
+
+			scope.colorArray[ c + 0 ] = colors[ o1 + 0 ];
+			scope.colorArray[ c + 1 ] = colors[ o1 + 1 ];
+			scope.colorArray[ c + 2 ] = colors[ o1 + 2 ];
+
+			scope.colorArray[ c + 3 ] = colors[ o2 + 0 ];
+			scope.colorArray[ c + 4 ] = colors[ o2 + 1 ];
+			scope.colorArray[ c + 5 ] = colors[ o2 + 2 ];
+
+			scope.colorArray[ c + 6 ] = colors[ o3 + 0 ];
+			scope.colorArray[ c + 7 ] = colors[ o3 + 1 ];
+			scope.colorArray[ c + 8 ] = colors[ o3 + 2 ];
+
+		}
+
+		scope.count += 3;
+
+		if ( scope.count >= scope.maxCount - 3 ) {
+
+			scope.hasPositions = true;
+			scope.hasNormals = true;
+
+			if ( scope.enableUvs ) {
+
+				scope.hasUvs = true;
+
+			}
+
+			if ( scope.enableColors ) {
+
+				scope.hasColors = true;
+
+			}
+
+			renderCallback( scope );
+
+		}
+
+	}
+
+	this.begin = function () {
+
+		this.count = 0;
+
+		this.hasPositions = false;
+		this.hasNormals = false;
+		this.hasUvs = false;
+		this.hasColors = false;
+
+	};
+
+	this.end = function ( renderCallback ) {
+
+		if ( this.count === 0 ) return;
+
+		for ( var i = this.count * 3; i < this.positionArray.length; i ++ ) {
+
+			this.positionArray[ i ] = 0.0;
+
+		}
+
+		this.hasPositions = true;
+		this.hasNormals = true;
+
+		if ( this.enableUvs && this.material.map ) {
+
+			this.hasUvs = true;
+
+		}
+
+		if ( this.enableColors && this.material.vertexColors !== __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["_7" /* NoColors */] ) {
+
+			this.hasColors = true;
+
+		}
+
+		renderCallback( this );
+
+	};
+
+	/////////////////////////////////////
+	// Metaballs
+	/////////////////////////////////////
+
+	// Adds a reciprocal ball (nice and blobby) that, to be fast, fades to zero after
+	// a fixed distance, determined by strength and subtract.
+
+	this.addBall = function ( ballx, bally, ballz, strength, subtract, colors ) {
+
+		var sign = Math.sign( strength );
+		strength = Math.abs( strength );
+		var userDefineColor = ! ( colors === undefined || colors === null );
+		var ballColor = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["q" /* Color */]( ballx, bally, ballz );
+		if ( userDefineColor ) {
+
+			try {
+
+				ballColor =
+					colors instanceof __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["q" /* Color */]
+						? colors
+						: Array.isArray( colors )
+							? new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["q" /* Color */](
+								Math.min( Math.abs( colors[ 0 ] ), 1 ),
+								Math.min( Math.abs( colors[ 1 ] ), 1 ),
+								Math.min( Math.abs( colors[ 2 ] ), 1 )
+						  )
+							: new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["q" /* Color */]( colors );
+
+			} catch ( err ) {
+
+				ballColor = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["q" /* Color */]( ballx, bally, ballz );
+
+			}
+
+		}
+
+		// Let's solve the equation to find the radius:
+		// 1.0 / (0.000001 + radius^2) * strength - subtract = 0
+		// strength / (radius^2) = subtract
+		// strength = subtract * radius^2
+		// radius^2 = strength / subtract
+		// radius = sqrt(strength / subtract)
+
+		var radius = this.size * Math.sqrt( strength / subtract ),
+			zs = ballz * this.size,
+			ys = bally * this.size,
+			xs = ballx * this.size;
+
+		var min_z = Math.floor( zs - radius );
+		if ( min_z < 1 ) min_z = 1;
+		var max_z = Math.floor( zs + radius );
+		if ( max_z > this.size - 1 ) max_z = this.size - 1;
+		var min_y = Math.floor( ys - radius );
+		if ( min_y < 1 ) min_y = 1;
+		var max_y = Math.floor( ys + radius );
+		if ( max_y > this.size - 1 ) max_y = this.size - 1;
+		var min_x = Math.floor( xs - radius );
+		if ( min_x < 1 ) min_x = 1;
+		var max_x = Math.floor( xs + radius );
+		if ( max_x > this.size - 1 ) max_x = this.size - 1;
+
+		// Don't polygonize in the outer layer because normals aren't
+		// well-defined there.
+
+		var x, y, z, y_offset, z_offset, fx, fy, fz, fz2, fy2, val;
+		for ( z = min_z; z < max_z; z ++ ) {
+
+			z_offset = this.size2 * z;
+			fz = z / this.size - ballz;
+			fz2 = fz * fz;
+
+			for ( y = min_y; y < max_y; y ++ ) {
+
+				y_offset = z_offset + this.size * y;
+				fy = y / this.size - bally;
+				fy2 = fy * fy;
+
+				for ( x = min_x; x < max_x; x ++ ) {
+
+					fx = x / this.size - ballx;
+					val = strength / ( 0.000001 + fx * fx + fy2 + fz2 ) - subtract;
+					if ( val > 0.0 ) {
+
+						this.field[ y_offset + x ] += val * sign;
+
+						// optimization
+						// http://www.geisswerks.com/ryan/BLOBS/blobs.html
+						const ratio =
+							Math.sqrt( ( x - xs ) * ( x - xs ) + ( y - ys ) * ( y - ys ) + ( z - zs ) * ( z - zs ) ) / radius;
+						const contrib =
+							1 - ratio * ratio * ratio * ( ratio * ( ratio * 6 - 15 ) + 10 );
+						this.palette[ ( y_offset + x ) * 3 + 0 ] += ballColor.r * contrib;
+						this.palette[ ( y_offset + x ) * 3 + 1 ] += ballColor.g * contrib;
+						this.palette[ ( y_offset + x ) * 3 + 2 ] += ballColor.b * contrib;
+
+					}
+
+				}
+
+			}
+
+		}
+
+	};
+
+	this.addPlaneX = function ( strength, subtract ) {
+
+		var x,
+			y,
+			z,
+			xx,
+			val,
+			xdiv,
+			cxy,
+			// cache attribute lookups
+			size = this.size,
+			yd = this.yd,
+			zd = this.zd,
+			field = this.field,
+			dist = size * Math.sqrt( strength / subtract );
+
+		if ( dist > size ) dist = size;
+
+		for ( x = 0; x < dist; x ++ ) {
+
+			xdiv = x / size;
+			xx = xdiv * xdiv;
+			val = strength / ( 0.0001 + xx ) - subtract;
+
+			if ( val > 0.0 ) {
+
+				for ( y = 0; y < size; y ++ ) {
+
+					cxy = x + y * yd;
+
+					for ( z = 0; z < size; z ++ ) {
+
+						field[ zd * z + cxy ] += val;
+
+					}
+
+				}
+
+			}
+
+		}
+
+	};
+
+	this.addPlaneY = function ( strength, subtract ) {
+
+		var x,
+			y,
+			z,
+			yy,
+			val,
+			ydiv,
+			cy,
+			cxy,
+			// cache attribute lookups
+			size = this.size,
+			yd = this.yd,
+			zd = this.zd,
+			field = this.field,
+			dist = size * Math.sqrt( strength / subtract );
+
+		if ( dist > size ) dist = size;
+
+		for ( y = 0; y < dist; y ++ ) {
+
+			ydiv = y / size;
+			yy = ydiv * ydiv;
+			val = strength / ( 0.0001 + yy ) - subtract;
+
+			if ( val > 0.0 ) {
+
+				cy = y * yd;
+
+				for ( x = 0; x < size; x ++ ) {
+
+					cxy = cy + x;
+
+					for ( z = 0; z < size; z ++ ) field[ zd * z + cxy ] += val;
+
+				}
+
+			}
+
+		}
+
+	};
+
+	this.addPlaneZ = function ( strength, subtract ) {
+
+		var x,
+			y,
+			z,
+			zz,
+			val,
+			zdiv,
+			cz,
+			cyz,
+			// cache attribute lookups
+			size = this.size,
+			yd = this.yd,
+			zd = this.zd,
+			field = this.field,
+			dist = size * Math.sqrt( strength / subtract );
+
+		if ( dist > size ) dist = size;
+
+		for ( z = 0; z < dist; z ++ ) {
+
+			zdiv = z / size;
+			zz = zdiv * zdiv;
+			val = strength / ( 0.0001 + zz ) - subtract;
+			if ( val > 0.0 ) {
+
+				cz = zd * z;
+
+				for ( y = 0; y < size; y ++ ) {
+
+					cyz = cz + y * yd;
+
+					for ( x = 0; x < size; x ++ ) field[ cyz + x ] += val;
+
+				}
+
+			}
+
+		}
+
+	};
+
+	/////////////////////////////////////
+	// Updates
+	/////////////////////////////////////
+
+	this.setCell = function ( x, y, z, value ) {
+
+		var index = this.size2 * z + this.size * y + x;
+		this.field[ index ] = value;
+
+	};
+
+	this.getCell = function ( x, y, z ) {
+
+		var index = this.size2 * z + this.size * y + x;
+		return this.field[ index ];
+
+	};
+
+	this.blur = function ( intensity ) {
+
+		if ( intensity === undefined ) {
+
+			intensity = 1;
+
+		}
+
+		var field = this.field;
+		var fieldCopy = field.slice();
+		var size = this.size;
+		var size2 = this.size2;
+		for ( var x = 0; x < size; x ++ ) {
+
+			for ( var y = 0; y < size; y ++ ) {
+
+				for ( var z = 0; z < size; z ++ ) {
+
+					var index = size2 * z + size * y + x;
+					var val = fieldCopy[ index ];
+					var count = 1;
+
+					for ( var x2 = - 1; x2 <= 1; x2 += 2 ) {
+
+						var x3 = x2 + x;
+						if ( x3 < 0 || x3 >= size ) continue;
+
+						for ( var y2 = - 1; y2 <= 1; y2 += 2 ) {
+
+							var y3 = y2 + y;
+							if ( y3 < 0 || y3 >= size ) continue;
+
+							for ( var z2 = - 1; z2 <= 1; z2 += 2 ) {
+
+								var z3 = z2 + z;
+								if ( z3 < 0 || z3 >= size ) continue;
+
+								var index2 = size2 * z3 + size * y3 + x3;
+								var val2 = fieldCopy[ index2 ];
+
+								count ++;
+								val += intensity * ( val2 - val ) / count;
+
+							}
+
+						}
+
+					}
+
+					field[ index ] = val;
+
+				}
+
+			}
+
+		}
+
+	};
+
+	this.reset = function () {
+
+		var i;
+
+		// wipe the normal cache
+
+		for ( i = 0; i < this.size3; i ++ ) {
+
+			this.normal_cache[ i * 3 ] = 0.0;
+			this.field[ i ] = 0.0;
+			this.palette[ i * 3 ] = this.palette[ i * 3 + 1 ] = this.palette[
+				i * 3 + 2
+			] = 0.0;
+
+		}
+
+	};
+
+	this.render = function ( renderCallback ) {
+
+		this.begin();
+
+		// Triangulate. Yeah, this is slow.
+
+		var smin2 = this.size - 2;
+
+		for ( var z = 1; z < smin2; z ++ ) {
+
+			var z_offset = this.size2 * z;
+			var fz = ( z - this.halfsize ) / this.halfsize; //+ 1
+
+			for ( var y = 1; y < smin2; y ++ ) {
+
+				var y_offset = z_offset + this.size * y;
+				var fy = ( y - this.halfsize ) / this.halfsize; //+ 1
+
+				for ( var x = 1; x < smin2; x ++ ) {
+
+					var fx = ( x - this.halfsize ) / this.halfsize; //+ 1
+					var q = y_offset + x;
+
+					polygonize( fx, fy, fz, q, this.isolation, renderCallback );
+
+				}
+
+			}
+
+		}
+
+		this.end( renderCallback );
+
+	};
+
+	this.generateGeometry = function () {
+
+		console.warn(
+			"MarchingCubes: generateGeometry() now returns BufferGeometry"
+		);
+		return this.generateBufferGeometry();
+
+	};
+
+	function concatenate( a, b, length ) {
+
+		var result = new Float32Array( a.length + length );
+		result.set( a, 0 );
+		result.set( b.slice( 0, length ), a.length );
+		return result;
+
+	}
+
+	this.generateBufferGeometry = function () {
+
+		var geo = new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["m" /* BufferGeometry */]();
+		var posArray = new Float32Array();
+		var normArray = new Float32Array();
+		var colorArray = new Float32Array();
+		var uvArray = new Float32Array();
+		var scope = this;
+
+		var geo_callback = function ( object ) {
+
+			if ( scope.hasPositions )
+				posArray = concatenate(
+					posArray,
+					object.positionArray,
+					object.count * 3
+				);
+			if ( scope.hasNormals )
+				normArray = concatenate(
+					normArray,
+					object.normalArray,
+					object.count * 3
+				);
+			if ( scope.hasColors )
+				colorArray = concatenate(
+					colorArray,
+					object.colorArray,
+					object.count * 3
+				);
+			if ( scope.hasUvs )
+				uvArray = concatenate( uvArray, object.uvArray, object.count * 2 );
+
+			object.count = 0;
+
+		};
+
+		this.render( geo_callback );
+
+		if ( this.hasPositions )
+			geo.setAttribute( "position", new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["l" /* BufferAttribute */]( posArray, 3 ) );
+		if ( this.hasNormals )
+			geo.setAttribute( "normal", new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["l" /* BufferAttribute */]( normArray, 3 ) );
+		if ( this.hasColors )
+			geo.setAttribute( "color", new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["l" /* BufferAttribute */]( colorArray, 3 ) );
+		if ( this.hasUvs )
+			geo.setAttribute( "uv", new __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["l" /* BufferAttribute */]( uvArray, 2 ) );
+
+		return geo;
+
+	};
+
+	this.init( resolution );
+
+};
+
+MarchingCubes.prototype = Object.create( __WEBPACK_IMPORTED_MODULE_0__build_three_module_js__["E" /* ImmediateRenderObject */].prototype );
+MarchingCubes.prototype.constructor = MarchingCubes;
+
+/////////////////////////////////////
+// Marching cubes lookup tables
+/////////////////////////////////////
+
+// These tables are straight from Paul Bourke's page:
+// http://local.wasp.uwa.edu.au/~pbourke/geometry/polygonise/
+// who in turn got them from Cory Gene Bloyd.
+
+var edgeTable = new Int32Array( [
+	0x0, 0x109, 0x203, 0x30a, 0x406, 0x50f, 0x605, 0x70c,
+	0x80c, 0x905, 0xa0f, 0xb06, 0xc0a, 0xd03, 0xe09, 0xf00,
+	0x190, 0x99, 0x393, 0x29a, 0x596, 0x49f, 0x795, 0x69c,
+	0x99c, 0x895, 0xb9f, 0xa96, 0xd9a, 0xc93, 0xf99, 0xe90,
+	0x230, 0x339, 0x33, 0x13a, 0x636, 0x73f, 0x435, 0x53c,
+	0xa3c, 0xb35, 0x83f, 0x936, 0xe3a, 0xf33, 0xc39, 0xd30,
+	0x3a0, 0x2a9, 0x1a3, 0xaa, 0x7a6, 0x6af, 0x5a5, 0x4ac,
+	0xbac, 0xaa5, 0x9af, 0x8a6, 0xfaa, 0xea3, 0xda9, 0xca0,
+	0x460, 0x569, 0x663, 0x76a, 0x66, 0x16f, 0x265, 0x36c,
+	0xc6c, 0xd65, 0xe6f, 0xf66, 0x86a, 0x963, 0xa69, 0xb60,
+	0x5f0, 0x4f9, 0x7f3, 0x6fa, 0x1f6, 0xff, 0x3f5, 0x2fc,
+	0xdfc, 0xcf5, 0xfff, 0xef6, 0x9fa, 0x8f3, 0xbf9, 0xaf0,
+	0x650, 0x759, 0x453, 0x55a, 0x256, 0x35f, 0x55, 0x15c,
+	0xe5c, 0xf55, 0xc5f, 0xd56, 0xa5a, 0xb53, 0x859, 0x950,
+	0x7c0, 0x6c9, 0x5c3, 0x4ca, 0x3c6, 0x2cf, 0x1c5, 0xcc,
+	0xfcc, 0xec5, 0xdcf, 0xcc6, 0xbca, 0xac3, 0x9c9, 0x8c0,
+	0x8c0, 0x9c9, 0xac3, 0xbca, 0xcc6, 0xdcf, 0xec5, 0xfcc,
+	0xcc, 0x1c5, 0x2cf, 0x3c6, 0x4ca, 0x5c3, 0x6c9, 0x7c0,
+	0x950, 0x859, 0xb53, 0xa5a, 0xd56, 0xc5f, 0xf55, 0xe5c,
+	0x15c, 0x55, 0x35f, 0x256, 0x55a, 0x453, 0x759, 0x650,
+	0xaf0, 0xbf9, 0x8f3, 0x9fa, 0xef6, 0xfff, 0xcf5, 0xdfc,
+	0x2fc, 0x3f5, 0xff, 0x1f6, 0x6fa, 0x7f3, 0x4f9, 0x5f0,
+	0xb60, 0xa69, 0x963, 0x86a, 0xf66, 0xe6f, 0xd65, 0xc6c,
+	0x36c, 0x265, 0x16f, 0x66, 0x76a, 0x663, 0x569, 0x460,
+	0xca0, 0xda9, 0xea3, 0xfaa, 0x8a6, 0x9af, 0xaa5, 0xbac,
+	0x4ac, 0x5a5, 0x6af, 0x7a6, 0xaa, 0x1a3, 0x2a9, 0x3a0,
+	0xd30, 0xc39, 0xf33, 0xe3a, 0x936, 0x83f, 0xb35, 0xa3c,
+	0x53c, 0x435, 0x73f, 0x636, 0x13a, 0x33, 0x339, 0x230,
+	0xe90, 0xf99, 0xc93, 0xd9a, 0xa96, 0xb9f, 0x895, 0x99c,
+	0x69c, 0x795, 0x49f, 0x596, 0x29a, 0x393, 0x99, 0x190,
+	0xf00, 0xe09, 0xd03, 0xc0a, 0xb06, 0xa0f, 0x905, 0x80c,
+	0x70c, 0x605, 0x50f, 0x406, 0x30a, 0x203, 0x109, 0x0 ] );
+
+var triTable = new Int32Array( [
+	- 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	0, 8, 3, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	0, 1, 9, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	1, 8, 3, 9, 8, 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	1, 2, 10, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	0, 8, 3, 1, 2, 10, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	9, 2, 10, 0, 2, 9, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	2, 8, 3, 2, 10, 8, 10, 9, 8, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	3, 11, 2, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	0, 11, 2, 8, 11, 0, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	1, 9, 0, 2, 3, 11, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	1, 11, 2, 1, 9, 11, 9, 8, 11, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	3, 10, 1, 11, 10, 3, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	0, 10, 1, 0, 8, 10, 8, 11, 10, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	3, 9, 0, 3, 11, 9, 11, 10, 9, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	9, 8, 10, 10, 8, 11, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	4, 7, 8, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	4, 3, 0, 7, 3, 4, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	0, 1, 9, 8, 4, 7, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	4, 1, 9, 4, 7, 1, 7, 3, 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	1, 2, 10, 8, 4, 7, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	3, 4, 7, 3, 0, 4, 1, 2, 10, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	9, 2, 10, 9, 0, 2, 8, 4, 7, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	2, 10, 9, 2, 9, 7, 2, 7, 3, 7, 9, 4, - 1, - 1, - 1, - 1,
+	8, 4, 7, 3, 11, 2, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	11, 4, 7, 11, 2, 4, 2, 0, 4, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	9, 0, 1, 8, 4, 7, 2, 3, 11, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	4, 7, 11, 9, 4, 11, 9, 11, 2, 9, 2, 1, - 1, - 1, - 1, - 1,
+	3, 10, 1, 3, 11, 10, 7, 8, 4, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	1, 11, 10, 1, 4, 11, 1, 0, 4, 7, 11, 4, - 1, - 1, - 1, - 1,
+	4, 7, 8, 9, 0, 11, 9, 11, 10, 11, 0, 3, - 1, - 1, - 1, - 1,
+	4, 7, 11, 4, 11, 9, 9, 11, 10, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	9, 5, 4, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	9, 5, 4, 0, 8, 3, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	0, 5, 4, 1, 5, 0, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	8, 5, 4, 8, 3, 5, 3, 1, 5, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	1, 2, 10, 9, 5, 4, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	3, 0, 8, 1, 2, 10, 4, 9, 5, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	5, 2, 10, 5, 4, 2, 4, 0, 2, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	2, 10, 5, 3, 2, 5, 3, 5, 4, 3, 4, 8, - 1, - 1, - 1, - 1,
+	9, 5, 4, 2, 3, 11, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	0, 11, 2, 0, 8, 11, 4, 9, 5, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	0, 5, 4, 0, 1, 5, 2, 3, 11, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	2, 1, 5, 2, 5, 8, 2, 8, 11, 4, 8, 5, - 1, - 1, - 1, - 1,
+	10, 3, 11, 10, 1, 3, 9, 5, 4, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	4, 9, 5, 0, 8, 1, 8, 10, 1, 8, 11, 10, - 1, - 1, - 1, - 1,
+	5, 4, 0, 5, 0, 11, 5, 11, 10, 11, 0, 3, - 1, - 1, - 1, - 1,
+	5, 4, 8, 5, 8, 10, 10, 8, 11, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	9, 7, 8, 5, 7, 9, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	9, 3, 0, 9, 5, 3, 5, 7, 3, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	0, 7, 8, 0, 1, 7, 1, 5, 7, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	1, 5, 3, 3, 5, 7, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	9, 7, 8, 9, 5, 7, 10, 1, 2, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	10, 1, 2, 9, 5, 0, 5, 3, 0, 5, 7, 3, - 1, - 1, - 1, - 1,
+	8, 0, 2, 8, 2, 5, 8, 5, 7, 10, 5, 2, - 1, - 1, - 1, - 1,
+	2, 10, 5, 2, 5, 3, 3, 5, 7, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	7, 9, 5, 7, 8, 9, 3, 11, 2, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	9, 5, 7, 9, 7, 2, 9, 2, 0, 2, 7, 11, - 1, - 1, - 1, - 1,
+	2, 3, 11, 0, 1, 8, 1, 7, 8, 1, 5, 7, - 1, - 1, - 1, - 1,
+	11, 2, 1, 11, 1, 7, 7, 1, 5, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	9, 5, 8, 8, 5, 7, 10, 1, 3, 10, 3, 11, - 1, - 1, - 1, - 1,
+	5, 7, 0, 5, 0, 9, 7, 11, 0, 1, 0, 10, 11, 10, 0, - 1,
+	11, 10, 0, 11, 0, 3, 10, 5, 0, 8, 0, 7, 5, 7, 0, - 1,
+	11, 10, 5, 7, 11, 5, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	10, 6, 5, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	0, 8, 3, 5, 10, 6, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	9, 0, 1, 5, 10, 6, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	1, 8, 3, 1, 9, 8, 5, 10, 6, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	1, 6, 5, 2, 6, 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	1, 6, 5, 1, 2, 6, 3, 0, 8, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	9, 6, 5, 9, 0, 6, 0, 2, 6, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	5, 9, 8, 5, 8, 2, 5, 2, 6, 3, 2, 8, - 1, - 1, - 1, - 1,
+	2, 3, 11, 10, 6, 5, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	11, 0, 8, 11, 2, 0, 10, 6, 5, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	0, 1, 9, 2, 3, 11, 5, 10, 6, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	5, 10, 6, 1, 9, 2, 9, 11, 2, 9, 8, 11, - 1, - 1, - 1, - 1,
+	6, 3, 11, 6, 5, 3, 5, 1, 3, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	0, 8, 11, 0, 11, 5, 0, 5, 1, 5, 11, 6, - 1, - 1, - 1, - 1,
+	3, 11, 6, 0, 3, 6, 0, 6, 5, 0, 5, 9, - 1, - 1, - 1, - 1,
+	6, 5, 9, 6, 9, 11, 11, 9, 8, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	5, 10, 6, 4, 7, 8, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	4, 3, 0, 4, 7, 3, 6, 5, 10, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	1, 9, 0, 5, 10, 6, 8, 4, 7, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	10, 6, 5, 1, 9, 7, 1, 7, 3, 7, 9, 4, - 1, - 1, - 1, - 1,
+	6, 1, 2, 6, 5, 1, 4, 7, 8, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	1, 2, 5, 5, 2, 6, 3, 0, 4, 3, 4, 7, - 1, - 1, - 1, - 1,
+	8, 4, 7, 9, 0, 5, 0, 6, 5, 0, 2, 6, - 1, - 1, - 1, - 1,
+	7, 3, 9, 7, 9, 4, 3, 2, 9, 5, 9, 6, 2, 6, 9, - 1,
+	3, 11, 2, 7, 8, 4, 10, 6, 5, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	5, 10, 6, 4, 7, 2, 4, 2, 0, 2, 7, 11, - 1, - 1, - 1, - 1,
+	0, 1, 9, 4, 7, 8, 2, 3, 11, 5, 10, 6, - 1, - 1, - 1, - 1,
+	9, 2, 1, 9, 11, 2, 9, 4, 11, 7, 11, 4, 5, 10, 6, - 1,
+	8, 4, 7, 3, 11, 5, 3, 5, 1, 5, 11, 6, - 1, - 1, - 1, - 1,
+	5, 1, 11, 5, 11, 6, 1, 0, 11, 7, 11, 4, 0, 4, 11, - 1,
+	0, 5, 9, 0, 6, 5, 0, 3, 6, 11, 6, 3, 8, 4, 7, - 1,
+	6, 5, 9, 6, 9, 11, 4, 7, 9, 7, 11, 9, - 1, - 1, - 1, - 1,
+	10, 4, 9, 6, 4, 10, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	4, 10, 6, 4, 9, 10, 0, 8, 3, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	10, 0, 1, 10, 6, 0, 6, 4, 0, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	8, 3, 1, 8, 1, 6, 8, 6, 4, 6, 1, 10, - 1, - 1, - 1, - 1,
+	1, 4, 9, 1, 2, 4, 2, 6, 4, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	3, 0, 8, 1, 2, 9, 2, 4, 9, 2, 6, 4, - 1, - 1, - 1, - 1,
+	0, 2, 4, 4, 2, 6, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	8, 3, 2, 8, 2, 4, 4, 2, 6, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	10, 4, 9, 10, 6, 4, 11, 2, 3, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	0, 8, 2, 2, 8, 11, 4, 9, 10, 4, 10, 6, - 1, - 1, - 1, - 1,
+	3, 11, 2, 0, 1, 6, 0, 6, 4, 6, 1, 10, - 1, - 1, - 1, - 1,
+	6, 4, 1, 6, 1, 10, 4, 8, 1, 2, 1, 11, 8, 11, 1, - 1,
+	9, 6, 4, 9, 3, 6, 9, 1, 3, 11, 6, 3, - 1, - 1, - 1, - 1,
+	8, 11, 1, 8, 1, 0, 11, 6, 1, 9, 1, 4, 6, 4, 1, - 1,
+	3, 11, 6, 3, 6, 0, 0, 6, 4, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	6, 4, 8, 11, 6, 8, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	7, 10, 6, 7, 8, 10, 8, 9, 10, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	0, 7, 3, 0, 10, 7, 0, 9, 10, 6, 7, 10, - 1, - 1, - 1, - 1,
+	10, 6, 7, 1, 10, 7, 1, 7, 8, 1, 8, 0, - 1, - 1, - 1, - 1,
+	10, 6, 7, 10, 7, 1, 1, 7, 3, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	1, 2, 6, 1, 6, 8, 1, 8, 9, 8, 6, 7, - 1, - 1, - 1, - 1,
+	2, 6, 9, 2, 9, 1, 6, 7, 9, 0, 9, 3, 7, 3, 9, - 1,
+	7, 8, 0, 7, 0, 6, 6, 0, 2, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	7, 3, 2, 6, 7, 2, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	2, 3, 11, 10, 6, 8, 10, 8, 9, 8, 6, 7, - 1, - 1, - 1, - 1,
+	2, 0, 7, 2, 7, 11, 0, 9, 7, 6, 7, 10, 9, 10, 7, - 1,
+	1, 8, 0, 1, 7, 8, 1, 10, 7, 6, 7, 10, 2, 3, 11, - 1,
+	11, 2, 1, 11, 1, 7, 10, 6, 1, 6, 7, 1, - 1, - 1, - 1, - 1,
+	8, 9, 6, 8, 6, 7, 9, 1, 6, 11, 6, 3, 1, 3, 6, - 1,
+	0, 9, 1, 11, 6, 7, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	7, 8, 0, 7, 0, 6, 3, 11, 0, 11, 6, 0, - 1, - 1, - 1, - 1,
+	7, 11, 6, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	7, 6, 11, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	3, 0, 8, 11, 7, 6, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	0, 1, 9, 11, 7, 6, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	8, 1, 9, 8, 3, 1, 11, 7, 6, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	10, 1, 2, 6, 11, 7, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	1, 2, 10, 3, 0, 8, 6, 11, 7, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	2, 9, 0, 2, 10, 9, 6, 11, 7, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	6, 11, 7, 2, 10, 3, 10, 8, 3, 10, 9, 8, - 1, - 1, - 1, - 1,
+	7, 2, 3, 6, 2, 7, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	7, 0, 8, 7, 6, 0, 6, 2, 0, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	2, 7, 6, 2, 3, 7, 0, 1, 9, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	1, 6, 2, 1, 8, 6, 1, 9, 8, 8, 7, 6, - 1, - 1, - 1, - 1,
+	10, 7, 6, 10, 1, 7, 1, 3, 7, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	10, 7, 6, 1, 7, 10, 1, 8, 7, 1, 0, 8, - 1, - 1, - 1, - 1,
+	0, 3, 7, 0, 7, 10, 0, 10, 9, 6, 10, 7, - 1, - 1, - 1, - 1,
+	7, 6, 10, 7, 10, 8, 8, 10, 9, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	6, 8, 4, 11, 8, 6, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	3, 6, 11, 3, 0, 6, 0, 4, 6, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	8, 6, 11, 8, 4, 6, 9, 0, 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	9, 4, 6, 9, 6, 3, 9, 3, 1, 11, 3, 6, - 1, - 1, - 1, - 1,
+	6, 8, 4, 6, 11, 8, 2, 10, 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	1, 2, 10, 3, 0, 11, 0, 6, 11, 0, 4, 6, - 1, - 1, - 1, - 1,
+	4, 11, 8, 4, 6, 11, 0, 2, 9, 2, 10, 9, - 1, - 1, - 1, - 1,
+	10, 9, 3, 10, 3, 2, 9, 4, 3, 11, 3, 6, 4, 6, 3, - 1,
+	8, 2, 3, 8, 4, 2, 4, 6, 2, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	0, 4, 2, 4, 6, 2, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	1, 9, 0, 2, 3, 4, 2, 4, 6, 4, 3, 8, - 1, - 1, - 1, - 1,
+	1, 9, 4, 1, 4, 2, 2, 4, 6, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	8, 1, 3, 8, 6, 1, 8, 4, 6, 6, 10, 1, - 1, - 1, - 1, - 1,
+	10, 1, 0, 10, 0, 6, 6, 0, 4, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	4, 6, 3, 4, 3, 8, 6, 10, 3, 0, 3, 9, 10, 9, 3, - 1,
+	10, 9, 4, 6, 10, 4, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	4, 9, 5, 7, 6, 11, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	0, 8, 3, 4, 9, 5, 11, 7, 6, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	5, 0, 1, 5, 4, 0, 7, 6, 11, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	11, 7, 6, 8, 3, 4, 3, 5, 4, 3, 1, 5, - 1, - 1, - 1, - 1,
+	9, 5, 4, 10, 1, 2, 7, 6, 11, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	6, 11, 7, 1, 2, 10, 0, 8, 3, 4, 9, 5, - 1, - 1, - 1, - 1,
+	7, 6, 11, 5, 4, 10, 4, 2, 10, 4, 0, 2, - 1, - 1, - 1, - 1,
+	3, 4, 8, 3, 5, 4, 3, 2, 5, 10, 5, 2, 11, 7, 6, - 1,
+	7, 2, 3, 7, 6, 2, 5, 4, 9, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	9, 5, 4, 0, 8, 6, 0, 6, 2, 6, 8, 7, - 1, - 1, - 1, - 1,
+	3, 6, 2, 3, 7, 6, 1, 5, 0, 5, 4, 0, - 1, - 1, - 1, - 1,
+	6, 2, 8, 6, 8, 7, 2, 1, 8, 4, 8, 5, 1, 5, 8, - 1,
+	9, 5, 4, 10, 1, 6, 1, 7, 6, 1, 3, 7, - 1, - 1, - 1, - 1,
+	1, 6, 10, 1, 7, 6, 1, 0, 7, 8, 7, 0, 9, 5, 4, - 1,
+	4, 0, 10, 4, 10, 5, 0, 3, 10, 6, 10, 7, 3, 7, 10, - 1,
+	7, 6, 10, 7, 10, 8, 5, 4, 10, 4, 8, 10, - 1, - 1, - 1, - 1,
+	6, 9, 5, 6, 11, 9, 11, 8, 9, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	3, 6, 11, 0, 6, 3, 0, 5, 6, 0, 9, 5, - 1, - 1, - 1, - 1,
+	0, 11, 8, 0, 5, 11, 0, 1, 5, 5, 6, 11, - 1, - 1, - 1, - 1,
+	6, 11, 3, 6, 3, 5, 5, 3, 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	1, 2, 10, 9, 5, 11, 9, 11, 8, 11, 5, 6, - 1, - 1, - 1, - 1,
+	0, 11, 3, 0, 6, 11, 0, 9, 6, 5, 6, 9, 1, 2, 10, - 1,
+	11, 8, 5, 11, 5, 6, 8, 0, 5, 10, 5, 2, 0, 2, 5, - 1,
+	6, 11, 3, 6, 3, 5, 2, 10, 3, 10, 5, 3, - 1, - 1, - 1, - 1,
+	5, 8, 9, 5, 2, 8, 5, 6, 2, 3, 8, 2, - 1, - 1, - 1, - 1,
+	9, 5, 6, 9, 6, 0, 0, 6, 2, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	1, 5, 8, 1, 8, 0, 5, 6, 8, 3, 8, 2, 6, 2, 8, - 1,
+	1, 5, 6, 2, 1, 6, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	1, 3, 6, 1, 6, 10, 3, 8, 6, 5, 6, 9, 8, 9, 6, - 1,
+	10, 1, 0, 10, 0, 6, 9, 5, 0, 5, 6, 0, - 1, - 1, - 1, - 1,
+	0, 3, 8, 5, 6, 10, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	10, 5, 6, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	11, 5, 10, 7, 5, 11, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	11, 5, 10, 11, 7, 5, 8, 3, 0, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	5, 11, 7, 5, 10, 11, 1, 9, 0, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	10, 7, 5, 10, 11, 7, 9, 8, 1, 8, 3, 1, - 1, - 1, - 1, - 1,
+	11, 1, 2, 11, 7, 1, 7, 5, 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	0, 8, 3, 1, 2, 7, 1, 7, 5, 7, 2, 11, - 1, - 1, - 1, - 1,
+	9, 7, 5, 9, 2, 7, 9, 0, 2, 2, 11, 7, - 1, - 1, - 1, - 1,
+	7, 5, 2, 7, 2, 11, 5, 9, 2, 3, 2, 8, 9, 8, 2, - 1,
+	2, 5, 10, 2, 3, 5, 3, 7, 5, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	8, 2, 0, 8, 5, 2, 8, 7, 5, 10, 2, 5, - 1, - 1, - 1, - 1,
+	9, 0, 1, 5, 10, 3, 5, 3, 7, 3, 10, 2, - 1, - 1, - 1, - 1,
+	9, 8, 2, 9, 2, 1, 8, 7, 2, 10, 2, 5, 7, 5, 2, - 1,
+	1, 3, 5, 3, 7, 5, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	0, 8, 7, 0, 7, 1, 1, 7, 5, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	9, 0, 3, 9, 3, 5, 5, 3, 7, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	9, 8, 7, 5, 9, 7, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	5, 8, 4, 5, 10, 8, 10, 11, 8, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	5, 0, 4, 5, 11, 0, 5, 10, 11, 11, 3, 0, - 1, - 1, - 1, - 1,
+	0, 1, 9, 8, 4, 10, 8, 10, 11, 10, 4, 5, - 1, - 1, - 1, - 1,
+	10, 11, 4, 10, 4, 5, 11, 3, 4, 9, 4, 1, 3, 1, 4, - 1,
+	2, 5, 1, 2, 8, 5, 2, 11, 8, 4, 5, 8, - 1, - 1, - 1, - 1,
+	0, 4, 11, 0, 11, 3, 4, 5, 11, 2, 11, 1, 5, 1, 11, - 1,
+	0, 2, 5, 0, 5, 9, 2, 11, 5, 4, 5, 8, 11, 8, 5, - 1,
+	9, 4, 5, 2, 11, 3, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	2, 5, 10, 3, 5, 2, 3, 4, 5, 3, 8, 4, - 1, - 1, - 1, - 1,
+	5, 10, 2, 5, 2, 4, 4, 2, 0, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	3, 10, 2, 3, 5, 10, 3, 8, 5, 4, 5, 8, 0, 1, 9, - 1,
+	5, 10, 2, 5, 2, 4, 1, 9, 2, 9, 4, 2, - 1, - 1, - 1, - 1,
+	8, 4, 5, 8, 5, 3, 3, 5, 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	0, 4, 5, 1, 0, 5, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	8, 4, 5, 8, 5, 3, 9, 0, 5, 0, 3, 5, - 1, - 1, - 1, - 1,
+	9, 4, 5, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	4, 11, 7, 4, 9, 11, 9, 10, 11, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	0, 8, 3, 4, 9, 7, 9, 11, 7, 9, 10, 11, - 1, - 1, - 1, - 1,
+	1, 10, 11, 1, 11, 4, 1, 4, 0, 7, 4, 11, - 1, - 1, - 1, - 1,
+	3, 1, 4, 3, 4, 8, 1, 10, 4, 7, 4, 11, 10, 11, 4, - 1,
+	4, 11, 7, 9, 11, 4, 9, 2, 11, 9, 1, 2, - 1, - 1, - 1, - 1,
+	9, 7, 4, 9, 11, 7, 9, 1, 11, 2, 11, 1, 0, 8, 3, - 1,
+	11, 7, 4, 11, 4, 2, 2, 4, 0, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	11, 7, 4, 11, 4, 2, 8, 3, 4, 3, 2, 4, - 1, - 1, - 1, - 1,
+	2, 9, 10, 2, 7, 9, 2, 3, 7, 7, 4, 9, - 1, - 1, - 1, - 1,
+	9, 10, 7, 9, 7, 4, 10, 2, 7, 8, 7, 0, 2, 0, 7, - 1,
+	3, 7, 10, 3, 10, 2, 7, 4, 10, 1, 10, 0, 4, 0, 10, - 1,
+	1, 10, 2, 8, 7, 4, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	4, 9, 1, 4, 1, 7, 7, 1, 3, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	4, 9, 1, 4, 1, 7, 0, 8, 1, 8, 7, 1, - 1, - 1, - 1, - 1,
+	4, 0, 3, 7, 4, 3, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	4, 8, 7, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	9, 10, 8, 10, 11, 8, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	3, 0, 9, 3, 9, 11, 11, 9, 10, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	0, 1, 10, 0, 10, 8, 8, 10, 11, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	3, 1, 10, 11, 3, 10, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	1, 2, 11, 1, 11, 9, 9, 11, 8, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	3, 0, 9, 3, 9, 11, 1, 2, 9, 2, 11, 9, - 1, - 1, - 1, - 1,
+	0, 2, 11, 8, 0, 11, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	3, 2, 11, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	2, 3, 8, 2, 8, 10, 10, 8, 9, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	9, 10, 2, 0, 9, 2, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	2, 3, 8, 2, 8, 10, 0, 1, 8, 1, 10, 8, - 1, - 1, - 1, - 1,
+	1, 10, 2, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	1, 3, 8, 9, 1, 8, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	0, 9, 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	0, 3, 8, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1,
+	- 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1, - 1 ] );
 
 
 
@@ -69932,7 +71222,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_three_examples_jsm_loaders_GLTFLoader__ = __webpack_require__("./node_modules/three/examples/jsm/loaders/GLTFLoader.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_three_examples_jsm_lights_RectAreaLightUniformsLib__ = __webpack_require__("./node_modules/three/examples/jsm/lights/RectAreaLightUniformsLib.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_three_examples_jsm_helpers_RectAreaLightHelper__ = __webpack_require__("./node_modules/three/examples/jsm/helpers/RectAreaLightHelper.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__three_webTest__ = __webpack_require__("./resources/assets/js/three/webTest.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_three_examples_jsm_objects_MarchingCubes__ = __webpack_require__("./node_modules/three/examples/jsm/objects/MarchingCubes.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__three_webTest__ = __webpack_require__("./resources/assets/js/three/webTest.js");
+
 
 
 
@@ -69960,8 +71252,8 @@ var camera = {
                 'objects': null,
                 'raycaster': null,
                 'prevTime': performance.now(),
-                'velocity': new __WEBPACK_IMPORTED_MODULE_0_three__["_37" /* Vector3 */](),
-                'direction': new __WEBPACK_IMPORTED_MODULE_0_three__["_37" /* Vector3 */](),
+                'velocity': new __WEBPACK_IMPORTED_MODULE_0_three__["_44" /* Vector3 */](),
+                'direction': new __WEBPACK_IMPORTED_MODULE_0_three__["_44" /* Vector3 */](),
                 'moveForward': false,
                 'moveBackward': false,
                 'moveLeft': false,
@@ -69981,7 +71273,7 @@ var raycaster = {
 
 function modelInit() {
 
-    scene = new __WEBPACK_IMPORTED_MODULE_0_three__["_19" /* Scene */]();
+    scene = new __WEBPACK_IMPORTED_MODULE_0_three__["_26" /* Scene */]();
     //scene.background = new THREE.Color('skyblue');
 }
 
@@ -69989,7 +71281,7 @@ function modelLight() {
 
     function room_lightes() {
         // --> Прямой источник света
-        light.directLight = new __WEBPACK_IMPORTED_MODULE_0_three__["p" /* DirectionalLight */](0xffffff, 5.0);
+        light.directLight = new __WEBPACK_IMPORTED_MODULE_0_three__["t" /* DirectionalLight */](0xffffff, 5.0);
         light.directLight.position.set(1, 10, 10);
 
         // --> Окружающий источник света
@@ -69998,7 +71290,7 @@ function modelLight() {
         scene.add(light.lightAmb);
 
         // --> Сферический источник света
-        light.sphereLight = new __WEBPACK_IMPORTED_MODULE_0_three__["z" /* HemisphereLight */](0xddeeff, 0x202020, 5);
+        light.sphereLight = new __WEBPACK_IMPORTED_MODULE_0_three__["D" /* HemisphereLight */](0xddeeff, 0x202020, 5);
         light.sphereLight.position.set(5, 10, 5);
 
         // --> Прямоуголный источник света
@@ -70007,14 +71299,14 @@ function modelLight() {
         var intensity = 8;
 
         __WEBPACK_IMPORTED_MODULE_4_three_examples_jsm_lights_RectAreaLightUniformsLib__["a" /* RectAreaLightUniformsLib */].init();
-        var rectLight = new __WEBPACK_IMPORTED_MODULE_0_three__["_17" /* RectAreaLight */](0xffffff, intensity, width, height);
+        var rectLight = new __WEBPACK_IMPORTED_MODULE_0_three__["_24" /* RectAreaLight */](0xffffff, intensity, width, height);
         rectLight.position.set(5.5, 1.85, -2.05);
-        rectLight.rotation.y = __WEBPACK_IMPORTED_MODULE_0_three__["Q" /* Math */].degToRad(90);
+        rectLight.rotation.y = __WEBPACK_IMPORTED_MODULE_0_three__["V" /* Math */].degToRad(90);
         scene.add(rectLight);
 
-        var rectLightMesh = new __WEBPACK_IMPORTED_MODULE_0_three__["T" /* Mesh */](new __WEBPACK_IMPORTED_MODULE_0_three__["_7" /* PlaneBufferGeometry */](), new __WEBPACK_IMPORTED_MODULE_0_three__["X" /* MeshStandardMaterial */]({
+        var rectLightMesh = new __WEBPACK_IMPORTED_MODULE_0_three__["Y" /* Mesh */](new __WEBPACK_IMPORTED_MODULE_0_three__["_14" /* PlaneBufferGeometry */](), new __WEBPACK_IMPORTED_MODULE_0_three__["_2" /* MeshStandardMaterial */]({
             color: 0xefedfe,
-            side: __WEBPACK_IMPORTED_MODULE_0_three__["d" /* BackSide */],
+            side: __WEBPACK_IMPORTED_MODULE_0_three__["f" /* BackSide */],
             emissive: 0xd5d4e2
         }));
         rectLightMesh.scale.x = rectLight.width;
@@ -70023,20 +71315,20 @@ function modelLight() {
 
         // --> Прожекторный свет
         var spotblue_intensity = 6.7;
-        var spotLight_blue = new __WEBPACK_IMPORTED_MODULE_0_three__["_28" /* SpotLight */](0x73b0ed, spotblue_intensity);
+        var spotLight_blue = new __WEBPACK_IMPORTED_MODULE_0_three__["_35" /* SpotLight */](0x73b0ed, spotblue_intensity);
         spotLight_blue.position.set(-5.46, 3.555, -4.2);
         scene.add(spotLight_blue);
 
-        var spotLight_blueMesh = new __WEBPACK_IMPORTED_MODULE_0_three__["T" /* Mesh */](new __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* SphereBufferGeometry */](0.07, 8, 8), new __WEBPACK_IMPORTED_MODULE_0_three__["U" /* MeshBasicMaterial */]());
+        var spotLight_blueMesh = new __WEBPACK_IMPORTED_MODULE_0_three__["Y" /* Mesh */](new __WEBPACK_IMPORTED_MODULE_0_three__["_32" /* SphereBufferGeometry */](0.07, 8, 8), new __WEBPACK_IMPORTED_MODULE_0_three__["Z" /* MeshBasicMaterial */]());
         spotLight_blue.add(spotLight_blueMesh);
 
         var spotpink_intensity = 4;
-        var spotLight_pink = new __WEBPACK_IMPORTED_MODULE_0_three__["_28" /* SpotLight */](0xffdcfd, spotpink_intensity);
+        var spotLight_pink = new __WEBPACK_IMPORTED_MODULE_0_three__["_35" /* SpotLight */](0xffdcfd, spotpink_intensity);
         spotLight_pink.position.set(4.545, 3.43, 4.57);
-        spotLight_pink.rotation.y = __WEBPACK_IMPORTED_MODULE_0_three__["Q" /* Math */].degToRad(60);
+        spotLight_pink.rotation.y = __WEBPACK_IMPORTED_MODULE_0_three__["V" /* Math */].degToRad(60);
         scene.add(spotLight_pink);
 
-        var spotLight_pinkMesh = new __WEBPACK_IMPORTED_MODULE_0_three__["T" /* Mesh */](new __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* SphereBufferGeometry */](0.07, 8, 8), new __WEBPACK_IMPORTED_MODULE_0_three__["U" /* MeshBasicMaterial */]());
+        var spotLight_pinkMesh = new __WEBPACK_IMPORTED_MODULE_0_three__["Y" /* Mesh */](new __WEBPACK_IMPORTED_MODULE_0_three__["_32" /* SphereBufferGeometry */](0.07, 8, 8), new __WEBPACK_IMPORTED_MODULE_0_three__["Z" /* MeshBasicMaterial */]());
         spotLight_pink.add(spotLight_pinkMesh);
     }
     function test_lightes() {
@@ -70058,23 +71350,23 @@ function modelLight() {
         // -- Это предпологается как далекий источник света как солнце, луна.
         // -- Пример солнце, луна так светить,
         // -- Может лампочка, но не в помещений так как он должен сделать GI (в таком лучае необходимо дополнительно добавить др источники света с GI)
-        var directionalLight = new __WEBPACK_IMPORTED_MODULE_0_three__["p" /* DirectionalLight */](0xffffff, 4);
+        var directionalLight = new __WEBPACK_IMPORTED_MODULE_0_three__["t" /* DirectionalLight */](0xffffff, 4);
         directionalLight.castShadow = true;
         directionalLight.position.set(0, 6, 4);
-        var helper = new __WEBPACK_IMPORTED_MODULE_0_three__["j" /* CameraHelper */](directionalLight.shadow.camera);
+        var helper = new __WEBPACK_IMPORTED_MODULE_0_three__["n" /* CameraHelper */](directionalLight.shadow.camera);
         //scene.add( helper );
-        var directionalLightMesh = new __WEBPACK_IMPORTED_MODULE_0_three__["T" /* Mesh */](new __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* SphereBufferGeometry */](0.07, 8, 8), new __WEBPACK_IMPORTED_MODULE_0_three__["U" /* MeshBasicMaterial */]());
+        var directionalLightMesh = new __WEBPACK_IMPORTED_MODULE_0_three__["Y" /* Mesh */](new __WEBPACK_IMPORTED_MODULE_0_three__["_32" /* SphereBufferGeometry */](0.07, 8, 8), new __WEBPACK_IMPORTED_MODULE_0_three__["Z" /* MeshBasicMaterial */]());
         directionalLight.add(directionalLightMesh);
 
         // Это свет похожий на directionalLight, но с GI и с 2 точками
         // -- Есть 2 точки вверх(небо) и вниз(земля) куда вставляются цвета. Этим добивается реализм, к примеру рядом с источником свет яркий, а в земле уже темный и отадаляесь становиться темнее.
-        var hemisphereLight = new __WEBPACK_IMPORTED_MODULE_0_three__["z" /* HemisphereLight */](0xffffff, 0x000000, 12);
+        var hemisphereLight = new __WEBPACK_IMPORTED_MODULE_0_three__["D" /* HemisphereLight */](0xffffff, 0x000000, 12);
         hemisphereLight.position.set(0, 6, 12);
-        var hemisphereLightMesh = new __WEBPACK_IMPORTED_MODULE_0_three__["T" /* Mesh */](new __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* SphereBufferGeometry */](0.07, 8, 8), new __WEBPACK_IMPORTED_MODULE_0_three__["U" /* MeshBasicMaterial */]());
+        var hemisphereLightMesh = new __WEBPACK_IMPORTED_MODULE_0_three__["Y" /* Mesh */](new __WEBPACK_IMPORTED_MODULE_0_three__["_32" /* SphereBufferGeometry */](0.07, 8, 8), new __WEBPACK_IMPORTED_MODULE_0_three__["Z" /* MeshBasicMaterial */]());
         hemisphereLight.add(hemisphereLightMesh);
 
         // Это свет точещнего источника, с направлением во все стороны. Пример лапочка в комнате, святлички.
-        var pointLight = new __WEBPACK_IMPORTED_MODULE_0_three__["_8" /* PointLight */](0xffffff, 1, 10, 2);
+        var pointLight = new __WEBPACK_IMPORTED_MODULE_0_three__["_15" /* PointLight */](0xffffff, 1, 10, 2);
         pointLight.position.set(18, 4, 3);
         pointLight.power = 600; // intensive деалем 1 и даем интенсивность мощностью лампы в люменах. Люмены можно глянуть в лампах.
         pointLight.castShadow = true;
@@ -70084,7 +71376,7 @@ function modelLight() {
         pointLight.shadow.camera.near = 0.5; // default
         pointLight.shadow.camera.far = 512; // default
 
-        var pointLightMesh = new __WEBPACK_IMPORTED_MODULE_0_three__["T" /* Mesh */](new __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* SphereBufferGeometry */](0.07, 8, 8), new __WEBPACK_IMPORTED_MODULE_0_three__["U" /* MeshBasicMaterial */]());
+        var pointLightMesh = new __WEBPACK_IMPORTED_MODULE_0_three__["Y" /* Mesh */](new __WEBPACK_IMPORTED_MODULE_0_three__["_32" /* SphereBufferGeometry */](0.07, 8, 8), new __WEBPACK_IMPORTED_MODULE_0_three__["Z" /* MeshBasicMaterial */]());
         pointLight.add(pointLightMesh);
 
         // Квадратный источник света - аналог как в vray квадрат в 3dmax
@@ -70092,18 +71384,18 @@ function modelLight() {
         var width = 6;
         var height = 6;
         var intensity = 6;
-        var rectLight = new __WEBPACK_IMPORTED_MODULE_0_three__["_17" /* RectAreaLight */](0xffffff, intensity, width, height);
+        var rectLight = new __WEBPACK_IMPORTED_MODULE_0_three__["_24" /* RectAreaLight */](0xffffff, intensity, width, height);
         rectLight.position.set(18, 6, 3);
-        rectLight.rotation.x = __WEBPACK_IMPORTED_MODULE_0_three__["Q" /* Math */].degToRad(-30);
+        rectLight.rotation.x = __WEBPACK_IMPORTED_MODULE_0_three__["V" /* Math */].degToRad(-30);
         var rectLightHelper = new __WEBPACK_IMPORTED_MODULE_5_three_examples_jsm_helpers_RectAreaLightHelper__["a" /* RectAreaLightHelper */](rectLight);
         rectLight.add(rectLightHelper);
 
         // Прожекторный источник света
-        var targetObject = new __WEBPACK_IMPORTED_MODULE_0_three__["_3" /* Object3D */]();
+        var targetObject = new __WEBPACK_IMPORTED_MODULE_0_three__["_9" /* Object3D */]();
         targetObject.position.set(40, 0, 6);
         scene.add(targetObject);
 
-        var spotLight = new __WEBPACK_IMPORTED_MODULE_0_three__["_28" /* SpotLight */](0xffffff, 1, 50, __WEBPACK_IMPORTED_MODULE_0_three__["Q" /* Math */].degToRad(30), 0.1, 2);
+        var spotLight = new __WEBPACK_IMPORTED_MODULE_0_three__["_35" /* SpotLight */](0xffffff, 1, 50, __WEBPACK_IMPORTED_MODULE_0_three__["V" /* Math */].degToRad(30), 0.1, 2);
         spotLight.power = 2000;
         spotLight.position.set(20, 6, 3);
         spotLight.target = targetObject; // Задаем цель прицелу источника. Теперь он будет следить за ним и поворачиваться туда где стоит цель.
@@ -70130,7 +71422,7 @@ function modelCamera(type_camera) {
     var aspect = container.clientWidth / container.clientHeight;
     var near = 0.1;
     var far = 100;
-    camera.camera = new __WEBPACK_IMPORTED_MODULE_0_three__["_6" /* PerspectiveCamera */](fov, aspect, near, far);
+    camera.camera = new __WEBPACK_IMPORTED_MODULE_0_three__["_13" /* PerspectiveCamera */](fov, aspect, near, far);
 
     // Контролы камеры
     function view_camera() {
@@ -70140,7 +71432,7 @@ function modelCamera(type_camera) {
 
         // Положение камеры
         camera.camera.position.set(0, 12, 7);
-        camera.camera.rotation.x = __WEBPACK_IMPORTED_MODULE_0_three__["Q" /* Math */].degToRad(-50);
+        camera.camera.rotation.x = __WEBPACK_IMPORTED_MODULE_0_three__["V" /* Math */].degToRad(-50);
     }
 
     function game_camera() {
@@ -70149,7 +71441,7 @@ function modelCamera(type_camera) {
 
         // Положение камеры
         camera.camera.position.set(-3, 1.5, 1);
-        camera.camera.rotation.y = __WEBPACK_IMPORTED_MODULE_0_three__["Q" /* Math */].degToRad(-70);
+        camera.camera.rotation.y = __WEBPACK_IMPORTED_MODULE_0_three__["V" /* Math */].degToRad(-70);
 
         if (first_init) {
             camera.controls.game.control.lock();
@@ -70239,11 +71531,11 @@ function modelCamera(type_camera) {
 function modelObjects() {
 
     var geometry = function geometry() {
-        var sphere = new __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* SphereBufferGeometry */](1.5, 48, 48);
+        var sphere = new __WEBPACK_IMPORTED_MODULE_0_three__["_32" /* SphereBufferGeometry */](1.5, 48, 48);
 
-        var test = new __WEBPACK_IMPORTED_MODULE_0_three__["i" /* BufferGeometry */]();
+        var test = new __WEBPACK_IMPORTED_MODULE_0_three__["m" /* BufferGeometry */]();
         var test_vertices = new Float32Array([0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 2.0, 2.0, -1.0, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 2.0, 2.0, 1.0]);
-        test.setAttribute('position', new __WEBPACK_IMPORTED_MODULE_0_three__["h" /* BufferAttribute */](test_vertices, 3));
+        test.setAttribute('position', new __WEBPACK_IMPORTED_MODULE_0_three__["l" /* BufferAttribute */](test_vertices, 3));
 
         var geo_wood = sphere,
             geo_metal = sphere,
@@ -70259,7 +71551,7 @@ function modelObjects() {
 
     var material = function material() {
         var setcolor = function setcolor(color) {
-            return new __WEBPACK_IMPORTED_MODULE_0_three__["X" /* MeshStandardMaterial */]({ color: color });
+            return new __WEBPACK_IMPORTED_MODULE_0_three__["_2" /* MeshStandardMaterial */]({ color: color });
         };
 
         var setmaterial = function setmaterial(map, material_type) {
@@ -70271,7 +71563,7 @@ function modelObjects() {
                 console.log(error);
             };
 
-            var textureLoader = new __WEBPACK_IMPORTED_MODULE_0_three__["_31" /* TextureLoader */]();
+            var textureLoader = new __WEBPACK_IMPORTED_MODULE_0_three__["_38" /* TextureLoader */]();
 
             var color = null;
             if (typeof map['color'] !== "undefined") {
@@ -70283,12 +71575,12 @@ function modelObjects() {
                 bitmap = textureLoader.load(map.map, undefined, undefined, function (error) {
                     return onError(error);
                 });
-                bitmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_40" /* sRGBEncoding */];
+                bitmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_47" /* sRGBEncoding */];
                 bitmap.flipY = false;
-                bitmap.wrapS = __WEBPACK_IMPORTED_MODULE_0_three__["_18" /* RepeatWrapping */];
-                bitmap.wrapT = __WEBPACK_IMPORTED_MODULE_0_three__["_18" /* RepeatWrapping */];
-                bitmap.magFilter = __WEBPACK_IMPORTED_MODULE_0_three__["J" /* LinearFilter */]; // ! Не понял в чем отличие
-                bitmap.minFilter = __WEBPACK_IMPORTED_MODULE_0_three__["L" /* LinearMipmapNearestFilter */]; // ! Не понял в чем отличие
+                bitmap.wrapS = __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* RepeatWrapping */];
+                bitmap.wrapT = __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* RepeatWrapping */];
+                bitmap.magFilter = __WEBPACK_IMPORTED_MODULE_0_three__["O" /* LinearFilter */]; // ! Не понял в чем отличие
+                bitmap.minFilter = __WEBPACK_IMPORTED_MODULE_0_three__["Q" /* LinearMipmapNearestFilter */]; // ! Не понял в чем отличие
                 bitmap.offset.set(0, 0); // Смещяем текстуру (как в максе)
                 bitmap.repeat.set(2, 2); // Кол-во повторений (как в максе)
                 bitmap.anisotropy = 8; // Четкость
@@ -70302,10 +71594,10 @@ function modelObjects() {
                 });
                 alphamap.anisotropy = 8;
                 alphamap.format = __WEBPACK_IMPORTED_MODULE_0_three__["a" /* AlphaFormat */];
-                alphamap.wrapS = __WEBPACK_IMPORTED_MODULE_0_three__["_18" /* RepeatWrapping */];
-                alphamap.wrapT = __WEBPACK_IMPORTED_MODULE_0_three__["_18" /* RepeatWrapping */];
-                alphamap.magFilter = __WEBPACK_IMPORTED_MODULE_0_three__["J" /* LinearFilter */]; // ! Не понял в чем отличие
-                alphamap.minFilter = __WEBPACK_IMPORTED_MODULE_0_three__["L" /* LinearMipmapNearestFilter */]; // ! Не понял в чем отличие
+                alphamap.wrapS = __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* RepeatWrapping */];
+                alphamap.wrapT = __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* RepeatWrapping */];
+                alphamap.magFilter = __WEBPACK_IMPORTED_MODULE_0_three__["O" /* LinearFilter */]; // ! Не понял в чем отличие
+                alphamap.minFilter = __WEBPACK_IMPORTED_MODULE_0_three__["Q" /* LinearMipmapNearestFilter */]; // ! Не понял в чем отличие
                 alphamap.offset.set(0, 0); // Смещяем текстуру (как в максе)
                 alphamap.repeat.set(2, 2); // Кол-во повторений (как в максе)
             }
@@ -70318,10 +71610,10 @@ function modelObjects() {
                 aomap.anisotropy = 8;
                 aomap.flipY = false;
                 aomap.format = __WEBPACK_IMPORTED_MODULE_0_three__["a" /* AlphaFormat */];
-                aomap.wrapS = __WEBPACK_IMPORTED_MODULE_0_three__["_18" /* RepeatWrapping */];
-                aomap.wrapT = __WEBPACK_IMPORTED_MODULE_0_three__["_18" /* RepeatWrapping */];
-                aomap.magFilter = __WEBPACK_IMPORTED_MODULE_0_three__["J" /* LinearFilter */]; // ! Не понял в чем отличие
-                aomap.minFilter = __WEBPACK_IMPORTED_MODULE_0_three__["L" /* LinearMipmapNearestFilter */]; // ! Не понял в чем отличие
+                aomap.wrapS = __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* RepeatWrapping */];
+                aomap.wrapT = __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* RepeatWrapping */];
+                aomap.magFilter = __WEBPACK_IMPORTED_MODULE_0_three__["O" /* LinearFilter */]; // ! Не понял в чем отличие
+                aomap.minFilter = __WEBPACK_IMPORTED_MODULE_0_three__["Q" /* LinearMipmapNearestFilter */]; // ! Не понял в чем отличие
                 aomap.offset.set(0, 0); // Смещяем текстуру (как в максе)
                 aomap.repeat.set(2, 2); // Кол-во повторений (как в максе)
             }
@@ -70333,10 +71625,10 @@ function modelObjects() {
                 });
                 bumpmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["a" /* AlphaFormat */];
                 bumpmap.flipY = false;
-                bumpmap.wrapS = __WEBPACK_IMPORTED_MODULE_0_three__["_18" /* RepeatWrapping */];
-                bumpmap.wrapT = __WEBPACK_IMPORTED_MODULE_0_three__["_18" /* RepeatWrapping */];
-                bumpmap.magFilter = __WEBPACK_IMPORTED_MODULE_0_three__["J" /* LinearFilter */]; // ! Не понял в чем отличие
-                bumpmap.minFilter = __WEBPACK_IMPORTED_MODULE_0_three__["L" /* LinearMipmapNearestFilter */]; // ! Не понял в чем отличие
+                bumpmap.wrapS = __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* RepeatWrapping */];
+                bumpmap.wrapT = __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* RepeatWrapping */];
+                bumpmap.magFilter = __WEBPACK_IMPORTED_MODULE_0_three__["O" /* LinearFilter */]; // ! Не понял в чем отличие
+                bumpmap.minFilter = __WEBPACK_IMPORTED_MODULE_0_three__["Q" /* LinearMipmapNearestFilter */]; // ! Не понял в чем отличие
                 bumpmap.offset.set(0, 0); // Смещяем текстуру (как в максе)
                 bumpmap.repeat.set(2, 2); // Кол-во повторений (как в максе)
                 bumpmap.anisotropy = 8; // Четкость
@@ -70348,10 +71640,10 @@ function modelObjects() {
                     return onError(error);
                 });
                 displacementmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["a" /* AlphaFormat */];
-                displacementmap.wrapS = __WEBPACK_IMPORTED_MODULE_0_three__["_18" /* RepeatWrapping */];
-                displacementmap.wrapT = __WEBPACK_IMPORTED_MODULE_0_three__["_18" /* RepeatWrapping */];
-                displacementmap.magFilter = __WEBPACK_IMPORTED_MODULE_0_three__["J" /* LinearFilter */]; // ! Не понял в чем отличие
-                displacementmap.minFilter = __WEBPACK_IMPORTED_MODULE_0_three__["L" /* LinearMipmapNearestFilter */]; // ! Не понял в чем отличие
+                displacementmap.wrapS = __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* RepeatWrapping */];
+                displacementmap.wrapT = __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* RepeatWrapping */];
+                displacementmap.magFilter = __WEBPACK_IMPORTED_MODULE_0_three__["O" /* LinearFilter */]; // ! Не понял в чем отличие
+                displacementmap.minFilter = __WEBPACK_IMPORTED_MODULE_0_three__["Q" /* LinearMipmapNearestFilter */]; // ! Не понял в чем отличие
                 displacementmap.offset.set(0, 0); // Смещяем текстуру (как в максе)
                 displacementmap.repeat.set(2, 2); // Кол-во повторений (как в максе)
                 displacementmap.anisotropy = 8; // Четкость
@@ -70367,12 +71659,12 @@ function modelObjects() {
                 emissivemap = textureLoader.load(map.emissivemap, undefined, undefined, function (error) {
                     return onError(error);
                 });
-                emissivemap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_40" /* sRGBEncoding */];
+                emissivemap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_47" /* sRGBEncoding */];
                 emissivemap.flipY = false;
-                emissivemap.wrapS = __WEBPACK_IMPORTED_MODULE_0_three__["_18" /* RepeatWrapping */];
-                emissivemap.wrapT = __WEBPACK_IMPORTED_MODULE_0_three__["_18" /* RepeatWrapping */];
-                emissivemap.magFilter = __WEBPACK_IMPORTED_MODULE_0_three__["J" /* LinearFilter */]; // ! Не понял в чем отличие
-                emissivemap.minFilter = __WEBPACK_IMPORTED_MODULE_0_three__["L" /* LinearMipmapNearestFilter */]; // ! Не понял в чем отличие
+                emissivemap.wrapS = __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* RepeatWrapping */];
+                emissivemap.wrapT = __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* RepeatWrapping */];
+                emissivemap.magFilter = __WEBPACK_IMPORTED_MODULE_0_three__["O" /* LinearFilter */]; // ! Не понял в чем отличие
+                emissivemap.minFilter = __WEBPACK_IMPORTED_MODULE_0_three__["Q" /* LinearMipmapNearestFilter */]; // ! Не понял в чем отличие
                 emissivemap.offset.set(0, 0); // Смещяем текстуру (как в максе)
                 emissivemap.repeat.set(2, 2); // Кол-во повторений (как в максе)
                 emissivemap.anisotropy = 8; // Четкость
@@ -70383,12 +71675,12 @@ function modelObjects() {
                 envmap = textureLoader.load(map.envmap, undefined, undefined, function (error) {
                     return onError(error);
                 });
-                envmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_40" /* sRGBEncoding */];
+                envmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_47" /* sRGBEncoding */];
                 envmap.flipY = false;
-                envmap.wrapS = __WEBPACK_IMPORTED_MODULE_0_three__["_18" /* RepeatWrapping */];
-                envmap.wrapT = __WEBPACK_IMPORTED_MODULE_0_three__["_18" /* RepeatWrapping */];
-                envmap.magFilter = __WEBPACK_IMPORTED_MODULE_0_three__["J" /* LinearFilter */]; // ! Не понял в чем отличие
-                envmap.minFilter = __WEBPACK_IMPORTED_MODULE_0_three__["L" /* LinearMipmapNearestFilter */]; // ! Не понял в чем отличие
+                envmap.wrapS = __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* RepeatWrapping */];
+                envmap.wrapT = __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* RepeatWrapping */];
+                envmap.magFilter = __WEBPACK_IMPORTED_MODULE_0_three__["O" /* LinearFilter */]; // ! Не понял в чем отличие
+                envmap.minFilter = __WEBPACK_IMPORTED_MODULE_0_three__["Q" /* LinearMipmapNearestFilter */]; // ! Не понял в чем отличие
                 envmap.offset.set(0, 0); // Смещяем текстуру (как в максе)
                 envmap.repeat.set(2, 2); // Кол-во повторений (как в максе)
                 envmap.anisotropy = 8; // Четкость
@@ -70399,12 +71691,12 @@ function modelObjects() {
                 lightmap = textureLoader.load(map.lightmap, undefined, undefined, function (error) {
                     return onError(error);
                 });
-                lightmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_40" /* sRGBEncoding */];
+                lightmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_47" /* sRGBEncoding */];
                 lightmap.flipY = false;
-                lightmap.wrapS = __WEBPACK_IMPORTED_MODULE_0_three__["_18" /* RepeatWrapping */];
-                lightmap.wrapT = __WEBPACK_IMPORTED_MODULE_0_three__["_18" /* RepeatWrapping */];
-                lightmap.magFilter = __WEBPACK_IMPORTED_MODULE_0_three__["J" /* LinearFilter */]; // ! Не понял в чем отличие
-                lightmap.minFilter = __WEBPACK_IMPORTED_MODULE_0_three__["L" /* LinearMipmapNearestFilter */]; // ! Не понял в чем отличие
+                lightmap.wrapS = __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* RepeatWrapping */];
+                lightmap.wrapT = __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* RepeatWrapping */];
+                lightmap.magFilter = __WEBPACK_IMPORTED_MODULE_0_three__["O" /* LinearFilter */]; // ! Не понял в чем отличие
+                lightmap.minFilter = __WEBPACK_IMPORTED_MODULE_0_three__["Q" /* LinearMipmapNearestFilter */]; // ! Не понял в чем отличие
                 lightmap.offset.set(0, 0); // Смещяем текстуру (как в максе)
                 lightmap.repeat.set(2, 2); // Кол-во повторений (как в максе)
                 lightmap.anisotropy = 8; // Четкость
@@ -70430,19 +71722,19 @@ function modelObjects() {
                 metalnessmap = textureLoader.load(map.metalnessmap, undefined, undefined, function (error) {
                     return onError(error);
                 });
-                metalnessmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_40" /* sRGBEncoding */];
+                metalnessmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_47" /* sRGBEncoding */];
                 metalnessmap.flipY = false;
-                metalnessmap.wrapS = __WEBPACK_IMPORTED_MODULE_0_three__["_18" /* RepeatWrapping */];
-                metalnessmap.wrapT = __WEBPACK_IMPORTED_MODULE_0_three__["_18" /* RepeatWrapping */];
-                metalnessmap.magFilter = __WEBPACK_IMPORTED_MODULE_0_three__["J" /* LinearFilter */]; // ! Не понял в чем отличие
-                metalnessmap.minFilter = __WEBPACK_IMPORTED_MODULE_0_three__["L" /* LinearMipmapNearestFilter */]; // ! Не понял в чем отличие
+                metalnessmap.wrapS = __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* RepeatWrapping */];
+                metalnessmap.wrapT = __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* RepeatWrapping */];
+                metalnessmap.magFilter = __WEBPACK_IMPORTED_MODULE_0_three__["O" /* LinearFilter */]; // ! Не понял в чем отличие
+                metalnessmap.minFilter = __WEBPACK_IMPORTED_MODULE_0_three__["Q" /* LinearMipmapNearestFilter */]; // ! Не понял в чем отличие
                 metalnessmap.offset.set(0, 0); // Смещяем текстуру (как в максе)
                 metalnessmap.repeat.set(2, 2); // Кол-во повторений (как в максе)
                 metalnessmap.anisotropy = 8; // Четкость
             }
 
             if (material_type == 'standart') {
-                return new __WEBPACK_IMPORTED_MODULE_0_three__["X" /* MeshStandardMaterial */]({
+                return new __WEBPACK_IMPORTED_MODULE_0_three__["_2" /* MeshStandardMaterial */]({
                     color: color,
                     map: bitmap,
                     aoMap: aomap,
@@ -70466,7 +71758,7 @@ function modelObjects() {
                     metalnessMap: metalnessmap
                 });
             } else if (material_type == 'mesh') {
-                return new __WEBPACK_IMPORTED_MODULE_0_three__["U" /* MeshBasicMaterial */]({
+                return new __WEBPACK_IMPORTED_MODULE_0_three__["Z" /* MeshBasicMaterial */]({
                     color: color,
                     map: bitmap
                 });
@@ -70550,7 +71842,7 @@ function modelObjects() {
     var position = 0;
     for (var item in geometry()) {
         position = position + 6;
-        mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["T" /* Mesh */](geometry()[item], material()[item]);
+        mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["Y" /* Mesh */](geometry()[item], material()[item]);
         mesh.position.set(position, 0, 0);
         mesh.castShadow = true; //default is false
         mesh.receiveShadow = false; //default
@@ -70558,9 +71850,9 @@ function modelObjects() {
     }
 
     // Test Shadow
-    var plane = new __WEBPACK_IMPORTED_MODULE_0_three__["g" /* BoxBufferGeometry */](55, 0.2, 15);
-    var plane_mat = new __WEBPACK_IMPORTED_MODULE_0_three__["X" /* MeshStandardMaterial */]({ color: 0x666666 });
-    var plane_mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["T" /* Mesh */](plane, plane_mat);
+    var plane = new __WEBPACK_IMPORTED_MODULE_0_three__["j" /* BoxBufferGeometry */](55, 0.2, 15);
+    var plane_mat = new __WEBPACK_IMPORTED_MODULE_0_three__["_2" /* MeshStandardMaterial */]({ color: 0x666666 });
+    var plane_mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["Y" /* Mesh */](plane, plane_mat);
     plane_mesh.position.set(35, -1.6, 0);
     plane_mesh.receiveShadow = true;
     scene.add(plane_mesh);
@@ -70577,7 +71869,7 @@ function loadModel() {
             console.log(error);
         };
 
-        var textureLoader = new __WEBPACK_IMPORTED_MODULE_0_three__["_31" /* TextureLoader */]();
+        var textureLoader = new __WEBPACK_IMPORTED_MODULE_0_three__["_38" /* TextureLoader */]();
 
         var color = null;
         if (typeof map['color'] !== "undefined") {
@@ -70589,7 +71881,7 @@ function loadModel() {
             bitmap = textureLoader.load(map.map, undefined, undefined, function (error) {
                 return onError(error);
             });
-            bitmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_40" /* sRGBEncoding */];
+            bitmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_47" /* sRGBEncoding */];
             bitmap.anisotropy = 8; // Четкость
             bitmap.flipY = false;
         }
@@ -70642,7 +71934,7 @@ function loadModel() {
             emissivemap = textureLoader.load(map.emissivemap, undefined, undefined, function (error) {
                 return onError(error);
             });
-            emissivemap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_40" /* sRGBEncoding */];
+            emissivemap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_47" /* sRGBEncoding */];
             emissivemap.anisotropy = 8; // Четкость
             emissivemap.flipY = false;
         }
@@ -70652,7 +71944,7 @@ function loadModel() {
             envmap = textureLoader.load(map.envmap, undefined, undefined, function (error) {
                 return onError(error);
             });
-            envmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_40" /* sRGBEncoding */];
+            envmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_47" /* sRGBEncoding */];
             envmap.anisotropy = 8; // Четкость
             envmap.flipY = false;
         }
@@ -70662,7 +71954,7 @@ function loadModel() {
             lightmap = textureLoader.load(map.lightmap, undefined, undefined, function (error) {
                 return onError(error);
             });
-            lightmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_40" /* sRGBEncoding */];
+            lightmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_47" /* sRGBEncoding */];
             lightmap.anisotropy = 8; // Четкость
             lightmap.flipY = false;
         }
@@ -70697,7 +71989,7 @@ function loadModel() {
             metalnessmap = textureLoader.load(map.metalnessmap, undefined, undefined, function (error) {
                 return onError(error);
             });
-            metalnessmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_40" /* sRGBEncoding */];
+            metalnessmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_47" /* sRGBEncoding */];
             metalnessmap.anisotropy = 8; // Четкость
             metalnessmap.flipY = false;
         }
@@ -70707,13 +71999,13 @@ function loadModel() {
             specularmap = textureLoader.load(map.metalnessmap, undefined, undefined, function (error) {
                 return onError(error);
             });
-            specularmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_40" /* sRGBEncoding */];
+            specularmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_47" /* sRGBEncoding */];
             specularmap.anisotropy = 8; // Четкость
             specularmap.flipY = false;
         }
 
         if (material_type == 'standart') {
-            return new __WEBPACK_IMPORTED_MODULE_0_three__["X" /* MeshStandardMaterial */]({
+            return new __WEBPACK_IMPORTED_MODULE_0_three__["_2" /* MeshStandardMaterial */]({
                 color: color,
                 map: bitmap,
                 aoMap: aomap,
@@ -70737,12 +72029,12 @@ function loadModel() {
                 metalnessMap: metalnessmap
             });
         } else if (material_type == 'mesh') {
-            return new __WEBPACK_IMPORTED_MODULE_0_three__["U" /* MeshBasicMaterial */]({
+            return new __WEBPACK_IMPORTED_MODULE_0_three__["Z" /* MeshBasicMaterial */]({
                 color: color,
                 map: bitmap
             });
         } else if (material_type == 'pong') {
-            return new __WEBPACK_IMPORTED_MODULE_0_three__["V" /* MeshPhongMaterial */]({
+            return new __WEBPACK_IMPORTED_MODULE_0_three__["_0" /* MeshPhongMaterial */]({
                 specular: 0x222222,
                 shininess: 35,
                 map: map,
@@ -70761,7 +72053,7 @@ function loadModel() {
             };
             var material = setmaterial(textures);
 
-            mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["T" /* Mesh */](gltf.scene.children[0].geometry, material);
+            mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["Y" /* Mesh */](gltf.scene.children[0].geometry, material);
             scene.add(mesh);
         };
         var onProgress = function onProgress(xhr) {
@@ -70789,14 +72081,14 @@ function loadModel() {
                 'map': 'models/pillar/textures/pillar.jpg'
             };
             var material_pillar = setmaterial(textures_pillar);
-            var mesh_pillar = new __WEBPACK_IMPORTED_MODULE_0_three__["T" /* Mesh */](gltf.scene.children[2].geometry, material_pillar);
+            var mesh_pillar = new __WEBPACK_IMPORTED_MODULE_0_three__["Y" /* Mesh */](gltf.scene.children[2].geometry, material_pillar);
             scene.add(mesh_pillar);
 
             var textures_fence = {
                 'map': 'models/pillar/textures/fence.jpg'
             };
             var material_fence = setmaterial(textures_fence);
-            var mesh_fence = new __WEBPACK_IMPORTED_MODULE_0_three__["T" /* Mesh */](gltf.scene.children[5].geometry, material_fence);
+            var mesh_fence = new __WEBPACK_IMPORTED_MODULE_0_three__["Y" /* Mesh */](gltf.scene.children[5].geometry, material_fence);
             scene.add(mesh_fence);
             mesh_fence.position.x = 3;
             mesh_fence.position.y = -2.5;
@@ -70806,7 +72098,7 @@ function loadModel() {
                 'map': 'models/pillar/textures/cloth.jpg'
             };
             var material_cloth = setmaterial(textures_cloth);
-            var mesh_cloth = new __WEBPACK_IMPORTED_MODULE_0_three__["T" /* Mesh */](gltf.scene.children[4].geometry, material_cloth);
+            var mesh_cloth = new __WEBPACK_IMPORTED_MODULE_0_three__["Y" /* Mesh */](gltf.scene.children[4].geometry, material_cloth);
             scene.add(mesh_cloth);
             mesh_cloth.position.x = 3.6;
             mesh_cloth.position.y = -2.5;
@@ -70841,10 +72133,10 @@ function loadModel() {
             };
             var material = setmaterial(textures);
 
-            mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["T" /* Mesh */](gltf.scene.children[1].geometry, material);
+            mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["Y" /* Mesh */](gltf.scene.children[1].geometry, material);
             // Добавление 2 UV кординат. Правим с косяк aomap
             var geometry = mesh.geometry;
-            geometry.addAttribute('uv2', new __WEBPACK_IMPORTED_MODULE_0_three__["h" /* BufferAttribute */](geometry.attributes.uv.array, 2));
+            geometry.addAttribute('uv2', new __WEBPACK_IMPORTED_MODULE_0_three__["l" /* BufferAttribute */](geometry.attributes.uv.array, 2));
             //
             scene.add(mesh);
         };
@@ -70869,9 +72161,9 @@ function loadModel() {
 
         function point() {
 
-            var plane = new __WEBPACK_IMPORTED_MODULE_0_three__["g" /* BoxBufferGeometry */](0.5, 1, 0.5);
-            var material = new __WEBPACK_IMPORTED_MODULE_0_three__["X" /* MeshStandardMaterial */]({ color: 0x8FBCD4 });
-            mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["T" /* Mesh */](plane, material);
+            var plane = new __WEBPACK_IMPORTED_MODULE_0_three__["j" /* BoxBufferGeometry */](0.5, 1, 0.5);
+            var material = new __WEBPACK_IMPORTED_MODULE_0_three__["_2" /* MeshStandardMaterial */]({ color: 0x8FBCD4 });
+            mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["Y" /* Mesh */](plane, material);
             mesh.position.set(4.7, 3.6, 4.7);
             scene.add(mesh);
         }
@@ -70888,10 +72180,10 @@ function loadModel() {
                 };
                 var material = setmaterial(textures);
 
-                mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["T" /* Mesh */](gltf.scene.children[1].geometry, material);
+                mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["Y" /* Mesh */](gltf.scene.children[1].geometry, material);
                 // Добавление 2 UV кординат. Правим с косяк aomap
                 var geometry = mesh.geometry;
-                geometry.addAttribute('uv2', new __WEBPACK_IMPORTED_MODULE_0_three__["h" /* BufferAttribute */](geometry.attributes.uv.array, 2));
+                geometry.addAttribute('uv2', new __WEBPACK_IMPORTED_MODULE_0_three__["l" /* BufferAttribute */](geometry.attributes.uv.array, 2));
                 //
                 scene.add(mesh);
 
@@ -70923,7 +72215,7 @@ function loadModel() {
                 };
                 var material = setmaterial(textures);
 
-                mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["T" /* Mesh */](gltf.scene.children[1].geometry, material);
+                mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["Y" /* Mesh */](gltf.scene.children[1].geometry, material);
                 mesh.rotation.x = Math.PI / 2;
                 mesh.rotation.z = Math.PI / 2;
                 mesh.position.set(5.7, 3.8, -3.22);
@@ -70955,10 +72247,10 @@ function loadModel() {
                 };
                 var material = setmaterial(textures);
 
-                mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["T" /* Mesh */](gltf.scene.children[1].geometry, material);
+                mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["Y" /* Mesh */](gltf.scene.children[1].geometry, material);
                 // Добавление 2 UV кординат. Правим с косяк aomap
                 var geometry = mesh.geometry;
-                geometry.addAttribute('uv2', new __WEBPACK_IMPORTED_MODULE_0_three__["h" /* BufferAttribute */](geometry.attributes.uv.array, 2));
+                geometry.addAttribute('uv2', new __WEBPACK_IMPORTED_MODULE_0_three__["l" /* BufferAttribute */](geometry.attributes.uv.array, 2));
                 //
                 mesh.position.set(5.7, 0.5, -1.9);
                 scene.add(mesh);
@@ -70989,7 +72281,7 @@ function loadModel() {
                 };
                 var material = setmaterial(textures);
 
-                mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["T" /* Mesh */](gltf.scene.children[1].geometry, material);
+                mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["Y" /* Mesh */](gltf.scene.children[1].geometry, material);
                 mesh.position.set(0.4, 0.033, -4.46);
                 scene.add(mesh);
             };
@@ -71019,10 +72311,10 @@ function loadModel() {
                 };
                 var material = setmaterial(textures);
 
-                mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["T" /* Mesh */](gltf.scene.children[1].geometry, material);
+                mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["Y" /* Mesh */](gltf.scene.children[1].geometry, material);
                 mesh.position.set(5.87, 1.7, 1.58);
-                mesh.rotation.x = __WEBPACK_IMPORTED_MODULE_0_three__["Q" /* Math */].degToRad(90);
-                mesh.rotation.z = __WEBPACK_IMPORTED_MODULE_0_three__["Q" /* Math */].degToRad(90);
+                mesh.rotation.x = __WEBPACK_IMPORTED_MODULE_0_three__["V" /* Math */].degToRad(90);
+                mesh.rotation.z = __WEBPACK_IMPORTED_MODULE_0_three__["V" /* Math */].degToRad(90);
                 scene.add(mesh);
             };
             var onProgress = function onProgress(xhr) {
@@ -71068,7 +72360,7 @@ function test_core() {
         // Прямой он не испольузется, он помогает BufferGeometry.
 
         // # BufferGeometry - основной класс геометрий где храниться вертексы, грани, uv кординаты, нормали, цвет и др вещи. Он по умолчанию пустой.
-        var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["i" /* BufferGeometry */]();
+        var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["m" /* BufferGeometry */]();
 
         // ## Основыне понятие в BufferGeometry ## //
         // vertex - это точки, они находится в пространстве. Через BufferAtribute
@@ -71104,9 +72396,9 @@ function test_core() {
         ls1[5] = 'string'; // тут будет 0
 
         // test BufferAttribute
-        var geometry_attr = new __WEBPACK_IMPORTED_MODULE_0_three__["i" /* BufferGeometry */]();
+        var geometry_attr = new __WEBPACK_IMPORTED_MODULE_0_three__["m" /* BufferGeometry */]();
         var vertices_box = new Float32Array([-1.0, -1.0, 1.0, 1.0, -1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, -1.0, 1.0, 1.0, -1.0, -1.0, 1.0]);
-        var attr = new __WEBPACK_IMPORTED_MODULE_0_three__["h" /* BufferAttribute */]();
+        var attr = new __WEBPACK_IMPORTED_MODULE_0_three__["l" /* BufferAttribute */]();
         attr.array = vertices_box;
         attr.count = 6; // Длина массива. Кол-во автоматический расчитывается если array, itemSize дать в конструктор
         attr.itemSize = 3;
@@ -71120,7 +72412,7 @@ function test_core() {
         ;geometry_attr.setAttribute('position', attr); // Для position, normal, color, uv вставим 3 в itemSize
 
         // test Geo 1
-        var geo_1 = new __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* SphereBufferGeometry */](1.4, 32, 32);
+        var geo_1 = new __WEBPACK_IMPORTED_MODULE_0_three__["_32" /* SphereBufferGeometry */](1.4, 32, 32);
         //var geo_1 = new THREE.ConeBufferGeometry(1.4, 2, 32);
         var get_index_1 = geo_1.getIndex(); // getIndex - получить index
         var get_position_1 = geo_1.getAttribute('position');
@@ -71136,7 +72428,7 @@ function test_core() {
         for (var g in get_position_1.array) {
             colors.push(Math.random(), Math.random(), Math.random());
         }
-        geometry.setAttribute('color', new __WEBPACK_IMPORTED_MODULE_0_three__["u" /* Float32BufferAttribute */](colors, 3)); // можно и цвет задать, но я его так в гемотрию задавать не буду. В материале этого делать.
+        geometry.setAttribute('color', new __WEBPACK_IMPORTED_MODULE_0_three__["y" /* Float32BufferAttribute */](colors, 3)); // можно и цвет задать, но я его так в гемотрию задавать не буду. В материале этого делать.
         geometry.computeBoundingBox(); // Граничная рамка в виде box
         geometry.computeBoundingSphere(); // ??? надо узнать эти границы для чего
         //geometry.computeVertexNormals(); // граница для нормалей
@@ -71151,7 +72443,7 @@ function test_core() {
         //geometry.applyMatrix4(matrix); // геометрия измениться по данным матрицы
 
         var geometry2 = geometry.clone(); // клонирование
-        var new_geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["i" /* BufferGeometry */]();
+        var new_geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["m" /* BufferGeometry */]();
         new_geometry.copy(geometry); // копирование данных от другого BufferGeometry
         geometry2.dispose(); // Удаляем геометрия. Не оставляет утечки в памяти.
         // mt: EventDispatcher - втстроен сюда. Он это EventListener. Слушаем изминений в геометрий
@@ -71160,29 +72452,29 @@ function test_core() {
         // mt: geometry2.deleteAttribute('color') - удаляет атрибут
         // mt: geometry2.setFromObject(Object3D) - добавляет атрибуты из объекта Object3D
 
-        var merge_1 = new __WEBPACK_IMPORTED_MODULE_0_three__["_25" /* SphereBufferGeometry */](1.4, 24, 24);
-        var merge_2 = new __WEBPACK_IMPORTED_MODULE_0_three__["n" /* ConeBufferGeometry */](1.4, 2, 32);
-        merge_2.rotateX(__WEBPACK_IMPORTED_MODULE_0_three__["Q" /* Math */].degToRad(30));
-        merge_2.rotateY(__WEBPACK_IMPORTED_MODULE_0_three__["Q" /* Math */].degToRad(30));
-        merge_2.rotateZ(__WEBPACK_IMPORTED_MODULE_0_three__["Q" /* Math */].degToRad(30));
+        var merge_1 = new __WEBPACK_IMPORTED_MODULE_0_three__["_32" /* SphereBufferGeometry */](1.4, 24, 24);
+        var merge_2 = new __WEBPACK_IMPORTED_MODULE_0_three__["r" /* ConeBufferGeometry */](1.4, 2, 32);
+        merge_2.rotateX(__WEBPACK_IMPORTED_MODULE_0_three__["V" /* Math */].degToRad(30));
+        merge_2.rotateY(__WEBPACK_IMPORTED_MODULE_0_three__["V" /* Math */].degToRad(30));
+        merge_2.rotateZ(__WEBPACK_IMPORTED_MODULE_0_three__["V" /* Math */].degToRad(30));
         merge_2.scale(1.2, 1.2, 1.2);
         merge_2.translate(1.2, 1.2, 1.2);
         var merge = merge_1.merge(merge_2, 2); // Скрепляет 2 геометрий. Могут сломаться полигоны.
 
-        var mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["T" /* Mesh */](geometry, new __WEBPACK_IMPORTED_MODULE_0_three__["V" /* MeshPhongMaterial */]({/*vertexColors: true*/}));
+        var mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["Y" /* Mesh */](geometry, new __WEBPACK_IMPORTED_MODULE_0_three__["_0" /* MeshPhongMaterial */]({/*vertexColors: true*/}));
         mesh.position.set(0, 2, 0);
         scene.add(mesh);
     }
     function clock() {
 
         // Это часы
-        var clock = new __WEBPACK_IMPORTED_MODULE_0_three__["l" /* Clock */](); // Параметр autoStart по умолчанию true
+        var clock = new __WEBPACK_IMPORTED_MODULE_0_three__["p" /* Clock */](); // Параметр autoStart по умолчанию true
         clock.start();
     }
     function set_raycaster() {
 
-        raycaster.cast = new __WEBPACK_IMPORTED_MODULE_0_three__["_16" /* Raycaster */]();
-        raycaster.mouse = new __WEBPACK_IMPORTED_MODULE_0_three__["_36" /* Vector2 */]();
+        raycaster.cast = new __WEBPACK_IMPORTED_MODULE_0_three__["_23" /* Raycaster */]();
+        raycaster.mouse = new __WEBPACK_IMPORTED_MODULE_0_three__["_43" /* Vector2 */]();
         raycaster.func = function onMouseMove(event) {
             if (event !== undefined) {
                 raycaster.mouse.x = event.clientX / window.innerWidth * 2 - 1;
@@ -71192,7 +72484,7 @@ function test_core() {
     }
     function font() {
 
-        var loader = new __WEBPACK_IMPORTED_MODULE_0_three__["w" /* FontLoader */]();
+        var loader = new __WEBPACK_IMPORTED_MODULE_0_three__["A" /* FontLoader */]();
         var font = loader.load(
         // resource URL
         'models/fonts/roboto_regular.json',
@@ -71200,20 +72492,21 @@ function test_core() {
         // onLoad callback
         function (font) {
 
-            var matLite = new __WEBPACK_IMPORTED_MODULE_0_three__["U" /* MeshBasicMaterial */]({
+            var matLite = new __WEBPACK_IMPORTED_MODULE_0_three__["Z" /* MeshBasicMaterial */]({
                 color: 0x006699,
                 transparent: true,
                 opacity: 1,
-                side: __WEBPACK_IMPORTED_MODULE_0_three__["q" /* DoubleSide */]
+                side: __WEBPACK_IMPORTED_MODULE_0_three__["u" /* DoubleSide */]
             });
 
             var generate_text = "EvilGoogle";
             var shapes = font.generateShapes(generate_text, 2);
 
-            var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["_21" /* ShapeBufferGeometry */](shapes);
+            // shape - это форма, не геометрия, он строиться из линий.
+            var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["_28" /* ShapeBufferGeometry */](shapes); // из формы создаем геометрию
             geometry.computeBoundingBox();
 
-            var text = new __WEBPACK_IMPORTED_MODULE_0_three__["T" /* Mesh */](geometry, matLite);
+            var text = new __WEBPACK_IMPORTED_MODULE_0_three__["Y" /* Mesh */](geometry, matLite);
             text.position.y = 2;
             scene.add(text);
         },
@@ -71290,33 +72583,65 @@ function test_core() {
             new THREE.Vector3( 10, 0, 0 )
         );*/
 
-        var curve = new __WEBPACK_IMPORTED_MODULE_0_three__["_27" /* SplineCurve */]([// Тоже самое что CatmullRomCurve3 создает произвольгую линию, но тольков xy кординатах
-        new __WEBPACK_IMPORTED_MODULE_0_three__["_36" /* Vector2 */](-10, 0), new __WEBPACK_IMPORTED_MODULE_0_three__["_36" /* Vector2 */](-5, 5), new __WEBPACK_IMPORTED_MODULE_0_three__["_36" /* Vector2 */](0, 0), new __WEBPACK_IMPORTED_MODULE_0_three__["_36" /* Vector2 */](5, -5), new __WEBPACK_IMPORTED_MODULE_0_three__["_36" /* Vector2 */](10, 0)]);
+        var curve = new __WEBPACK_IMPORTED_MODULE_0_three__["_34" /* SplineCurve */]([// Тоже самое что CatmullRomCurve3 создает произвольгую линию, но тольков xy кординатах
+        new __WEBPACK_IMPORTED_MODULE_0_three__["_43" /* Vector2 */](-10, 0), new __WEBPACK_IMPORTED_MODULE_0_three__["_43" /* Vector2 */](-5, 5), new __WEBPACK_IMPORTED_MODULE_0_three__["_43" /* Vector2 */](0, 0), new __WEBPACK_IMPORTED_MODULE_0_three__["_43" /* Vector2 */](5, -5), new __WEBPACK_IMPORTED_MODULE_0_three__["_43" /* Vector2 */](10, 0)]);
 
         var points = curve.getPoints(50); // Точки в кординате с добавленными 50 точками для округление
         //console.log(curve.getLength()); // Получаем общую длину кривой
         //console.log(curve.getTangent(20)); // получается xyz для чего не понятно
 
-        var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["i" /* BufferGeometry */]().setFromPoints(points);
-        var material = new __WEBPACK_IMPORTED_MODULE_0_three__["G" /* LineBasicMaterial */]({ color: 0xff0000 });
-        var line = new __WEBPACK_IMPORTED_MODULE_0_three__["F" /* Line */](geometry, material);
+        var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["m" /* BufferGeometry */]().setFromPoints(points);
+        var material = new __WEBPACK_IMPORTED_MODULE_0_three__["L" /* LineBasicMaterial */]({ color: 0xff0000 });
+        var line = new __WEBPACK_IMPORTED_MODULE_0_three__["K" /* Line */](geometry, material);
         scene.add(line);
+    }
+    function path() {
+
+        // Создает контуры - те же самые линий
+        var path = new __WEBPACK_IMPORTED_MODULE_0_three__["_12" /* Path */]();
+
+        path.lineTo(0, 0.8);
+        path.quadraticCurveTo(0, 1, 0.2, 1);
+        path.lineTo(1, 1);
+
+        var points = path.getPoints();
+
+        var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["m" /* BufferGeometry */]().setFromPoints(points);
+        var material = new __WEBPACK_IMPORTED_MODULE_0_three__["L" /* LineBasicMaterial */]({ color: 0xffffff });
+
+        var line = new __WEBPACK_IMPORTED_MODULE_0_three__["K" /* Line */](geometry, material);
+        scene.add(line);
+    }
+    function marchingCubesFunc() {
+
+        // ImmediateRenderObject - есть такой класс для геометрий, он легкий в обработке. Нужен для трансформирующиеся 3d моделей как MarchingCubes
+        var materials = new __WEBPACK_IMPORTED_MODULE_0_three__["_0" /* MeshPhongMaterial */]({ color: 0x000000, specular: 0x888888, shininess: 250 });
+
+        var effect = new __WEBPACK_IMPORTED_MODULE_6_three_examples_jsm_objects_MarchingCubes__["a" /* MarchingCubes */](28, materials, true, true);
+        effect.position.set(0, 2, 0);
+        effect.scale.set(1, 1, 1);
+        effect.enableUvs = false;
+        effect.enableColors = false;
+
+        scene.add(effect);
     }
 
     //clock();
     //bufferGeometry();
     set_raycaster();
     //curve()
-    font();
+    //font();
+    //path();
+    //marchingCubesFunc();
 }
 
 function test_math() {
 
     function box3() {
 
-        var box = new __WEBPACK_IMPORTED_MODULE_0_three__["f" /* Box3 */]();
+        var box = new __WEBPACK_IMPORTED_MODULE_0_three__["h" /* Box3 */]();
 
-        var mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["T" /* Mesh */](new __WEBPACK_IMPORTED_MODULE_0_three__["g" /* BoxBufferGeometry */](1, 1, 1), new __WEBPACK_IMPORTED_MODULE_0_three__["U" /* MeshBasicMaterial */]({ color: 0xfff000 }));
+        var mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["Y" /* Mesh */](new __WEBPACK_IMPORTED_MODULE_0_three__["j" /* BoxBufferGeometry */](1, 1, 1), new __WEBPACK_IMPORTED_MODULE_0_three__["Z" /* MeshBasicMaterial */]({ color: 0xfff000 }));
         mesh.position.set(0, 2, 0);
         mesh.geometry.computeBoundingBox();
         box.copy(mesh.geometry.boundingBox).applyMatrix4(mesh.matrixWorld);
@@ -71327,15 +72652,78 @@ function test_math() {
     //box3();
 }
 
+function test_helpers() {
+
+    function arrowHelper() {
+
+        // Хелпер - Стрелка
+        var dir = new __WEBPACK_IMPORTED_MODULE_0_three__["_44" /* Vector3 */](2, 0, 0); // Направление стрелы
+        dir.normalize();
+        var origin = new __WEBPACK_IMPORTED_MODULE_0_three__["_44" /* Vector3 */](0, 0, 0); // Стартовая точка
+
+        var length = 2; // Длина стрелки
+        var hex = 0xffff00;
+        var headLength = 0.2 * length; // Длина наконечника
+        var headWidth = 0.4 * headLength; // Размер шляпы наконечника
+
+        var arrowHelper = new __WEBPACK_IMPORTED_MODULE_0_three__["d" /* ArrowHelper */](dir, origin, length, hex, headLength, headWidth);
+        // arrowHelper.setColor(0x000617); Установка цвета
+        // arrowHelper.setLength(length, headLength, headWidth); Установка длин
+        arrowHelper.setDirection(new __WEBPACK_IMPORTED_MODULE_0_three__["_44" /* Vector3 */](2, 1, 0));
+        arrowHelper.position.y = 1;
+        scene.add(arrowHelper);
+    }
+    function axesHelper() {
+
+        var axesHelper = new __WEBPACK_IMPORTED_MODULE_0_three__["e" /* AxesHelper */](2);
+        axesHelper.position.set(-3, 1, -3);
+        scene.add(axesHelper);
+    }
+    function boxHelper() {
+
+        var plane = new __WEBPACK_IMPORTED_MODULE_0_three__["_32" /* SphereBufferGeometry */](0.5, 24, 24);
+        var material = new __WEBPACK_IMPORTED_MODULE_0_three__["_2" /* MeshStandardMaterial */]({ color: 0x8FBCD4 });
+        mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["Y" /* Mesh */](plane, material);
+        mesh.position.set(3, 1, 0);
+        scene.add(mesh);
+
+        // Этот хелпер нужен для обозначение границ объектов Geometry и BufferGeometry. В него задаем mesh и этот хелпер встанет в ее границы коробкой.
+        var box = new __WEBPACK_IMPORTED_MODULE_0_three__["k" /* BoxHelper */](mesh, 0xffff00);
+        scene.add(box);
+    }
+    function box3Helper() {
+
+        // Есть вот такие классы - Box2 и Box3 для создание ограничительных границ
+        // Box3Helper - помогает ее визуализировать.
+
+        // Box3. Вспомним есть св boundingBox в BufferGeometry. Это как раз расчет этой ограничительной Box3
+        var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["_32" /* SphereBufferGeometry */](0.5, 24, 24);
+        geometry.computeBoundingBox();
+
+        var mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["Y" /* Mesh */](geometry, new __WEBPACK_IMPORTED_MODULE_0_three__["_2" /* MeshStandardMaterial */]({ color: 0x8FBCD4 }));
+        var box3 = new __WEBPACK_IMPORTED_MODULE_0_three__["h" /* Box3 */]();
+        box3.copy(mesh.geometry.boundingBox); // Взяли параметры для box3
+
+        // Box3Hepler
+        var helper = new __WEBPACK_IMPORTED_MODULE_0_three__["i" /* Box3Helper */](box3, 0xffff00);
+        scene.add(helper); //
+    }
+
+    arrowHelper();
+    axesHelper();
+    boxHelper();
+    box3Helper();
+}
+
 function modelRender() {
 
-    renderer = new __WEBPACK_IMPORTED_MODULE_0_three__["_39" /* WebGLRenderer */]({ antialias: true }); // antialias - сглаживания
+    renderer = new __WEBPACK_IMPORTED_MODULE_0_three__["_46" /* WebGLRenderer */]({ antialias: true }); // antialias - сглаживания
 
     // Физическое правильное освещение
     renderer.physicallyCorrectLights = true;
 
     // Кодировка цвета
-    renderer.outputEncoding = __WEBPACK_IMPORTED_MODULE_0_three__["_40" /* sRGBEncoding */];
+    renderer.outputEncoding = __WEBPACK_IMPORTED_MODULE_0_three__["_47" /* sRGBEncoding */];
 
     // Гамма. Настраиваем гамму коррекцию видимой для глаз
     renderer.gammaFactor = 2.2;
@@ -71349,7 +72737,7 @@ function modelRender() {
 
     // Test
     renderer.shadowMap.enabled = true;
-    renderer.shadowMap.type = __WEBPACK_IMPORTED_MODULE_0_three__["_5" /* PCFSoftShadowMap */]; // default THREE.PCFShadowMap
+    renderer.shadowMap.type = __WEBPACK_IMPORTED_MODULE_0_three__["_11" /* PCFSoftShadowMap */]; // default THREE.PCFShadowMap
 
     // Положить canvas в наш блок
     container.appendChild(renderer.domElement);
@@ -71364,6 +72752,7 @@ function play(type_camera) {
     loadModel();
     test_math();
     test_core();
+    test_helpers();
     modelRender();
 
     // Raycaster
@@ -71431,7 +72820,7 @@ function stop() {
 /* ----------------------------- */
 
 /* Проверка совместимости браузера [обязательно] */
-if (__WEBPACK_IMPORTED_MODULE_6__three_webTest__["a" /* WEBGL */].isWebGLAvailable()) {
+if (__WEBPACK_IMPORTED_MODULE_7__three_webTest__["a" /* WEBGL */].isWebGLAvailable()) {
 
     $('.scene_method button').click(function (e) {
 

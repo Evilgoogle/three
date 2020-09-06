@@ -4,6 +4,7 @@ import { PointerLockControls } from 'three/examples/jsm/controls/PointerLockCont
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { RectAreaLightUniformsLib } from 'three/examples/jsm/lights/RectAreaLightUniformsLib';
 import { RectAreaLightHelper } from 'three/examples/jsm/helpers/RectAreaLightHelper';
+import { MarchingCubes } from 'three/examples/jsm/objects/MarchingCubes';
 import { WEBGL } from './three/webTest';
 import {DirectGeometry} from "three";
 
@@ -1197,10 +1198,11 @@ function test_core() {
                     side: THREE.DoubleSide
                 });
 
-                let generate_text = "EvilGoogle"; 
+                let generate_text = "EvilGoogle";
                 let shapes = font.generateShapes(generate_text, 2);
 
-                let geometry = new THREE.ShapeBufferGeometry(shapes);
+                // shape - это форма, не геометрия, он строиться из линий.
+                let geometry = new THREE.ShapeBufferGeometry(shapes); // из формы создаем геометрию
                 geometry.computeBoundingBox();
 
                 let text = new THREE.Mesh(geometry, matLite);
@@ -1298,12 +1300,44 @@ function test_core() {
         var line = new THREE.Line(geometry, material);
         scene.add(line);
     }
+    function path() {
+
+        // Создает контуры - те же самые линий
+        var path = new THREE.Path();
+
+        path.lineTo(0, 0.8);
+        path.quadraticCurveTo(0, 1, 0.2, 1);
+        path.lineTo(1, 1);
+
+        var points = path.getPoints();
+
+        var geometry = new THREE.BufferGeometry().setFromPoints(points);
+        var material = new THREE.LineBasicMaterial({color: 0xffffff});
+
+        var line = new THREE.Line(geometry, material);
+        scene.add(line);
+    }
+    function marchingCubesFunc() {
+
+        // ImmediateRenderObject - есть такой класс для геометрий, он легкий в обработке. Нужен для трансформирующиеся 3d моделей как MarchingCubes
+        let materials = new THREE.MeshPhongMaterial({ color: 0x000000, specular: 0x888888, shininess: 250 });
+
+        let effect = new MarchingCubes(28, materials, true, true);
+        effect.position.set(0, 2, 0);
+        effect.scale.set(1, 1, 1);
+        effect.enableUvs = false;
+        effect.enableColors = false;
+
+        scene.add(effect);
+    }
 
     //clock();
     //bufferGeometry();
     set_raycaster();
     //curve()
-    font();
+    //font();
+    //path();
+    //marchingCubesFunc();
 }
 
 function test_math() {
@@ -1324,6 +1358,69 @@ function test_math() {
         //console.log(box);
     }
     //box3();
+}
+
+function test_helpers() {
+
+    function arrowHelper() {
+
+        // Хелпер - Стрелка
+        var dir = new THREE.Vector3(2, 0, 0); // Направление стрелы
+        dir.normalize();
+        var origin = new THREE.Vector3(0, 0, 0); // Стартовая точка
+
+        var length = 2; // Длина стрелки
+        var hex = 0xffff00;
+        var headLength = 0.2 * length; // Длина наконечника
+        var headWidth = 0.4 * headLength; // Размер шляпы наконечника
+
+        var arrowHelper = new THREE.ArrowHelper(dir, origin, length, hex, headLength, headWidth);
+        // arrowHelper.setColor(0x000617); Установка цвета
+        // arrowHelper.setLength(length, headLength, headWidth); Установка длин
+        arrowHelper.setDirection(new THREE.Vector3(2, 1, 0));
+        arrowHelper.position.y = 1;
+        scene.add(arrowHelper);
+    }
+    function axesHelper() {
+
+        var axesHelper = new THREE.AxesHelper(2);
+        axesHelper.position.set(-3, 1, -3);
+        scene.add(axesHelper);
+    }
+    function boxHelper() {
+
+        let plane = new THREE.SphereBufferGeometry(0.5, 24, 24);
+        let material = new THREE.MeshStandardMaterial({ color: 0x8FBCD4 });
+        mesh = new THREE.Mesh(plane, material);
+        mesh.position.set(3, 1, 0);
+        scene.add(mesh);
+
+        // Этот хелпер нужен для обозначение границ объектов Geometry и BufferGeometry. В него задаем mesh и этот хелпер встанет в ее границы коробкой.
+        var box = new THREE.BoxHelper(mesh, 0xffff00);
+        scene.add(box);
+    }
+    function box3Helper() {
+
+        // Есть вот такие классы - Box2 и Box3 для создание ограничительных границ
+        // Box3Helper - помогает ее визуализировать.
+
+        // Box3. Вспомним есть св boundingBox в BufferGeometry. Это как раз расчет этой ограничительной Box3
+        var geometry = new THREE.SphereBufferGeometry(0.5, 24, 24);
+        geometry.computeBoundingBox();
+
+        var mesh = new THREE.Mesh(geometry, new THREE.MeshStandardMaterial({ color: 0x8FBCD4 }));
+        var box3 = new THREE.Box3();
+        box3.copy(mesh.geometry.boundingBox); // Взяли параметры для box3
+
+        // Box3Hepler
+        var helper = new THREE.Box3Helper(box3, 0xffff00 );
+        scene.add(helper); //
+    }
+
+    arrowHelper();
+    axesHelper();
+    boxHelper();
+    box3Helper();
 }
 
 function modelRender() {
@@ -1363,6 +1460,7 @@ function play(type_camera) {
     loadModel();
     test_math();
     test_core();
+    test_helpers();
     modelRender();
 
     // Raycaster
