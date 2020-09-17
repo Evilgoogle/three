@@ -6,7 +6,7 @@ import { RectAreaLightUniformsLib } from 'three/examples/jsm/lights/RectAreaLigh
 import { RectAreaLightHelper } from 'three/examples/jsm/helpers/RectAreaLightHelper';
 import { MarchingCubes } from 'three/examples/jsm/objects/MarchingCubes';
 import { WEBGL } from './three/webTest';
-import {DirectGeometry} from "three";
+import {DirectGeometry, MeshBasicMaterial, MeshStandardMaterial} from "three";
 
 /* Создаем сцену */
 const container = document.querySelector('#scene_container');
@@ -1108,6 +1108,9 @@ function test_core() {
         }
         // св:version - показывается версию изминенй этого экземпляра.
 
+        // Задаем в Геометрия атрибут. Есть так сказать 2 варианте передачи атрибутов.1 Через сам BufferAttribute, 2 через разновидность BufferAttribute с соотвествущиемся типизированным массивом - к примеру Float32BufferAttribute
+        // Если мы задаем через сам BufferAttribute, то правильно будет ему отправлять типизированные массивы - Float32Array.
+        // Можно отправить просто обычный массив [], без Float32Array, но так можно отправить только к Float32BufferAttribute. Такие типизированные BufferAttribute сами обычные массивы [] преоброзуют в типизированные
         geometry_attr.setAttribute('position', attr); // Для position, normal, color, uv вставим 3 в itemSize
 
         // test Geo 1
@@ -1383,6 +1386,7 @@ function test_helpers() {
     }
     function axesHelper() {
 
+        // Хелпер ось XYZ
         var axesHelper = new THREE.AxesHelper(2);
         axesHelper.position.set(-3, 1, -3);
         scene.add(axesHelper);
@@ -1416,11 +1420,173 @@ function test_helpers() {
         var helper = new THREE.Box3Helper(box3, 0xffff00 );
         scene.add(helper); //
     }
+    function cameraHelper() {
+        var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.set(3, 2, 2);
+        camera.updateMatrix();
+        var helper = new THREE.CameraHelper(camera);
+        scene.add(helper);
+
+        //helper.matrixAutoUpdate = true;
+        helper.updateMatrix();
+        helper.update();
+    }
+    function directionLightHelper() {
+
+        var light = new THREE.DirectionalLight(0xFFFFFF, 10);
+        light.position.set(0, 8, 4);
+        var helper = new THREE.DirectionalLightHelper(light, 5, 0xFFFFF0);
+        scene.add(light);
+        scene.add(helper);
+    }
+    function gridHelper() {
+
+        // Создаем квадрат с сеткой. Как в 3dmax-е в окне perspective
+        var size = 10;
+        var divisions = 10;
+
+        var gridHelper = new THREE.GridHelper( size, divisions );
+        scene.add(gridHelper);
+    }
+    function polarGridHelper() {
+
+        // Создаем сетку в виде круга
+        var radius = 10;
+        var radials = 16;
+        var circles = 8;
+        var divisions = 64;
+
+        var helper = new THREE.PolarGridHelper(radius, radials, circles, divisions);
+        scene.add(helper);
+    }
+    function hemisphereLightHelper() {
+
+        // Хелпер для светильника HemisphereLight
+        var light = new THREE.HemisphereLight(0xffffbb, 0x080820, 1);
+        var helper = new THREE.HemisphereLightHelper(light, 5);
+        scene.add(helper);
+    }
+    function pointLightHelper() {
+
+        // Для светильника pointLight
+        var pointLight = new THREE.PointLight(0xff0000, 1, 100);
+        pointLight.position.set(0, 2.2, 0);
+        scene.add(pointLight);
+
+        var pointLightHelper = new THREE.PointLightHelper(pointLight, 0.3);
+        scene.add(pointLightHelper);
+    }
 
     arrowHelper();
     axesHelper();
     boxHelper();
     box3Helper();
+    //cameraHelper();
+    //directionLightHelper();
+    //gridHelper();
+    //polarGridHelper();
+    //hemisphereLightHelper();
+    pointLightHelper();
+}
+
+function test_objects() {
+
+    function points() {
+
+        var box_geometry = new THREE.BoxBufferGeometry(2, 2, 2).getAttribute('position');
+        var geometry = new THREE.BufferGeometry();
+
+        var point_1 = [ // 1 точка
+            1, 1, 1,
+        ];
+        var point_2 = [ // 3 точка
+            -1, -1, 1,
+            1, -1, 1,
+            1, 1, 1,
+        ];
+        var point_3 = new Float32Array([
+            -1.0, -1.0,  1.0,
+            1.0, -1.0,  1.0,
+            1.0,  1.0,  1.0,
+
+            1.0,  1.0,  1.0,
+            -1.0,  1.0,  1.0,
+            -1.0, -1.0,  1.0
+        ]);
+        let attr = new THREE.BufferAttribute(point_3, 3);
+        let type_attr = new THREE.Int32BufferAttribute(point_2,3)
+        geometry.setAttribute('position', box_geometry);
+
+        let textureLoader = new THREE.TextureLoader();
+        var alphamap = textureLoader.load('/models/textures/brick/alphablock.jpg', undefined, undefined, error => onError(error));
+        alphamap.anisotropy = 8; // C альфа каналом были проблемы и в mesh. Похоже надо дать green канал
+        var map = textureLoader.load('/models/textures/brick/map.jpg', undefined, undefined, error => onError(error));
+        map.anisotropy = 8;
+        // Материал для точек. Он рабоат также на тренгуляр геометрий, но ограниченно к примеру карты не работают.
+        // материалы как MeshStandardMaterial, MeshBasicMaterial, Pong не будут работать на точках, им нужны тренгуляры
+        var material = new THREE.PointsMaterial({color: 0x888888});
+        material.alphaMap = alphamap;
+        material.map = map;
+        material.size = 0.4; // размер точек. Точки они квадратные
+
+        var mesh = new THREE.Mesh(geometry, material); // Передали geometry(point_2) с 3 точками которая создала Mesh
+        mesh.position.set(-2, 1, 0);
+        scene.add(mesh);
+
+        // Points - создает точки, в отличий от mesh по position не будут создоваться тренгуляры, они встанут как точки. Точки всегда смотрять в сторону камеры
+        var point = new THREE.Points(geometry, material); // Передали geometry(point_2) с 3 точками и эти 3 точки встали в свои кординаты.
+        point.position.set(1, 1, 0);
+        scene.add(point);
+    }
+    function line() {
+
+        // 1
+        var points = [];
+        points.push(new THREE.Vector3( - 3, 0, 0 ));
+        points.push(new THREE.Vector3( 0, 3, 0 ));
+        points.push(new THREE.Vector3( 3, 0, 0 ));
+        var geometry = new THREE.BufferGeometry();
+        geometry.setFromPoints(points); // это берет точки и установить его в атрибут
+
+        // 2
+        var vertices = new Float32Array( [
+            -1.0, -1.0,  1.0,
+            1.0, -1.0,  1.0,
+            1.0,  1.0,  1.0,
+
+            1.0,  1.0,  1.0,
+            -1.0,  1.0,  1.0,
+            -1.0, -1.0,  1.0
+        ] );
+        var geometry = new THREE.BufferGeometry();
+        geometry.setAttribute('position', new THREE.BufferAttribute(vertices, 3));
+
+        // 3
+        var vertices = new Float32Array( [
+            -1.0, -1.0,  1.0,
+            1.0, -1.0,  1.0,
+            1.0,  1.0,  1.0,
+        ]);
+        var geometry = new THREE.BufferGeometry();
+
+        console.log(geometry);
+
+        var material = new THREE.LineBasicMaterial({ color: 0x0000ff });
+        var line = new THREE.Line(geometry, material);
+        scene.add(line);
+
+        /*var material = new THREE.PointsMaterial({ color: 0x888888 });
+        var point = new THREE.Points(geometry, material)
+        scene.add(point);*/
+
+        /*var material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+        var mesh = new THREE.Mesh(geometry, material);
+        mesh.position.y = 2;
+        scene.add(mesh);*/
+    }
+
+    //points();
+    line();
 }
 
 function modelRender() {
@@ -1456,11 +1622,12 @@ function play(type_camera) {
     modelInit();
     modelLight();
     modelCamera(type_camera);
-    modelObjects();
-    loadModel();
+    //modelObjects();
+    //loadModel();
     test_math();
     test_core();
-    test_helpers();
+    //test_helpers();
+    test_objects();
     modelRender();
 
     // Raycaster
