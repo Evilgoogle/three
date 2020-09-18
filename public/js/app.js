@@ -72840,25 +72840,39 @@ function test_objects() {
         // 3
         var vertices = new Float32Array([-1.0, -1.0, 1.0, 1.0, -1.0, 1.0, 1.0, 1.0, 1.0]);
         var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["m" /* BufferGeometry */]();
+        geometry.setAttribute('position', new __WEBPACK_IMPORTED_MODULE_0_three__["l" /* BufferAttribute */](vertices, 3));
+
+        // 4
+        var curve = new __WEBPACK_IMPORTED_MODULE_0_three__["_40" /* SplineCurve */]([new __WEBPACK_IMPORTED_MODULE_0_three__["_49" /* Vector2 */](-10, 0), new __WEBPACK_IMPORTED_MODULE_0_three__["_49" /* Vector2 */](-5, 5), new __WEBPACK_IMPORTED_MODULE_0_three__["_49" /* Vector2 */](0, 0), new __WEBPACK_IMPORTED_MODULE_0_three__["_49" /* Vector2 */](5, -5), new __WEBPACK_IMPORTED_MODULE_0_three__["_49" /* Vector2 */](10, 0)]);
+        var points = curve.getPoints(50);
+        var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["m" /* BufferGeometry */]().setFromPoints(points);
 
         console.log(geometry);
 
-        var material = new __WEBPACK_IMPORTED_MODULE_0_three__["P" /* LineBasicMaterial */]({ color: 0x0000ff });
+        // Материал для линий
+        var material = new __WEBPACK_IMPORTED_MODULE_0_three__["P" /* LineBasicMaterial */]({
+            color: 0x0000ff,
+            linewidth: 3, // Толщина линий, работает только на некоторых линиях
+            morphTargets: false // Деформаций
+        });
         var line = new __WEBPACK_IMPORTED_MODULE_0_three__["O" /* Line */](geometry, material);
+        line.position.x = -3;
         scene.add(line);
 
-        /*var material = new THREE.PointsMaterial({ color: 0x888888 });
-        var point = new THREE.Points(geometry, material)
-        scene.add(point);*/
+        var material = new __WEBPACK_IMPORTED_MODULE_0_three__["_22" /* PointsMaterial */]({ color: 0x888888 });
+        var point = new __WEBPACK_IMPORTED_MODULE_0_three__["_21" /* Points */](geometry, material);
+        point.position.x = 0;
+        scene.add(point);
 
-        /*var material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
-        var mesh = new THREE.Mesh(geometry, material);
+        var material = new __WEBPACK_IMPORTED_MODULE_0_three__["_3" /* MeshBasicMaterial */]({ color: 0xff0000 });
+        var mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["_2" /* Mesh */](geometry, material);
         mesh.position.y = 2;
-        scene.add(mesh);*/
+        mesh.position.x = 3;
+        scene.add(mesh);
     }
 
     //points();
-    line();
+    //line();
 }
 
 function modelRender() {

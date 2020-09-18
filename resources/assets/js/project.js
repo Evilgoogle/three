@@ -1549,7 +1549,7 @@ function test_objects() {
         geometry.setFromPoints(points); // это берет точки и установить его в атрибут
 
         // 2
-        var vertices = new Float32Array( [
+        var vertices = new Float32Array([
             -1.0, -1.0,  1.0,
             1.0, -1.0,  1.0,
             1.0,  1.0,  1.0,
@@ -1562,31 +1562,51 @@ function test_objects() {
         geometry.setAttribute('position', new THREE.BufferAttribute(vertices, 3));
 
         // 3
-        var vertices = new Float32Array( [
+        var vertices = new Float32Array([
             -1.0, -1.0,  1.0,
             1.0, -1.0,  1.0,
             1.0,  1.0,  1.0,
         ]);
         var geometry = new THREE.BufferGeometry();
+        geometry.setAttribute('position', new THREE.BufferAttribute(vertices, 3));
+
+        // 4
+        var curve = new THREE.SplineCurve([
+            new THREE.Vector2( -10, 0 ),
+            new THREE.Vector2( -5, 5 ),
+            new THREE.Vector2( 0, 0 ),
+            new THREE.Vector2( 5, -5 ),
+            new THREE.Vector2( 10, 0 )
+        ]);
+        var points = curve.getPoints(50);
+        var geometry = new THREE.BufferGeometry().setFromPoints(points);
 
         console.log(geometry);
 
-        var material = new THREE.LineBasicMaterial({ color: 0x0000ff });
+        // Материал для линий
+        var material = new THREE.LineBasicMaterial({
+            color: 0x0000ff,
+            linewidth: 3, // Толщина линий, работает только на некоторых линиях
+            morphTargets: false // Деформаций
+        });
         var line = new THREE.Line(geometry, material);
+        line.position.x = -3
         scene.add(line);
 
-        /*var material = new THREE.PointsMaterial({ color: 0x888888 });
-        var point = new THREE.Points(geometry, material)
-        scene.add(point);*/
+        var material = new THREE.PointsMaterial({ color: 0x888888 });
+        var point = new THREE.Points(geometry, material);
+        point.position.x = 0
+        scene.add(point);
 
-        /*var material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+        var material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
         var mesh = new THREE.Mesh(geometry, material);
         mesh.position.y = 2;
-        scene.add(mesh);*/
+        mesh.position.x = 3;
+        scene.add(mesh);
     }
 
     //points();
-    line();
+    //line();
 }
 
 function modelRender() {
