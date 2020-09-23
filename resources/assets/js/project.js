@@ -1604,9 +1604,77 @@ function test_objects() {
         mesh.position.x = 3;
         scene.add(mesh);
     }
+    // InstancedMesh - быстрый рендер если есть много одинаковых моделей с разными трансформациями
+    function lineLoop() {
+
+        // Не понял чем отличается от line, но он юзает gl.LINE_LOOP от WebGL
+        var points = [];
+        points.push(new THREE.Vector3( - 3, 0, 0 ));
+        points.push(new THREE.Vector3( 0, 3, 0 ));
+        points.push(new THREE.Vector3( 3, 0, 0 ));
+        points.push(new THREE.Vector3( -1, -2, 0 ));
+        points.push(new THREE.Vector3( -3, 0, -0.2 ));
+        var geometry = new THREE.BufferGeometry();
+        geometry.setFromPoints(points);
+
+        // Материал для линий
+        var material = new THREE.LineBasicMaterial({
+            color: 0x0000ff,
+            linewidth: 3, // Толщина линий, работает только на некоторых линиях
+            morphTargets: false // Деформаций
+        });
+        var line = new THREE.Line(geometry, material);
+        line.position.x = -3
+        scene.add(line);
+    }
+    function lineSegments() {
+
+        // Это визуально не отичаеться от Line, но юзает gl.LINES от WebGL
+        var points = [];
+        points.push(new THREE.Vector3( - 3, 0, 0 ));
+        points.push(new THREE.Vector3( 0, 3, 0 ));
+        points.push(new THREE.Vector3( 3, 0, 0 ));
+        points.push(new THREE.Vector3( -1, -2, 0 ));
+        var geometry = new THREE.BufferGeometry();
+        geometry.setFromPoints(points);
+
+        // Материал для линий
+        var material = new THREE.LineBasicMaterial({
+            color: 0x0000ff,
+            linewidth: 3, // Толщина линий, работает только на некоторых линиях
+            morphTargets: false // Деформаций
+        });
+        var line = new THREE.Line(geometry, material);
+        line.position.x = -3
+        scene.add(line);
+    }
+    function lod() {
+
+        // LOD - это подгрузчик моделей. Очень нужная вещь когда в цене много моделей, чтоб при отдалений заменялись на lowpoly
+        // Техналогия в играх. Пример - warthunder, далеко летим low модели погружены, подходим средние модели подгрузились, близко подходим highpoly модель подгрузилась со своими соотвественно текстурами
+        var lod = new THREE.LOD();
+        // св: level - главная вещь lod. В нем храниться дитанция и модель.
+
+        let box1 = new THREE.IcosahedronBufferGeometry(2, 2);
+        let material1 = new THREE.MeshStandardMaterial({ color: 0x8FBCD4 });
+        let mesh1 = new THREE.Mesh(box1, material1);
+        lod.addLevel(mesh1, 20);
+
+        let box2 = new THREE.IcosahedronBufferGeometry(2, 4);
+        let material2 = new THREE.MeshStandardMaterial({ color: 0x8FBCD4 });
+        let mesh2 = new THREE.Mesh(box2, material2);
+        lod.addLevel(mesh2, 10);
+
+        console.log(lod.getCurrentLevel()); // Получить текущий уровень
+        console.log(lod.getObjectForDistance()); // Получить модлеь текущего уровня
+        scene.add(lod);
+    }
 
     //points();
     //line();
+    //lineLoop();
+    //lineSegments();
+    //lod();
 }
 
 function modelRender() {
