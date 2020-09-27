@@ -48,66 +48,102 @@ let raycaster = {
 function modelInit() {
 
     scene = new THREE.Scene();
+
+    // Прямая текстура. Обычная
+    //let textureLoader = new THREE.TextureLoader();
+    //var map = textureLoader.load('/models/textures/brick/map.jpg', undefined, undefined, error => onError(error));
+    //map.anisotropy = 8;
+
+    // Cоздаеться куб. Подходитт для env
+    /*var loader = new THREE.CubeTextureLoader();
+    loader.setPath( '/models/textures/brick/' );
+    var map = loader.load( [
+        'map.jpg', 'map.jpg',
+        'map.jpg', 'map.jpg',
+        'map.jpg', 'map.jpg'
+    ] );
+
+    scene.background = map;*/
+
     //scene.background = new THREE.Color('skyblue');
+    //scene.fog = new THREE.Fog(0x666666, 1, 60); // Туман которая будет усиливаться с растоянием. Задаем растояние по нему будет работать туман
+    //scene.fog = new THREE.FogExp2(0x666666, 0.2); // Этот туман зависит от камеры. Задаем плотность тумана. Подходит для игр.
 }
 
 function modelLight() {
 
     function room_lightes() {
+
         // --> Прямой источник света
-        light.directLight = new THREE.DirectionalLight(0xffffff, 5.0);
-        light.directLight.position.set(1, 10, 10);
+        function direct() {
+            light.directLight = new THREE.DirectionalLight(0xffffff, 5.0);
+            light.directLight.position.set(1, 10, 10);
+        }
 
         // --> Окружающий источник света
-        light.lightAmb = new THREE.AmbientLight(0xffffff, 0.8);
-        light.lightAmb.position.set(0, 2.7, 0);
-        scene.add(light.lightAmb);
+        function amb() {
+            light.lightAmb = new THREE.AmbientLight(0xffffff, 0.8);
+            light.lightAmb.position.set(0, 2.7, 0);
+            scene.add(light.lightAmb);
+        }
 
         // --> Сферический источник света
-        light.sphereLight = new THREE.HemisphereLight(
-            0xddeeff,
-            0x202020,
-            5,
-        );
-        light.sphereLight.position.set(5, 10, 5);
+        function sphere() {
+            light.sphereLight = new THREE.HemisphereLight(
+                0xddeeff,
+                0x202020,
+                5,
+            );
+            light.sphereLight.position.set(5, 10, 5);
+        }
 
         // --> Прямоуголный источник света
-        let width = 3.2;
-        let height = 2.33;
-        let intensity = 8;
+        function area() {
+            let width = 3.2;
+            let height = 2.33;
+            let intensity = 8;
 
-        RectAreaLightUniformsLib.init();
-        let rectLight = new THREE.RectAreaLight(0xffffff, intensity,  width, height);
-        rectLight.position.set(5.5, 1.85, -2.05);
-        rectLight.rotation.y = THREE.Math.degToRad(90);
-        scene.add(rectLight);
+            RectAreaLightUniformsLib.init();
+            let rectLight = new THREE.RectAreaLight(0xffffff, intensity, width, height);
+            rectLight.position.set(5.5, 1.85, -2.05);
+            rectLight.rotation.y = THREE.Math.degToRad(90);
+            scene.add(rectLight);
 
-        var rectLightMesh = new THREE.Mesh(new THREE.PlaneBufferGeometry(), new THREE.MeshStandardMaterial({
-            color: 0xefedfe,
-            side: THREE.BackSide,
-            emissive: 0xd5d4e2,
-        }));
-        rectLightMesh.scale.x = rectLight.width;
-        rectLightMesh.scale.y = rectLight.height;
-        rectLight.add( rectLightMesh );
+            var rectLightMesh = new THREE.Mesh(new THREE.PlaneBufferGeometry(), new THREE.MeshStandardMaterial({
+                color: 0xefedfe,
+                side: THREE.BackSide,
+                emissive: 0xd5d4e2,
+            }));
+            rectLightMesh.scale.x = rectLight.width;
+            rectLightMesh.scale.y = rectLight.height;
+            rectLight.add(rectLightMesh);
+        }
 
         // --> Прожекторный свет
-        let spotblue_intensity = 6.7;
-        var spotLight_blue = new THREE.SpotLight(0x73b0ed, spotblue_intensity);
-        spotLight_blue.position.set(-5.46, 3.555, -4.2);
-        scene.add(spotLight_blue);
+        function spots() {
+            let spotblue_intensity = 6.7;
+            var spotLight_blue = new THREE.SpotLight(0x73b0ed, spotblue_intensity);
+            spotLight_blue.position.set(-5.46, 3.555, -4.2);
+            scene.add(spotLight_blue);
 
-        var spotLight_blueMesh = new THREE.Mesh(new THREE.SphereBufferGeometry(0.07, 8, 8), new THREE.MeshBasicMaterial());
-        spotLight_blue.add(spotLight_blueMesh);
+            var spotLight_blueMesh = new THREE.Mesh(new THREE.SphereBufferGeometry(0.07, 8, 8), new THREE.MeshBasicMaterial());
+            spotLight_blue.add(spotLight_blueMesh);
 
-        let spotpink_intensity = 4;
-        var spotLight_pink = new THREE.SpotLight(0xffdcfd, spotpink_intensity);
-        spotLight_pink.position.set(4.545, 3.43, 4.57);
-        spotLight_pink.rotation.y = THREE.Math.degToRad(60);
-        scene.add(spotLight_pink);
+            let spotpink_intensity = 4;
+            var spotLight_pink = new THREE.SpotLight(0xffdcfd, spotpink_intensity);
+            spotLight_pink.position.set(4.545, 3.43, 4.57);
+            spotLight_pink.rotation.y = THREE.Math.degToRad(60);
+            scene.add(spotLight_pink);
 
-        var spotLight_pinkMesh = new THREE.Mesh(new THREE.SphereBufferGeometry(0.07, 8, 8), new THREE.MeshBasicMaterial());
-        spotLight_pink.add(spotLight_pinkMesh);
+            var spotLight_pinkMesh = new THREE.Mesh(new THREE.SphereBufferGeometry(0.07, 8, 8), new THREE.MeshBasicMaterial());
+            spotLight_pink.add(spotLight_pinkMesh);
+        }
+
+        amb();
+        direct();
+        sphere();
+        area();
+        spots();
     }
     function test_lightes() {
 
@@ -734,14 +770,27 @@ function loadModel() {
             metalnessmap.flipY = false;
         }
 
-        let specularmap = null; // Уровень металичности материала. Применяем его если у нас есть метал.
+        let specular = 0x111111;
+        if(typeof map['specular'] !== "undefined") {
+            specular = map.specular;
+        }
+
+        let specularmap = null;
         if(typeof map['specularmap'] !== "undefined") {
-            specularmap = textureLoader.load(map.metalnessmap, undefined, undefined, error => onError(error));
+            specularmap = textureLoader.load(map.specularmap, undefined, undefined, error => onError(error));
             specularmap.encoding = THREE.sRGBEncoding;
             specularmap.anisotropy = 8; // Четкость
             specularmap.flipY = false;
         }
 
+        let matcap = null;
+        if(typeof map['matcap'] !== "undefined") {
+            matcap = textureLoader.load(map.matcap, undefined, undefined, error => onError(error));
+            matcap.encoding = THREE.sRGBEncoding;
+            matcap.anisotropy = 8;
+        }
+
+        // [full] [react-light] Cтандартный материал для большинство сцен
         if(material_type == 'standart') {
             return new THREE.MeshStandardMaterial({
                 color: color,
@@ -766,17 +815,76 @@ function loadModel() {
                 metalness: metalness,
                 metalnessMap: metalnessmap
             });
-        } else if(material_type == 'mesh') {
+        // [mini] [NO-react-light] Упращенный базовый материал не реагирующий на цвет. Подходит для теста и для простых сцен (возможно еще на элементы в заднем плане)
+        } else if(material_type == 'basic') {
             return new THREE.MeshBasicMaterial({
                 color: color,
                 map: bitmap,
+                aoMap: aomap,
+                aoMapIntensity: 1,
+                specularMap: lightmap
             });
+        // [full] [react-light] Материал хорошо подходящий для глянцевых, гладких, отражающих объектов
         } else if(material_type == 'pong') {
             return new THREE.MeshPhongMaterial({
-                specular: 0x222222,
-                shininess: 35,
-                map: map,
+                color: color,
+                map: bitmap,
+                aoMap: aomap,
+                aoMapIntensity: 1,
+                alphaMap: alphamap,
+                bumpMap: bumpmap,
+                bumpScale: 0.037,
+                //displacementMap: displacementmap,
+                displacementScale: 0.1,
+                displacementBias: 0,
+                emissive: emissive,
+                emissiveMap: emissivemap,
+                emissiveIntensity: 1,
+                //envMap: envmap
+                lightMap: lightmap,
+                lightMapIntensity: 1,
+                reflectivity: 1, // отражательность
+                shininess: 60, // сила блеска
+                specular: specular, // цвет блеска
                 specularMap: specularmap,
+                refractionRatio: refractionratio,
+            });
+        // [full] [react-light] Материал для матовых, шероховатых (камень, грубое дерево и так далее) поверхностей. Полный материал как Standard. Берет меншьше вычеслительной мощностий
+        } else if(material_type == 'lambert') {
+            return new THREE.MeshLambertMaterial({
+                color: color,
+                map: bitmap,
+                aoMap: aomap,
+                aoMapIntensity: 1,
+                emissive: emissive,
+                emissiveMap: emissivemap,
+                emissiveIntensity: 1,
+                lightMap: lightmap,
+                lightMapIntensity: 1,
+                refractionRatio: refractionratio,
+                specularMap: lightmap
+            });
+        // [mini] [NO-react-light] Материал где освещение задается ему вручную через текстуру - matcap.
+        } else if(material_type == 'matcup') {
+            return new THREE.MeshMatcapMaterial({
+                color: color,
+                map: bitmap,
+                matcap: matcap,
+                bumpMap: bumpmap,
+                bumpScale: 0.037,
+                //displacementMap: displacementmap,
+                displacementScale: 0.1,
+                displacementBias: 0,
+            });
+        // [mini] [react-light] [support] Вспомагательный материал которая позволяет визуально увидить normal от карт bump или normalmap
+        } else if(material_type == 'normal') {
+            return new THREE.MeshNormalMaterial({
+                matcap: matcap,
+                bumpMap: bumpmap,
+                bumpScale: 0.037,
+                //displacementMap: displacementmap,
+                displacementScale: 0.1,
+                displacementBias: 0,
             });
         }
     }
@@ -898,8 +1006,11 @@ function loadModel() {
                     'emissivemap': 'models/room/walls/textures/emissive.jpg',
                     'lightmap': 'models/room/walls/textures/light.jpg',
                     'roughnessmap': 'models/room/walls/textures/roughness.jpg',
+                    'matcap': 'models/textures/m_white.jpg',
+                    'specular': '0x666666',
+                    'specularmap': 'models/room/walls/textures/light.jpg',
                 }
-                let material = setmaterial(textures);
+                let material = setmaterial(textures, 'pong');
 
                 mesh = new THREE.Mesh(gltf.scene.children[1].geometry, material);
                 // Добавление 2 UV кординат. Правим с косяк aomap
@@ -1669,12 +1780,108 @@ function test_objects() {
         console.log(lod.getObjectForDistance()); // Получить модлеь текущего уровня
         scene.add(lod);
     }
+    function sprite() {
+
+        // Справйт - это объект как точка которая всегда смотрить в сторону камеры. В его материал вставляешь изображение и это изображение отобразиться на Sprite объекте
+        var spriteMap = new THREE.TextureLoader().load("/models/textures/flame.png");
+
+        var spriteMaterial = new THREE.SpriteMaterial({ map: spriteMap });
+        var sprite = new THREE.Sprite(spriteMaterial);
+        scene.add(sprite);
+    }
 
     //points();
     //line();
     //lineLoop();
     //lineSegments();
     //lod();
+    //sprite();
+}
+
+function print_scene() {
+
+    function create() {
+
+        var objects = [];
+
+        var rollOverGeo = new THREE.BoxBufferGeometry( 2, 2, 2 );
+        var rollOverMaterial = new THREE.MeshBasicMaterial( { color: 0xff0000, opacity: 0.5, transparent: true } );
+        var rollOverMesh = new THREE.Mesh( rollOverGeo, rollOverMaterial );
+        scene.add(rollOverMesh);
+
+        var cubeGeo = new THREE.BoxBufferGeometry( 2, 2, 2 );
+        var cubeMaterial = new THREE.MeshLambertMaterial( { color: 0xfeb74c, map: new THREE.TextureLoader().load('models/textures/brick/map.jpg' ) });
+
+        var geometry = new THREE.PlaneBufferGeometry( 1000, 1000 );
+        geometry.rotateX( - Math.PI / 2 );
+        var plane = new THREE.Mesh( geometry, new THREE.MeshBasicMaterial( { visible: false } ) );
+        scene.add(plane);
+        objects.push(plane);
+
+        var gridHelper = new THREE.GridHelper( 10, 5 );
+        scene.add(gridHelper);
+
+        var raycaster = new THREE.Raycaster();
+        var mouse = new THREE.Vector2();
+
+        document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+        document.addEventListener( 'mousedown', onDocumentMouseDown, false );
+
+        function onDocumentMouseMove( event ) {
+            event.preventDefault();
+
+            mouse.set( ( event.clientX / window.innerWidth ) * 2 - 1, - ( event.clientY / window.innerHeight ) * 2 + 1 );
+            raycaster.setFromCamera( mouse, camera.camera );
+
+            var intersects = raycaster.intersectObjects(objects);
+            if (intersects.length > 0) {
+                var intersect = intersects[0];
+                rollOverMesh.position.copy(intersect.point).add(intersect.face.normal);
+                rollOverMesh.position.divideScalar( 2 ).floor().multiplyScalar( 2 ).addScalar( 2 );
+            }
+        }
+
+        function onDocumentMouseDown( event ) {
+            event.preventDefault();
+            if(event.which == 3) {
+
+                mouse.set((event.clientX / window.innerWidth) * 2 - 1, -(event.clientY / window.innerHeight) * 2 + 1);
+                raycaster.setFromCamera(mouse, camera.camera);
+
+                var intersects = raycaster.intersectObjects(objects);
+                if (intersects.length > 0) {
+                    var intersect = intersects[0];
+
+                    var voxel = new THREE.Mesh(cubeGeo, cubeMaterial);
+                    voxel.position.copy(intersect.point).add(intersect.face.normal);
+                    voxel.position.divideScalar(2).floor().multiplyScalar(2).addScalar(2);
+                    scene.add(voxel);
+
+                    objects.push(voxel);
+                }
+            }
+        }
+    }
+
+    function drag() {
+
+        var planeGeometry = new THREE.PlaneBufferGeometry( 10, 10 );
+        planeGeometry.rotateX( - Math.PI / 2 );
+        var planeMaterial = new THREE.ShadowMaterial( { opacity: 0.2 } );
+        var plane = new THREE.Mesh( planeGeometry, planeMaterial );
+        plane.position.y = 0;
+        plane.receiveShadow = true;
+        scene.add( plane );
+
+        var helper = new THREE.GridHelper(10, 5);
+        helper.position.y = 0;
+        helper.material.opacity = 0.25;
+        helper.material.transparent = true;
+        scene.add(helper);
+    }
+
+    //create();
+    drag();
 }
 
 function modelRender() {
@@ -1716,6 +1923,7 @@ function play(type_camera) {
     test_core();
     //test_helpers();
     test_objects();
+    print_scene();
     modelRender();
 
     // Raycaster
