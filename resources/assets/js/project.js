@@ -5,6 +5,8 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { RectAreaLightUniformsLib } from 'three/examples/jsm/lights/RectAreaLightUniformsLib';
 import { RectAreaLightHelper } from 'three/examples/jsm/helpers/RectAreaLightHelper';
 import { MarchingCubes } from 'three/examples/jsm/objects/MarchingCubes';
+import { TransformControls } from 'three/examples/jsm/controls/TransformControls';
+import { DragControls } from 'three/examples/jsm/controls/DragControls';
 import { WEBGL } from './three/webTest';
 import {DirectGeometry, MeshBasicMaterial, MeshStandardMaterial} from "three";
 
@@ -1865,19 +1867,35 @@ function print_scene() {
 
     function drag() {
 
-        var planeGeometry = new THREE.PlaneBufferGeometry( 10, 10 );
-        planeGeometry.rotateX( - Math.PI / 2 );
-        var planeMaterial = new THREE.ShadowMaterial( { opacity: 0.2 } );
-        var plane = new THREE.Mesh( planeGeometry, planeMaterial );
-        plane.position.y = 0;
-        plane.receiveShadow = true;
-        scene.add( plane );
-
         var helper = new THREE.GridHelper(10, 5);
         helper.position.y = 0;
         helper.material.opacity = 0.25;
         helper.material.transparent = true;
         scene.add(helper);
+
+        var texture = new THREE.TextureLoader().load('models/textures/brick/map.jpg');
+        var material = new THREE.MeshLambertMaterial( { map: texture, transparent: true } );
+        var geometry = new THREE.BoxBufferGeometry( 2, 2, 2 );
+        var mesh = new THREE.Mesh(geometry, material);
+        scene.add(mesh);
+
+        // Transform
+        var control = new TransformControls(camera.camera, renderer.domElement);
+        control.setMode("translate");
+        control.addEventListener( 'dragging-changed', function ( event ) {
+            camera.controls.view.enabled = ! event.value
+        });
+
+        // Drag
+        var controls = new DragControls([mesh], camera.camera, renderer.domElement );
+        controls.enabled = false;
+        controls.addEventListener( 'hoveron', function ( event ) {
+            control.attach(mesh);
+            scene.add(control);
+        });
+        controls.addEventListener( 'hoveroff', function ( event ) {
+            control.detach(mesh);
+        });
     }
 
     //create();
@@ -1915,6 +1933,7 @@ function modelRender() {
 function play(type_camera) {
 
     modelInit();
+    modelRender();
     modelLight();
     modelCamera(type_camera);
     //modelObjects();
@@ -1924,7 +1943,6 @@ function play(type_camera) {
     //test_helpers();
     test_objects();
     print_scene();
-    modelRender();
 
     // Raycaster
     window.addEventListener('mousemove', function (e) {
