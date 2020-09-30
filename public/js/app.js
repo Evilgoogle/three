@@ -75032,6 +75032,311 @@ function test_objects() {
     //sprite();
 }
 
+function test_material() {
+
+    var setmaterial = function setmaterial(map, material_type) {
+        var onError = function onError(error) {
+            console.log(error);
+        };
+
+        var textureLoader = new __WEBPACK_IMPORTED_MODULE_0_three__["_54" /* TextureLoader */]();
+
+        var color = 0xffffff;
+        if (typeof map['color'] !== "undefined") {
+            color = map['color'];
+        }
+
+        var bitmap = null;
+        if (typeof map['map'] !== "undefined") {
+            bitmap = textureLoader.load(map.map, undefined, undefined, function (error) {
+                return onError(error);
+            });
+            bitmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_64" /* sRGBEncoding */];
+            bitmap.anisotropy = 8; // Четкость
+            bitmap.flipY = false;
+        }
+
+        var alphamap = null;
+        if (typeof map['alphamap'] !== "undefined") {
+            alphamap = textureLoader.load(map.alphamap, undefined, undefined, function (error) {
+                return onError(error);
+            });
+            alphamap.anisotropy = 8;
+        }
+
+        var aomap = null; // [Реализм] Симуляция затение. Указываем где затениние хорошо идет, где слабо (где свет блокируется поверхностью объекта). Через aoMapIntensity задаем интенсивность
+        if (typeof map['aomap'] !== "undefined") {
+            aomap = textureLoader.load(map.aomap, undefined, undefined, function (error) {
+                return onError(error);
+            });
+            aomap.format = __WEBPACK_IMPORTED_MODULE_0_three__["a" /* AlphaFormat */];
+            aomap.anisotropy = 8;
+            aomap.flipY = false;
+        }
+
+        var bumpmap = null; // [Реализм] Это карта рельефа работает только на освещение. Как в максе задает шереховатость поверхности. bumpScale указывает интенсивность
+        if (typeof map['bumpmap'] !== "undefined") {
+            bumpmap = textureLoader.load(map.bumpmap, undefined, undefined, function (error) {
+                return onError(error);
+            });
+            bumpmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["a" /* AlphaFormat */];
+            bumpmap.anisotropy = 8;
+            bumpmap.flipY = false;
+        }
+
+        var displacementmap = null; // Это displacement как в максе, действует на геометрию моделя. С ним я рисовал траву, жрет он много.
+        if (typeof map['displacementmap'] !== "undefined") {
+            displacementmap = textureLoader.load(map.displacementmap, undefined, undefined, function (error) {
+                return onError(error);
+            });
+            displacementmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["a" /* AlphaFormat */];
+            displacementmap.anisotropy = 8; // Четкость
+            displacementmap.flipY = false;
+        }
+
+        var emissive = 0x000000;
+        if (typeof map['emissive'] !== "undefined") {
+            emissive = map.emissive;
+        }
+
+        var emissivemap = null; // Самосветящаяся карта.
+        if (typeof map['emissivemap'] !== "undefined") {
+            emissivemap = textureLoader.load(map.emissivemap, undefined, undefined, function (error) {
+                return onError(error);
+            });
+            emissivemap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_64" /* sRGBEncoding */];
+            emissivemap.anisotropy = 8; // Четкость
+            emissivemap.flipY = false;
+        }
+
+        var envmap = null;
+        if (typeof map['envmap'] !== "undefined") {
+            envmap = textureLoader.load(map.envmap, undefined, undefined, function (error) {
+                return onError(error);
+            });
+            envmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_64" /* sRGBEncoding */];
+            envmap.anisotropy = 8; // Четкость
+            envmap.flipY = false;
+        }
+
+        var lightmap = null; // [Реализм] Симуляция освещенности поверхности. Указываем где освещение хорошо идет, где слабо. Через lightMapIntensity задаем интенсивность
+        if (typeof map['lightmap'] !== "undefined") {
+            lightmap = textureLoader.load(map.lightmap, undefined, undefined, function (error) {
+                return onError(error);
+            });
+            lightmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_64" /* sRGBEncoding */];
+            lightmap.anisotropy = 8; // Четкость
+            lightmap.flipY = false;
+        }
+
+        var roughness = 1; // Уровень шереховатестей поверхностя. Он зеркально гладкий, хорошо отражает свет или расеянный.
+        if (typeof map['roughness'] !== "undefined") {
+            roughness = map.roughness;
+        }
+
+        var roughnessmap = null;
+        if (typeof map['roughnessmap'] !== "undefined") {
+            roughnessmap = textureLoader.load(map.roughnessmap, undefined, undefined, function (error) {
+                return onError(error);
+            });
+            roughnessmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["a" /* AlphaFormat */];
+            roughnessmap.anisotropy = 8; // Четкость
+            roughnessmap.flipY = false;
+        }
+
+        var refractionratio = 0.98; // Уровень IOR
+        if (typeof map['refractionratio'] !== "undefined") {
+            refractionratio = map.refractionratio;
+        }
+
+        var metalness = 0; // Уровень металичности материала. Применяем его если у нас есть метал.
+        if (typeof map['metalness'] !== "undefined") {
+            metalness = map.metalness; // Нужен EquirectangularReflectionMapping
+        }
+
+        var metalnessmap = null; // Уровень металичности материала. Применяем его если у нас есть метал.
+        if (typeof map['metalnessmap'] !== "undefined") {
+            metalnessmap = textureLoader.load(map.metalnessmap, undefined, undefined, function (error) {
+                return onError(error);
+            });
+            metalnessmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_64" /* sRGBEncoding */];
+            metalnessmap.anisotropy = 8; // Четкость
+            metalnessmap.flipY = false;
+        }
+
+        var specular = 0x111111;
+        if (typeof map['specular'] !== "undefined") {
+            specular = map.specular;
+        }
+
+        var specularmap = null;
+        if (typeof map['specularmap'] !== "undefined") {
+            specularmap = textureLoader.load(map.specularmap, undefined, undefined, function (error) {
+                return onError(error);
+            });
+            specularmap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_64" /* sRGBEncoding */];
+            specularmap.anisotropy = 8; // Четкость
+            specularmap.flipY = false;
+        }
+
+        var matcap = null;
+        if (typeof map['matcap'] !== "undefined") {
+            matcap = textureLoader.load(map.matcap, undefined, undefined, function (error) {
+                return onError(error);
+            });
+            matcap.encoding = __WEBPACK_IMPORTED_MODULE_0_three__["_64" /* sRGBEncoding */];
+            matcap.anisotropy = 8;
+        }
+
+        // [full] [react-light] Cтандартный материал для большинство сцен
+        if (material_type == 'standard') {
+            return new __WEBPACK_IMPORTED_MODULE_0_three__["_12" /* MeshStandardMaterial */]({
+                color: color,
+                map: bitmap,
+                aoMap: aomap,
+                aoMapIntensity: 1,
+                alphaMap: alphamap,
+                bumpMap: bumpmap,
+                bumpScale: 0.037,
+                displacementMap: displacementmap,
+                displacementScale: 0.1,
+                displacementBias: 0,
+                emissive: emissive,
+                emissiveMap: emissivemap,
+                emissiveIntensity: 1,
+                envMap: envmap,
+                lightMap: lightmap,
+                lightMapIntensity: 1,
+                roughness: roughness,
+                roughnessMap: roughnessmap,
+                refractionRatio: refractionratio,
+                metalness: metalness,
+                metalnessMap: metalnessmap
+            });
+            // [mini] [NO-react-light] Упращенный базовый материал не реагирующий на цвет. Подходит для теста и для простых сцен (возможно еще на элементы в заднем плане)
+        } else if (material_type == 'pong') {
+            return new __WEBPACK_IMPORTED_MODULE_0_three__["_10" /* MeshPhongMaterial */]({
+                color: color,
+                map: bitmap,
+                aoMap: aomap,
+                aoMapIntensity: 1,
+                alphaMap: alphamap,
+                bumpMap: bumpmap,
+                bumpScale: 0.037,
+                displacementMap: displacementmap,
+                displacementScale: 0.1,
+                displacementBias: 0,
+                emissive: emissive,
+                emissiveMap: emissivemap,
+                emissiveIntensity: 1,
+                envMap: envmap,
+                lightMap: lightmap,
+                lightMapIntensity: 1,
+                reflectivity: 1, // отражательность
+                shininess: 60, // сила блеска
+                specular: specular, // цвет блеска
+                specularMap: specularmap,
+                refractionRatio: refractionratio
+            });
+            // [full] [react-light] Материал для матовых, шероховатых (камень, грубое дерево и так далее) поверхностей. Полный материал как Standard. Берет меншьше вычеслительной мощностий
+        } else if (material_type == 'lambert') {
+            return new __WEBPACK_IMPORTED_MODULE_0_three__["_7" /* MeshLambertMaterial */]({
+                color: color,
+                map: bitmap,
+                aoMap: aomap,
+                aoMapIntensity: 1,
+                emissive: emissive,
+                emissiveMap: emissivemap,
+                emissiveIntensity: 1,
+                lightMap: lightmap,
+                lightMapIntensity: 1,
+                refractionRatio: refractionratio,
+                specularMap: lightmap
+            });
+        }
+    };
+
+    var objects = ['asphalt', 'brick', 'jeans', 'laminat', 'metal', 'pic'];
+    var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["_46" /* SphereBufferGeometry */](1.2, 48, 48);
+    var group = new __WEBPACK_IMPORTED_MODULE_0_three__["F" /* Group */]();
+    function phong() {
+
+        var i = 0;
+        for (var key in objects) {
+
+            var textures = {
+                'map': 'models/textures/' + objects[key] + '/map.jpg',
+                'bumpmap': 'models/textures/' + objects[key] + '/bump.jpg',
+                'aomap': 'models/textures/' + objects[key] + '/ao.jpg',
+                'emissivemap': 'models/textures/' + objects[key] + '/emissive.jpg',
+                'lightmap': 'models/textures/' + objects[key] + '/light.jpg',
+                'specular': '0x666666',
+                'specularmap': 'models/textures/' + objects[key] + '/light.jpg'
+            };
+            var material = setmaterial(textures, 'pong');
+            var _mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["_5" /* Mesh */](geometry, material);
+            _mesh.position.set(-6, 0, i);
+
+            group.add(_mesh);
+
+            i = i - 3;
+        }
+    }
+    function mesh() {
+
+        var i = 0;
+        for (var key in objects) {
+
+            var textures = {
+                'map': 'models/textures/' + objects[key] + '/map.jpg',
+                'bumpmap': 'models/textures/' + objects[key] + '/bump.jpg',
+                'aomap': 'models/textures/' + objects[key] + '/ao.jpg',
+                'emissivemap': 'models/textures/' + objects[key] + '/emissive.jpg',
+                'lightmap': 'models/textures/' + objects[key] + '/light.jpg',
+                'roughnessmap': 'models/textures/' + objects[key] + '/roughness.jpg'
+                //'specularmap': 'models/room/walls/textures/light.jpg',
+            };
+            var material = setmaterial(textures, 'standard');
+            var _mesh2 = new __WEBPACK_IMPORTED_MODULE_0_three__["_5" /* Mesh */](geometry, material);
+            _mesh2.position.set(-3, 0, i);
+
+            group.add(_mesh2);
+
+            i = i - 3;
+        }
+    }
+    function lambert() {
+
+        var i = 0;
+        for (var key in objects) {
+            var textures = {
+                'map': 'models/textures/' + objects[key] + '/map.jpg',
+                'bumpmap': 'models/room/walls/textures/bump.jpg',
+                'aomap': 'models/room/walls/textures/ao.jpg',
+                'emissivemap': 'models/room/walls/textures/emissive.jpg',
+                'lightmap': 'models/room/walls/textures/light.jpg',
+                'specular': '0x666666',
+                'specularmap': 'models/room/walls/textures/light.jpg'
+            };
+            var material = setmaterial(textures, 'lambert');
+            var _mesh3 = new __WEBPACK_IMPORTED_MODULE_0_three__["_5" /* Mesh */](geometry, material);
+            _mesh3.position.set(0, 0, i);
+
+            group.add(_mesh3);
+
+            i = i - 3;
+        }
+    }
+
+    phong();
+    mesh();
+    lambert();
+
+    group.position.set(45, 0, -2);
+    group.rotation.y = __WEBPACK_IMPORTED_MODULE_0_three__["_2" /* Math */].degToRad(90);
+    scene.add(group);
+}
+
 function print_scene() {
 
     function create() {
@@ -75131,7 +75436,7 @@ function print_scene() {
     }
 
     //create();
-    drag();
+    //drag();
 }
 
 function modelRender() {
@@ -75173,7 +75478,8 @@ function play(type_camera) {
     test_math();
     test_core();
     //test_helpers();
-    test_objects();
+    //test_objects();
+    test_material();
     print_scene();
 
     // Raycaster
