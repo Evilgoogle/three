@@ -1995,7 +1995,35 @@ function test_material() {
                 lightMap: lightmap,
                 lightMapIntensity: 1,
                 refractionRatio: refractionratio,
-                specularMap: lightmap
+                specularMap: specularmap
+            });
+        } else if(material_type == 'physical') {
+            return new THREE.MeshPhysicalMaterial({
+                color: color,
+                map: bitmap,
+                aoMap: aomap,
+                aoMapIntensity: 1,
+                alphaMap: alphamap,
+                bumpMap: bumpmap,
+                bumpScale: 0.037,
+                displacementMap: displacementmap,
+                displacementScale: 0.1,
+                displacementBias: 0,
+                emissive: emissive,
+                emissiveMap: emissivemap,
+                emissiveIntensity: 1,
+                envMap: envmap,
+                lightMap: lightmap,
+                lightMapIntensity: 1,
+                roughness: roughness,
+                roughnessMap: roughnessmap,
+                refractionRatio: refractionratio,
+                metalness: metalness,
+                metalnessMap: metalnessmap,
+
+                clearcoat: 0.4,
+                clearcoatRoughness: 0.98,
+                reflectivity: 1,
             });
         }
     }
@@ -2010,12 +2038,13 @@ function test_material() {
 
             let textures = {
                 'map': 'models/textures/'+objects[key]+'/map.jpg',
-                'bumpmap': 'models/textures/'+objects[key]+'/bump.jpg',
-                'aomap': 'models/textures/'+objects[key]+'/ao.jpg',
-                'emissivemap': 'models/textures/'+objects[key]+'/emissive.jpg',
-                'lightmap': 'models/textures/'+objects[key]+'/light.jpg',
-                'specular': '0x666666',
-                'specularmap': 'models/textures/'+objects[key]+'/light.jpg',
+                'alphamap': 'models/textures/'+objects[key]+'/alphamap.jpg',
+                'bumpmap': 'models/textures/'+objects[key]+'/bumpmap.jpg',
+                'aomap': 'models/textures/'+objects[key]+'/aomap.jpg',
+                'emissivemap': 'models/textures/'+objects[key]+'/emissivemap.jpg',
+                'lightmap': 'models/textures/'+objects[key]+'/lightmap.jpg',
+                //'specular': '0x666666',
+                'specularmap': 'models/textures/'+objects[key]+'/specularmap.jpg',
             }
             let material = setmaterial(textures, 'pong');
             let mesh = new THREE.Mesh(geometry, material);
@@ -2033,12 +2062,14 @@ function test_material() {
 
             let textures = {
                 'map': 'models/textures/'+objects[key]+'/map.jpg',
-                'bumpmap': 'models/textures/'+objects[key]+'/bump.jpg',
-                'aomap': 'models/textures/'+objects[key]+'/ao.jpg',
-                'emissivemap': 'models/textures/'+objects[key]+'/emissive.jpg',
-                'lightmap': 'models/textures/'+objects[key]+'/light.jpg',
-                'roughnessmap': 'models/textures/'+objects[key]+'/roughness.jpg',
-                //'specularmap': 'models/room/walls/textures/light.jpg',
+                'alphamap': 'models/textures/'+objects[key]+'/alphamap.jpg',
+                'bumpmap': 'models/textures/'+objects[key]+'/bumpmap.jpg',
+                'aomap': 'models/textures/'+objects[key]+'/aomap.jpg',
+                'emissivemap': 'models/textures/'+objects[key]+'/emissivemap.jpg',
+                'lightmap': 'models/textures/'+objects[key]+'/lightmap.jpg',
+                'roughnessmap': 'models/textures/'+objects[key]+'/roughnessmap.jpg',
+                'metalnessmap': 'models/textures/'+objects[key]+'/metalnessmap.jpg',
+                'roughness' : 0.6
             }
             let material = setmaterial(textures, 'standard');
             let mesh = new THREE.Mesh(geometry, material);
@@ -2055,12 +2086,13 @@ function test_material() {
         for(let key in objects) {
             let textures = {
                 'map': 'models/textures/'+objects[key]+'/map.jpg',
-                'bumpmap': 'models/room/walls/textures/bump.jpg',
-                'aomap': 'models/room/walls/textures/ao.jpg',
-                'emissivemap': 'models/room/walls/textures/emissive.jpg',
-                'lightmap': 'models/room/walls/textures/light.jpg',
+                'alphamap': 'models/textures/'+objects[key]+'/alphamap.jpg',
+                'bumpmap': 'models/textures/'+objects[key]+'/bumpmap.jpg',
+                'aomap': 'models/textures/'+objects[key]+'/aomap.jpg',
+                'emissivemap': 'models/textures/'+objects[key]+'/emissivemap.jpg',
+                'lightmap': 'models/textures/'+objects[key]+'/lightmap.jpg',
                 'specular': '0x666666',
-                'specularmap': 'models/room/walls/textures/light.jpg',
+                'specularmap': 'models/textures/'+objects[key]+'/specularmap.jpg',
             }
             let material = setmaterial(textures, 'lambert');
             let mesh = new THREE.Mesh(geometry, material);
@@ -2071,14 +2103,46 @@ function test_material() {
             i = i - 3;
         }
     }
+    function physical() {
+
+        let i = 0;
+        for(let key in objects) {
+            let textures = {
+                'map': 'models/textures/'+objects[key]+'/map.jpg',
+                'alphamap': 'models/textures/'+objects[key]+'/alphamap.jpg',
+                'bumpmap': 'models/textures/'+objects[key]+'/bumpmap.jpg',
+                'aomap': 'models/textures/'+objects[key]+'/aomap.jpg',
+                'emissivemap': 'models/textures/'+objects[key]+'/emissivemap.jpg',
+                'lightmap': 'models/textures/'+objects[key]+'/lightmap.jpg',
+                'roughnessmap': 'models/textures/'+objects[key]+'/roughnessmap.jpg',
+                'metalnessmap': 'models/textures/'+objects[key]+'/metalnessmap.jpg',
+                'roughness' : 0.6
+            }
+            let material = setmaterial(textures, 'physical');
+            let mesh = new THREE.Mesh(geometry, material);
+            mesh.position.set(-9, 0, i);
+
+            group.add(mesh);
+
+            i = i - 3;
+        }
+    }
 
     phong();
     mesh();
     lambert();
+    physical();
 
     group.position.set(45, 0, -2);
     group.rotation.y = THREE.Math.degToRad(90);
     scene.add(group);
+
+    let plane = new THREE.BoxBufferGeometry(55, 0.2, 15);
+    let plane_mat = new THREE.MeshStandardMaterial({ color: 0x666666 });
+    let plane_mesh = new THREE.Mesh(plane, plane_mat);
+    plane_mesh.position.set(35, -1.6, 0);
+    plane_mesh.receiveShadow = true;
+    scene.add(plane_mesh);
 }
 
 function print_scene() {
@@ -2120,7 +2184,7 @@ function print_scene() {
             if (intersects.length > 0) {
                 var intersect = intersects[0];
                 rollOverMesh.position.copy(intersect.point).add(intersect.face.normal);
-                rollOverMesh.position.divideScalar( 2 ).floor().multiplyScalar( 2 ).addScalar( 2 );
+                //rollOverMesh.position.divideScalar( 2 ).floor().multiplyScalar( 2 ).addScalar( 2 );
             }
         }
 
@@ -2137,7 +2201,7 @@ function print_scene() {
 
                     var voxel = new THREE.Mesh(cubeGeo, cubeMaterial);
                     voxel.position.copy(intersect.point).add(intersect.face.normal);
-                    voxel.position.divideScalar(2).floor().multiplyScalar(2).addScalar(2);
+                    //voxel.position.divideScalar(2).floor().multiplyScalar(2).addScalar(2);
                     scene.add(voxel);
 
                     objects.push(voxel);
@@ -2181,6 +2245,379 @@ function print_scene() {
 
     //create();
     //drag();
+    /*-----------------*/
+    // Packages
+    class Libs {
+
+        constructor(who, pick) {
+            this.who = who;
+            this.pick = pick;
+            this.setmaterial = function (map, material_type) {
+                const onError = (error) => {
+                    console.log(error);
+                };
+
+                let textureLoader = new THREE.TextureLoader();
+
+                let color = 0xffffff;
+                if(typeof map['color'] !== "undefined") {
+                    color = map['color'];
+                }
+
+                let bitmap = null;
+                if(typeof map['map'] !== "undefined") {
+                    bitmap = textureLoader.load(map.map, undefined, undefined, error => onError(error));
+                    bitmap.encoding = THREE.sRGBEncoding;
+                    bitmap.anisotropy = 8; // Четкость
+                    bitmap.flipY = false;
+                }
+
+                let alphamap = null;
+                if(typeof map['alphamap'] !== "undefined") {
+                    alphamap = textureLoader.load(map.alphamap, undefined, undefined, error => onError(error));
+                    alphamap.anisotropy = 8;
+                }
+
+                let aomap = null; // [Реализм] Симуляция затение. Указываем где затениние хорошо идет, где слабо (где свет блокируется поверхностью объекта). Через aoMapIntensity задаем интенсивность
+                if(typeof map['aomap'] !== "undefined") {
+                    aomap = textureLoader.load(map.aomap, undefined, undefined, error => onError(error));
+                    aomap.format = THREE.AlphaFormat;
+                    aomap.anisotropy = 8;
+                    aomap.flipY = false;
+                }
+
+                let bumpmap = null; // [Реализм] Это карта рельефа работает только на освещение. Как в максе задает шереховатость поверхности. bumpScale указывает интенсивность
+                if(typeof map['bumpmap'] !== "undefined") {
+                    bumpmap = textureLoader.load(map.bumpmap, undefined, undefined, error => onError(error));
+                    bumpmap.encoding = THREE.AlphaFormat;
+                    bumpmap.anisotropy = 8;
+                    bumpmap.flipY = false;
+                }
+
+                let displacementmap = null; // Это displacement как в максе, действует на геометрию моделя. С ним я рисовал траву, жрет он много.
+                if(typeof map['displacementmap'] !== "undefined") {
+                    displacementmap = textureLoader.load(map.displacementmap, undefined, undefined, error => onError(error));
+                    displacementmap.encoding = THREE.AlphaFormat;
+                    displacementmap.anisotropy = 8; // Четкость
+                    displacementmap.flipY = false;
+                }
+
+                let emissive = 0x000000;
+                if(typeof map['emissive'] !== "undefined") {
+                    emissive = map.emissive;
+                }
+
+                let emissivemap = null; // Самосветящаяся карта.
+                if(typeof map['emissivemap'] !== "undefined") {
+                    emissivemap = textureLoader.load(map.emissivemap, undefined, undefined, error => onError(error));
+                    emissivemap.encoding = THREE.sRGBEncoding;
+                    emissivemap.anisotropy = 8; // Четкость
+                    emissivemap.flipY = false;
+                }
+
+                let envmap = null
+                if(typeof map['envmap'] !== "undefined") {
+                    envmap = textureLoader.load(map.envmap, undefined, undefined, error => onError(error));
+                    envmap.encoding = THREE.sRGBEncoding;
+                    envmap.anisotropy = 8; // Четкость
+                    envmap.flipY = false;
+                }
+
+                let lightmap = null; // [Реализм] Симуляция освещенности поверхности. Указываем где освещение хорошо идет, где слабо. Через lightMapIntensity задаем интенсивность
+                if(typeof map['lightmap'] !== "undefined") {
+                    lightmap = textureLoader.load(map.lightmap, undefined, undefined, error => onError(error));
+                    lightmap.encoding = THREE.sRGBEncoding;
+                    lightmap.anisotropy = 8; // Четкость
+                    lightmap.flipY = false;
+                }
+
+                let roughness = 1; // Уровень шереховатестей поверхностя. Он зеркально гладкий, хорошо отражает свет или расеянный.
+                if(typeof map['roughness'] !== "undefined") {
+                    roughness = map.roughness;
+                }
+
+                let roughnessmap = null;
+                if(typeof map['roughnessmap'] !== "undefined") {
+                    roughnessmap = textureLoader.load(map.roughnessmap, undefined, undefined, error => onError(error));
+                    roughnessmap.encoding = THREE.AlphaFormat;
+                    roughnessmap.anisotropy = 8; // Четкость
+                    roughnessmap.flipY = false;
+                }
+
+                let refractionratio = 0.98; // Уровень IOR
+                if(typeof map['refractionratio'] !== "undefined") {
+                    refractionratio = map.refractionratio;
+                }
+
+                let metalness = 0; // Уровень металичности материала. Применяем его если у нас есть метал.
+                if(typeof map['metalness'] !== "undefined") {
+                    metalness = map.metalness; // Нужен EquirectangularReflectionMapping
+                }
+
+                let metalnessmap = null; // Уровень металичности материала. Применяем его если у нас есть метал.
+                if(typeof map['metalnessmap'] !== "undefined") {
+                    metalnessmap = textureLoader.load(map.metalnessmap, undefined, undefined, error => onError(error));
+                    metalnessmap.encoding = THREE.sRGBEncoding;
+                    metalnessmap.anisotropy = 8; // Четкость
+                    metalnessmap.flipY = false;
+                }
+
+                let specular = 0x111111;
+                if(typeof map['specular'] !== "undefined") {
+                    specular = map.specular;
+                }
+
+                let specularmap = null;
+                if(typeof map['specularmap'] !== "undefined") {
+                    specularmap = textureLoader.load(map.specularmap, undefined, undefined, error => onError(error));
+                    specularmap.encoding = THREE.sRGBEncoding;
+                    specularmap.anisotropy = 8; // Четкость
+                    specularmap.flipY = false;
+                }
+
+                let matcap = null;
+                if(typeof map['matcap'] !== "undefined") {
+                    matcap = textureLoader.load(map.matcap, undefined, undefined, error => onError(error));
+                    matcap.encoding = THREE.sRGBEncoding;
+                    matcap.anisotropy = 8;
+                }
+
+                // [full] [react-light] Cтандартный материал для большинство сцен
+                if(material_type == 'standard') {
+                    return new THREE.MeshStandardMaterial({
+                        color: color,
+                        map: bitmap,
+                        aoMap: aomap,
+                        aoMapIntensity: 1,
+                        alphaMap: alphamap,
+                        bumpMap: bumpmap,
+                        bumpScale: 0.037,
+                        displacementMap: displacementmap,
+                        displacementScale: 0.1,
+                        displacementBias: 0,
+                        emissive: emissive,
+                        emissiveMap: emissivemap,
+                        emissiveIntensity: 1,
+                        envMap: envmap,
+                        lightMap: lightmap,
+                        lightMapIntensity: 1,
+                        roughness: roughness,
+                        roughnessMap: roughnessmap,
+                        refractionRatio: refractionratio,
+                        metalness: metalness,
+                        metalnessMap: metalnessmap
+                    });
+                    // [mini] [NO-react-light] Упращенный базовый материал не реагирующий на цвет. Подходит для теста и для простых сцен (возможно еще на элементы в заднем плане)
+                } else if(material_type == 'pong') {
+                    return new THREE.MeshPhongMaterial({
+                        color: color,
+                        map: bitmap,
+                        aoMap: aomap,
+                        aoMapIntensity: 1,
+                        alphaMap: alphamap,
+                        bumpMap: bumpmap,
+                        bumpScale: 0.037,
+                        displacementMap: displacementmap,
+                        displacementScale: 0.1,
+                        displacementBias: 0,
+                        emissive: emissive,
+                        emissiveMap: emissivemap,
+                        emissiveIntensity: 1,
+                        envMap: envmap,
+                        lightMap: lightmap,
+                        lightMapIntensity: 1,
+                        reflectivity: 1, // отражательность
+                        shininess: 60, // сила блеска
+                        specular: specular, // цвет блеска
+                        specularMap: specularmap,
+                        refractionRatio: refractionratio
+                    });
+                    // [full] [react-light] Материал для матовых, шероховатых (камень, грубое дерево и так далее) поверхностей. Полный материал как Standard. Берет меншьше вычеслительной мощностий
+                } else if(material_type == 'lambert') {
+                    return new THREE.MeshLambertMaterial({
+                        color: color,
+                        map: bitmap,
+                        aoMap: aomap,
+                        aoMapIntensity: 1,
+                        emissive: emissive,
+                        emissiveMap: emissivemap,
+                        emissiveIntensity: 1,
+                        lightMap: lightmap,
+                        lightMapIntensity: 1,
+                        refractionRatio: refractionratio,
+                        specularMap: specularmap
+                    });
+                } else if(material_type == 'physical') {
+                    return new THREE.MeshPhysicalMaterial({
+                        color: color,
+                        map: bitmap,
+                        aoMap: aomap,
+                        aoMapIntensity: 1,
+                        alphaMap: alphamap,
+                        bumpMap: bumpmap,
+                        bumpScale: 0.037,
+                        displacementMap: displacementmap,
+                        displacementScale: 0.1,
+                        displacementBias: 0,
+                        emissive: emissive,
+                        emissiveMap: emissivemap,
+                        emissiveIntensity: 1,
+                        envMap: envmap,
+                        lightMap: lightmap,
+                        lightMapIntensity: 1,
+                        roughness: roughness,
+                        roughnessMap: roughnessmap,
+                        refractionRatio: refractionratio,
+                        metalness: metalness,
+                        metalnessMap: metalnessmap,
+
+                        clearcoat: 0.4,
+                        clearcoatRoughness: 0.98,
+                        reflectivity: 1,
+                    });
+                }
+            }
+        }
+
+        init() {
+            if(this.who == 'model') {
+                return this._model();
+            } else if(this.who == 'light') {
+                return this._light();
+            }
+        }
+
+        _model() {
+            let geometry, roll_m, mesh_m;
+            if(this.pick == 'cube_brick') {
+                geometry = new THREE.BoxBufferGeometry(2, 2, 2);
+                roll_m = new THREE.MeshBasicMaterial({ color: 0xff0000, opacity: 0.3, transparent: true });
+                let textures = {
+                    'map': 'models/textures/brick/map.jpg',
+                    'alphamap': 'models/textures/brick/alphamap.jpg',
+                    'bumpmap': 'models/textures/brick/bumpmap.jpg',
+                    'aomap': 'models/textures/brick/aomap.jpg',
+                    'emissivemap': 'models/textures/brick/emissivemap.jpg',
+                    'lightmap': 'models/textures/brick/lightmap.jpg',
+                    'roughnessmap': 'models/textures/brick/roughnessmap.jpg',
+                    'metalnessmap': 'models/textures/brick/metalnessmap.jpg',
+                    'roughness': 0.6
+                }
+                mesh_m = this.setmaterial(textures, 'standard');
+            } else if(this.pick == 'schere_plastic') {
+                geometry = new THREE.IcosahedronBufferGeometry(2, 3);
+                roll_m = new THREE.MeshBasicMaterial({ color: 0xff0000, opacity: 0.3, transparent: true });
+
+                let textures = {
+                    'color': 0xff0000,
+                    'metalness': 0,
+                    'roughness': 0.8
+                }
+                mesh_m = this.setmaterial(textures, 'standard');
+            }
+            if(this.pick !== undefined) {
+                return {
+                    'roll': new THREE.Mesh(geometry, roll_m),
+                    'mesh': new THREE.Mesh(geometry, mesh_m)
+                }
+            }
+        }
+
+        _light() {
+        }
+    }
+    class Insert {
+
+        constructor(picking, objects) {
+            this.picking = picking;
+            this.objects = objects;
+
+            this.raycaster = {
+                'caster': this.raycaster = new THREE.Raycaster(),
+                'mouse': this.mouse = new THREE.Vector2()
+            }
+            this.events = {
+                'onDocumentMouseMove': null,
+                'onDocumentMouseDown': null,
+            }
+        }
+
+        _events() {
+            let objects = this.objects;
+            let raycaster = this.raycaster.caster;
+            let mouse = this.raycaster.mouse;
+            let roll = this.picking.roll;
+            let mesh = this.picking.mesh;
+            let insert = this._insert;
+            let events = this.events;
+
+            this.events.onDocumentMouseMove = function onDocumentMouseMove(event) {
+                event.preventDefault();
+                mouse.set((event.clientX / window.innerWidth) * 2 - 1, - (event.clientY / window.innerHeight) * 2 + 1);
+                raycaster.setFromCamera(mouse, camera.camera);
+
+                let intersects = raycaster.intersectObjects(objects);
+                if (intersects.length > 0) {
+                    let intersect = intersects[0];
+                    roll.position.copy(intersect.point).add(intersect.face.normal);
+                }
+            }
+
+            this.events.onDocumentMouseDown = function onDocumentMouseDown(event) {
+                event.preventDefault();
+                if(event.which == 3) {
+
+                    mouse.set((event.clientX / window.innerWidth) * 2 - 1, -(event.clientY / window.innerHeight) * 2 + 1);
+                    raycaster.setFromCamera(mouse, camera.camera);
+
+                    var intersects = raycaster.intersectObjects(objects);
+                    if (intersects.length > 0) {
+                        var intersect = intersects[0];
+
+                        mesh.position.copy(intersect.point).add(intersect.face.normal);
+                        insert(mesh, roll, events);
+                    }
+                }
+            }
+
+            document.addEventListener('mousemove', this.events.onDocumentMouseMove, false);
+            document.addEventListener('mousedown', this.events.onDocumentMouseDown, false);
+        }
+
+        init() {
+            this.picking.roll.position.set(camera.camera.getWorldDirection());
+            scene.add(this.picking.roll);
+            this._events();
+        }
+
+        _insert(mesh, roll, events) {
+
+            scene.add(mesh);
+            objects.push(mesh);
+
+            scene.remove(roll);
+            document.removeEventListener('mousemove', events.onDocumentMouseMove, false);
+            document.removeEventListener('mousedown', events.onDocumentMouseDown, false);
+        }
+    }
+
+    // Start
+    let objects = [];
+
+    var geometry = new THREE.PlaneBufferGeometry( 1000, 1000 );
+    geometry.rotateX(- Math.PI / 2);
+    var plane = new THREE.Mesh(geometry, new THREE.MeshBasicMaterial({ visible: false }));
+    scene.add(plane);
+    objects.push(plane);
+
+    $('.js_print_add').click(function () {
+
+        let libs = new Libs('model', $(this).data('id'));
+        let picking = libs.init();
+
+        let model = new Insert(picking, objects);
+        model.init();
+    });
 }
 
 function modelRender() {
@@ -2223,7 +2660,7 @@ function play(type_camera) {
     test_core();
     //test_helpers();
     //test_objects();
-    test_material();
+    //test_material();
     print_scene();
 
     // Raycaster

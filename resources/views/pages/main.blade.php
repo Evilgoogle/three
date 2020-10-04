@@ -2,7 +2,19 @@
 
 @section('app_content')
 
-    <div id="scene_container"></div>
+    <div class="gaming">
+        <div id="scene_container"></div>
+        <div class="panel">
+            <button class="js_print_add" data-id="cube_brick">
+                <img src="">
+                <p>Куб кирпич</p>
+            </button>
+            <button class="js_print_add" data-id="schere_plastic">
+                <img src="">
+                <p>Шар пластик</p>
+            </button>
+        </div>
+    </div>
     <div class="scene_method">
         <div class="box">
             <div class="title">3D room</div>
