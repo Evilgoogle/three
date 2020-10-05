@@ -2147,105 +2147,6 @@ function test_material() {
 
 function print_scene() {
 
-    function create() {
-
-        var objects = [];
-
-        var rollOverGeo = new THREE.BoxBufferGeometry( 2, 2, 2 );
-        var rollOverMaterial = new THREE.MeshBasicMaterial( { color: 0xff0000, opacity: 0.5, transparent: true } );
-        var rollOverMesh = new THREE.Mesh( rollOverGeo, rollOverMaterial );
-        scene.add(rollOverMesh);
-
-        var cubeGeo = new THREE.BoxBufferGeometry( 2, 2, 2 );
-        var cubeMaterial = new THREE.MeshLambertMaterial( { color: 0xfeb74c, map: new THREE.TextureLoader().load('models/textures/brick/map.jpg' ) });
-
-        var geometry = new THREE.PlaneBufferGeometry( 1000, 1000 );
-        geometry.rotateX( - Math.PI / 2 );
-        var plane = new THREE.Mesh( geometry, new THREE.MeshBasicMaterial( { visible: false } ) );
-        scene.add(plane);
-        objects.push(plane);
-
-        var gridHelper = new THREE.GridHelper( 10, 5 );
-        scene.add(gridHelper);
-
-        var raycaster = new THREE.Raycaster();
-        var mouse = new THREE.Vector2();
-
-        document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-        document.addEventListener( 'mousedown', onDocumentMouseDown, false );
-
-        function onDocumentMouseMove( event ) {
-            event.preventDefault();
-
-            mouse.set( ( event.clientX / window.innerWidth ) * 2 - 1, - ( event.clientY / window.innerHeight ) * 2 + 1 );
-            raycaster.setFromCamera( mouse, camera.camera );
-
-            var intersects = raycaster.intersectObjects(objects);
-            if (intersects.length > 0) {
-                var intersect = intersects[0];
-                rollOverMesh.position.copy(intersect.point).add(intersect.face.normal);
-                //rollOverMesh.position.divideScalar( 2 ).floor().multiplyScalar( 2 ).addScalar( 2 );
-            }
-        }
-
-        function onDocumentMouseDown( event ) {
-            event.preventDefault();
-            if(event.which == 3) {
-
-                mouse.set((event.clientX / window.innerWidth) * 2 - 1, -(event.clientY / window.innerHeight) * 2 + 1);
-                raycaster.setFromCamera(mouse, camera.camera);
-
-                var intersects = raycaster.intersectObjects(objects);
-                if (intersects.length > 0) {
-                    var intersect = intersects[0];
-
-                    var voxel = new THREE.Mesh(cubeGeo, cubeMaterial);
-                    voxel.position.copy(intersect.point).add(intersect.face.normal);
-                    //voxel.position.divideScalar(2).floor().multiplyScalar(2).addScalar(2);
-                    scene.add(voxel);
-
-                    objects.push(voxel);
-                }
-            }
-        }
-    }
-
-    function drag() {
-
-        var helper = new THREE.GridHelper(10, 5);
-        helper.position.y = 0;
-        helper.material.opacity = 0.25;
-        helper.material.transparent = true;
-        scene.add(helper);
-
-        var texture = new THREE.TextureLoader().load('models/textures/brick/map.jpg');
-        var material = new THREE.MeshLambertMaterial( { map: texture, transparent: true } );
-        var geometry = new THREE.BoxBufferGeometry( 2, 2, 2 );
-        var mesh = new THREE.Mesh(geometry, material);
-        scene.add(mesh);
-
-        // Transform
-        var control = new TransformControls(camera.camera, renderer.domElement);
-        control.setMode("translate");
-        control.addEventListener( 'dragging-changed', function ( event ) {
-            camera.controls.view.enabled = ! event.value
-        });
-
-        // Drag
-        var controls = new DragControls([mesh], camera.camera, renderer.domElement );
-        controls.enabled = false;
-        controls.addEventListener( 'hoveron', function ( event ) {
-            control.attach(mesh);
-            scene.add(control);
-        });
-        controls.addEventListener( 'hoveroff', function ( event ) {
-            control.detach(mesh);
-        });
-    }
-
-    //create();
-    //drag();
-    /*-----------------*/
     // Packages
     class Libs {
 
@@ -2600,23 +2501,50 @@ function print_scene() {
             document.removeEventListener('mousedown', events.onDocumentMouseDown, false);
         }
     }
+    class Drag {
+
+        constructor(objects) {
+            this.transform = new TransformControls(camera.camera, renderer.domElement);
+            this.drag = new DragControls(objects, camera.camera, renderer.domElement );
+        }
+
+        init() {
+            this.transform.setMode("translate");
+            this.transform.addEventListener('dragging-changed', function (event) {
+                camera.controls.view.enabled = !event.value
+            });
+
+            let transform = this.transform;
+            this.drag.enabled = false;
+            this.drag.addEventListener('dragstart', function (event) {
+                if(event.object.name != 'dummy') {
+                    transform.attach(event.object);
+                    scene.add(transform);
+                } else {
+                    transform.detach();
+                }
+            });
+        }
+    }
 
     // Start
     let objects = [];
 
-    var geometry = new THREE.PlaneBufferGeometry( 1000, 1000 );
-    geometry.rotateX(- Math.PI / 2);
-    var plane = new THREE.Mesh(geometry, new THREE.MeshBasicMaterial({ visible: false }));
+    let geometry = new THREE.PlaneBufferGeometry( 1000, 1000 ); geometry.rotateX(- Math.PI / 2);
+    let plane = new THREE.Mesh(geometry, new THREE.MeshBasicMaterial({ visible: false })); plane.name = 'dummy';
     scene.add(plane);
     objects.push(plane);
 
-    $('.js_print_add').click(function () {
+    let drag = new Drag(objects);
 
+    $('.js_print_add').click(function () {
         let libs = new Libs('model', $(this).data('id'));
         let picking = libs.init();
 
         let model = new Insert(picking, objects);
         model.init();
+
+        drag.init(objects);
     });
 }
 

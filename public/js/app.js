@@ -75407,107 +75407,7 @@ function test_material() {
 
 function print_scene() {
 
-    function create() {
-
-        var objects = [];
-
-        var rollOverGeo = new __WEBPACK_IMPORTED_MODULE_0_three__["j" /* BoxBufferGeometry */](2, 2, 2);
-        var rollOverMaterial = new __WEBPACK_IMPORTED_MODULE_0_three__["_6" /* MeshBasicMaterial */]({ color: 0xff0000, opacity: 0.5, transparent: true });
-        var rollOverMesh = new __WEBPACK_IMPORTED_MODULE_0_three__["_5" /* Mesh */](rollOverGeo, rollOverMaterial);
-        scene.add(rollOverMesh);
-
-        var cubeGeo = new __WEBPACK_IMPORTED_MODULE_0_three__["j" /* BoxBufferGeometry */](2, 2, 2);
-        var cubeMaterial = new __WEBPACK_IMPORTED_MODULE_0_three__["_7" /* MeshLambertMaterial */]({ color: 0xfeb74c, map: new __WEBPACK_IMPORTED_MODULE_0_three__["_54" /* TextureLoader */]().load('models/textures/brick/map.jpg') });
-
-        var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["_26" /* PlaneBufferGeometry */](1000, 1000);
-        geometry.rotateX(-Math.PI / 2);
-        var plane = new __WEBPACK_IMPORTED_MODULE_0_three__["_5" /* Mesh */](geometry, new __WEBPACK_IMPORTED_MODULE_0_three__["_6" /* MeshBasicMaterial */]({ visible: false }));
-        scene.add(plane);
-        objects.push(plane);
-
-        var gridHelper = new __WEBPACK_IMPORTED_MODULE_0_three__["E" /* GridHelper */](10, 5);
-        scene.add(gridHelper);
-
-        var raycaster = new __WEBPACK_IMPORTED_MODULE_0_three__["_37" /* Raycaster */]();
-        var mouse = new __WEBPACK_IMPORTED_MODULE_0_three__["_60" /* Vector2 */]();
-
-        document.addEventListener('mousemove', onDocumentMouseMove, false);
-        document.addEventListener('mousedown', onDocumentMouseDown, false);
-
-        function onDocumentMouseMove(event) {
-            event.preventDefault();
-
-            mouse.set(event.clientX / window.innerWidth * 2 - 1, -(event.clientY / window.innerHeight) * 2 + 1);
-            raycaster.setFromCamera(mouse, camera.camera);
-
-            var intersects = raycaster.intersectObjects(objects);
-            if (intersects.length > 0) {
-                var intersect = intersects[0];
-                rollOverMesh.position.copy(intersect.point).add(intersect.face.normal);
-                //rollOverMesh.position.divideScalar( 2 ).floor().multiplyScalar( 2 ).addScalar( 2 );
-            }
-        }
-
-        function onDocumentMouseDown(event) {
-            event.preventDefault();
-            if (event.which == 3) {
-
-                mouse.set(event.clientX / window.innerWidth * 2 - 1, -(event.clientY / window.innerHeight) * 2 + 1);
-                raycaster.setFromCamera(mouse, camera.camera);
-
-                var intersects = raycaster.intersectObjects(objects);
-                if (intersects.length > 0) {
-                    var intersect = intersects[0];
-
-                    var voxel = new __WEBPACK_IMPORTED_MODULE_0_three__["_5" /* Mesh */](cubeGeo, cubeMaterial);
-                    voxel.position.copy(intersect.point).add(intersect.face.normal);
-                    //voxel.position.divideScalar(2).floor().multiplyScalar(2).addScalar(2);
-                    scene.add(voxel);
-
-                    objects.push(voxel);
-                }
-            }
-        }
-    }
-
-    function drag() {
-
-        var helper = new __WEBPACK_IMPORTED_MODULE_0_three__["E" /* GridHelper */](10, 5);
-        helper.position.y = 0;
-        helper.material.opacity = 0.25;
-        helper.material.transparent = true;
-        scene.add(helper);
-
-        var texture = new __WEBPACK_IMPORTED_MODULE_0_three__["_54" /* TextureLoader */]().load('models/textures/brick/map.jpg');
-        var material = new __WEBPACK_IMPORTED_MODULE_0_three__["_7" /* MeshLambertMaterial */]({ map: texture, transparent: true });
-        var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["j" /* BoxBufferGeometry */](2, 2, 2);
-        var mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["_5" /* Mesh */](geometry, material);
-        scene.add(mesh);
-
-        // Transform
-        var control = new __WEBPACK_IMPORTED_MODULE_7_three_examples_jsm_controls_TransformControls__["a" /* TransformControls */](camera.camera, renderer.domElement);
-        control.setMode("translate");
-        control.addEventListener('dragging-changed', function (event) {
-            camera.controls.view.enabled = !event.value;
-        });
-
-        // Drag
-        var controls = new __WEBPACK_IMPORTED_MODULE_8_three_examples_jsm_controls_DragControls__["a" /* DragControls */]([mesh], camera.camera, renderer.domElement);
-        controls.enabled = false;
-        controls.addEventListener('hoveron', function (event) {
-            control.attach(mesh);
-            scene.add(control);
-        });
-        controls.addEventListener('hoveroff', function (event) {
-            control.detach(mesh);
-        });
-    }
-
-    //create();
-    //drag();
-    /*-----------------*/
     // Packages
-
     var Libs = function () {
         function Libs(who, pick) {
             _classCallCheck(this, Libs);
@@ -75904,24 +75804,58 @@ function print_scene() {
         return Insert;
     }();
 
+    var Drag = function () {
+        function Drag(objects) {
+            _classCallCheck(this, Drag);
+
+            this.transform = new __WEBPACK_IMPORTED_MODULE_7_three_examples_jsm_controls_TransformControls__["a" /* TransformControls */](camera.camera, renderer.domElement);
+            this.drag = new __WEBPACK_IMPORTED_MODULE_8_three_examples_jsm_controls_DragControls__["a" /* DragControls */](objects, camera.camera, renderer.domElement);
+        }
+
+        _createClass(Drag, [{
+            key: 'init',
+            value: function init() {
+                this.transform.setMode("translate");
+                this.transform.addEventListener('dragging-changed', function (event) {
+                    camera.controls.view.enabled = !event.value;
+                });
+
+                var transform = this.transform;
+                this.drag.enabled = false;
+                this.drag.addEventListener('dragstart', function (event) {
+                    if (event.object.name != 'dummy') {
+                        transform.attach(event.object);
+                        scene.add(transform);
+                    } else {
+                        transform.detach();
+                    }
+                });
+            }
+        }]);
+
+        return Drag;
+    }();
+
     // Start
 
 
     var objects = [];
 
-    var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["_26" /* PlaneBufferGeometry */](1000, 1000);
-    geometry.rotateX(-Math.PI / 2);
-    var plane = new __WEBPACK_IMPORTED_MODULE_0_three__["_5" /* Mesh */](geometry, new __WEBPACK_IMPORTED_MODULE_0_three__["_6" /* MeshBasicMaterial */]({ visible: false }));
+    var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["_26" /* PlaneBufferGeometry */](1000, 1000);geometry.rotateX(-Math.PI / 2);
+    var plane = new __WEBPACK_IMPORTED_MODULE_0_three__["_5" /* Mesh */](geometry, new __WEBPACK_IMPORTED_MODULE_0_three__["_6" /* MeshBasicMaterial */]({ visible: false }));plane.name = 'dummy';
     scene.add(plane);
     objects.push(plane);
 
-    $('.js_print_add').click(function () {
+    var drag = new Drag(objects);
 
+    $('.js_print_add').click(function () {
         var libs = new Libs('model', $(this).data('id'));
         var picking = libs.init();
 
         var model = new Insert(picking, objects);
         model.init();
+
+        drag.init(objects);
     });
 }
 
