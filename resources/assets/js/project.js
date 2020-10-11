@@ -1418,12 +1418,19 @@ function test_core() {
     }
     function path() {
 
-        // Создает контуры - те же самые линий
+        // Создает контуры - те же самые линий, но можно бесконечными цепочками создавать
         var path = new THREE.Path();
 
-        path.lineTo(0, 0.8);
-        path.quadraticCurveTo(0, 1, 0.2, 1);
-        path.lineTo(1, 1);
+        // path.absarc(0, 0, 3, THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(300)); // создает arc. точное копия - EllipseCurve
+        // path.absellipse(0, 0, 3, 2, THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(300)); // рисуем элипс
+        // path.bezierCurveTo(0, 2, 2, 3, 2, 0); // создает bezier кривую от 4 точек
+        // path.lineTo(0, 3); // создаем линия x y
+        // path.moveTo(-3, 0); // двигаем
+        // path.quadraticCurveTo(0, 3, 0, 1); // создает линию которую можно изкривыть
+        path.lineTo(0, 3);
+        path.lineTo(3, 3);
+        path.lineTo(3, 0);
+        path.lineTo(0, 0);
 
         var points = path.getPoints();
 
@@ -2520,18 +2527,20 @@ function print_scene() {
                 if(event.object.name != 'dummy') {
                     transform.attach(event.object);
                     scene.add(transform);
-                } else {
-                    transform.detach();
                 }
             });
+        }
+
+        destroy() {
+            this.transform.detach();
         }
     }
 
     // Start
     let objects = [];
 
-    let geometry = new THREE.PlaneBufferGeometry( 1000, 1000 ); geometry.rotateX(- Math.PI / 2);
-    let plane = new THREE.Mesh(geometry, new THREE.MeshBasicMaterial({ visible: false })); plane.name = 'dummy';
+    let plane_geo = new THREE.PlaneBufferGeometry( 1000, 1000 ); plane_geo.rotateX(- Math.PI / 2);
+    let plane = new THREE.Mesh(plane_geo, new THREE.MeshBasicMaterial({ visible: false })); plane.name = 'dummy';
     scene.add(plane);
     objects.push(plane);
 
@@ -2546,6 +2555,97 @@ function print_scene() {
 
         drag.init(objects);
     });
+
+    /* ----------------- */
+    let draw_objects = [];
+
+    let draw_drag = new Drag(draw_objects);
+    draw_drag.spline_listener = function () {
+
+        let spline = this.spline;
+        this.transform.addEventListener('objectChange', function (event) {
+console.log(draw_objects);
+console.log(event);
+console.log(event.target.position);
+            var position = spline.geometry.attributes.position;
+            for(let i = 0; i <= 4; i++) {
+                position.setXYZ(i, event.target.position.x, event.target.position.y, event.target.position.z);
+            }
+            position.needsUpdate = true;
+        });
+    };
+
+    $('.js_draw').click(function () {
+
+        function create() {
+            let box_g = new THREE.BoxBufferGeometry(0.2, 0.2, 0.2);
+            let box_m = new THREE.MeshBasicMaterial({ color: 0x666666 });
+
+            let shape = new THREE.Shape();
+            for(let i = 0; i <= 4; i++) {
+
+                let mesh = new THREE.Mesh(box_g, box_m);
+                if(i == 0) {
+                    mesh.position.set(0, 0, 0);
+                } else if(i == 1) {
+                    mesh.position.set(0, 0, 1);
+                } else if(i == 2) {
+                    mesh.position.set(1, 0, 1);
+                } else if(i == 3) {
+                    mesh.position.set(1, 0, 0);
+                }
+
+                shape.lineTo(mesh.position.x, mesh.position.z)
+                scene.add(mesh);
+                draw_objects.push(mesh);
+            }
+
+            let curve = shape.getPoints();
+            var geometry = new THREE.BufferGeometry().setFromPoints(curve);
+            var material = new THREE.LineBasicMaterial({ color: 0xff0000 });
+            var line = new THREE.Line(geometry, material);
+            line.rotation.x = THREE.MathUtils.degToRad(90);
+
+            scene.add(line);
+
+            draw_drag.spline = line;
+            draw_drag.init(draw_objects);
+            draw_drag.spline_listener();
+        }
+        function drag() {
+
+        }
+
+        create();
+        drag();
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if(event.keyCode == 27) {
+            drag.destroy();
+            draw_drag.destroy();
+        }
+    }, false);
+    /*var shape = new THREE.Shape();
+
+    shape.lineTo(0, 3);
+    shape.lineTo(3, 3);
+    shape.lineTo(3, 0);
+    shape.lineTo(0, 0);
+
+    var points = shape.getPoints();
+    var geometry = new THREE.BufferGeometry().setFromPoints(points);
+    var material = new THREE.LineBasicMaterial({color: 0xffffff});
+
+    var line = new THREE.Line(geometry, material);
+    scene.add(line);
+
+    drag.init(objects);*/
+
+    /*var extrudeSettings = { amount: 8, bevelEnabled: true, bevelSegments: 2, steps: 2, bevelSize: 1, bevelThickness: 1 };
+    var geometry = new THREE.ExtrudeBufferGeometry( heartShape, extrudeSettings );
+    var mesh = new THREE.Mesh( geometry, new THREE.MeshPhongMaterial() );
+    scene.add(mesh);*/
 }
 
 function modelRender() {

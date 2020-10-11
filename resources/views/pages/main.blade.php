@@ -13,6 +13,10 @@
                 <img src="">
                 <p>Шар пластик</p>
             </button>
+            <button class="js_draw">
+                <img src="">
+                <p>Рисовать</p>
+            </button>
         </div>
     </div>
     <div class="scene_method">
