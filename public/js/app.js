@@ -75874,16 +75874,29 @@ function print_scene() {
     var draw_drag = new Drag(draw_objects);
     draw_drag.spline_listener = function () {
 
-        var spline = this.spline;
+        var line = this.line;
+        var data = this.data;
         this.transform.addEventListener('objectChange', function (event) {
-            console.log(draw_objects);
-            console.log(event);
-            console.log(event.target.position);
-            var position = spline.geometry.attributes.position;
-            for (var i = 0; i <= 4; i++) {
-                position.setXYZ(i, event.target.position.x, event.target.position.y, event.target.position.z);
+
+            var target = event.target.object;
+            //var position = line.geometry.attributes.position;
+            var shape = new __WEBPACK_IMPORTED_MODULE_0_three__["_42" /* Shape */]();
+            for (var i = 1; i <= 4; i++) {
+                /*console.log(target.x);
+                console.log(target.y);
+                console.log(target.z);
+                position.setXYZ(i, target.x, target.y, target.z);*/
+                for (var d in data) {
+                    if (target.uuid == data[d].mesh.uuid && i == data[d].index) {
+                        shape.lineTo(target.position.x, target.position.z);
+                    } else {
+                        shape.lineTo(data[d].mesh.position.x, data[d].mesh.position.z);
+                    }
+                }
             }
-            position.needsUpdate = true;
+            var curve = shape.getPoints();
+            line.geometry.setFromPoints(curve);
+            //position.needsUpdate = true;
         });
     };
 
@@ -75894,8 +75907,9 @@ function print_scene() {
             var box_m = new __WEBPACK_IMPORTED_MODULE_0_three__["_6" /* MeshBasicMaterial */]({ color: 0x666666 });
 
             var shape = new __WEBPACK_IMPORTED_MODULE_0_three__["_42" /* Shape */]();
-            for (var i = 0; i <= 4; i++) {
-
+            var data = [];
+            for (var i = 1; i <= 4; i++) {
+                console.log(i);
                 var _mesh5 = new __WEBPACK_IMPORTED_MODULE_0_three__["_5" /* Mesh */](box_g, box_m);
                 if (i == 0) {
                     _mesh5.position.set(0, 0, 0);
@@ -75910,6 +75924,10 @@ function print_scene() {
                 shape.lineTo(_mesh5.position.x, _mesh5.position.z);
                 scene.add(_mesh5);
                 draw_objects.push(_mesh5);
+                data.push({
+                    'index': i,
+                    'mesh': _mesh5
+                });
             }
 
             var curve = shape.getPoints();
@@ -75920,7 +75938,8 @@ function print_scene() {
 
             scene.add(line);
 
-            draw_drag.spline = line;
+            draw_drag.line = line;
+            draw_drag.data = data;
             draw_drag.init(draw_objects);
             draw_drag.spline_listener();
         }

@@ -226,7 +226,7 @@ function modelLight() {
 
         scene.add(spotLight);
     }
-    
+
     room_lightes();
     test_lightes();
 }
@@ -2562,16 +2562,31 @@ function print_scene() {
     let draw_drag = new Drag(draw_objects);
     draw_drag.spline_listener = function () {
 
-        let spline = this.spline;
+        let line = this.line;
+        let data = this.data;
         this.transform.addEventListener('objectChange', function (event) {
-console.log(draw_objects);
-console.log(event);
-console.log(event.target.position);
-            var position = spline.geometry.attributes.position;
-            for(let i = 0; i <= 4; i++) {
-                position.setXYZ(i, event.target.position.x, event.target.position.y, event.target.position.z);
+
+            let target = event.target.object;
+            //var position = line.geometry.attributes.position;
+            let shape = new THREE.Shape();
+            for(let i = 1; i <= 4; i++) {
+                /*console.log(target.x);
+                console.log(target.y);
+                console.log(target.z);
+                position.setXYZ(i, target.x, target.y, target.z);*/
+                for(let d in data) {
+                    if(target.uuid == data[d].mesh.uuid && i == data[d].index) {
+                        shape.lineTo(target.position.x, target.position.z);
+                    } else {
+                        shape.lineTo(data[d].mesh.position.x, data[d].mesh.position.z);
+                    }
+
+                }
+
             }
-            position.needsUpdate = true;
+            let curve = shape.getPoints();
+            line.geometry.setFromPoints(curve);
+            //position.needsUpdate = true;
         });
     };
 
@@ -2582,8 +2597,9 @@ console.log(event.target.position);
             let box_m = new THREE.MeshBasicMaterial({ color: 0x666666 });
 
             let shape = new THREE.Shape();
-            for(let i = 0; i <= 4; i++) {
-
+            let data = [];
+            for(let i = 1; i <= 4; i++) {
+                console.log(i);
                 let mesh = new THREE.Mesh(box_g, box_m);
                 if(i == 0) {
                     mesh.position.set(0, 0, 0);
@@ -2598,6 +2614,10 @@ console.log(event.target.position);
                 shape.lineTo(mesh.position.x, mesh.position.z)
                 scene.add(mesh);
                 draw_objects.push(mesh);
+                data.push({
+                    'index': i,
+                    'mesh': mesh
+                });
             }
 
             let curve = shape.getPoints();
@@ -2608,7 +2628,8 @@ console.log(event.target.position);
 
             scene.add(line);
 
-            draw_drag.spline = line;
+            draw_drag.line = line;
+            draw_drag.data = data;
             draw_drag.init(draw_objects);
             draw_drag.spline_listener();
         }
