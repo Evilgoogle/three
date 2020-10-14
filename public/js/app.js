@@ -75875,28 +75875,21 @@ function print_scene() {
     draw_drag.spline_listener = function () {
 
         var line = this.line;
-        var data = this.data;
         this.transform.addEventListener('objectChange', function (event) {
 
             var target = event.target.object;
-            //var position = line.geometry.attributes.position;
+
             var shape = new __WEBPACK_IMPORTED_MODULE_0_three__["_42" /* Shape */]();
-            for (var i = 1; i <= 4; i++) {
-                /*console.log(target.x);
-                console.log(target.y);
-                console.log(target.z);
-                position.setXYZ(i, target.x, target.y, target.z);*/
-                for (var d in data) {
-                    if (target.uuid == data[d].mesh.uuid && i == data[d].index) {
-                        shape.lineTo(target.position.x, target.position.z);
-                    } else {
-                        shape.lineTo(data[d].mesh.position.x, data[d].mesh.position.z);
-                    }
+            for (var d in draw_objects) {
+                shape.lineTo(draw_objects[d].position.x, draw_objects[d].position.z);
+
+                if (target.uuid == draw_objects[d].uuid) {
+                    shape.lineTo(target.position.x, target.position.z);
                 }
             }
+
             var curve = shape.getPoints();
             line.geometry.setFromPoints(curve);
-            //position.needsUpdate = true;
         });
     };
 
@@ -75907,9 +75900,9 @@ function print_scene() {
             var box_m = new __WEBPACK_IMPORTED_MODULE_0_three__["_6" /* MeshBasicMaterial */]({ color: 0x666666 });
 
             var shape = new __WEBPACK_IMPORTED_MODULE_0_three__["_42" /* Shape */]();
-            var data = [];
-            for (var i = 1; i <= 4; i++) {
-                console.log(i);
+            var points = 4;
+            for (var i = 1; i <= points; i++) {
+
                 var _mesh5 = new __WEBPACK_IMPORTED_MODULE_0_three__["_5" /* Mesh */](box_g, box_m);
                 if (i == 0) {
                     _mesh5.position.set(0, 0, 0);
@@ -75920,15 +75913,12 @@ function print_scene() {
                 } else if (i == 3) {
                     _mesh5.position.set(1, 0, 0);
                 }
-
                 shape.lineTo(_mesh5.position.x, _mesh5.position.z);
+
                 scene.add(_mesh5);
                 draw_objects.push(_mesh5);
-                data.push({
-                    'index': i,
-                    'mesh': _mesh5
-                });
             }
+            console.log(shape);
 
             var curve = shape.getPoints();
             var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["m" /* BufferGeometry */]().setFromPoints(curve);
@@ -75939,14 +75929,11 @@ function print_scene() {
             scene.add(line);
 
             draw_drag.line = line;
-            draw_drag.data = data;
             draw_drag.init(draw_objects);
             draw_drag.spline_listener();
         }
-        function drag() {}
 
         create();
-        drag();
     });
 
     document.addEventListener('keydown', function (event) {

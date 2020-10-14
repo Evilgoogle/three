@@ -2563,30 +2563,21 @@ function print_scene() {
     draw_drag.spline_listener = function () {
 
         let line = this.line;
-        let data = this.data;
         this.transform.addEventListener('objectChange', function (event) {
 
             let target = event.target.object;
-            //var position = line.geometry.attributes.position;
+
             let shape = new THREE.Shape();
-            for(let i = 1; i <= 4; i++) {
-                /*console.log(target.x);
-                console.log(target.y);
-                console.log(target.z);
-                position.setXYZ(i, target.x, target.y, target.z);*/
-                for(let d in data) {
-                    if(target.uuid == data[d].mesh.uuid && i == data[d].index) {
-                        shape.lineTo(target.position.x, target.position.z);
-                    } else {
-                        shape.lineTo(data[d].mesh.position.x, data[d].mesh.position.z);
-                    }
+            for(let d in draw_objects) {
+                shape.lineTo(draw_objects[d].position.x, draw_objects[d].position.z);
 
+                if(target.uuid == draw_objects[d].uuid) {
+                    shape.lineTo(target.position.x, target.position.z);
                 }
-
             }
+
             let curve = shape.getPoints();
             line.geometry.setFromPoints(curve);
-            //position.needsUpdate = true;
         });
     };
 
@@ -2597,9 +2588,9 @@ function print_scene() {
             let box_m = new THREE.MeshBasicMaterial({ color: 0x666666 });
 
             let shape = new THREE.Shape();
-            let data = [];
-            for(let i = 1; i <= 4; i++) {
-                console.log(i);
+            let points = 4;
+            for(let i = 1; i <= points; i++) {
+
                 let mesh = new THREE.Mesh(box_g, box_m);
                 if(i == 0) {
                     mesh.position.set(0, 0, 0);
@@ -2610,15 +2601,12 @@ function print_scene() {
                 } else if(i == 3) {
                     mesh.position.set(1, 0, 0);
                 }
+                shape.lineTo(mesh.position.x, mesh.position.z);
 
-                shape.lineTo(mesh.position.x, mesh.position.z)
                 scene.add(mesh);
                 draw_objects.push(mesh);
-                data.push({
-                    'index': i,
-                    'mesh': mesh
-                });
             }
+            console.log(shape);
 
             let curve = shape.getPoints();
             var geometry = new THREE.BufferGeometry().setFromPoints(curve);
@@ -2629,16 +2617,11 @@ function print_scene() {
             scene.add(line);
 
             draw_drag.line = line;
-            draw_drag.data = data;
             draw_drag.init(draw_objects);
             draw_drag.spline_listener();
         }
-        function drag() {
-
-        }
 
         create();
-        drag();
     });
 
     document.addEventListener('keydown', function (event) {
