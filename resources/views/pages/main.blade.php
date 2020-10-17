@@ -17,6 +17,10 @@
                 <img src="">
                 <p>Рисовать</p>
             </button>
+            <button class="js_extrude">
+                <img src="">
+                <p>Поднять</p>
+            </button>
         </div>
     </div>
     <div class="scene_method">

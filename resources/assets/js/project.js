@@ -1377,10 +1377,10 @@ function test_core() {
             new THREE.Vector3( 10, 0, 0 )
         );*/
 
-        /*var curve = new THREE.LineCurve( // создаем линию
+        var curve = new THREE.LineCurve( // создаем линию
             new THREE.Vector2(1, 0),
             new THREE.Vector2(3, 4),
-        );*/
+        );
 
         /*var curve = new THREE.LineCurve3( // тоже самое что LineCurve, но есть z кордината
             new THREE.Vector3(1, 0, 2),
@@ -1399,13 +1399,13 @@ function test_core() {
             new THREE.Vector3( 10, 0, 0 )
         );*/
 
-        var curve = new THREE.SplineCurve([ // Тоже самое что CatmullRomCurve3 создает произвольгую линию, но тольков xy кординатах
+        /*var curve = new THREE.SplineCurve([ // Тоже самое что CatmullRomCurve3 создает произвольгую линию, но тольков xy кординатах
             new THREE.Vector2( -10, 0 ),
             new THREE.Vector2( -5, 5 ),
             new THREE.Vector2( 0, 0 ),
             new THREE.Vector2( 5, -5 ),
             new THREE.Vector2( 10, 0 )
-        ]);
+        ]);*/
 
         var points = curve.getPoints(50); // Точки в кординате с добавленными 50 точками для округление
         //console.log(curve.getLength()); // Получаем общую длину кривой
@@ -2557,28 +2557,32 @@ function print_scene() {
     });
 
     /* ----------------- */
-    let draw_objects = [];
+    let objects_draw = {
+        'points': [],
+        'shape': null
+    };
 
-    let draw_drag = new Drag(draw_objects);
+    let draw_drag = new Drag(objects_draw.points);
     draw_drag.spline_listener = function () {
 
         let line = this.line;
-        this.transform.addEventListener('objectChange', function (event) {
-
-            let target = event.target.object;
+        let go_shape = this.shape;
+        this.transform.addEventListener('objectChange', function () {
 
             let shape = new THREE.Shape();
-            for(let d in draw_objects) {
-                shape.lineTo(draw_objects[d].position.x, draw_objects[d].position.z);
 
-                if(target.uuid == draw_objects[d].uuid) {
-                    shape.lineTo(target.position.x, target.position.z);
-                }
+            shape.moveTo(objects_draw.points[3].position.x, objects_draw.points[3].position.z);
+            for(let d in objects_draw.points) {
+                shape.lineTo(objects_draw.points[d].position.x, objects_draw.points[d].position.z);
             }
 
             let curve = shape.getPoints();
             line.geometry.setFromPoints(curve);
+            go_shape = shape;
         });
+        this.transform.addEventListener('mouseUp', function () {
+            objects_draw.shape = go_shape;
+        })
     };
 
     $('.js_draw').click(function () {
@@ -2591,6 +2595,7 @@ function print_scene() {
             let points = 4;
             for(let i = 1; i <= points; i++) {
 
+                // create cubes and line
                 let mesh = new THREE.Mesh(box_g, box_m);
                 if(i == 0) {
                     mesh.position.set(0, 0, 0);
@@ -2604,9 +2609,8 @@ function print_scene() {
                 shape.lineTo(mesh.position.x, mesh.position.z);
 
                 scene.add(mesh);
-                draw_objects.push(mesh);
+                objects_draw.points.push(mesh);
             }
-            console.log(shape);
 
             let curve = shape.getPoints();
             var geometry = new THREE.BufferGeometry().setFromPoints(curve);
@@ -2617,11 +2621,30 @@ function print_scene() {
             scene.add(line);
 
             draw_drag.line = line;
-            draw_drag.init(draw_objects);
+            draw_drag.shape = shape;
+            draw_drag.init();
             draw_drag.spline_listener();
         }
 
         create();
+    });
+
+    $('.js_extrude').click(function () {
+
+        var setting = {
+            steps: 2,
+            depth: 16,
+            bevelEnabled: true,
+            bevelThickness: 1,
+            bevelSize: 1,
+            bevelOffset: 0,
+            bevelSegments: 1
+        };
+
+        var geometry = new THREE.ExtrudeGeometry(objects_draw.shape, setting);
+        var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+        var mesh = new THREE.Mesh(geometry, material) ;
+        scene.add(mesh);
     });
 
     document.addEventListener('keydown', function (event) {
