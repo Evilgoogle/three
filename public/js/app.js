@@ -76235,9 +76235,6 @@ function print_scene() {
         _createClass(Segment, [{
             key: '_create3D',
             value: function _create3D() {
-                console.log(this.start);
-                console.log(this.end);
-                console.log('------------------');
                 if (this.start && this.end) {
                     var distStartToEnd = this.start.distanceTo(this.end);
 
@@ -76307,7 +76304,7 @@ function print_scene() {
         _createClass(Wall, [{
             key: 'init',
             value: function init() {
-                var MAX_POINTS = 5;
+                var MAX_POINTS = 10;
                 this.positions = new Float32Array(MAX_POINTS * 3);
                 var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["m" /* BufferGeometry */]();
                 geometry.setAttribute('position', new __WEBPACK_IMPORTED_MODULE_0_three__["l" /* BufferAttribute */](this.positions, 3));
@@ -76337,7 +76334,7 @@ function print_scene() {
                     'count': this.count,
                     'addPoint': this._addPoint,
                     'helper': this.helper,
-                    '_addHelper': this._addHelper
+                    'addHelper': this._addHelper
                 };
 
                 this.events.onMouseMove = function onMouseMove(event) {
@@ -76357,15 +76354,7 @@ function print_scene() {
                 };
 
                 this.events.onMouseDown = function onMouseDown() {
-                    if (elements.count === 0) {
-                        elements.positions[elements.count * 3 + 0] = elements.cordinate.x;
-                        elements.positions[elements.count * 3 + 1] = elements.cordinate.y;
-                        elements.positions[elements.count * 3 + 2] = elements.cordinate.z;
-
-                        elements.count++;
-                        elements.line.geometry.setDrawRange(0, elements.count);
-                    }
-                    elements.addPoint(elements);
+                    elements.addHelper(elements);
                 };
 
                 document.addEventListener("mousemove", this.events.onMouseMove, false);
@@ -76381,38 +76370,46 @@ function print_scene() {
                 elements.positions[elements.count * 3 - 2] = elements.cordinate.y;
                 elements.positions[elements.count * 3 - 1] = elements.cordinate.z;
                 elements.line.geometry.attributes.position.needsUpdate = true;
-                console.log(elements.positions);
             }
         }, {
             key: '_addHelper',
-            value: function _addHelper(point, elements) {
+            value: function _addHelper(elements) {
+                // Добавляем изначальную точку, чтоб создавалось начальное линия [BEGIN POINT]
+                if (elements.count == 0) {
+                    elements.positions[elements.count * 3 + 0] = elements.cordinate.x;
+                    elements.positions[elements.count * 3 + 1] = elements.cordinate.y;
+                    elements.positions[elements.count * 3 + 2] = elements.cordinate.z;
+
+                    elements.count++;
+                    elements.line.geometry.setDrawRange(0, elements.count);
+                }
+
                 var box_g = new __WEBPACK_IMPORTED_MODULE_0_three__["j" /* BoxBufferGeometry */](0.2, 0.2, 0.2);
                 var box_m = new __WEBPACK_IMPORTED_MODULE_0_three__["_8" /* MeshBasicMaterial */]({ color: 0x666666 });
 
                 var mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["_7" /* Mesh */](box_g, box_m);
                 mesh.name = elements.count;
-                mesh.position.copy(point);
+                mesh.position.set(elements.cordinate.x, elements.cordinate.y, elements.cordinate.z);
                 scene.add(mesh);
 
+                elements.addPoint(elements, mesh);
                 elements.helper.push(mesh);
             }
         }, {
             key: '_addPoint',
-            value: function _addPoint(elements) {
-                elements.positions[elements.count * 3 + 0] = elements.cordinate.x;
-                elements.positions[elements.count * 3 + 1] = elements.cordinate.y;
-                elements.positions[elements.count * 3 + 2] = elements.cordinate.z;
+            value: function _addPoint(elements, last_helper) {
+                elements.positions[elements.count * 3 + 0] = last_helper.position.x;
+                elements.positions[elements.count * 3 + 1] = last_helper.position.y;
+                elements.positions[elements.count * 3 + 2] = last_helper.position.z;
 
                 elements.count++;
                 elements.line.geometry.setDrawRange(0, elements.count);
 
                 elements.updateLine(elements);
                 elements.point3ds.push({
-                    'count': elements.count,
+                    'count': elements.count - 1, // Отнемаем 1 чтоб вернуться к изначальной точке [BEGIN POINT]
                     'cordinate': new __WEBPACK_IMPORTED_MODULE_0_three__["_64" /* Vector3 */](elements.cordinate.x, elements.cordinate.y, elements.cordinate.z)
                 });
-
-                elements._addHelper(new __WEBPACK_IMPORTED_MODULE_0_three__["_64" /* Vector3 */](elements.cordinate.x, elements.cordinate.y, elements.cordinate.z), elements);
             }
         }, {
             key: 'create3D',
@@ -76442,6 +76439,17 @@ function print_scene() {
             value: function destroy() {
                 document.removeEventListener('mousemove', this.events.onMouseMove, false);
                 document.removeEventListener('mousedown', this.events.onMouseDown, false);
+
+                this.positions[this.count * 3 - 3] = 0;
+                this.positions[this.count * 3 - 2] = 0;
+                this.positions[this.count * 3 - 1] = 0;
+                this.line.geometry.attributes.position.needsUpdate = true;
+                console.log(this.positions[this.count * 3 - 3]);
+                console.log(this.positions[this.count * 3 - 2]);
+                console.log(this.positions[this.count * 3 - 1]);
+                console.log(this.count);
+                console.log(this.helper);
+                console.log(this.positions);
             }
         }]);
 
@@ -76458,13 +76466,13 @@ function print_scene() {
             elements.positions[this.object.name * 3 - 2] = this.object.position.y;
             elements.positions[this.object.name * 3 - 1] = this.object.position.z;
             elements.line.geometry.attributes.position.needsUpdate = true;
-            console.log(elements.positions);
+
             for (var key in elements.point3ds) {
                 if (elements.point3ds[key].count == this.object.name) {
                     elements.point3ds[key].cordinate = new __WEBPACK_IMPORTED_MODULE_0_three__["_64" /* Vector3 */](this.object.position.x, this.object.position.y, this.object.position.z);
                 }
             }
-            console.log(elements.positions);
+            console.log(elements.count);
         });
     };
     $('.js_draw').click(function () {
