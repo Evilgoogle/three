@@ -74261,7 +74261,7 @@ function loadModel() {
                     'specular': '0x666666',
                     'specularmap': 'models/room/walls/textures/light.jpg'
                 };
-                var material = setmaterial(textures, 'pong');
+                var material = setmaterial(textures);
 
                 mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["_7" /* Mesh */](gltf.scene.children[1].geometry, material);
                 // Добавление 2 UV кординат. Правим с косяк aomap
@@ -75789,7 +75789,7 @@ function print_scene() {
                     raycaster.setFromCamera(mouse, camera.camera);
 
                     var intersects = raycaster.intersectObjects(objects);
-                    if (intersects.length > 0 && intersects[0].object.name == 'dummy') {
+                    if (intersects.length > 0 && intersects[0].object.name == 'world') {
                         var intersect = intersects[0];
                         roll.position.copy(intersect.point).add(intersect.face.normal);
                     }
@@ -75803,7 +75803,7 @@ function print_scene() {
                         raycaster.setFromCamera(mouse, camera.camera);
 
                         var intersects = raycaster.intersectObjects(objects);
-                        if (intersects.length > 0 && intersects[0].object.name == 'dummy') {
+                        if (intersects.length > 0 && intersects[0].object.name == 'world') {
                             var intersect = intersects[0];
 
                             mesh.position.copy(intersect.point).add(intersect.face.normal);
@@ -75858,7 +75858,7 @@ function print_scene() {
                 var transform = this.transform;
                 this.drag.enabled = false;
                 this.drag.addEventListener('dragstart', function (event) {
-                    if (event.object.name != 'dummy') {
+                    if (event.object.name != 'world') {
                         transform.attach(event.object);
                         scene.add(transform);
 
@@ -75881,13 +75881,24 @@ function print_scene() {
 
     var objects = [];
 
-    var dummy_geo = new __WEBPACK_IMPORTED_MODULE_0_three__["_28" /* PlaneBufferGeometry */](1000, 1000);dummy_geo.rotateX(-Math.PI / 2);
-    var dummy = new __WEBPACK_IMPORTED_MODULE_0_three__["_7" /* Mesh */](dummy_geo, new __WEBPACK_IMPORTED_MODULE_0_three__["_8" /* MeshBasicMaterial */]({ visible: false }));dummy.name = 'dummy';
-    scene.add(dummy);
-    objects.push(dummy);
+    // Установка мира
+    function set_world() {
+        var geo = new __WEBPACK_IMPORTED_MODULE_0_three__["_28" /* PlaneBufferGeometry */](1000, 1000);
+        geo.rotateX(-Math.PI / 2);
 
+        var mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["_7" /* Mesh */](geo, new __WEBPACK_IMPORTED_MODULE_0_three__["_8" /* MeshBasicMaterial */]({ visible: false }));
+        mesh.name = 'world';
+        mesh.position.set(0, 0, 0);
+
+        return mesh;
+    }
+    var world = set_world();
+
+    scene.add(world);
+    objects.push(world);
+
+    // Установка елементов в цену
     var drag = new Drag(objects);
-
     $('.js_print_add').click(function () {
         var libs = new Libs('model', $(this).data('id'));
         var picking = libs.init();
@@ -76296,15 +76307,17 @@ function print_scene() {
             this.mouse = new __WEBPACK_IMPORTED_MODULE_0_three__["_63" /* Vector2 */]();
             this.cordinate = new __WEBPACK_IMPORTED_MODULE_0_three__["_64" /* Vector3 */]();
             this.plane = new __WEBPACK_IMPORTED_MODULE_0_three__["_27" /* Plane */](new __WEBPACK_IMPORTED_MODULE_0_three__["_64" /* Vector3 */](0, 0, 1), 0);
-            this.count = 0;
+            this.step = 0;
+            this.last_step;
             this.point3ds = [];
             this.helper = [];
+            this.elements;
         }
 
         _createClass(Wall, [{
             key: 'init',
             value: function init() {
-                var MAX_POINTS = 10;
+                var MAX_POINTS = 100;
                 this.positions = new Float32Array(MAX_POINTS * 3);
                 var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["m" /* BufferGeometry */]();
                 geometry.setAttribute('position', new __WEBPACK_IMPORTED_MODULE_0_three__["l" /* BufferAttribute */](this.positions, 3));
@@ -76331,11 +76344,12 @@ function print_scene() {
                     'line': this.line,
                     'point3ds': this.point3ds,
                     'updateLine': this._updateLine,
-                    'count': this.count,
+                    'step': this.step,
                     'addPoint': this._addPoint,
                     'helper': this.helper,
                     'addHelper': this._addHelper
                 };
+                this.elements = elements;
 
                 this.events.onMouseMove = function onMouseMove(event) {
                     var rect = renderer.domElement.getBoundingClientRect();
@@ -76343,11 +76357,11 @@ function print_scene() {
                     elements.mouse.y = -((event.clientY - rect.top) / (rect.bottom - rect.top)) * 2 + 1;
 
                     raycaster.setFromCamera(elements.mouse, camera.camera);
-                    var intersects = raycaster.intersectObjects([dummy]);
-                    if (intersects.length > 0 && intersects[0].object.name == 'dummy') {
+                    var intersects = raycaster.intersectObjects([world]);
+                    if (intersects.length > 0 && intersects[0].object.name == 'world') {
 
                         elements.cordinate.set(intersects[0].point.x, 0, intersects[0].point.z);
-                        if (elements.count != 0) {
+                        if (elements.step != 0) {
                             elements.updateLine(elements);
                         }
                     }
@@ -76366,29 +76380,29 @@ function print_scene() {
         }, {
             key: '_updateLine',
             value: function _updateLine(elements) {
-                elements.positions[elements.count * 3 - 3] = elements.cordinate.x;
-                elements.positions[elements.count * 3 - 2] = elements.cordinate.y;
-                elements.positions[elements.count * 3 - 1] = elements.cordinate.z;
+                elements.positions[elements.step * 3 - 3] = elements.cordinate.x;
+                elements.positions[elements.step * 3 - 2] = elements.cordinate.y;
+                elements.positions[elements.step * 3 - 1] = elements.cordinate.z;
                 elements.line.geometry.attributes.position.needsUpdate = true;
             }
         }, {
             key: '_addHelper',
             value: function _addHelper(elements) {
                 // Добавляем изначальную точку, чтоб создавалось начальное линия [BEGIN POINT]
-                if (elements.count == 0) {
-                    elements.positions[elements.count * 3 + 0] = elements.cordinate.x;
-                    elements.positions[elements.count * 3 + 1] = elements.cordinate.y;
-                    elements.positions[elements.count * 3 + 2] = elements.cordinate.z;
+                if (elements.step == 0) {
+                    elements.positions[elements.step * 3 + 0] = elements.cordinate.x;
+                    elements.positions[elements.step * 3 + 1] = elements.cordinate.y;
+                    elements.positions[elements.step * 3 + 2] = elements.cordinate.z;
 
-                    elements.count++;
-                    elements.line.geometry.setDrawRange(0, elements.count);
+                    elements.step++;
+                    elements.line.geometry.setDrawRange(0, elements.step);
                 }
 
                 var box_g = new __WEBPACK_IMPORTED_MODULE_0_three__["j" /* BoxBufferGeometry */](0.2, 0.2, 0.2);
                 var box_m = new __WEBPACK_IMPORTED_MODULE_0_three__["_8" /* MeshBasicMaterial */]({ color: 0x666666 });
 
                 var mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["_7" /* Mesh */](box_g, box_m);
-                mesh.name = elements.count;
+                mesh.userData = elements.step;
                 mesh.position.set(elements.cordinate.x, elements.cordinate.y, elements.cordinate.z);
                 scene.add(mesh);
 
@@ -76398,16 +76412,16 @@ function print_scene() {
         }, {
             key: '_addPoint',
             value: function _addPoint(elements, last_helper) {
-                elements.positions[elements.count * 3 + 0] = last_helper.position.x;
-                elements.positions[elements.count * 3 + 1] = last_helper.position.y;
-                elements.positions[elements.count * 3 + 2] = last_helper.position.z;
+                elements.positions[elements.step * 3 + 0] = last_helper.position.x;
+                elements.positions[elements.step * 3 + 1] = last_helper.position.y;
+                elements.positions[elements.step * 3 + 2] = last_helper.position.z;
 
-                elements.count++;
-                elements.line.geometry.setDrawRange(0, elements.count);
+                elements.step++;
+                elements.line.geometry.setDrawRange(0, elements.step);
 
                 elements.updateLine(elements);
                 elements.point3ds.push({
-                    'count': elements.count - 1, // Отнемаем 1 чтоб вернуться к изначальной точке [BEGIN POINT]
+                    'step': elements.step - 1, // Отнимаем 1 чтоб вернуться к изначальной точке [BEGIN POINT]
                     'cordinate': new __WEBPACK_IMPORTED_MODULE_0_three__["_64" /* Vector3 */](elements.cordinate.x, elements.cordinate.y, elements.cordinate.z)
                 });
             }
@@ -76440,16 +76454,10 @@ function print_scene() {
                 document.removeEventListener('mousemove', this.events.onMouseMove, false);
                 document.removeEventListener('mousedown', this.events.onMouseDown, false);
 
-                this.positions[this.count * 3 - 3] = 0;
-                this.positions[this.count * 3 - 2] = 0;
-                this.positions[this.count * 3 - 1] = 0;
+                this.positions[this.elements.step * 3 - 3] = NaN;
+                this.positions[this.elements.step * 3 - 2] = NaN;
+                this.positions[this.elements.step * 3 - 1] = NaN;
                 this.line.geometry.attributes.position.needsUpdate = true;
-                console.log(this.positions[this.count * 3 - 3]);
-                console.log(this.positions[this.count * 3 - 2]);
-                console.log(this.positions[this.count * 3 - 1]);
-                console.log(this.count);
-                console.log(this.helper);
-                console.log(this.positions);
             }
         }]);
 
@@ -76462,17 +76470,16 @@ function print_scene() {
 
         this.transform.addEventListener('objectChange', function () {
 
-            elements.positions[this.object.name * 3 - 3] = this.object.position.x;
-            elements.positions[this.object.name * 3 - 2] = this.object.position.y;
-            elements.positions[this.object.name * 3 - 1] = this.object.position.z;
+            elements.positions[this.object.userData * 3 - 3] = this.object.position.x;
+            elements.positions[this.object.userData * 3 - 2] = this.object.position.y;
+            elements.positions[this.object.userData * 3 - 1] = this.object.position.z;
             elements.line.geometry.attributes.position.needsUpdate = true;
 
             for (var key in elements.point3ds) {
-                if (elements.point3ds[key].count == this.object.name) {
+                if (elements.point3ds[key].step == this.object.userData) {
                     elements.point3ds[key].cordinate = new __WEBPACK_IMPORTED_MODULE_0_three__["_64" /* Vector3 */](this.object.position.x, this.object.position.y, this.object.position.z);
                 }
             }
-            console.log(elements.count);
         });
     };
     $('.js_draw').click(function () {
@@ -76571,7 +76578,7 @@ function play(type_camera) {
     modelLight();
     modelCamera(type_camera);
     //modelObjects();
-    //loadModel();
+    loadModel();
     test_math();
     test_core();
     //test_helpers();
