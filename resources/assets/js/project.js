@@ -2537,6 +2537,7 @@ function print_scene() {
         constructor(objects) {
             this.transform = new TransformControls(camera.camera, renderer.domElement);
             this.drag = new DragControls(objects, camera.camera, renderer.domElement );
+            this.object;
         }
 
         init() {
@@ -2551,6 +2552,8 @@ function print_scene() {
                 if(event.object.name != 'dummy') {
                     transform.attach(event.object);
                     scene.add(transform);
+
+                    this.object = event.object;
                 }
             });
         }
@@ -3064,7 +3067,7 @@ function print_scene() {
         }
 
         init() {
-            var MAX_POINTS = 10;
+            var MAX_POINTS = 5;
             this.positions = new Float32Array(MAX_POINTS * 3);
             var geometry = new THREE.BufferGeometry();
             geometry.setAttribute('position', new THREE.BufferAttribute(this.positions, 3));
@@ -3105,7 +3108,7 @@ function print_scene() {
                 let intersects = raycaster.intersectObjects([dummy]);
                 if (intersects.length > 0 && intersects[0].object.name == 'dummy') {
 
-                    elements.cordinate.copy(intersects[0].point);
+                    elements.cordinate.set(intersects[0].point.x, 0, intersects[0].point.z);
                     if(elements.count != 0) {
                         elements.updateLine(elements);
                     }
@@ -3113,11 +3116,22 @@ function print_scene() {
             }
 
             this.events.onMouseDown = function onMouseDown() {
+                if(elements.count === 0){
+                    elements.positions[elements.count * 3 + 0] = elements.cordinate.x;
+                    elements.positions[elements.count * 3 + 1] = elements.cordinate.y;
+                    elements.positions[elements.count * 3 + 2] = elements.cordinate.z;
+
+                    elements.count++;
+                    elements.line.geometry.setDrawRange(0, elements.count);
+                }
                 elements.addPoint(elements);
             }
 
             document.addEventListener("mousemove", this.events.onMouseMove, false);
             document.addEventListener('mousedown', this.events.onMouseDown, false);
+
+            wall_helpers_drag.init();
+            wall_helpers_drag.wall_helpers_listener(elements);
         }
 
         _updateLine(elements) {
@@ -3125,15 +3139,16 @@ function print_scene() {
             elements.positions[elements.count * 3 - 2] = elements.cordinate.y;
             elements.positions[elements.count * 3 - 1] = elements.cordinate.z;
             elements.line.geometry.attributes.position.needsUpdate = true;
+            console.log(elements.positions);
         }
 
         _addHelper(point, elements) {
-
             let box_g = new THREE.BoxBufferGeometry(0.2, 0.2, 0.2);
             let box_m = new THREE.MeshBasicMaterial({ color: 0x666666 });
 
             let mesh = new THREE.Mesh(box_g, box_m);
-            mesh.position.copy(point);console.log(point);
+            mesh.name = elements.count;
+            mesh.position.copy(point);
             scene.add(mesh);
 
             elements.helper.push(mesh);
@@ -3148,7 +3163,10 @@ function print_scene() {
             elements.line.geometry.setDrawRange(0, elements.count);
 
             elements.updateLine(elements);
-            elements.point3ds.push(new THREE.Vector3(elements.cordinate.x, elements.cordinate.y, elements.cordinate.z));
+            elements.point3ds.push({
+                'count': elements.count,
+                'cordinate': new THREE.Vector3(elements.cordinate.x, elements.cordinate.y, elements.cordinate.z)
+            });
 
             elements._addHelper(new THREE.Vector3(elements.cordinate.x, elements.cordinate.y, elements.cordinate.z), elements);
         }
@@ -3165,7 +3183,7 @@ function print_scene() {
                 var segmentHeight = 4;
                 this.point3ds.forEach( point3d => {
                     if(index < this.point3ds.length){
-                        var seg = new Segment(point3d, this.point3ds[index], someMaterial, segmentHeight);
+                        var seg = new Segment(point3d.cordinate, this.point3ds[index].cordinate, someMaterial, segmentHeight);
                         mesh3D.add(seg.mesh3D);
                         index++;
                     }
@@ -3179,8 +3197,25 @@ function print_scene() {
         }
     }
 
-    let helpers_line = [];
     let wall = new Wall();
+    let wall_helpers_drag = new Drag(wall.helper);
+    wall_helpers_drag.wall_helpers_listener = function (elements) {
+
+        this.transform.addEventListener('objectChange', function () {
+
+            elements.positions[this.object.name * 3 - 3] = this.object.position.x;
+            elements.positions[this.object.name * 3 - 2] = this.object.position.y;
+            elements.positions[this.object.name * 3 - 1] = this.object.position.z;
+            elements.line.geometry.attributes.position.needsUpdate = true;
+console.log(elements.positions);
+            for(let key in elements.point3ds) {
+                if(elements.point3ds[key].count == this.object.name) {
+                    elements.point3ds[key].cordinate = new THREE.Vector3(this.object.position.x, this.object.position.y, this.object.position.z);
+                }
+            }
+            console.log(elements.positions);
+        })
+    };
     $('.js_draw').click(function () {
 
         wall.init();
@@ -3193,6 +3228,7 @@ function print_scene() {
         if(event.keyCode == 27) {
             drag.destroy();
             wall.destroy();
+            wall_helpers_drag.destroy();
         }
     }, false);
 
@@ -3227,6 +3263,25 @@ function print_scene() {
 
     const mesh = new THREE.Mesh( geometry, new THREE.MeshPhongMaterial() );
     scene.add(mesh);*/
+
+    /*let positions = new Float32Array([-1.4648921489715576, 0, -2.58066725730896, 3.360517978668213, 0, -2.58066725730896, 4.104445457458496, 0, -3.562267303466797, -1.6428800821304321, 0, 1.5893481969833374, -1.932550311088562, 0, 1.0328019857406616]);
+    var geometry = new THREE.BufferGeometry();
+    geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+
+    var material = new THREE.LineBasicMaterial({
+        color: 0xff0000,
+        linewidth: 2
+    });
+
+    let line = new THREE.Line(geometry, material);
+    scene.add(line);
+
+    positions[0] = -3.666323184967041;
+    positions[2] = -2.949087142944336;
+    line.geometry.attributes.position.needsUpdate = true;
+    line.geometry.setDrawRange(0, 5);
+
+    console.log(line.geometry);*/
 }
 
 function modelRender() {
