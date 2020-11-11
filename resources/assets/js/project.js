@@ -2565,6 +2565,7 @@ function print_scene() {
 
     // Start
     let objects = [];
+    let building_walls = [];
 
     // Установка мира
     function set_world() {
@@ -2999,7 +3000,7 @@ function print_scene() {
         let wall = new Wall(pointer);
     });*/
 
-    class Segment {
+    class Wall {
 
         constructor(start, end, material, height){
             this.start = start;
@@ -3057,7 +3058,7 @@ function print_scene() {
             }
         }
     }
-    class Wall {
+    class WallCreater {
 
         constructor() {
             this.positions;
@@ -3070,7 +3071,6 @@ function print_scene() {
             this.cordinate = new THREE.Vector3();
             this.plane = new THREE.Plane(new THREE.Vector3(0,0,1), 0);
             this.step = 0;
-            this.last_step;
             this.point3ds = [];
             this.helper = [];
             this.elements;
@@ -3194,9 +3194,11 @@ function print_scene() {
                 var segmentHeight = 4;
                 this.point3ds.forEach( point3d => {
                     if(index < this.point3ds.length){
-                        var seg = new Segment(point3d.cordinate, this.point3ds[index].cordinate, someMaterial, segmentHeight);
+                        var seg = new Wall(point3d.cordinate, this.point3ds[index].cordinate, someMaterial, segmentHeight);
                         mesh3D.add(seg.mesh3D);
                         index++;
+
+                        building_walls.push(seg.mesh3D);
                     }
                 });
             }
@@ -3206,14 +3208,118 @@ function print_scene() {
             document.removeEventListener('mousemove', this.events.onMouseMove, false);
             document.removeEventListener('mousedown', this.events.onMouseDown, false);
 
-            this.positions[this.elements.step * 3 - 3] = NaN;
-            this.positions[this.elements.step * 3 - 2] = NaN;
-            this.positions[this.elements.step * 3 - 1] = NaN;
-            this.line.geometry.attributes.position.needsUpdate = true;
+            if(this.step !== 0 || this.elements.step !== undefined) {
+                this.positions[this.elements.step * 3 - 3] = NaN;
+                this.positions[this.elements.step * 3 - 2] = NaN;
+                this.positions[this.elements.step * 3 - 1] = NaN;
+                this.line.geometry.attributes.position.needsUpdate = true;
+            }
+        }
+    }
+    class WallHole {
+
+        constructor() {
+            this.building = null;
+            this.hole = null;
+            this.events = {
+                'onMouseMove': null,
+                'onMouseDown': null,
+            };
+        }
+
+        init(building, hole, raise) {
+            this.destroy();
+            this.building = building;
+
+            let geo = new THREE.BoxGeometry(
+                hole.data('parametr').width,
+                hole.data('parametr').height,
+                0.25
+            );
+            this.hole = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({color: "red"}));
+            this.hole.position.y = (hole.data('parametr').height/2) + Number(raise);
+            scene.add(this.hole);
+
+            this._events();
+        }
+
+        _events() {
+            let raycaster = new THREE.Raycaster();
+            let mouse = new THREE.Vector2();
+            let elements = {
+                'building': this.building,
+                'hole': this.hole,
+                'events': this.events,
+                'destroy': this.destroy
+            };
+
+            elements.events.onMouseMove = function(event) {
+                let rect = renderer.domElement.getBoundingClientRect();
+                mouse.x = (event.clientX - rect.left) / (rect.right - rect.left) * 2 - 1;
+                mouse.y = - ((event.clientY - rect.top) / (rect.bottom - rect.top)) * 2 + 1;
+
+                raycaster.setFromCamera(mouse, camera.camera);
+                let intersects = raycaster.intersectObjects(elements.building);
+                if (intersects.length != 0) {
+                    // normalMatrix.getNormalMatrix(intersects[0].object.matrixWorld);
+                    // worldNormal.copy(intersects[0].face.normal).applyMatrix3(normalMatrix).normalize();
+                    elements.hole.position.copy(intersects[0].point);
+                    //elements.hole.lookAt(new THREE.Vector3().copy(intersects[0].point).add(worldNormal));
+                }
+            }
+
+            elements.events.onMouseDown = function() {
+                console.log(12);
+                document.removeEventListener('mousemove', elements.events.onMouseMove, false);
+                document.removeEventListener('mousedown', elements.events.onMouseDown, false);
+            }
+
+            document.addEventListener("mousemove", elements.events.onMouseMove, false);
+            document.addEventListener("mousedown", elements.events.onMouseDown, false);
+        }
+
+        makeAHole() {
+            var width = building.userData.size.width * 0.5;
+            var height = building.userData.size.height * 0.5;
+            var depth = building.userData.size.depth * 0.5;
+            var shape = new THREE.Shape();
+            shape.moveTo(-width, height);
+            shape.lineTo(-width, -height);
+            shape.lineTo(width, -height);
+            shape.lineTo(width, height);
+            shape.lineTo(-width, height);
+
+            var pointAtWall = _window.position.clone();
+            building.worldToLocal(pointAtWall);
+            var wWidth = _window.geometry.parameters.width * 0.5;
+            var wHeight = _window.geometry.parameters.height * 0.5;
+            var hole = new THREE.Path();
+            hole.moveTo(pointAtWall.x - wWidth, pointAtWall.y + wHeight);
+            hole.lineTo(pointAtWall.x - wWidth, pointAtWall.y - wHeight);
+            hole.lineTo(pointAtWall.x + wWidth, pointAtWall.y - wHeight);
+            hole.lineTo(pointAtWall.x + wWidth, pointAtWall.y + wHeight);
+            hole.lineTo(pointAtWall.x - wWidth, pointAtWall.y + wHeight);
+
+            shape.holes.push(hole);
+            var extrudeSettings = {
+                amount: depth * 2,
+                bevelEnabled: false
+            };
+            var extrudeGeometry = new THREE.ExtrudeBufferGeometry(shape, extrudeSettings);
+            extrudeGeometry.translate(0, 0, -depth);
+            building.geometry.dispose();
+            building.geometry = extrudeGeometry;
+        }
+
+        destroy() {
+            if(this.hole !== null) {
+                scene.remove(this.hole);
+            }
         }
     }
 
-    let wall = new Wall();
+    // Рисуем стену
+    let wall = new WallCreater();
     let wall_helpers_drag = new Drag(wall.helper);
     wall_helpers_drag.wall_helpers_listener = function (elements) {
 
@@ -3239,11 +3345,26 @@ function print_scene() {
         wall.create3D();
     });
 
+    // Высекаем стену
+    let hole = new WallHole();
+    $('.js_hole').click(function (e) {
+
+        let get_hole = $(e.target).closest('.wall_hole').find('select').find('option:selected');
+        let get_raise = $(e.target).closest('.wall_hole').find('input[name="raise"]').val();
+
+        hole.init(building_walls, get_hole, get_raise);
+    });
+    $('.js_hole_make').click(function (e) {
+
+        hole.makeAHole();
+    });
+
     document.addEventListener('keydown', function (event) {
         if(event.keyCode == 27) {
             drag.destroy();
             wall.destroy();
             wall_helpers_drag.destroy();
+            hole.destroy();
         }
     }, false);
 

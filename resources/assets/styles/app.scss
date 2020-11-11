@@ -1874,3 +1874,14 @@ header {
     }
   }
 }
+
+.wall_hole {
+  border-radius: 10px;
+  border: 1px dashed#FFFFFF;
+  padding: 10px;
+  .js_hole {
+    > * {
+      pointer-events: none;
+    }
+  }
+}

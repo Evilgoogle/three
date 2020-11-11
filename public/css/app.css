@@ -7682,3 +7682,13 @@ header .active_nav {
   background-color: #858687;
 }
 
+.wall_hole {
+  border-radius: 10px;
+  border: 1px dashed #FFFFFF;
+  padding: 10px;
+}
+
+.wall_hole .js_hole > * {
+  pointer-events: none;
+}
+
