@@ -6,14 +6,17 @@
     $door = [
         'width' => 1.1,
         'height' => 2,
+        'name' => 'door'
     ];
     $window_s = [
         'width' => 1.3,
         'height' => 1.3,
+        'name' => 'window_s'
     ];
     $window_b = [
         'width' => 2,
         'height' => 2,
+        'name' => 'window_b'
     ];
     ?>
 
@@ -41,9 +44,9 @@
                     <p>Проем</p>
                 </button>
                 <select>
-                    <option name="hole" value="door" data-parametr="{{ json_encode($door) }}" selected>Дверь</option>
-                    <option name="hole" value="window_s" data-parametr="{{ json_encode($window_s) }}">Окно маленькое</option>
-                    <option name="hole" value="window_b" data-parametr="{{ json_encode($window_b) }}">Окно большое</option>
+                    <option name="hole" data-parameter="{{ json_encode($door) }}" selected>Дверь</option>
+                    <option name="hole" data-parameter="{{ json_encode($window_s) }}">Окно маленькое</option>
+                    <option name="hole" data-parameter="{{ json_encode($window_b) }}">Окно большое</option>
                 </select>
                 <input type="number" name="raise" value="0">
                 <button class="js_hole_make">
