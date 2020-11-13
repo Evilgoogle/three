@@ -76578,10 +76578,11 @@ function print_scene() {
                 for (var b in build_holes) {
                     var build_box = build_holes[b].build.geometry.boundingBox.getSize();
                     var build = build_holes[b].build;
-
-                    var width = build_box.x; // * 0.5;
-                    var height = build_box.y; // * 0.5;
-                    var depth = build_box.z; // * 0.5;
+                    console.log(build_box);
+                    console.log(build);
+                    var width = build_box.x * 0.5;
+                    var height = build_box.y * 0.5;
+                    var depth = build_box.z * 0.5;
 
                     var shape = new __WEBPACK_IMPORTED_MODULE_0_three__["_45" /* Shape */]();
                     shape.moveTo(-width, height);
@@ -76593,7 +76594,8 @@ function print_scene() {
                     /*for(let h in build_holes[b].holes) {
                         let holes = build_holes[b].holes[h];
                           let pointAtWall = holes.position.clone();
-                        build.worldToLocal(pointAtWall);
+                        //build.worldToLocal(pointAtWall);
+                        console.log(pointAtWall);
                           let wWidth = holes.geometry.parameters.width * 0.5;
                         let wHeight = holes.geometry.parameters.height * 0.5;
                           let hole_path = new THREE.Shape();
@@ -76603,19 +76605,26 @@ function print_scene() {
                         hole_path.lineTo(pointAtWall.x + wWidth, pointAtWall.y + wHeight);
                         hole_path.lineTo(pointAtWall.x - wWidth, pointAtWall.y + wHeight);
                           shape.holes.push(hole_path);
+                          let gh = new THREE.ShapeBufferGeometry(hole_path);
+                        let h = new THREE.Mesh(gh, new THREE.MeshBasicMaterial({color: "gray", transparent: true, opacity: 0.4}));
+                        scene.add(h);
                     }*/
+
                     var extrudeSettings = {
                         amount: depth * 2,
                         bevelEnabled: false
                     };
-                    console.log(shape);
-                    /*var extrudeGeometry = new THREE.ExtrudeBufferGeometry(shape, extrudeSettings);
+                    var extrudeGeometry = new __WEBPACK_IMPORTED_MODULE_0_three__["z" /* ExtrudeBufferGeometry */](shape, extrudeSettings);
                     extrudeGeometry.translate(0, 0, -depth);
-                    build.geometry.dispose();
-                    build.geometry = extrudeGeometry;*/
-                    var extrudeGeometry = new __WEBPACK_IMPORTED_MODULE_0_three__["_46" /* ShapeBufferGeometry */](shape);
-                    build.geometry.dispose();
-                    build.geometry = extrudeGeometry;
+                    //build.geometry.dispose();
+                    //build.geometry = extrudeGeometry;
+
+                    //
+                    var material = new __WEBPACK_IMPORTED_MODULE_0_three__["_33" /* PointsMaterial */]({ color: 0x888888 });
+                    material.size = 0.4;
+
+                    var point = new __WEBPACK_IMPORTED_MODULE_0_three__["_32" /* Points */](extrudeGeometry, material);
+                    scene.add(point);
 
                     // remove holes
                     for (var h in build_holes[b].holes) {

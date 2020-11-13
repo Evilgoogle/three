@@ -3325,10 +3325,11 @@ function print_scene() {
             for(let b in build_holes) {
                 let build_box = build_holes[b].build.geometry.boundingBox.getSize();
                 let build = build_holes[b].build;
-
-                let width = build_box.x// * 0.5;
-                let height = build_box.y// * 0.5;
-                let depth = build_box.z// * 0.5;
+console.log(build_box);
+console.log(build);
+                let width = build_box.x * 0.5;
+                let height = build_box.y * 0.5;
+                let depth = build_box.z * 0.5;
 
                 let shape = new THREE.Shape();
                 shape.moveTo(-width, height);
@@ -3341,7 +3342,8 @@ function print_scene() {
                     let holes = build_holes[b].holes[h];
 
                     let pointAtWall = holes.position.clone();
-                    build.worldToLocal(pointAtWall);
+                    //build.worldToLocal(pointAtWall);
+                    console.log(pointAtWall);
 
                     let wWidth = holes.geometry.parameters.width * 0.5;
                     let wHeight = holes.geometry.parameters.height * 0.5;
@@ -3354,19 +3356,27 @@ function print_scene() {
                     hole_path.lineTo(pointAtWall.x - wWidth, pointAtWall.y + wHeight);
 
                     shape.holes.push(hole_path);
+
+                    let gh = new THREE.ShapeBufferGeometry(hole_path);
+                    let h = new THREE.Mesh(gh, new THREE.MeshBasicMaterial({color: "gray", transparent: true, opacity: 0.4}));
+                    scene.add(h);
                 }*/
+
                 var extrudeSettings = {
                     amount: depth * 2,
                     bevelEnabled: false
                 };
-                console.log(shape);
-                /*var extrudeGeometry = new THREE.ExtrudeBufferGeometry(shape, extrudeSettings);
+                var extrudeGeometry = new THREE.ExtrudeBufferGeometry(shape, extrudeSettings);
                 extrudeGeometry.translate(0, 0, -depth);
-                build.geometry.dispose();
-                build.geometry = extrudeGeometry;*/
-                const extrudeGeometry = new THREE.ShapeBufferGeometry(shape);
-                build.geometry.dispose();
-                build.geometry = extrudeGeometry;
+                //build.geometry.dispose();
+                //build.geometry = extrudeGeometry;
+
+                //
+                var material = new THREE.PointsMaterial({color: 0x888888});
+                material.size = 0.4;
+
+                var point = new THREE.Points(extrudeGeometry, material);
+                scene.add(point);
 
                 // remove holes
                 for(let h in build_holes[b].holes) {
