@@ -76502,6 +76502,7 @@ function print_scene() {
                 }
             };
             this.builds = null;
+            this.holes = [];
             this.hole = null;
             this.hole_raise = null;
             this.events = {
@@ -76538,6 +76539,7 @@ function print_scene() {
                 var elements = {
                     'build_holes': this.build_holes,
                     'builds': this.builds,
+                    'holes': this.holes,
                     'hole': this.hole,
                     'hole_raise': this.hole_raise,
                     'events': this.events,
@@ -76565,12 +76567,16 @@ function print_scene() {
                     var current_build = intersects[0].object;
                     var hole = elements.hole.clone();hole.material = new __WEBPACK_IMPORTED_MODULE_0_three__["_9" /* MeshBasicMaterial */]({ color: "red" });scene.add(hole);
 
+                    elements.holes.push(hole);
                     elements.build_holes.calc(current_build, hole);
                     elements.destroy();
                 };
 
                 document.addEventListener("mousemove", elements.events.onMouseMove, false);
                 document.addEventListener("mousedown", elements.events.onMouseDown, false);
+
+                hole_drag.init();
+                hole_drag.holes_listener(elements);
             }
         }, {
             key: 'makeAHole',
@@ -76578,8 +76584,7 @@ function print_scene() {
                 for (var b in build_holes) {
                     var build_box = build_holes[b].build.geometry.boundingBox.getSize();
                     var build = build_holes[b].build;
-                    console.log(build_box);
-                    console.log(build);
+
                     var width = build_box.x * 0.5;
                     var height = build_box.y * 0.5;
                     var depth = build_box.z * 0.5;
@@ -76591,45 +76596,41 @@ function print_scene() {
                     shape.lineTo(width, height);
                     shape.lineTo(-width, height);
 
-                    /*for(let h in build_holes[b].holes) {
-                        let holes = build_holes[b].holes[h];
-                          let pointAtWall = holes.position.clone();
-                        //build.worldToLocal(pointAtWall);
-                        console.log(pointAtWall);
-                          let wWidth = holes.geometry.parameters.width * 0.5;
-                        let wHeight = holes.geometry.parameters.height * 0.5;
-                          let hole_path = new THREE.Shape();
-                        hole_path.moveTo(pointAtWall.x - wWidth, pointAtWall.y + wHeight);
-                        hole_path.lineTo(pointAtWall.x - wWidth, pointAtWall.y - wHeight);
-                        hole_path.lineTo(pointAtWall.x + wWidth, pointAtWall.y - wHeight);
-                        hole_path.lineTo(pointAtWall.x + wWidth, pointAtWall.y + wHeight);
-                        hole_path.lineTo(pointAtWall.x - wWidth, pointAtWall.y + wHeight);
-                          shape.holes.push(hole_path);
-                          let gh = new THREE.ShapeBufferGeometry(hole_path);
-                        let h = new THREE.Mesh(gh, new THREE.MeshBasicMaterial({color: "gray", transparent: true, opacity: 0.4}));
-                        scene.add(h);
-                    }*/
+                    for (var h in build_holes[b].holes) {
+                        var holes = build_holes[b].holes[h];
+
+                        var pointAtWall = holes.position.clone();
+                        build.worldToLocal(pointAtWall);
+
+                        var wWidth = holes.geometry.parameters.width * 0.5;
+                        var wHeight = holes.geometry.parameters.height * 0.5;
+
+                        var hole_path = new __WEBPACK_IMPORTED_MODULE_0_three__["_45" /* Shape */]();
+                        hole_path.moveTo(pointAtWall.x - width - wWidth, pointAtWall.y - height + wHeight);
+                        hole_path.lineTo(pointAtWall.x - width - wWidth, pointAtWall.y - height - wHeight);
+                        hole_path.lineTo(pointAtWall.x - width + wWidth, pointAtWall.y - height - wHeight);
+                        hole_path.lineTo(pointAtWall.x - width + wWidth, pointAtWall.y - height + wHeight);
+                        hole_path.lineTo(pointAtWall.x - width - wWidth, pointAtWall.y - height + wHeight);
+
+                        shape.holes.push(hole_path);
+                    }
 
                     var extrudeSettings = {
                         amount: depth * 2,
                         bevelEnabled: false
                     };
                     var extrudeGeometry = new __WEBPACK_IMPORTED_MODULE_0_three__["z" /* ExtrudeBufferGeometry */](shape, extrudeSettings);
-                    extrudeGeometry.translate(0, 0, -depth);
-                    //build.geometry.dispose();
-                    //build.geometry = extrudeGeometry;
-
-                    //
-                    var material = new __WEBPACK_IMPORTED_MODULE_0_three__["_33" /* PointsMaterial */]({ color: 0x888888 });
-                    material.size = 0.4;
-
-                    var point = new __WEBPACK_IMPORTED_MODULE_0_three__["_32" /* Points */](extrudeGeometry, material);
-                    scene.add(point);
+                    extrudeGeometry.translate(width, height, -depth * 2);
+                    build.geometry.dispose();
+                    build.geometry = extrudeGeometry;
 
                     // remove holes
-                    for (var h in build_holes[b].holes) {
-                        scene.remove(build_holes[b].holes[h]);
+                    for (var _h in build_holes[b].holes) {
+                        scene.remove(build_holes[b].holes[_h]);
                     }
+
+                    // Remove Drag holes
+                    hole_drag.destroy();
                 }
             }
         }, {
@@ -76641,6 +76642,24 @@ function print_scene() {
                     document.removeEventListener('mousemove', this.events.onMouseMove, false);
                     document.removeEventListener('mousedown', this.events.onMouseDown, false);
                 }
+            }
+        }, {
+            key: 'remove_hole',
+            value: function remove_hole() {
+                var object = hole_drag.transform.object;
+
+                for (var build in this.elements.build_holes.arr) {
+                    for (var holes in this.elements.holes) {
+                        if (this.elements.holes[holes].uuid == object.uuid) {
+                            this.elements.holes.splice(holes, 1);
+                            scene.remove(object);
+
+                            this.elements.build_holes.arr[build].holes.splice(holes, 1);
+                        }
+                    }
+                }
+
+                hole_drag.destroy();
             }
         }]);
 
@@ -76678,6 +76697,12 @@ function print_scene() {
     // Высекаем стену
     var build_holes = [];
     var hole = new WallHole(build_holes);
+    var hole_drag = new Drag(hole.holes);
+    hole_drag.holes_listener = function (elements) {
+        this.transform.addEventListener('objectChange', function () {
+            console.log(114);
+        });
+    };
     $('.js_hole').click(function (e) {
 
         var get_hole = $(e.target).closest('.wall_hole').find('select').find('option:selected');
@@ -76696,6 +76721,12 @@ function print_scene() {
             wall.destroy();
             wall_helpers_drag.destroy();
             hole.destroy();
+        }
+    }, false);
+
+    document.addEventListener('keydown', function (event) {
+        if (event.keyCode == 8) {
+            hole.remove_hole();
         }
     }, false);
 
@@ -76742,6 +76773,16 @@ function print_scene() {
     line.geometry.attributes.position.needsUpdate = true;
     line.geometry.setDrawRange(0, 5);
       console.log(line.geometry);*/
+
+    /*let m_geo = new THREE.BoxBufferGeometry(1, 1, 1);
+    let m_test = new THREE.Mesh(m_geo, new THREE.MeshBasicMaterial({color: "gray", transparent: true, opacity: 0.4}));
+    m_test.position.set(-4, 0, -6);
+    scene.add(m_test);
+    let geo = new THREE.BoxBufferGeometry(2, 2, 2);
+    let test = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({color: "red", transparent: true, opacity: 0.4}));
+    test.quaternion.setFromUnitVectors(m_test.position, new THREE.Vector3(7, 0, -4))
+    scene.add(test);
+    console.log(test.position);*/
 }
 
 function modelRender() {
@@ -76779,7 +76820,7 @@ function play(type_camera) {
     modelLight();
     modelCamera(type_camera);
     //modelObjects();
-    loadModel();
+    //loadModel();
     test_math();
     test_core();
     //test_helpers();
