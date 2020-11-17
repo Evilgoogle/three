@@ -75850,7 +75850,6 @@ function print_scene() {
         _createClass(Drag, [{
             key: 'init',
             value: function init() {
-                console.log(this.test);
                 this.transform.setMode("translate");
                 this.transform.addEventListener('dragging-changed', function (event) {
                     camera.controls.view.enabled = !event.value;
@@ -75874,362 +75873,6 @@ function print_scene() {
 
         return Drag;
     }();
-
-    // Start
-
-
-    var objects = [];
-    var building_walls = [];
-
-    // Установка мира
-    function set_world() {
-        var geo = new __WEBPACK_IMPORTED_MODULE_0_three__["_29" /* PlaneBufferGeometry */](1000, 1000);
-        geo.rotateX(-Math.PI / 2);
-
-        var mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["_8" /* Mesh */](geo, new __WEBPACK_IMPORTED_MODULE_0_three__["_9" /* MeshBasicMaterial */]({ visible: false }));
-        mesh.name = 'world';
-        mesh.position.set(0, 0, 0);
-
-        return mesh;
-    }
-    var world = set_world();
-
-    scene.add(world);
-    objects.push(world);
-
-    // Установка елементов в сцену
-    var drag = new Drag(objects);
-    $('.js_print_add').click(function () {
-        var libs = new Libs('model', $(this).data('id'));
-        var picking = libs.init();
-
-        var model = new Insert(picking, objects);
-        model.init();
-
-        drag.init(objects);
-    });
-
-    /* ----------------- */
-    /*let objects_draw = {
-        'points': [],
-        'shape': null
-    };
-      let draw_drag = new Drag(objects_draw.points);
-    draw_drag.spline_listener = function () {
-          let line = this.line;
-        let go_shape = this.shape;
-        this.transform.addEventListener('objectChange', function () {
-              let shape = new THREE.Shape();
-              shape.moveTo(objects_draw.points[3].position.x, objects_draw.points[3].position.z);
-            for(let d in objects_draw.points) {
-                shape.lineTo(objects_draw.points[d].position.x, objects_draw.points[d].position.z);
-            }
-              let curve = shape.getPoints();
-            line.geometry.setFromPoints(curve);
-            go_shape = shape;
-        });
-        this.transform.addEventListener('mouseUp', function () {
-            objects_draw.shape = go_shape;
-        })
-    };
-      $('.js_draw').click(function () {
-          function create() {
-            let box_g = new THREE.BoxBufferGeometry(0.2, 0.2, 0.2);
-            let box_m = new THREE.MeshBasicMaterial({ color: 0x666666 });
-              let shape = new THREE.Shape();
-            let points = 4;
-            for(let i = 1; i <= points; i++) {
-                  // create cubes and line
-                let mesh = new THREE.Mesh(box_g, box_m);
-                if(i == 0) {
-                    mesh.position.set(0, 0, 0);
-                } else if(i == 1) {
-                    mesh.position.set(0, 0, 1);
-                } else if(i == 2) {
-                    mesh.position.set(1, 0, 1);
-                } else if(i == 3) {
-                    mesh.position.set(1, 0, 0);
-                }
-                shape.lineTo(mesh.position.x, mesh.position.z);
-                  scene.add(mesh);
-                objects_draw.points.push(mesh);
-            }
-              let curve = shape.getPoints();
-            var geometry = new THREE.BufferGeometry().setFromPoints(curve);
-            var material = new THREE.LineBasicMaterial({ color: 0xff0000 });
-            var line = new THREE.Line(geometry, material);
-            line.rotation.x = THREE.MathUtils.degToRad(90);
-              scene.add(line);
-              draw_drag.line = line;
-            draw_drag.shape = shape;
-            draw_drag.init();
-            draw_drag.spline_listener();
-        }
-          create();
-    });
-      $('.js_extrude').click(function () {
-          var setting = {
-            steps: 2,
-            depth: 16,
-            bevelEnabled: true,
-            bevelThickness: 1,
-            bevelSize: 1,
-            bevelOffset: 0,
-            bevelSegments: 1
-        };
-          var geometry = new THREE.ExtrudeGeometry(objects_draw.shape, setting);
-        var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-        var mesh = new THREE.Mesh(geometry, material) ;
-        scene.add(mesh);
-    });
-      document.addEventListener('keydown', function (event) {
-        if(event.keyCode == 27) {
-            drag.destroy();
-            draw_drag.destroy();
-        }
-    }, false);*/
-
-    /* ----------------- */
-    /*class Box {
-          constructor(pointer) {
-            this.pointer = pointer();
-            this.line;
-            this.events = {
-                'onDocumentMouseMove': null,
-                'onDocumentMouseDown': null,
-                'transform': new TransformControls(camera.camera, renderer.domElement),
-            }
-              this._init();
-        }
-          _events(set_point = null) {
-            let raycaster = new THREE.Raycaster();
-            let mouse = new THREE.Vector2();
-              let elements = {
-                'destroy': this._destroy,
-                'line': this.line,
-                'pointer': this.pointer,
-                'events': this.events,
-                '_events': this._events,
-                '_move': this._move,
-                '_rotate': this._rotate
-            };
-              let start = this._start;
-            let end = this._end;
-              this.events.onDocumentMouseMove = function onDocumentMouseMove(event) {
-                event.preventDefault();
-                  mouse.set((event.clientX / window.innerWidth) * 2 - 1, - (event.clientY / window.innerHeight) * 2 + 1);
-                raycaster.setFromCamera(mouse, camera.camera);
-                  let intersects = raycaster.intersectObjects([dummy]);
-                if (intersects.length > 0 && intersects[0].object.name == 'dummy') {
-                      let intersect = intersects[0];
-                    if(set_point === null) {
-                        elements.pointer.position.copy(intersect.point);
-                    } else {
-                        elements._move(elements, intersect);
-                    }
-                }
-            }
-            this.events.onDocumentMouseDown = function onDocumentMouseDown(event) {
-                event.preventDefault();
-                if(event.which == 1) {
-                      mouse.set((event.clientX / window.innerWidth) * 2 - 1, -(event.clientY / window.innerHeight) * 2 + 1);
-                    raycaster.setFromCamera(mouse, camera.camera);
-                      var intersects = raycaster.intersectObjects([dummy]);
-                    if (intersects.length > 0 && intersects[0].object.name == 'dummy') {
-                        var intersect = intersects[0];
-                          if(set_point === null) {
-                            start(intersect, elements);
-                        } else  {
-                          }
-                    }
-                }
-            }
-              document.addEventListener('mousemove', this.events.onDocumentMouseMove, false);
-            document.addEventListener('mousedown', this.events.onDocumentMouseDown, false);
-        }
-          _rotate(elements, intersect) {
-              for (let box in helpers_linebox) {
-                helpers_linebox[box] = helpers_linebox[box]
-            }
-            //elements.group.rotation.z = THREE.MathUtils.degToRad(70);
-        }
-          _move(elements, intersect) {
-            helpers_linebox[0].position.set(intersect.point.x, 0, intersect.point.z);
-            helpers_linebox[3].position.set(intersect.point.x + 1, 0, intersect.point.z);
-              let boxs = elements._rotate(elements, intersect);
-              let shape = new THREE.Shape();
-            shape.moveTo(boxs[3].position.x, boxs[3].position.z);
-            for(let d in boxs) {
-                shape.lineTo(boxs[d].position.x, boxs[d].position.z);
-            }
-              let curve = shape.getPoints();
-            elements.line.geometry.setFromPoints(curve);
-        }
-          _init() {
-            scene.add(this.pointer);
-            this._events();
-        }
-          _start(intersect, elements) {
-            elements.destroy(elements.pointer, elements.events.onDocumentMouseMove, elements.events.onDocumentMouseDown);
-              let box_g = new THREE.BoxBufferGeometry(0.2, 0.2, 0.2);
-            let box_m = new THREE.MeshBasicMaterial({ color: 0x666666 });
-              // create cubes and line
-            let points = 4;
-            let shape = new THREE.Shape();
-            shape.moveTo(intersect.point.x + 1, intersect.point.z);
-            for(let i = 1; i <= points; i++) {
-                  let mesh = new THREE.Mesh(box_g, box_m);
-                if(i == 1) {
-                    mesh.position.set(intersect.point.x, 0, intersect.point.z);
-                } else if(i == 2) {
-                    mesh.position.set(intersect.point.x, 0, intersect.point.z + 1);
-                } else if(i == 3) {
-                    mesh.position.set(intersect.point.x + 1, 0, intersect.point.z + 1);
-                } else if(i == 4) {
-                    mesh.position.set(intersect.point.x + 1, 0, intersect.point.z);
-                }
-                shape.lineTo(mesh.position.x, mesh.position.z);
-                  scene.add(mesh);
-                helpers_linebox.push(mesh);
-            }
-              var curve_g = new THREE.BufferGeometry().setFromPoints(shape.getPoints());
-            var curve_m = new THREE.LineBasicMaterial({ color: 0xff0000 });
-            elements.line = new THREE.Line(curve_g, curve_m);
-            elements.line.rotation.x = THREE.MathUtils.degToRad(90);
-              scene.add(elements.line);
-              elements._events(intersect);
-        }
-          _end() {}
-          _destroy(pointer, onDocumentMouseMove, onDocumentMouseDown) {
-            scene.remove(pointer);
-            document.removeEventListener('mousemove', onDocumentMouseMove, false);
-            document.removeEventListener('mousedown', onDocumentMouseDown, false);
-        }
-    }
-      let coordinates;
-    let helpers_linebox = [];
-    var pointer = function () {
-          let material = new THREE.SpriteMaterial({ map: new THREE.TextureLoader().load("/models/textures/plus.png") });
-        let sprite = new THREE.Sprite(material);
-        sprite.scale.set(0.4, 0.4, 0.4);
-          return sprite;
-    }
-      $('.js_draw').click(function () {
-          let box = new Box(pointer);
-    });*/
-    /* ----------------- */
-    /*class Wall {
-          constructor(pointer) {
-            this.pointer = pointer();
-            this.position;
-            this.line;
-            this.events = {
-                'onDocumentMouseMove': null,
-                'onDocumentMouseDown': null,
-            }
-              this._events('pointer');
-        }
-          _events(controll, drag_points = []) {
-            let raycaster = new THREE.Raycaster();
-            let mouse = new THREE.Vector2();
-              let elements = {
-                'pointer': this.pointer,
-                'line': this.line,
-                'events': this.events,
-                '_events': this._events,
-                '_move': this._move,
-                '_start': this._start,
-                '_end': this._end,
-                '_destroy': this._destroy,
-            };
-              this.events.onDocumentMouseMove = function onDocumentMouseMove(event) {
-                event.preventDefault();
-                  mouse.set((event.clientX / window.innerWidth) * 2 - 1, - (event.clientY / window.innerHeight) * 2 + 1);
-                raycaster.setFromCamera(mouse, camera.camera);
-                  let intersects = raycaster.intersectObjects([dummy]);
-                if (intersects.length > 0 && intersects[0].object.name == 'dummy') {
-                      let intersect = intersects[0];
-                    if(controll == 'pointer') {
-                        scene.add(elements.pointer);
-                        elements.pointer.position.copy(intersect.point);
-                    } else if(controll == 'line') {
-                        elements._move(elements, drag_points, intersect);
-                    }
-                }
-            }
-            this.events.onDocumentMouseDown = function onDocumentMouseDown(event) {
-                event.preventDefault();
-                if(event.which == 1) {
-                      mouse.set((event.clientX / window.innerWidth) * 2 - 1, -(event.clientY / window.innerHeight) * 2 + 1);
-                    raycaster.setFromCamera(mouse, camera.camera);
-                      var intersects = raycaster.intersectObjects([dummy]);
-                    if (intersects.length > 0 && intersects[0].object.name == 'dummy') {
-                        var intersect = intersects[0];
-                        if(controll == 'pointer') {
-                            elements._start(elements, intersect);
-                        } else if(controll == 'line') {
-                            elements._end(elements, intersect);
-                        }
-                    }
-                }
-            }
-              document.addEventListener('mousemove', this.events.onDocumentMouseMove, false);
-            document.addEventListener('mousedown', this.events.onDocumentMouseDown, false);
-        }
-          _move(elements, drag_points, intersect) {
-            drag_points[0].position.set(intersect.point.x, 0, intersect.point.z);
-              let shape = new THREE.Shape();
-            shape.moveTo(drag_points[0].position.x, drag_points[0].position.z);
-            shape.lineTo(drag_points[1].position.x, drag_points[1].position.z);
-              let get = shape.getPoints();
-            elements.line.geometry.setFromPoints(get);
-        }
-          _start(elements, intersect) {
-            elements._destroy(elements.pointer, elements.events.onDocumentMouseMove, elements.events.onDocumentMouseDown);
-              let box_g = new THREE.BoxBufferGeometry(0.2, 0.2, 0.2);
-            let box_m = new THREE.MeshBasicMaterial({ color: 0x666666 });
-              let points = 2;
-            let shape = new THREE.Shape();
-            shape.moveTo(intersect.point.x, intersect.point.z);
-              let drag_points = [];
-            for(let i = 1; i <= points; i++) {
-                let mesh = new THREE.Mesh(box_g, box_m);
-                  if(i == 1) {
-                    mesh.position.set(intersect.point.x, 0, intersect.point.z);
-                } else if(i == 2) {
-                    mesh.position.set(intersect.point.x, 0, intersect.point.z + 1);
-                }
-                  scene.add(mesh);
-                helpers_line.push(mesh);
-                drag_points.push(mesh);
-            }
-            shape.lineTo(intersect.point.x, intersect.point.z + 1);
-              var curve_g = new THREE.BufferGeometry().setFromPoints(shape.getPoints());
-            var curve_m = new THREE.LineBasicMaterial({ color: 0xff0000 });
-            elements.line = new THREE.Line(curve_g, curve_m);
-            elements.line.rotation.x = THREE.MathUtils.degToRad(90);
-              scene.add(elements.line);
-            elements._events('line', drag_points);
-        }
-          _end(elements, intersect) {
-              elements._start(elements, intersect);
-        }
-          _destroy(pointer, onDocumentMouseMove, onDocumentMouseDown) {
-            scene.remove(pointer);
-            document.removeEventListener('mousemove', onDocumentMouseMove, false);
-            document.removeEventListener('mousedown', onDocumentMouseDown, false);
-        }
-    }
-      let helpers_line = [];
-    var pointer = function () {
-          let material = new THREE.SpriteMaterial({ map: new THREE.TextureLoader().load("/models/textures/plus.png") });
-        let sprite = new THREE.Sprite(material);
-        sprite.scale.set(0.4, 0.4, 0.4);
-          return sprite;
-    }
-    $('.js_draw').click(function () {
-          let wall = new Wall(pointer);
-    });*/
 
     var Wall = function () {
         function Wall(start, end, material, height) {
@@ -76462,6 +76105,8 @@ function print_scene() {
                             building_walls.push(seg.mesh3D);
                         }
                     });
+
+                    this._destroy();
                 }
             }
         }, {
@@ -76482,12 +76127,17 @@ function print_scene() {
             value: function _destroy() {
                 document.removeEventListener('mousemove', this.events.onMouseMove, false);
                 document.removeEventListener('mousedown', this.events.onMouseDown, false);
+                wall_helpers_drag.destroy();
+
+                scene.remove(this.line);
+                for (var help in wall_helpers) {
+                    scene.remove(wall_helpers[help]);
+                }
 
                 this.positions = null;
                 this.line = null;
                 this.step = 0;
                 this.point3ds = [];
-                this.helper = [];
                 this.elements = null;
             }
         }]);
@@ -76692,9 +76342,44 @@ function print_scene() {
         return WallHole;
     }();
 
+    // Start
+
+
+    var objects = [];
+    var building_walls = [];
+
+    // Установка мира
+    function set_world() {
+        var geo = new __WEBPACK_IMPORTED_MODULE_0_three__["_29" /* PlaneBufferGeometry */](1000, 1000);
+        geo.rotateX(-Math.PI / 2);
+
+        var mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["_8" /* Mesh */](geo, new __WEBPACK_IMPORTED_MODULE_0_three__["_9" /* MeshBasicMaterial */]({ visible: false }));
+        mesh.name = 'world';
+        mesh.position.set(0, 0, 0);
+
+        return mesh;
+    }
+    var world = set_world();
+
+    scene.add(world);
+    objects.push(world);
+
+    // Управление объектами сцены
+    var drag_walls = new Drag(building_walls);
+    drag_walls.init();
+    var drag_models = new Drag(objects);
+    drag_models.init();
+
+    // Установка елементов в сцену
+    $('.js_print_add').click(function () {
+        var libs = new Libs('model', $(this).data('id'));
+        var picking = libs.init();
+
+        var model = new Insert(picking, objects);
+        model.init();
+    });
+
     // Рисуем стену
-
-
     var wall = new WallCreater();
     var wall_helpers = [];
     var wall_helpers_drag = new Drag(wall_helpers);
@@ -76719,7 +76404,6 @@ function print_scene() {
     });
     $('.js_extrude').click(function () {
         wall.create3D();
-        console.log(wall.helper);
     });
 
     // Высекаем стену
@@ -76738,74 +76422,23 @@ function print_scene() {
         hole.makeAHole();
     });
 
+    // Отмена
     document.addEventListener('keydown', function (event) {
         if (event.keyCode == 27) {
-            drag.destroy();
+            drag_models.destroy();
+            drag_walls.destroy();
             wall.stop();
             wall_helpers_drag.destroy();
             hole.destroy();
         }
     }, false);
 
+    // Удаление
     document.addEventListener('keydown', function (event) {
-        if (event.keyCode == 8) {
+        if (event.keyCode == 8 || event.keyCode == 46) {
             hole.remove_hole();
         }
     }, false);
-
-    //
-    /*var vec2s = [
-        new THREE.Vector2(0, 0),
-        new THREE.Vector2(0, 4),
-        new THREE.Vector2(2, 4),
-        new THREE.Vector2(2, 0)
-    ];
-    var shape = new THREE.Shape(vec2s);
-    var geo = new THREE.ShapeGeometry(shape);
-      let someMaterial = new THREE.MeshBasicMaterial({color: 0x0000ff, side: THREE.DoubleSide, transparent: true, opacity:0.3});
-    let mesh3D = new THREE.Mesh(geo, someMaterial);
-    mesh3D.position.x = -4;
-    scene.add(mesh3D);*/
-
-    //
-    /*const extrudeSettings = {
-        steps: 1,
-        depth: 1,
-        bevelEnabled: true,
-        bevelThickness: 1,
-        bevelSize: 0,
-        bevelOffset: 0,
-        bevelSegments: 0
-    };
-      const heartShape = new THREE.Shape(vec2s);
-    const geometry = new THREE.ExtrudeBufferGeometry(heartShape, extrudeSettings);
-      const mesh = new THREE.Mesh( geometry, new THREE.MeshPhongMaterial() );
-    scene.add(mesh);*/
-
-    /*let positions = new Float32Array([-1.4648921489715576, 0, -2.58066725730896, 3.360517978668213, 0, -2.58066725730896, 4.104445457458496, 0, -3.562267303466797, -1.6428800821304321, 0, 1.5893481969833374, -1.932550311088562, 0, 1.0328019857406616]);
-    var geometry = new THREE.BufferGeometry();
-    geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-      var material = new THREE.LineBasicMaterial({
-        color: 0xff0000,
-        linewidth: 2
-    });
-      let line = new THREE.Line(geometry, material);
-    scene.add(line);
-      positions[0] = -3.666323184967041;
-    positions[2] = -2.949087142944336;
-    line.geometry.attributes.position.needsUpdate = true;
-    line.geometry.setDrawRange(0, 5);
-      console.log(line.geometry);*/
-
-    /*let m_geo = new THREE.BoxBufferGeometry(1, 1, 1);
-    let m_test = new THREE.Mesh(m_geo, new THREE.MeshBasicMaterial({color: "gray", transparent: true, opacity: 0.4}));
-    m_test.position.set(-4, 0, -6);
-    scene.add(m_test);
-    let geo = new THREE.BoxBufferGeometry(2, 2, 2);
-    let test = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({color: "red", transparent: true, opacity: 0.4}));
-    test.quaternion.setFromUnitVectors(m_test.position, new THREE.Vector3(7, 0, -4))
-    scene.add(test);
-    console.log(test.position);*/
 }
 
 function modelRender() {
