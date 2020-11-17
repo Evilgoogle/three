@@ -2537,7 +2537,7 @@ function print_scene() {
         constructor(objects) {
             this.transform = new TransformControls(camera.camera, renderer.domElement);
             this.drag = new DragControls(objects, camera.camera, renderer.domElement );
-            this.test = objects;
+            this.objects = objects;
         }
 
         init() {
@@ -2556,8 +2556,19 @@ function print_scene() {
             });
         }
 
+        stop() {
+            this.transform.detach();
+        }
+
         destroy() {
             this.transform.detach();
+
+            let current = this.transform.object;console.log(this.transform);console.log(this.objects);
+            for(let object in this.objects) {
+                if(this.objects[object].uuid == current.uuid) {
+                    scene.remove(this.transform.object);
+                }
+            }
         }
     }
     class Wall {
@@ -2968,7 +2979,7 @@ function print_scene() {
                 }
 
                 // Remove Drag holes
-                hole_drag.destroy();
+                hole_drag.stop();
             }
         }
 
@@ -2984,18 +2995,20 @@ function print_scene() {
         remove_hole() {
             let object = hole_drag.transform.object;
 
-            for(let build in this.elements.build_holes.arr) {
-                for(let holes in this.elements.holes) {
-                    if(this.elements.holes[holes].uuid == object.uuid) {
-                        this.elements.holes.splice(holes, 1);
-                        scene.remove(object);
+            if(this.holes.length > 0) {
+                for (let build in this.elements.build_holes.arr) {
+                    for (let holes in this.elements.holes) {
+                        if (this.elements.holes[holes].uuid == object.uuid) {
+                            this.elements.holes.splice(holes, 1);
+                            scene.remove(object);
 
-                        this.elements.build_holes.arr[build].holes.splice(holes, 1);
+                            this.elements.build_holes.arr[build].holes.splice(holes, 1);
+                        }
                     }
                 }
             }
 
-            hole_drag.destroy();
+            hole_drag.stop();
         }
     }
 
@@ -3080,10 +3093,10 @@ function print_scene() {
     // Отмена
     document.addEventListener('keydown', function (event) {
         if(event.keyCode == 27) {
-            drag_models.destroy();
-            drag_walls.destroy();
+            drag_models.stop();
+            drag_walls.stop();
             wall.stop();
-            wall_helpers_drag.destroy();
+            wall_helpers_drag.stop();
             hole.destroy();
         }
     }, false);
@@ -3092,6 +3105,7 @@ function print_scene() {
     document.addEventListener('keydown', function (event) {
         if(event.keyCode == 8 || event.keyCode == 46) {
             hole.remove_hole();
+            drag_models.destroy();
         }
     }, false);
 }
