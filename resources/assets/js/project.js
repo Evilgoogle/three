@@ -2534,8 +2534,8 @@ function print_scene() {
     }
     class Drag {
 
-        constructor(objects) {
-            this.transform = new TransformControls(camera.camera, renderer.domElement);
+        constructor(objects, info = null) {
+            this.transform = new TransformControls(camera.camera, renderer.domElement); this.transform.name = info;
             this.drag = new DragControls(objects, camera.camera, renderer.domElement );
             this.objects = objects;
         }
@@ -2561,12 +2561,19 @@ function print_scene() {
         }
 
         destroy() {
-            this.transform.detach();
+            if(this.objects.length > 0) {
+                console.log(this);
+                for (let object in this.objects) {
+                    if(typeof(this.objects[object].name) !== "undefined" && this.objects[object].name == 'world') {
+                        continue;
+                    }
+                    console.log(this.transform.object.uuid);
+                    if (this.objects[object].uuid == this.transform.object.uuid) {
+                        scene.remove(this.transform.object);
 
-            let current = this.transform.object;console.log(this.transform);console.log(this.objects);
-            for(let object in this.objects) {
-                if(this.objects[object].uuid == current.uuid) {
-                    scene.remove(this.transform.object);
+                        this.objects.splice(object, 1);
+                        this.transform.detach();
+                    }
                 }
             }
         }
@@ -2755,9 +2762,7 @@ function print_scene() {
 
         create3D() {
             if(this.point3ds.length) {
-
                 let mesh3D = new THREE.Mesh();
-                scene.add(mesh3D);
 
                 //
                 let textureLoader = new THREE.TextureLoader();
@@ -2782,6 +2787,7 @@ function print_scene() {
                         mesh3D.add(seg.mesh3D);
                         index++;
 
+                        scene.add(seg.mesh3D);
                         building_walls.push(seg.mesh3D);
                     }
                 });
@@ -2794,22 +2800,26 @@ function print_scene() {
             document.removeEventListener('mousemove', this.events.onMouseMove, false);
             document.removeEventListener('mousedown', this.events.onMouseDown, false);
 
-            if(this.step !== 0 || this.elements.step !== undefined) {
-                this.positions[this.elements.step * 3 - 3] = NaN;
-                this.positions[this.elements.step * 3 - 2] = NaN;
-                this.positions[this.elements.step * 3 - 1] = NaN;
-                this.line.geometry.attributes.position.needsUpdate = true;
+            if(this.elements !== undefined || this.elements !== null) {
+                if(this.elements.step !== 0) {
+                    this.positions[this.elements.step * 3 - 3] = NaN;
+                    this.positions[this.elements.step * 3 - 2] = NaN;
+                    this.positions[this.elements.step * 3 - 1] = NaN;
+                    this.line.geometry.attributes.position.needsUpdate = true;
+                }
             }
         }
 
         _destroy() {
             document.removeEventListener('mousemove', this.events.onMouseMove, false);
             document.removeEventListener('mousedown', this.events.onMouseDown, false);
-            wall_helpers_drag.destroy();
+            wall_helpers_drag.stop();
 
             scene.remove(this.line);
             for(let help in wall_helpers) {
                 scene.remove(wall_helpers[help]);
+
+                wall_helpers.slice(help, 1);
             }
 
             this.positions = null;
@@ -2862,7 +2872,7 @@ function print_scene() {
         }
 
         init(building, hole, raise) {
-            this.destroy();
+            this.stop();
             this.builds = building;
 
             let geo = new THREE.BoxBufferGeometry(
@@ -2893,7 +2903,7 @@ function print_scene() {
                 'hole': this.hole,
                 'hole_raise': this.hole_raise,
                 'events': this.events,
-                'destroy': this.destroy
+                'stop': this.stop
             };
             this.elements = elements;
 
@@ -2919,7 +2929,7 @@ function print_scene() {
 
                 elements.holes.push(hole);
                 elements.build_holes.calc(current_build, hole);
-                elements.destroy();
+                elements.stop();
             }
 
             document.addEventListener("mousemove", elements.events.onMouseMove, false);
@@ -2983,7 +2993,7 @@ function print_scene() {
             }
         }
 
-        destroy() {
+        stop() {
             if(this.hole !== null) {
                 scene.remove(this.hole);
 
@@ -2992,7 +3002,7 @@ function print_scene() {
             }
         }
 
-        remove_hole() {
+        destroy() {
             let object = hole_drag.transform.object;
 
             if(this.holes.length > 0) {
@@ -3033,9 +3043,9 @@ function print_scene() {
     objects.push(world);
 
     // Управление объектами сцены
-    let drag_walls = new Drag(building_walls);
+    let drag_walls = new Drag(building_walls, 'walls');
     drag_walls.init();
-    let drag_models = new Drag(objects);
+    let drag_models = new Drag(objects, 'models');
     drag_models.init();
 
     // Установка елементов в сцену
@@ -3071,6 +3081,9 @@ function print_scene() {
         wall.init();
     });
     $('.js_extrude').click(function () {
+        console.log('------');
+        console.log(drag_models);
+        console.log(drag_walls);
         wall.create3D();
     });
 
@@ -3097,15 +3110,17 @@ function print_scene() {
             drag_walls.stop();
             wall.stop();
             wall_helpers_drag.stop();
-            hole.destroy();
+            hole.stop();
         }
     }, false);
 
     // Удаление
     document.addEventListener('keydown', function (event) {
         if(event.keyCode == 8 || event.keyCode == 46) {
-            hole.remove_hole();
+            hole.destroy();
             drag_models.destroy();
+            drag_walls.destroy();
+            //wall_helpers_drag.destroy();
         }
     }, false);
 }
