@@ -2489,7 +2489,7 @@ function print_scene() {
                 raycaster.setFromCamera(mouse, camera.camera);
 
                 let intersects = raycaster.intersectObjects(objects);
-                if (intersects.length > 0 && intersects[0].object.name == 'world') {
+                if (intersects.length > 0 && intersects[0].object.userData.type == 'world') {
                     let intersect = intersects[0];
                     roll.position.copy(intersect.point).add(intersect.face.normal);
                 }
@@ -2503,7 +2503,7 @@ function print_scene() {
                     raycaster.setFromCamera(mouse, camera.camera);
 
                     var intersects = raycaster.intersectObjects(objects);
-                    if (intersects.length > 0 && intersects[0].object.name == 'world') {
+                    if (intersects.length > 0 && intersects[0].object.userData.type == 'world') {
                         var intersect = intersects[0];
 
                         mesh.position.copy(intersect.point).add(intersect.face.normal);
@@ -2563,7 +2563,7 @@ function print_scene() {
         destroy() {
             if(this.objects.length > 0) {
                 for (let object in this.objects) {
-                    if(this.objects[object].name == 'world') {
+                    if(this.objects[object].userData.type == 'world') {
                         continue;
                     }
                     if (this.transform.object !== undefined && this.objects[object].uuid == this.transform.object.uuid) {
@@ -2612,6 +2612,7 @@ function print_scene() {
                 geo.computeBoundingBox();
                 this.mesh3D = new THREE.Mesh(geo, this.material);
                 this.mesh3D.name = 'wall';
+                this.mesh3D.userData.type = 'wall';
 
                 this._alignRotation();
                 this._alignPosition();
@@ -2883,6 +2884,7 @@ function print_scene() {
             );
             this.hole = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({color: "red", transparent: true, opacity: 0.4}));
             this.hole.name = 'hole';
+            this.hole.userData.type = 'hole';
             this.hole.position.set(camera.camera.getWorldDirection());
             scene.add(this.hole);
 
@@ -2992,7 +2994,7 @@ function print_scene() {
                 for(let h in build_holes[b].holes) {
                     let object = build_holes[b].holes[h];
                     for(let del in objects) {
-                        if (object.name == 'hole') {
+                        if (object.userData.type == 'hole') {
                             if (objects[del].uuid == object.uuid) {
                                 objects.splice(del, 1);
                             }
@@ -3022,7 +3024,7 @@ function print_scene() {
 
             // Удаляем из глобальнего objects
             for(let del in objects) {
-                if(objects[del].name == 'hole') {
+                if(objects[del].userData.type == 'hole') {
                     if (objects[del].uuid == object.uuid) {
                         objects.splice(del, 1);
                     }
@@ -3060,6 +3062,7 @@ function print_scene() {
 
         let mesh = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({ visible: false }));
         mesh.name = 'world';
+        mesh.userData.type = 'world';
         mesh.position.set(0, 0, 0);
 
         return mesh;
@@ -3106,7 +3109,7 @@ function print_scene() {
         wall.init();
     });
     $('.js_extrude').click(function () {
-        console.log(objects);
+
         wall.create3D();
     });
 
