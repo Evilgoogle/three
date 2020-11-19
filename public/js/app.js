@@ -75875,13 +75875,11 @@ function print_scene() {
             key: 'destroy',
             value: function destroy() {
                 if (this.objects.length > 0) {
-                    console.log(this);
                     for (var object in this.objects) {
-                        if (typeof this.objects[object].name !== "undefined" && this.objects[object].name == 'world') {
+                        if (this.objects[object].name == 'world') {
                             continue;
                         }
-                        console.log(this.transform.object.uuid);
-                        if (this.objects[object].uuid == this.transform.object.uuid) {
+                        if (this.transform.object !== undefined && this.objects[object].uuid == this.transform.object.uuid) {
                             scene.remove(this.transform.object);
 
                             this.objects.splice(object, 1);
@@ -75929,6 +75927,7 @@ function print_scene() {
                     var geo = new __WEBPACK_IMPORTED_MODULE_0_three__["z" /* ExtrudeBufferGeometry */](shape, extrudeSettings);
                     geo.computeBoundingBox();
                     this.mesh3D = new __WEBPACK_IMPORTED_MODULE_0_three__["_8" /* Mesh */](geo, this.material);
+                    this.mesh3D.name = 'wall';
 
                     this._alignRotation();
                     this._alignPosition();
@@ -76122,7 +76121,7 @@ function print_scene() {
                             index++;
 
                             scene.add(seg.mesh3D);
-                            building_walls.push(seg.mesh3D);
+                            objects.push(seg.mesh3D);
                         }
                     });
 
@@ -76135,12 +76134,14 @@ function print_scene() {
                 document.removeEventListener('mousemove', this.events.onMouseMove, false);
                 document.removeEventListener('mousedown', this.events.onMouseDown, false);
 
-                if (this.elements !== undefined || this.elements !== null) {
-                    if (this.elements.step !== 0) {
-                        this.positions[this.elements.step * 3 - 3] = NaN;
-                        this.positions[this.elements.step * 3 - 2] = NaN;
-                        this.positions[this.elements.step * 3 - 1] = NaN;
-                        this.line.geometry.attributes.position.needsUpdate = true;
+                if (this.elements !== undefined) {
+                    if (this.elements !== null) {
+                        if (this.elements.step !== 0) {
+                            this.positions[this.elements.step * 3 - 3] = NaN;
+                            this.positions[this.elements.step * 3 - 2] = NaN;
+                            this.positions[this.elements.step * 3 - 1] = NaN;
+                            this.line.geometry.attributes.position.needsUpdate = true;
+                        }
                     }
                 }
             }
@@ -76220,7 +76221,7 @@ function print_scene() {
 
                 var geo = new __WEBPACK_IMPORTED_MODULE_0_three__["j" /* BoxBufferGeometry */](hole.data('parameter').width, hole.data('parameter').height, 0.25);
                 this.hole = new __WEBPACK_IMPORTED_MODULE_0_three__["_8" /* Mesh */](geo, new __WEBPACK_IMPORTED_MODULE_0_three__["_9" /* MeshBasicMaterial */]({ color: "red", transparent: true, opacity: 0.4 }));
-                this.hole.name = hole.data('parameter').name;
+                this.hole.name = 'hole';
                 this.hole.position.set(camera.camera.getWorldDirection());
                 scene.add(this.hole);
 
@@ -76255,17 +76256,23 @@ function print_scene() {
                     raycaster.setFromCamera(mouse, camera.camera);
                     intersects = raycaster.intersectObjects(elements.builds);
                     if (intersects.length != 0) {
-                        normalMatrix.getNormalMatrix(intersects[0].object.matrixWorld);
-                        worldNormal.copy(intersects[0].face.normal).applyMatrix3(normalMatrix).normalize();
+                        if (intersects[0].object.name == 'wall') {
+                            normalMatrix.getNormalMatrix(intersects[0].object.matrixWorld);
+                            worldNormal.copy(intersects[0].face.normal).applyMatrix3(normalMatrix).normalize();
 
-                        elements.hole.position.copy(intersects[0].point.setY(elements.hole_raise));
-                        elements.hole.lookAt(new __WEBPACK_IMPORTED_MODULE_0_three__["_65" /* Vector3 */]().copy(intersects[0].point.setY(elements.hole_raise)).add(worldNormal));
+                            elements.hole.position.copy(intersects[0].point.setY(elements.hole_raise));
+                            elements.hole.lookAt(new __WEBPACK_IMPORTED_MODULE_0_three__["_65" /* Vector3 */]().copy(intersects[0].point.setY(elements.hole_raise)).add(worldNormal));
+                        }
                     }
                 };
 
                 elements.events.onMouseDown = function () {
                     var current_build = intersects[0].object;
-                    var hole = elements.hole.clone();hole.material = new __WEBPACK_IMPORTED_MODULE_0_three__["_9" /* MeshBasicMaterial */]({ color: "red" });scene.add(hole);
+
+                    var hole = elements.hole.clone();
+                    hole.material = new __WEBPACK_IMPORTED_MODULE_0_three__["_9" /* MeshBasicMaterial */]({ color: "red" });
+                    scene.add(hole);
+                    objects.push(hole);
 
                     elements.holes.push(hole);
                     elements.build_holes.calc(current_build, hole);
@@ -76274,8 +76281,6 @@ function print_scene() {
 
                 document.addEventListener("mousemove", elements.events.onMouseMove, false);
                 document.addEventListener("mousedown", elements.events.onMouseDown, false);
-
-                hole_drag.init();
             }
         }, {
             key: 'makeAHole',
@@ -76324,13 +76329,22 @@ function print_scene() {
                     build.geometry = extrudeGeometry;
                     build.geometry.computeBoundingBox();
 
-                    // remove holes
+                    // Удаляем проемы и очищаем objects
                     for (var _h in build_holes[b].holes) {
+                        var object = build_holes[b].holes[_h];
+                        for (var del in objects) {
+                            if (object.name == 'hole') {
+                                if (objects[del].uuid == object.uuid) {
+                                    objects.splice(del, 1);
+                                }
+                            }
+                        }
+
                         scene.remove(build_holes[b].holes[_h]);
                     }
 
-                    // Remove Drag holes
-                    hole_drag.stop();
+                    // Remove hole transform
+                    drag_objects.stop();
                 }
             }
         }, {
@@ -76346,22 +76360,36 @@ function print_scene() {
         }, {
             key: 'destroy',
             value: function destroy() {
-                var object = hole_drag.transform.object;
+                // ----> Выбранный елемент удаление
+                var object = drag_objects.transform.object;
 
-                if (this.holes.length > 0) {
-                    for (var build in this.elements.build_holes.arr) {
-                        for (var holes in this.elements.holes) {
-                            if (this.elements.holes[holes].uuid == object.uuid) {
-                                this.elements.holes.splice(holes, 1);
-                                scene.remove(object);
-
-                                this.elements.build_holes.arr[build].holes.splice(holes, 1);
-                            }
+                // Удаляем из глобальнего objects
+                for (var del in objects) {
+                    if (objects[del].name == 'hole') {
+                        if (objects[del].uuid == object.uuid) {
+                            objects.splice(del, 1);
                         }
                     }
                 }
 
-                hole_drag.stop();
+                // Удаляем из служебных массивов класса
+                if (this.holes.length > 0) {
+                    for (var build in this.elements.build_holes.arr) {
+                        for (var holes in this.elements.build_holes.arr[build].holes) {
+                            if (this.elements.build_holes.arr[build].holes[holes].uuid == object.uuid) {
+                                this.elements.build_holes.arr[build].holes.splice(holes, 1);
+                            }
+                        }
+                    }
+                    for (var _hole in this.elements.holes) {
+                        if (this.elements.holes[_hole].uuid == object.uuid) {
+                            this.elements.holes.splice(_hole, 1);
+                            scene.remove(object);
+
+                            drag_objects.stop();
+                        }
+                    }
+                }
             }
         }]);
 
@@ -76372,7 +76400,6 @@ function print_scene() {
 
 
     var objects = [];
-    var building_walls = [];
 
     // Установка мира
     function set_world() {
@@ -76391,10 +76418,8 @@ function print_scene() {
     objects.push(world);
 
     // Управление объектами сцены
-    var drag_walls = new Drag(building_walls, 'walls');
-    drag_walls.init();
-    var drag_models = new Drag(objects, 'models');
-    drag_models.init();
+    var drag_objects = new Drag(objects);
+    drag_objects.init();
 
     // Установка елементов в сцену
     $('.js_print_add').click(function () {
@@ -76408,7 +76433,7 @@ function print_scene() {
     // Рисуем стену
     var wall = new WallCreater();
     var wall_helpers = [];
-    var wall_helpers_drag = new Drag(wall_helpers);
+    var wall_helpers_drag = new Drag(wall_helpers, 'wall_helper');
     wall_helpers_drag.wall_helpers_listener = function (elements) {
         this.transform.addEventListener('objectChange', function () {
 
@@ -76429,22 +76454,19 @@ function print_scene() {
         wall.init();
     });
     $('.js_extrude').click(function () {
-        console.log('------');
-        console.log(drag_models);
-        console.log(drag_walls);
+        console.log(objects);
         wall.create3D();
     });
 
     // Высекаем стену
     var build_holes = [];
     var hole = new WallHole(build_holes);
-    var hole_drag = new Drag(hole.holes);
     $('.js_hole').click(function (e) {
 
         var get_hole = $(e.target).closest('.wall_hole').find('select').find('option:selected');
         var get_raise = $(e.target).closest('.wall_hole').find('input[name="raise"]').val();
 
-        hole.init(building_walls, get_hole, get_raise);
+        hole.init(objects, get_hole, get_raise);
     });
     $('.js_hole_make').click(function (e) {
 
@@ -76454,10 +76476,9 @@ function print_scene() {
     // Отмена
     document.addEventListener('keydown', function (event) {
         if (event.keyCode == 27) {
-            drag_models.stop();
-            drag_walls.stop();
-            wall.stop();
+            drag_objects.stop();
             wall_helpers_drag.stop();
+            wall.stop();
             hole.stop();
         }
     }, false);
@@ -76466,9 +76487,7 @@ function print_scene() {
     document.addEventListener('keydown', function (event) {
         if (event.keyCode == 8 || event.keyCode == 46) {
             hole.destroy();
-            drag_models.destroy();
-            drag_walls.destroy();
-            //wall_helpers_drag.destroy();
+            drag_objects.destroy();
         }
     }, false);
 }
