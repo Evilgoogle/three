@@ -29,7 +29,7 @@
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
     "lightbox2": "^2.10.0",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.21",
     "popper.js": "^1.13.0",
     "style-loader": "^0.20.2",
     "swiper": "^4.1.6"
