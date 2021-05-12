@@ -32,7 +32,7 @@
     "lodash": "^4.17.4",
     "popper.js": "^1.13.0",
     "style-loader": "^0.20.2",
-    "swiper": "^4.1.6"
+    "swiper": "^6.5.1"
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.1",
