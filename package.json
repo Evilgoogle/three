@@ -25,7 +25,7 @@
     "fullpage.js": "^3.0.1",
     "jquery": "^3.2",
     "jquery-fancybox": "^3.1.0",
-    "laravel-mix": "^2.0",
+    "laravel-mix": "^6.0",
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
     "lightbox2": "^2.10.0",
